@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:js="library://ns.apache.org/flexjs/basic" 
+					  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+	<mdl:NavigationLayoutContent>
+		<mdl:Grid height="300">
+			<mdl:style>
+				<js:AllCSSStyles justifyContent="center"/>
+			</mdl:style>
+			<mdl:GridCell column="4" alignMiddle="true">
+				<mdl:Card id="mycard" shadow="2">
+	                <mdl:CardTitle height="100">
+						<mdl:style>
+							<js:AllCSSStyles justifyContent="center" color="#052D49"/>
+						</mdl:style>
+	                    <mdl:CardTitleText text="Transpiled ActionScript!"/>
+	                </mdl:CardTitle>
+					<mdl:CardActions border="true">	
+						<js:Group>	
+							<mdl:style>
+								<js:AllCSSStyles fontSize="24" color="#F96854" textAlign="center" marginTop="5"/>
+							</mdl:style>		
+	                        <js:TextNode text="Coming soon..."/>
+	                    </js:Group>
+	                </mdl:CardActions>
+				</mdl:Card>
+			</mdl:GridCell>
+		</mdl:Grid>
+    </mdl:NavigationLayoutContent>				
+</mdl:NavigationLayout>
