@@ -14,7 +14,7 @@ The repository will contain three branches, i.e. examples, snippets and utils. E
     + MyExample 
     | 
     | 
-    + AnotherExample`
+    + AnotherExample
   
 [snippets](https://github.com/piotrzarzycki21/TranspiledActionScript/tree/snippets) - will contain the Snippets folder, in which each created subfolder will include files (ActionScript classes, MXML files) containing short presentation of an interesting code in Apache Royale®, along with a proper description, usually in a separate GitHub .md file.
 
@@ -24,7 +24,7 @@ The repository will contain three branches, i.e. examples, snippets and utils. E
     + MyBindingSnippets 
     | 
     | 
-    + MySecondBindingSnippets`
+    + MySecondBindingSnippets
   
 [utils](https://github.com/piotrzarzycki21/TranspiledActionScript/tree/utils) – will contain everything which does not fit the "examples" or "snippets" branches, but can be helpful while developing your applications in Apache Royale®. 
 
@@ -34,7 +34,7 @@ The repository will contain three branches, i.e. examples, snippets and utils. E
     + MyUtilsForBuildHelp 
     | 
     | 
-    + MyUtilForCleanUp` 
+    + MyUtilForCleanUp 
   
 ## Releases
 
