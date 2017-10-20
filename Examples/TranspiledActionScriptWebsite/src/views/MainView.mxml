@@ -1,30 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
 <mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:js="library://ns.apache.org/flexjs/basic" 
-					  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+					  xmlns:mdl="library://ns.apache.org/flexjs/mdl" 
+					  xmlns:models="models.*" xmlns:views="views.*" 
+					  currentState="Examples"					>
+	<mdl:states>
+		<js:State name="Examples"/>
+		<js:State name="Snippets"/>	
+		<js:State name="About"/>
+	</mdl:states>				
+	<mdl:model>
+		<models:MainNavigationModel id="mainNavigationModel"/>
+	</mdl:model>			
+	<mdl:Header>
+		<mdl:HeaderRow>
+			<mdl:Navigation>
+				<mdl:beads>
+                    <js:ConstantBinding
+                            sourceID="mainNavigationModel"
+                            sourcePropertyName="mainNavigation"
+                            destinationPropertyName="dataProvider" />
+                </mdl:beads>
+			</mdl:Navigation>
+		</mdl:HeaderRow>
+	</mdl:Header>		
 	<mdl:NavigationLayoutContent>
-		<mdl:Grid height="300">
-			<mdl:style>
-				<js:AllCSSStyles justifyContent="center"/>
-			</mdl:style>
-			<mdl:GridCell column="4" alignMiddle="true">
-				<mdl:Card id="mycard" shadow="2">
-	                <mdl:CardTitle height="100">
-						<mdl:style>
-							<js:AllCSSStyles justifyContent="center" color="#052D49"/>
-						</mdl:style>
-	                    <mdl:CardTitleText text="Transpiled ActionScript!"/>
-	                </mdl:CardTitle>
-					<mdl:CardActions border="true">	
-						<js:Group>	
-							<mdl:style>
-								<js:AllCSSStyles fontSize="24" color="#F96854" textAlign="center" marginTop="5"/>
-							</mdl:style>		
-	                        <js:TextNode text="Coming soon..."/>
-	                    </js:Group>
-	                </mdl:CardActions>
-				</mdl:Card>
-			</mdl:GridCell>
-		</mdl:Grid>
-    </mdl:NavigationLayoutContent>				
+		<views:ExamplesView includeIn="Examples"/>
+		<views:SnippetsView includeIn="Snippets"/>
+		<views:AboutView includeIn="About"/>
+		
+		<mdl:Footer mini="true">
+			<mdl:FooterLeftSection>
+			</mdl:FooterLeftSection>
+			<mdl:FooterRightSection>
+			</mdl:FooterRightSection>
+		</mdl:Footer>
+    </mdl:NavigationLayoutContent>	
 </mdl:NavigationLayout>

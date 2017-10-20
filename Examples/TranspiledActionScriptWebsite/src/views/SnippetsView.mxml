@@ -17,27 +17,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<mdl:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
-				 xmlns:js="library://ns.apache.org/flexjs/basic" 
-				 xmlns:mdl="library://ns.apache.org/flexjs/mdl"
-				 xmlns:views="views.*"
-				 pageTitle="Transpiled ActionScript">
-	<fx:Style>
-		@namespace basic "library://ns.apache.org/flexjs/basic";
-		
-		global {
-    		IStatesImpl: ClassReference("org.apache.flex.core.SimpleStatesImpl");
-		}
-	</fx:Style>
-
-	<mdl:valuesImpl>
-		<js:SimpleCSSValuesImpl />
-	</mdl:valuesImpl>
-	
-	<mdl:initialView>
-		<js:View width="100%" height="100%">
-			<views:MainView />
-		</js:View>
-	</mdl:initialView>
-	
- </mdl:Application>
+<mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
+			  xmlns:js="library://ns.apache.org/flexjs/basic"
+			  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+	<mdl:GridCell>
+		<mdl:Button text="Snippets"/>
+	</mdl:GridCell>	
+</mdl:Grid>
