@@ -23,22 +23,23 @@ limitations under the License.
 					  xmlns:models="models.*" xmlns:views="views.*" 
 					  currentState="Examples"					>
 	<mdl:states>
-		<js:State name="Examples"/>
-		<js:State name="Snippets"/>	
-		<js:State name="About"/>
-	</mdl:states>				
-	<mdl:model>
-		<models:MainNavigationModel id="mainNavigationModel"/>
-	</mdl:model>			
+		<js:State name="Examples" stateGroups="all"/>
+		<js:State name="Snippets" stateGroups="all"/>	
+		<js:State name="About" stateGroups="all"/>
+	</mdl:states>						
 	<mdl:Header>
 		<mdl:HeaderRow>
 			<mdl:Navigation>
-				<mdl:beads>
-                    <js:ConstantBinding
-                            sourceID="mainNavigationModel"
-                            sourcePropertyName="mainNavigation"
-                            destinationPropertyName="dataProvider" />
-                </mdl:beads>
+				<mdl:NavigationLink text="Examples" includeIn="all"
+									click="onExamplesLinkClick(event)"/>
+				<mdl:NavigationLink text="Snippets" includeIn="all"
+									click="onSnippetsLinkClick(event)"/>
+				<mdl:NavigationLink text="GitHub" href="https://github.com/piotrzarzycki21/TranspiledActionScript" 
+									includeIn="all"/>
+				<mdl:NavigationLink text="Patreon" href="https://www.patreon.com/"
+									includeIn="all"/>
+				<mdl:NavigationLink text="About" includeIn="all"
+									click="onAboutLinkClick(event)"/>
 			</mdl:Navigation>
 		</mdl:HeaderRow>
 	</mdl:Header>		
@@ -54,4 +55,24 @@ limitations under the License.
 			</mdl:FooterRightSection>
 		</mdl:Footer>
     </mdl:NavigationLayoutContent>	
+	<fx:Script>
+	<![CDATA[
+		import org.apache.flex.events.MouseEvent;
+
+		private function onExamplesLinkClick(event:MouseEvent):void
+		{
+			currentState = "Examples";
+		}
+		
+		private function onSnippetsLinkClick(event:MouseEvent):void
+		{
+			currentState = "Snippets";
+		}
+		
+		private function onAboutLinkClick(event:MouseEvent):void
+		{
+			currentState = "About";
+		}
+	]]>
+</fx:Script>
 </mdl:NavigationLayout>

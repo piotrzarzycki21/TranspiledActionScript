@@ -47,9 +47,6 @@
   <library></library>
   <compileTargets>
     <compile path="src/TranspiledActionScriptWebsite.mxml"/>
-    <compile path="src/TranspiledActionScriptWebsite.mxml"/>
-    <compile path="src/TranspiledActionScriptWebsite.mxml"/>
-    <compile path="src/TranspiledActionScriptWebsite.mxml"/>
   </compileTargets>
   <hiddenPaths></hiddenPaths>
   <preBuildCommand>null</preBuildCommand>
