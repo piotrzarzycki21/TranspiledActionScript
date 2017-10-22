@@ -24,11 +24,11 @@ package models
 	public class MainNavigationModel
 	{
 		private var _mainNavigation:Array = [
-		   new NavigationVO("Examples", "Examples"),
-		   new NavigationVO("Snippets", "Snippets"),
+		   new NavigationVO("Examples"),
+		   new NavigationVO("Snippets"),
 		   new NavigationVO("GitHub", "https://github.com/piotrzarzycki21/TranspiledActionScript"),
-		   new NavigationVO("Patreon", ""),
-           new NavigationVO("About", "About")
+		   new NavigationVO("Patreon", "https://patreon.com"),
+           new NavigationVO("About")
         ];
 
 		public function get mainNavigation():Array

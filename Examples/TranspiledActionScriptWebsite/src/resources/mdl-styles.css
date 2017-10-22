@@ -22,6 +22,10 @@
 @namespace "http://www.w3.org/1999/xhtml";
 @namespace js "library://ns.apache.org/flexjs/basic";
 @namespace mdl "library://ns.apache.org/flexjs/mdl";
+	
+global {
+   IStatesImpl: ClassReference("org.apache.flex.core.SimpleStatesImpl");
+}
 
 .flexjs *, . flexjs *:before, . flexjs *:after {
     -moz-box-sizing: border-box;
@@ -33,5 +37,10 @@
 {
 	padding: 10px;
 	margin: 10px;
+}
+
+.navigationChange
+{
+	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
 }
 

@@ -20,26 +20,26 @@ limitations under the License.
 <mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:js="library://ns.apache.org/flexjs/basic" 
 					  xmlns:mdl="library://ns.apache.org/flexjs/mdl" 
-					  xmlns:models="models.*" xmlns:views="views.*" 
-					  currentState="Examples"					>
+					  xmlns:models="models.*" xmlns:views="views.*"
+					  currentState="Examples">
 	<mdl:states>
-		<js:State name="Examples" stateGroups="all"/>
-		<js:State name="Snippets" stateGroups="all"/>	
-		<js:State name="About" stateGroups="all"/>
-	</mdl:states>						
+		<js:State name="Examples"/>
+		<js:State name="Snippets"/>	
+		<js:State name="About"/>
+	</mdl:states>	
+	<mdl:model>
+		<models:MainNavigationModel id="mainNavigationModel"/>
+	</mdl:model>				
 	<mdl:Header>
 		<mdl:HeaderRow>
-			<mdl:Navigation>
-				<mdl:NavigationLink text="Examples" includeIn="all"
-									click="onExamplesLinkClick(event)"/>
-				<mdl:NavigationLink text="Snippets" includeIn="all"
-									click="onSnippetsLinkClick(event)"/>
-				<mdl:NavigationLink text="GitHub" href="https://github.com/piotrzarzycki21/TranspiledActionScript" 
-									includeIn="all"/>
-				<mdl:NavigationLink text="Patreon" href="https://www.patreon.com/"
-									includeIn="all"/>
-				<mdl:NavigationLink text="About" includeIn="all"
-									click="onAboutLinkClick(event)"/>
+			<mdl:Navigation id="mainNavigation" className="navigationChange"
+						    change="onNavigationChange(event)" >			
+				<mdl:beads>
+                    <js:ConstantBinding
+                            sourceID="mainNavigationModel"
+                            sourcePropertyName="mainNavigation"
+                            destinationPropertyName="dataProvider" />
+                </mdl:beads>
 			</mdl:Navigation>
 		</mdl:HeaderRow>
 	</mdl:Header>		
@@ -57,22 +57,16 @@ limitations under the License.
     </mdl:NavigationLayoutContent>	
 	<fx:Script>
 	<![CDATA[
-		import org.apache.flex.events.MouseEvent;
-
-		private function onExamplesLinkClick(event:MouseEvent):void
+		import vos.NavigationVO;
+	
+		private function onNavigationChange(event:Event):void
 		{
-			currentState = "Examples";
-		}
-		
-		private function onSnippetsLinkClick(event:MouseEvent):void
-		{
-			currentState = "Snippets";
-		}
-		
-		private function onAboutLinkClick(event:MouseEvent):void
-		{
-			currentState = "About";
-		}
+			var clickedMainNavigationObject:NavigationVO = mainNavigation.selectedItem as NavigationVO;
+			if (hasState(clickedMainNavigationObject.label))
+			{
+				currentState = clickedMainNavigationObject.label;	
+			}
+		}		
 	]]>
 </fx:Script>
 </mdl:NavigationLayout>
