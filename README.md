@@ -40,11 +40,12 @@ The repository will contain three branches, i.e. examples, snippets and utils. E
 
 The release will take place as soon as enough helpful information is gathered in one of the branches. All the updated branches will be merged into the "master" branch at a certain point, the [CHANGELOG.md](https://github.com/piotrzarzycki21/TranspiledActionScript/blob/master/CHANGELOG.md) will be updated and the release will be announced to you. 
 
-### Trademarks
+## Trademarks
 Apache, Apache Royale™, and the Apache Royale™ logo are either registered trademarks or trademarks of the [Apache Software Foundation](https://www.apache.org/) in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.
 
 ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.
 
+##
 Soon you will be able support this project by buying me beer on [Patreon](https://www.patreon.com/)! :)
 
 Enjoy!
