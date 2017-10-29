@@ -41,6 +41,13 @@ global {
 
 .navigationChange
 {
+	IItemRenderer: ClassReference("org.apache.flex.mdl.itemRenderers.NavigationLinkItemMouseRenderer");
+	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
+}
+
+.navigationFooterList
+{
+	IItemRenderer: ClassReference("itemRenderers.NavigationFooterLinkListItemRenderer");
 	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
 }
 

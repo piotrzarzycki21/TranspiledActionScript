@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:js="library://ns.apache.org/flexjs/basic"
+		  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+	<mdl:GridCell column="12">
+		<js:H4 text="Legal"/>
+		<mdl:Card width="100%">
+		    <mdl:style>
+				<js:AllCSSStyles minHeight="0"/>
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Source Code License"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="20"/>
+				</mdl:style>
+			 	<mdl:beads>
+                    <js:InnerHTML>
+                         <![CDATA[All source code appearing on this website is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.]]>
+                    </js:InnerHTML>
+                 </mdl:beads>		
+            </mdl:CardSupportingText>
+		</mdl:Card>
+		<mdl:Card width="100%">
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Trademarks"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="20"/>
+				</mdl:style>
+				<mdl:beads>
+					  <js:InnerHTML>
+                         <![CDATA[Apache, Apache Royale&trade;, Apache Maven&trade;, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/">Apache Software Foundation</a> in the United States and/or other countries. 
+								   No endorsement by The Apache Software Foundation is implied by the use of these marks. </br></br>
+								  ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.]]>
+                      </js:InnerHTML>
+				</mdl:beads>
+			</mdl:CardSupportingText>
+		</mdl:Card>
+	</mdl:GridCell>
+</mdl:Grid>

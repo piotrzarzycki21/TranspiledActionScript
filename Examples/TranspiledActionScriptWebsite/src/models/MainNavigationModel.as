@@ -35,5 +35,23 @@ package models
         {
             return _mainNavigation;
         }
+
+		private var _leftFooterNavigation:Array = [
+			new NavigationVO("Support this project on Patreon", "https://patreon.com")
+		];
+		
+		public function get leftFooterNavigation():Array
+		{
+			return _leftFooterNavigation;
+		}
+		
+		private var _rightFooterNavigation:Array = [
+			new NavigationVO("Legal")
+		];
+		
+		public function get rightFooterNavigation():Array
+		{
+			return _rightFooterNavigation;
+		}
 	}
 }

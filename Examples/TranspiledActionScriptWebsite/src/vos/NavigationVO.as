@@ -24,7 +24,7 @@ package vos
 		public var label:String;
 		public var href:String;
 		
-		public function NavigationVO(label:String, href:String = null):void
+		public function NavigationVO(label:String, href:String = "#"):void
 		{
 			this.label = label;
 			this.href = href;

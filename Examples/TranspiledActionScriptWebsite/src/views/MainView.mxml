@@ -20,13 +20,14 @@ limitations under the License.
 <mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:js="library://ns.apache.org/flexjs/basic" 
 					  xmlns:mdl="library://ns.apache.org/flexjs/mdl" 
-					  xmlns:models="models.*" xmlns:views="views.*"
+					  xmlns:models="models.*" xmlns:views="views.*" 
 					  currentState="Examples">
 	<mdl:states>
 		<js:State name="Examples"/>
 		<js:State name="Snippets"/>	
 		<js:State name="About"/>
-	</mdl:states>	
+		<js:State name="Legal"/>
+	</mdl:states>
 	<mdl:model>
 		<models:MainNavigationModel id="mainNavigationModel"/>
 	</mdl:model>				
@@ -36,7 +37,7 @@ limitations under the License.
 						    change="onNavigationChange(event)" >			
 				<mdl:beads>
                     <js:ConstantBinding
-                            sourceID="mainNavigationModel"
+                            sourceID="model"
                             sourcePropertyName="mainNavigation"
                             destinationPropertyName="dataProvider" />
                 </mdl:beads>
@@ -47,12 +48,40 @@ limitations under the License.
 		<views:ExamplesView includeIn="Examples"/>
 		<views:SnippetsView includeIn="Snippets"/>
 		<views:AboutView includeIn="About"/>
+		<views:LegalView includeIn="Legal"/>
 		
 		<mdl:Footer mini="true">
 			<mdl:FooterLeftSection>
+				<mdl:FooterLinkList labelField="label" className="navigationFooterList">
+                        <mdl:beads>
+                            <js:ConstantBinding
+                                sourceID="model"
+                                sourcePropertyName="leftFooterNavigation"
+                                destinationPropertyName="dataProvider" />
+                        </mdl:beads>
+                 </mdl:FooterLinkList>
 			</mdl:FooterLeftSection>
+			<mdl:FooterMiddleSection>
+				<mdl:FooterHeading>
+					<mdl:beads>
+                    		<js:InnerHTML>
+                         	<![CDATA[This website is created in <a href="http://royale.apache.org/">Apache Royale&trade;</a>.]]>
+                    		</js:InnerHTML>
+                 	</mdl:beads>	
+				</mdl:FooterHeading>
+			</mdl:FooterMiddleSection>
 			<mdl:FooterRightSection>
+				<mdl:FooterLinkList labelField="label" className="navigationFooterList" change="onNavigationChange(event)">
+                        <mdl:beads>
+                            <js:ConstantBinding
+                                sourceID="model"
+                                sourcePropertyName="rightFooterNavigation"
+                                destinationPropertyName="dataProvider" />
+                        </mdl:beads>
+                 </mdl:FooterLinkList>
 			</mdl:FooterRightSection>
+			<mdl:beads>
+			</mdl:beads>
 		</mdl:Footer>
     </mdl:NavigationLayoutContent>	
 	<fx:Script>
@@ -61,10 +90,10 @@ limitations under the License.
 	
 		private function onNavigationChange(event:Event):void
 		{
-			var clickedMainNavigationObject:NavigationVO = mainNavigation.selectedItem as NavigationVO;
-			if (hasState(clickedMainNavigationObject.label))
+			var navigationVO:NavigationVO = event.currentTarget.selectedItem as NavigationVO;
+			if (hasState(navigationVO.label))
 			{
-				currentState = clickedMainNavigationObject.label;	
+				currentState = navigationVO.label;	
 			}
 		}		
 	]]>
