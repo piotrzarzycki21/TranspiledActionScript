@@ -27,7 +27,7 @@ package models
 		   new NavigationVO("Examples"),
 		   new NavigationVO("Snippets"),
 		   new NavigationVO("GitHub", "https://github.com/piotrzarzycki21/TranspiledActionScript"),
-		   new NavigationVO("Patreon", "https://patreon.com"),
+		   new NavigationVO("Patreon", "https://www.patreon.com/piotrzarzycki"),
            new NavigationVO("About")
         ];
 
@@ -37,7 +37,7 @@ package models
         }
 
 		private var _leftFooterNavigation:Array = [
-			new NavigationVO("Support this project on Patreon", "https://patreon.com")
+			new NavigationVO("Support this project on Patreon", "https://www.patreon.com/piotrzarzycki")
 		];
 		
 		public function get leftFooterNavigation():Array

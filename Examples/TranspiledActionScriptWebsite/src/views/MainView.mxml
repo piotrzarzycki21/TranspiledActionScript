@@ -21,7 +21,7 @@ limitations under the License.
 					  xmlns:js="library://ns.apache.org/flexjs/basic" 
 					  xmlns:mdl="library://ns.apache.org/flexjs/mdl" 
 					  xmlns:models="models.*" xmlns:views="views.*" 
-					  currentState="Examples">
+					  currentState="Examples" fixedHeader="true">
 	<mdl:states>
 		<js:State name="Examples"/>
 		<js:State name="Snippets"/>	

@@ -13,7 +13,7 @@
 			</mdl:CardTitle>
 			<mdl:CardSupportingText>
 				<mdl:style>
-					<js:SimpleCSSStyles fontSize="20"/>
+					<js:SimpleCSSStyles fontSize="16"/>
 				</mdl:style>
 			 	<mdl:beads>
                     <js:InnerHTML>
@@ -28,11 +28,11 @@
 			</mdl:CardTitle>
 			<mdl:CardSupportingText>
 				<mdl:style>
-					<js:SimpleCSSStyles fontSize="20"/>
+					<js:SimpleCSSStyles fontSize="16"/>
 				</mdl:style>
 				<mdl:beads>
 					  <js:InnerHTML>
-                         <![CDATA[Apache, Apache Royale&trade;, Apache Maven&trade;, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/">Apache Software Foundation</a> in the United States and/or other countries. 
+                         <![CDATA[Apache, <a href="http://royale.apache.org/">Apache Royale&trade;</a>, <a href="http://maven.apache.org/">Apache Maven&trade;</a>, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/">Apache Software Foundation</a> in the United States and/or other countries. 
 								   No endorsement by The Apache Software Foundation is implied by the use of these marks. </br></br>
 								  ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.]]>
                       </js:InnerHTML>

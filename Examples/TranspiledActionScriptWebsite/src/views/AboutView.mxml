@@ -20,7 +20,108 @@ limitations under the License.
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
 			  xmlns:js="library://ns.apache.org/flexjs/basic"
 			  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
-	<mdl:GridCell>
-		<mdl:Button text="About"/>
+	<mdl:style>
+		<js:AllCSSStyles maxWidth="900" margin="auto"/>
+	</mdl:style>		
+	<mdl:GridCell column="12">
+		<mdl:Card width="100%">
+			<mdl:style>
+				<js:AllCSSStyles minHeight="0" />
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Hello Royale Developers!"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="16"/>
+				</mdl:style>
+			 	<mdl:beads>
+                    <js:InnerHTML>
+                         <![CDATA[
+							I would like to present my idea of helping you with your first steps in <a href="http://royale.apache.org/">Apache Royale&trade;</a> framework. Basically, I will provide brief information, tutorials and updates from the community area using <a href="https://www.patreon.com/piotrzarzycki">Patreon</a>, <a href="https://github.com/piotrzarzycki21/TranspiledActionScript">GitHub</a> and <a href="https://transpiledactionscript.com/">TranspiledActionScript.com</a> website.
+							]]>
+                    </js:InnerHTML>
+                 </mdl:beads>		
+            </mdl:CardSupportingText>
+		</mdl:Card>
+		<mdl:Card width="100%">
+			<mdl:style>
+				<js:AllCSSStyles minHeight="0" />
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Patreon"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="16"/>
+				</mdl:style>
+			 	<mdl:beads>
+                    <js:InnerHTML>
+                         <![CDATA[
+							This place will be the central point of information. I will provide you updates from the Apache Royale&trade; community, some development nuances and some examples through the GitHub repository. However, my support will have a time limit of one year, counting from the start date. After that time, I will review what I was able to achieve and whether people are still seeking my help. Each donation through Patreon will allow me to extend the amount of time, which I can spend on this idea, and thus to be more flexible in terms of the content that can appear here.
+							]]>
+                    </js:InnerHTML>
+                 </mdl:beads>		
+            </mdl:CardSupportingText>
+		</mdl:Card>
+		<mdl:Card width="100%">
+			<mdl:style>
+				<js:AllCSSStyles minHeight="0" />
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Website"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="16"/>
+				</mdl:style>
+			 	<mdl:beads>
+                    <js:InnerHTML>
+                         <![CDATA[
+							The TranspiledActionScript.com website will serve as a gateway to Patreon and the Github repository, as well as a place where you will be able to see all created examples live. The website will be developed using Apache Royale&trade; and its sources will become a part of the repository examples.
+							]]>
+                    </js:InnerHTML>
+                 </mdl:beads>		
+            </mdl:CardSupportingText>
+		</mdl:Card>
+		<mdl:Card width="100%">
+			<mdl:style>
+				<js:AllCSSStyles minHeight="0" />
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="GitHub Repository"/>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="16"/>
+				</mdl:style>
+			 	<mdl:beads>
+                    <js:InnerHTML>
+                         <![CDATA[
+							The transpiledactionscript repository will store not only the source code of the provided examples, but also all articles not restricted to patrons in the form of Wiki pages. The idea of how the repository is going to work as well as the release process is described in <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/master/README.md">README</a> file.
+						  ]]>
+                    </js:InnerHTML>
+                 </mdl:beads>		
+            </mdl:CardSupportingText>
+		</mdl:Card>
+		<mdl:Card width="100%">
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="I have a question related to Apache Royale. Where should I ask it?"/>
+			</mdl:CardTitle>	
+			<mdl:CardSupportingText>
+				<mdl:style>
+					<js:SimpleCSSStyles fontSize="16"/>
+				</mdl:style>
+				<mdl:beads>
+					<js:InnerHTML>
+					<![CDATA[
+					The best place to ask questions is Apache Royale <a href="http://apache-royale-development.20373.n8.nabble.com/">development</a> or <a href="http://apache-royale-users.20374.n8.nabble.com/">users</a> mailing lists. However, I will also be happy to answer to any issues raised in the GitHub repository or in the comments section under Patreon articles.</br></br>
+					I hope you will enjoy this place and find the answers you seek,</br>
+					Piotr
+					]]>
+					</js:InnerHTML>
+				</mdl:beads>
+			</mdl:CardSupportingText>
+		</mdl:Card>
 	</mdl:GridCell>		
 </mdl:Grid>

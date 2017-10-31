@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:TableRowItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+			  xmlns:js="library://ns.apache.org/flexjs/basic"
+			  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+	
+	<mdl:beads>
+        <js:ItemRendererDataBinding />
+    </mdl:beads>
+    <mdl:TableCell text="{example.description}">
+		<mdl:style>
+				<js:AllCSSStyles maxWidth="600" whiteSpace="normal" wordWrap="break-word"/>
+		</mdl:style>
+	</mdl:TableCell>
+    <mdl:TableCell>
+        <js:A text="Sources" href="{example.sourceUrl}"/>
+    </mdl:TableCell>
+	<mdl:TableCell>
+        <js:A text="Live" href="{example.liveUrl}"/>
+    </mdl:TableCell>
+	<mdl:TableCell text="{example.version}"/>
+	<fx:Script>
+		<![CDATA[
+			import vos.ExampleVO;
+            
+            [Bindable("dataChange")]
+            public function get example():ExampleVO
+            {
+                return data as ExampleVO;
+            }
+		]]>
+	</fx:Script>
+</mdl:TableRowItemRenderer>

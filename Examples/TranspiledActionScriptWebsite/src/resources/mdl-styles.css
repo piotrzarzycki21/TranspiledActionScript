@@ -51,3 +51,9 @@ global {
 	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
 }
 
+.exampleTable
+{
+	IItemRenderer: ClassReference("itemRenderers.ExampleTableRowItemRenderer");
+}
+
+
