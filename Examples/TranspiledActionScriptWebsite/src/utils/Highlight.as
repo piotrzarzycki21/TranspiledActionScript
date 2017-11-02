@@ -16,21 +16,33 @@
 //  limitations under the License.
 //
 ////////////////////////////////////////////////////////////////////////////////
-package vos
+package utils
 {
-	public class ExampleVO
+	public class Highlight
 	{
-		public var description:String;
-		public var sourceUrl:String;
-		public var liveUrl:String;
-		public var version:String;
-		
-		public function ExampleVO(description:String, sourceUrl:String, liveUrl:String, version:String)
+		/** 
+		 * <inject_html>
+		 * <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+		 * </inject_html>
+		 */
+		public function Highlight()
 		{
-			this.description = description;
-			this.sourceUrl = sourceUrl;
-			this.liveUrl = liveUrl;
-			this.version = version;
+		}
+
+		COMPILE::JS		
+		public function initHighlight():void
+		{
+			var hljs:Object = window["hljs"];
+			//prevent renaming by compiler
+			hljs["initHighlightingOnLoad"]();
+		}
+		
+		COMPILE::JS	
+		public function highlightBlock(block:Object):void
+		{
+			var hljs:Object = window["hljs"];
+			//prevent renaming by compiler
+			hljs["highlightBlock"](block);
 		}
 	}
 }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:js="library://ns.apache.org/flexjs/basic"
+		  xmlns:mdl="library://ns.apache.org/flexjs/mdl"
+		  initComplete="onSnippetBoxInitComplete(event)" width="100%">
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>		
+	<mdl:CardTitle>
+		<mdl:style>
+			<js:SimpleCSSStyles paddingLeft="125"/>
+		</mdl:style>
+		<mdl:CardTitleText text="{title}"/>
+	</mdl:CardTitle>
+	<mdl:CardSupportingText>
+		<mdl:style>
+			<js:SimpleCSSStyles fontSize="16" marginLeft="150px" paddingBottom="0"/>
+		</mdl:style>
+		<js:TextNode text="{description}"/>
+	</mdl:CardSupportingText>
+	<mdl:Grid>
+		<mdl:GridCell column="12">
+			<js:Pre>
+				<mdl:style>
+					<js:SimpleCSSStyles margin="0"/>
+				</mdl:style>
+				<js:Code localId="snippetsCode" className="{languages}" text="{code}"/>
+			</js:Pre>
+		</mdl:GridCell>
+	</mdl:Grid>
+	<fx:Script>
+	<![CDATA[
+		import org.apache.flex.net.URLBinaryLoader;
+		import org.apache.flex.net.URLRequest;
+		import utils.Highlight;
+
+		[Bindable]
+		public var title:String;
+		[Bindable]
+		public var description:String;
+		[Bindable]
+		public var link:String;
+		[Bindable]
+		public var languages:String;
+		[Bindable]
+		private var code:String;
+		
+		private var _loader:URLBinaryLoader;
+		
+		private function onSnippetBoxInitComplete(event:Event):void
+		{
+			_loader = new URLBinaryLoader();
+			_loader.addEventListener(Event.COMPLETE, onLoaderComplete);
+			_loader.addEventListener("communicationError", onLoaderCommunicationError);
+			
+			_loader.load(new URLRequest(link));
+		}
+		
+		private function onLoaderComplete(event:Event):void
+		{
+			code = _loader.data.readUTFBytes(_loader.data.length);
+			
+			COMPILE::JS
+			{
+				var highlight:Highlight = new Highlight();
+				highlight.highlightBlock(snippetsCode.element);
+			}
+			
+			_loader.removeEventListener(Event.COMPLETE, onLoaderComplete);
+			_loader.close();
+		}
+		
+		private function onLoaderCommunicationError(event:Event):void
+		{
+			_loader.removeEventListener("communicationError", onLoaderCommunicationError);
+			_loader.close();
+		}
+	]]>
+	</fx:Script>
+</mdl:Card>

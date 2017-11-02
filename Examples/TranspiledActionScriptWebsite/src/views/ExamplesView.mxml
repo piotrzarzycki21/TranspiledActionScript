@@ -21,7 +21,7 @@ limitations under the License.
 			  xmlns:js="library://ns.apache.org/flexjs/basic"
 			  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:models="models.*">
 	<mdl:style>
-		<js:AllCSSStyles maxWidth="900" margin="auto"/>
+		<js:AllCSSStyles maxWidth="900" minHeight="445" margin="auto"/>
 	</mdl:style>	
 	<mdl:model>
 		<models:ExamplesModel />

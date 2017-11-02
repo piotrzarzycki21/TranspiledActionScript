@@ -19,8 +19,15 @@ limitations under the License.
 -->
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
 			  xmlns:js="library://ns.apache.org/flexjs/basic"
-			  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
-	<mdl:GridCell>
-		<mdl:Button text="Snippets"/>
+			  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:components="components.*">
+	<mdl:style>
+		<js:AllCSSStyles minHeight="445"/>
+	</mdl:style>
+	<mdl:GridCell column="12">
+		<mdl:Card width="100%">
+			<mdl:CardTitle>
+				<mdl:CardTitleText text="Snippets"/>
+			</mdl:CardTitle>						
+		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>

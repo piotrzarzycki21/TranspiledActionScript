@@ -21,9 +21,9 @@ limitations under the License.
 				 xmlns:js="library://ns.apache.org/flexjs/basic" 
 				 xmlns:mdl="library://ns.apache.org/flexjs/mdl"
 				 xmlns:views="views.*"
-				 pageTitle="Transpiled ActionScript">
+				 pageTitle="Transpiled ActionScript" applicationComplete="onApplicationComplete(event)">
 				
-	<fx:Style source="resources/mdl-styles.css"/>				
+	<fx:Style source="resources/mdl-styles.css"/>	
 	<fx:Style>
 		@namespace basic "library://ns.apache.org/flexjs/basic";
 		
@@ -41,5 +41,19 @@ limitations under the License.
 			<views:MainView />
 		</js:View>
 	</mdl:initialView>
-	
+	<fx:Script>
+	<![CDATA[
+		import utils.Highlight;
+		
+		public var highlight:Highlight = new Highlight();
+			
+		private function onApplicationComplete(event:Event):void
+		{
+			COMPILE::JS
+			{
+				highlight.initHighlight();
+			}
+		}
+	]]>
+</fx:Script>
  </mdl:Application>
