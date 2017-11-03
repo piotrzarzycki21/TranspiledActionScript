@@ -46,6 +46,6 @@ Apache, Apache Royale™, Apache Maven™ and the Apache Maven™, Apache Royale
 ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.
 
 ##
-Soon you will be able support this project by buying me beer on [Patreon](https://www.patreon.com/piotrzarzycki)! :)
+Support this project by buying me beer on [Patreon](https://www.patreon.com/piotrzarzycki)! :)
 
 Enjoy!
