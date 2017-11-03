@@ -25,7 +25,8 @@ package models
 	{
 		private var _examples:Array = [
 			new ExampleVO(
-			"The TranspiledActionScript.com website example has been created using MaterialDesignLight module of Apache Royale. ", 
+			"The TranspiledActionScript.com website example has been created using MaterialDesignLight module of Apache Royale (FlexJS). "
+			+ "It is still work in progress, however you can learn how to use MDL library by checking source code.", 
 			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/TranspiledActionScriptWebsite", 
 			"https://transpiledactionscript.com/", "0.0.1-Pending")
 		];

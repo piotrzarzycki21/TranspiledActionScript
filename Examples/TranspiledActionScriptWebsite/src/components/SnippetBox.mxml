@@ -28,7 +28,7 @@ limitations under the License.
 		<mdl:style>
 			<js:SimpleCSSStyles paddingLeft="125"/>
 		</mdl:style>
-		<mdl:CardTitleText text="{title}"/>
+		<js:A href="{titleLink}" text="{title}"/>
 	</mdl:CardTitle>
 	<mdl:CardSupportingText>
 		<mdl:style>
@@ -54,6 +54,8 @@ limitations under the License.
 
 		[Bindable]
 		public var title:String;
+		[Bindable]
+		public var titleLink:String;
 		[Bindable]
 		public var description:String;
 		[Bindable]

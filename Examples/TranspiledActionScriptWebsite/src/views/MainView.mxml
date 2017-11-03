@@ -33,6 +33,15 @@ limitations under the License.
 	</mdl:model>				
 	<mdl:Header>
 		<mdl:HeaderRow>
+			<mdl:style>
+				<js:AllCSSStyles justifyContent="center"/>
+			</mdl:style>
+			<mdl:LayoutTitle text="TranspiledActionScript"/>
+		</mdl:HeaderRow>
+		<mdl:HeaderRow>
+			<mdl:style>
+				<js:AllCSSStyles justifyContent="center"/>
+			</mdl:style>
 			<mdl:Navigation id="mainNavigation" className="navigationChange"
 						    change="onNavigationChange(event)" >			
 				<mdl:beads>
@@ -65,7 +74,7 @@ limitations under the License.
 				<mdl:FooterHeading>
 					<mdl:beads>
                     		<js:InnerHTML>
-                         	<![CDATA[This website is created in <a href="http://royale.apache.org/">Apache Royale&trade;</a>.]]>
+                         	<![CDATA[Copyright 2017 Nellix Software. All rights reserved.]]>
                     		</js:InnerHTML>
                  	</mdl:beads>	
 				</mdl:FooterHeading>

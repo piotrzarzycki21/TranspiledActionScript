@@ -27,7 +27,10 @@ limitations under the License.
 		<mdl:Card width="100%">
 			<mdl:CardTitle>
 				<mdl:CardTitleText text="Snippets"/>
-			</mdl:CardTitle>						
+			</mdl:CardTitle>		
+			<components:SnippetBox title="#1 Hello World MXML" description="Simple Hello World" languages="xml" 
+								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
+								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>				
 		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>
