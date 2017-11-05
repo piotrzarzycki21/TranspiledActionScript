@@ -21,7 +21,7 @@ limitations under the License.
 		  xmlns:js="library://ns.apache.org/flexjs/basic"
 		  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
 	<mdl:style>
-		<js:AllCSSStyles minHeight="445"/>
+		<js:AllCSSStyles minHeight="445" maxWidth="900"/>
 	</mdl:style>
 	<mdl:GridCell column="12">
 		<js:H4 text="Legal"/>
