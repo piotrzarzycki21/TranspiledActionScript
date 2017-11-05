@@ -38,11 +38,11 @@ limitations under the License.
 			</mdl:style>
 			<mdl:LayoutTitle text="TranspiledActionScript"/>
 		</mdl:HeaderRow>
-		<mdl:HeaderRow>
+		<mdl:HeaderRow className="mdl-layout--large-screen-only">
 			<mdl:style>
 				<js:AllCSSStyles justifyContent="center"/>
 			</mdl:style>
-			<mdl:Navigation id="mainNavigation" className="navigationChange"
+			<mdl:Navigation className="navigationChange"
 						    change="onNavigationChange(event)" >			
 				<mdl:beads>
                     <js:ConstantBinding
@@ -53,6 +53,18 @@ limitations under the License.
 			</mdl:Navigation>
 		</mdl:HeaderRow>
 	</mdl:Header>		
+	<mdl:Drawer className="mdl-layout--small-screen-only">
+		<mdl:LayoutTitle text="TranspiledActionScript"/>
+		<mdl:Navigation className="navigationChange"
+						    change="onNavigationChange(event)" >			
+				<mdl:beads>
+                    <js:ConstantBinding
+                            sourceID="model"
+                            sourcePropertyName="mainNavigation"
+                            destinationPropertyName="dataProvider" />
+                </mdl:beads>
+		</mdl:Navigation>
+	</mdl:Drawer>
 	<mdl:NavigationLayoutContent>
 		<views:ExamplesView includeIn="Examples"/>
 		<views:SnippetsView includeIn="Snippets"/>
