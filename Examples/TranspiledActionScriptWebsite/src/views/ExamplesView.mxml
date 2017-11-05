@@ -31,20 +31,25 @@ limitations under the License.
 			<mdl:CardTitle>
 				<mdl:CardTitleText text="Examples"/>
 			</mdl:CardTitle>
-			<mdl:Table className="exampleTable">
-				<mdl:columns>
-					<mdl:TableColumn headerText="Description"/>
-					<mdl:TableColumn headerText="Source Code"/>
-					<mdl:TableColumn headerText="Preview"/>
-					<mdl:TableColumn headerText="Version"/>
-				</mdl:columns>
-				<mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="examples"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-			</mdl:Table>
+			<js:Container>	
+				<js:beads>
+					<js:ScrollingViewport />
+				</js:beads>		
+				<mdl:Table className="exampleTable">
+					<mdl:columns>
+						<mdl:TableColumn headerText="Description"/>
+						<mdl:TableColumn headerText="Source Code"/>
+						<mdl:TableColumn headerText="Preview"/>
+						<mdl:TableColumn headerText="Version"/>
+					</mdl:columns>
+					<mdl:beads>
+	                    <js:ConstantBinding
+	                        sourceID="model"
+	                        sourcePropertyName="examples"
+	                        destinationPropertyName="dataProvider" />
+	                </mdl:beads>
+				</mdl:Table>
+			</js:Container>				
 		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>

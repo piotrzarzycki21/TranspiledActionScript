@@ -21,14 +21,14 @@ limitations under the License.
 			  xmlns:js="library://ns.apache.org/flexjs/basic"
 			  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:components="components.*">
 	<mdl:style>
-		<js:AllCSSStyles minHeight="445"/>
+		<js:AllCSSStyles minHeight="445" maxWidth="900"/>
 	</mdl:style>
 	<mdl:GridCell column="12">
 		<mdl:Card width="100%">
 			<mdl:CardTitle>
 				<mdl:CardTitleText text="Snippets"/>
 			</mdl:CardTitle>		
-			<components:SnippetBox title="#1 Hello World MXML" description="Simple Hello World" languages="xml" 
+			<components:SnippetBox title="#1 Hello World MXML" languages="xml" 
 								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
 								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>				
 		</mdl:Card>

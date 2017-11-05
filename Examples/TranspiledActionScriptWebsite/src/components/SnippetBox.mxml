@@ -21,31 +21,27 @@ limitations under the License.
 		  xmlns:js="library://ns.apache.org/flexjs/basic"
 		  xmlns:mdl="library://ns.apache.org/flexjs/mdl"
 		  initComplete="onSnippetBoxInitComplete(event)" width="100%">
+	<mdl:style>
+		<js:AllCSSStyles paddingLeft="20" paddingRight="20"/>
+	</mdl:style>	
 	<mdl:beads>
 		<js:ContainerDataBinding />
 	</mdl:beads>		
 	<mdl:CardTitle>
-		<mdl:style>
-			<js:SimpleCSSStyles paddingLeft="125"/>
-		</mdl:style>
 		<js:A href="{titleLink}" text="{title}"/>
 	</mdl:CardTitle>
 	<mdl:CardSupportingText>
 		<mdl:style>
-			<js:SimpleCSSStyles fontSize="16" marginLeft="150px" paddingBottom="0"/>
+			<js:SimpleCSSStyles fontSize="16" paddingBottom="0"/>
 		</mdl:style>
 		<js:TextNode text="{description}"/>
-	</mdl:CardSupportingText>
-	<mdl:Grid>
-		<mdl:GridCell column="12">
-			<js:Pre>
-				<mdl:style>
-					<js:SimpleCSSStyles margin="0"/>
-				</mdl:style>
-				<js:Code localId="snippetsCode" className="{languages}" text="{code}"/>
-			</js:Pre>
-		</mdl:GridCell>
-	</mdl:Grid>
+	</mdl:CardSupportingText>	
+	<js:Pre>
+		<mdl:style>
+			<js:SimpleCSSStyles margin="0" padding="0"/>
+		</mdl:style>
+		<js:Code localId="snippetsCode" className="{languages}" text="{code}"/>
+	</js:Pre>		
 	<fx:Script>
 	<![CDATA[
 		import org.apache.flex.net.URLBinaryLoader;
