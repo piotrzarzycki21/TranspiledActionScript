@@ -18,8 +18,8 @@ limitations under the License.
 
 -->
 <mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
-					  xmlns:js="library://ns.apache.org/flexjs/basic" 
-					  xmlns:mdl="library://ns.apache.org/flexjs/mdl" 
+					  xmlns:js="library://ns.apache.org/royale/basic" 
+					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
 					  xmlns:models="models.*" xmlns:views="views.*" 
 					  currentState="Examples" fixedHeader="true">
 	<mdl:states>
@@ -73,7 +73,7 @@ limitations under the License.
 		
 		<mdl:Footer mini="true">
 			<mdl:FooterLeftSection>
-				<mdl:FooterLinkList labelField="label" className="navigationFooterList">
+				<mdl:FooterLinkList labelField="label" className="navigationChange">
                         <mdl:beads>
                             <js:ConstantBinding
                                 sourceID="model"
@@ -98,6 +98,7 @@ limitations under the License.
                                 sourceID="model"
                                 sourcePropertyName="rightFooterNavigation"
                                 destinationPropertyName="dataProvider" />
+							<js:DataFieldProviderBead dataField="href"/>
                         </mdl:beads>
                  </mdl:FooterLinkList>
 			</mdl:FooterRightSection>

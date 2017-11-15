@@ -18,15 +18,15 @@ limitations under the License.
 
 -->
 <mdl:TableRowItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
-			  xmlns:js="library://ns.apache.org/flexjs/basic"
-			  xmlns:mdl="library://ns.apache.org/flexjs/mdl">
+			  xmlns:js="library://ns.apache.org/royale/basic"
+			  xmlns:mdl="library://ns.apache.org/royale/mdl">
 	
 	<mdl:beads>
         <js:ItemRendererDataBinding />
     </mdl:beads>
     <mdl:TableCell text="{example.description}">
 		<mdl:style>
-				<js:AllCSSStyles maxWidth="600" whiteSpace="normal" wordWrap="break-word"/>
+			<js:AllCSSStyles maxWidth="600" whiteSpace="normal" wordWrap="break-word"/>
 		</mdl:style>
 	</mdl:TableCell>
     <mdl:TableCell>

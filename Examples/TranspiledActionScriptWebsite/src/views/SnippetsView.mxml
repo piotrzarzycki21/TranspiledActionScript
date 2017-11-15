@@ -18,8 +18,8 @@ limitations under the License.
 
 -->
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
-			  xmlns:js="library://ns.apache.org/flexjs/basic"
-			  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:components="components.*">
+			  xmlns:js="library://ns.apache.org/royale/basic"
+			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:components="components.*">
 	<mdl:style>
 		<js:AllCSSStyles minHeight="445" maxWidth="900"/>
 	</mdl:style>
@@ -30,7 +30,10 @@ limitations under the License.
 			</mdl:CardTitle>		
 			<components:SnippetBox title="#1 Hello World MXML" languages="xml" 
 								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
-								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>				
+								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>	
+			<components:SnippetBox title="#2 Apache Maven pom template" languages="xml"
+								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Maven/pom.xml"
+								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Maven/pom.xml"/>							
 		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>

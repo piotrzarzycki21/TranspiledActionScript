@@ -20,14 +20,14 @@
 */
 
 @namespace "http://www.w3.org/1999/xhtml";
-@namespace js "library://ns.apache.org/flexjs/basic";
-@namespace mdl "library://ns.apache.org/flexjs/mdl";
+@namespace js "library://ns.apache.org/royale/basic";
+@namespace mdl "library://ns.apache.org/royale/mdl";
 	
 global {
-   IStatesImpl: ClassReference("org.apache.flex.core.SimpleStatesImpl");
+   IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
 }
 
-.flexjs *, . flexjs *:before, . flexjs *:after {
+.royale *, . royale *:before, . royale *:after {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -41,14 +41,8 @@ global {
 
 .navigationChange
 {
-	IItemRenderer: ClassReference("org.apache.flex.mdl.itemRenderers.NavigationLinkItemMouseRenderer");
-	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
-}
-
-.navigationFooterList
-{
-	IItemRenderer: ClassReference("itemRenderers.NavigationFooterLinkListItemRenderer");
-	IBeadController: ClassReference("org.apache.flex.html.beads.controllers.ListSingleSelectionMouseController");
+	IItemRenderer: ClassReference("org.apache.royale.mdl.itemRenderers.NavigationLinkItemMouseRenderer");
+	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
 }
 
 .exampleTable

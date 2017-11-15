@@ -18,8 +18,8 @@ limitations under the License.
 
 -->
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
-			  xmlns:js="library://ns.apache.org/flexjs/basic"
-			  xmlns:mdl="library://ns.apache.org/flexjs/mdl" xmlns:models="models.*">
+			  xmlns:js="library://ns.apache.org/royale/basic"
+			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*">
 	<mdl:style>
 		<js:AllCSSStyles maxWidth="900" minHeight="445" margin="auto"/>
 	</mdl:style>	
