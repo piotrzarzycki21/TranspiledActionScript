@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- Place here your groupId ex. com.transpiledactionscript -->
+  <groupId>{yourgroupid}</groupId>
+  <!-- Place here your artifactId - file name which will be in following folder ex: com/transpiledactionscript/ -->
+  <artifactId>{artifactid}</artifactId>
+  <!-- If it is your development version use here SNAPSHOT - file name which will be in following folder ex: com/transpiledactionscript/HelloWorld-0.1-SNAPSHOT -->
+  <version>1.0-SNAPSHOT</version>
+  <packaging>swf</packaging>
+
+  <build>
+	<!-- Path to the folder where you have main Application file -->
+    <sourceDirectory>src/main/royale</sourceDirectory>
+	<!-- If your application contains some assets, css files -->
+	<resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+		<!--Version of Royale compiler which will use SNAPSHOT = Nightly Build-->
+        <groupId>org.apache.royale.compiler</groupId>
+        <artifactId>royale-maven-plugin</artifactId>
+        <version>0.9.0-SNAPSHOT</version>
+        <extensions>true</extensions>
+        <configuration>
+		  <!--Place here name of your main class ex: HellowWorld.mxml-->	
+          <mainClass>{nameofyourmainfile}</mainClass>
+		  <!--The type of output, if you don't need SWF just remove it. If you remove whole target application will build to JS and SWF default.-->
+		  <targets>JSRoyale,SWF</targets>
+		  <!--If you have some predefined html template file place path here-->
+		 <!-- <htmlTemplate>${basedir}/src/main/flex/resources/helloworld-js-index-template.html</htmlTemplate>-->
+		  <!--Place here additonal compiler options ex: -compiler.exclude-defaults-css-files=Basic-0.9.0-SNAPSHOT-js.swc:defaults.css"
+		  If you don't have any remove it.
+          <additionalCompilerOptions></additionalCompilerOptions>-->
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.royale.compiler</groupId>
+            <artifactId>compiler-jx</artifactId>
+            <version>0.9.0-SNAPSHOT</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Place here module which you would like to use in your application. List -> https://goo.gl/jt9roA -->
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.royale.framework</groupId>
+      <artifactId>Basic</artifactId>
+      <version>0.9.0-SNAPSHOT</version>
+      <type>swc</type>
+	  <classifier>js</classifier>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.royale.framework</groupId>
+      <artifactId>Language</artifactId>
+      <version>0.9.0-SNAPSHOT</version>
+      <type>swc</type>
+	  <classifier>js</classifier>
+    </dependency>
+    
+	<!--Needed if you are building to SWF: <targets>SWF</targets>-->
+    <dependency>
+      <groupId>com.adobe.flash.framework</groupId>
+      <artifactId>playerglobal</artifactId>
+      <version>20.0</version>
+      <type>swc</type>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>
