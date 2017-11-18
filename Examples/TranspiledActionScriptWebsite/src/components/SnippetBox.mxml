@@ -36,11 +36,12 @@ limitations under the License.
 		</mdl:style>
 		<js:TextNode text="{description}"/>
 	</mdl:CardSupportingText>	
-	<js:PRE>
+	<js:PRE id="preCode">
 		<mdl:style>
-			<js:SimpleCSSStyles margin="0" padding="0"/>
+			<js:AllCSSStyles margin="0" padding="0"/>
 		</mdl:style>
 		<js:Code localId="snippetsCode" className="{languages}" text="{code}"/>
+		<mdl:Spinner isActive="{_isSpinnerActive}" width="45" height="45"/>
 	</js:PRE>		
 	<fx:Script>
 	<![CDATA[
@@ -60,6 +61,8 @@ limitations under the License.
 		public var languages:String;
 		[Bindable]
 		private var code:String;
+		[Bindable]
+		private var _isSpinnerActive:Boolean;
 		
 		private var _loader:URLBinaryLoader;
 		
@@ -69,6 +72,9 @@ limitations under the License.
 			_loader.addEventListener(Event.COMPLETE, onLoaderComplete);
 			_loader.addEventListener("communicationError", onLoaderCommunicationError);
 			
+			//Set spinner in the center
+			preCode.style = "textAlign:center;";
+			_isSpinnerActive = true;
 			_loader.load(new URLRequest(link));
 		}
 		
@@ -84,12 +90,19 @@ limitations under the License.
 			
 			_loader.removeEventListener(Event.COMPLETE, onLoaderComplete);
 			_loader.close();
+			
+			//Bring back text to the left
+			preCode.style = "textAlign:left;";
+			_isSpinnerActive = false;
 		}
 		
 		private function onLoaderCommunicationError(event:Event):void
 		{
 			_loader.removeEventListener("communicationError", onLoaderCommunicationError);
 			_loader.close();
+			
+			preCode.style = "textAlign:left;";
+			_isSpinnerActive = false;
 		}
 	]]>
 	</fx:Script>
