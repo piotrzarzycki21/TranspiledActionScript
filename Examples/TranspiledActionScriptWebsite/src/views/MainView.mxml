@@ -73,7 +73,7 @@ limitations under the License.
 		
 		<mdl:Footer mini="true">
 			<mdl:FooterLeftSection>
-				<mdl:FooterLinkList labelField="label" className="navigationChange">
+				<mdl:FooterLinkList labelField="label">
                         <mdl:beads>
                             <js:ConstantBinding
                                 sourceID="model"
@@ -92,7 +92,8 @@ limitations under the License.
 				</mdl:FooterHeading>
 			</mdl:FooterMiddleSection>
 			<mdl:FooterRightSection>
-				<mdl:FooterLinkList labelField="label" className="navigationFooterList" change="onNavigationChange(event)">
+				<mdl:FooterLinkList labelField="label" className="navigationChange" 
+									change="onNavigationChange(event)">
                         <mdl:beads>
                             <js:ConstantBinding
                                 sourceID="model"
