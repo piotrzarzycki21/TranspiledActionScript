@@ -26,24 +26,12 @@ package utils
     import org.apache.royale.mdl.Navigation;
 
     /**
-	 *  This bead allow to close Drawer when someone click on Navigation link
-	 *  It fixes issue in MDL https://github.com/google/material-design-lite/issues/1246
-	 *  
-	 *  @langversion 3.0
-	 *  @playerversion Flash 10.2
-	 *  @playerversion AIR 2.6
-	 *  @productversion Royale 0.9
+	 *  This Bead allows to close the Drawer when someone clicks on the Navigation link.
+	 *  It fixes the issue in MDL https://github.com/google/material-design-lite/issues/1246
 	 */
 	public class CloseDrawerOnNavigationLinkClick implements IBead
 	{
-		/**
-		 *  constructor.
-		 *
-		 *  @langversion 3.0
-		 *  @playerversion Flash 10.2
-		 *  @playerversion AIR 2.6
-		 *  @productversion Royale 0.
-		 */
+	
 		public function CloseDrawerOnNavigationLinkClick()
 		{
 		}
@@ -55,10 +43,6 @@ package utils
 		/**
 		 *  @copy org.apache.royale.core.IBead#strand
 		 *  
-		 *  @langversion 3.0
-		 *  @playerversion Flash 10.2
-		 *  @playerversion AIR 2.6
-		 *  @productversion Royale 0.8
 		 *  @royaleignorecoercion HTMLInputElement
 		 *  @royaleignorecoercion org.apache.royale.core.UIBase;
 		 */
