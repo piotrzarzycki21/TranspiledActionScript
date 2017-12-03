@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:TableRowItemSingleSelectionMouseRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       		   				  xmlns:js="library://ns.apache.org/royale/basic"
+                       		   				  xmlns:mdl="library://ns.apache.org/royale/mdl">
+  <fx:Script>
+		<![CDATA[
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+            
+			[Bindable]
+			private var departament:String;
+			
+			override public function set data(value:Object):void
+			{
+				super.data = value;
+				
+				if (value)
+				{
+					departament = value.department.value;
+				}
+			}
+			
+            [Bindable("dataChange")]
+            public function get user():UserVO
+            {
+                return data as UserVO;
+            }
+		]]>
+	</fx:Script>
+	<mdl:beads>
+        <js:ItemRendererDataBinding />
+    </mdl:beads>
+	<mdl:TableCell text="{user.username}"/>
+	<mdl:TableCell text="{user.fname}"/>
+	<mdl:TableCell text="{user.lname}"/> 
+	<mdl:TableCell text="{user.email}"/> 
+	<mdl:TableCell text="{user.department.value}"/>
+</mdl:TableRowItemSingleSelectionMouseRenderer>

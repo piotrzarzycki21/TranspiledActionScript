@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+		  xmlns:js="library://ns.apache.org/royale/basic"
+		  initComplete="onRolePanelInitComplete(event)">
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>	
+	<mdl:CardTitle>
+		<mdl:CardTitleText text="User Roles" percentWidth="100"/>
+		<js:Label text="Stoge, Curly"/>
+	</mdl:CardTitle>
+	<mdl:Grid percentWidth="100" percentHeight="100">
+		<mdl:GridCell column="12">
+			<mdl:List className="roleList"
+					  labelField="value" dataProvider="{userRoles}">
+			</mdl:List>
+		</mdl:GridCell>
+	</mdl:Grid>	
+	<mdl:CardActions>
+		<mdl:style>
+			<js:AllCSSStyles textAlign="right"/>
+		</mdl:style>
+		<mdl:Button text="Add" accent="true" width="100"/>
+		<mdl:Button text="Remove" accent="true" width="100"/>
+	</mdl:CardActions>
+	<fx:Script>
+	<![CDATA[
+			import org.apache.royale.collections.ArrayList;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.RoleEnum;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.events.Event;
+
+			public static const ADD:String = "add";
+			public static const REMOVE:String = "remove";
+
+			[Bindable] public var user:UserVO;
+			[Bindable] public var selectedRole:RoleEnum;
+			[Bindable] public var userRoles:ArrayList;
+			
+			// send the named event
+			private function sendEvent( eventName:String ):void
+			{
+				dispatchEvent( new Event( eventName, true ) );
+			}
+			
+			// select role to remove
+			private function selectRoleToRemove():void
+			{
+				//roleCombo.selectedItem = RoleEnum.NONE_SELECTED;
+				//selectedRole=RoleEnum( roleList.selectedItem );
+			}
+			
+			// select role to add
+			private function selectRoleToAdd():void
+			{
+				//roleList.selectedIndex = -1;
+				//selectedRole=RoleEnum (roleCombo.selectedItem );
+			}
+			
+			public function reset():void
+			{
+				//roleCombo.selectedItem = RoleEnum.NONE_SELECTED;
+			}
+	
+			private function onRolePanelInitComplete(event:Event):void
+			{
+				userRoles = new ArrayList([
+					RoleEnum.ADMIN,
+					RoleEnum.INVENTORY,
+					RoleEnum.ACCT_PAY
+				]);
+			}		
+	]]>
+</fx:Script>
+</mdl:Card>

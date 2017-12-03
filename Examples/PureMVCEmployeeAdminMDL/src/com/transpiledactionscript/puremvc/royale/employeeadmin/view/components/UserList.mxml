@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+		  xmlns:js="library://ns.apache.org/royale/basic">
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>	
+	<mdl:CardTitle>
+		<mdl:CardTitleText text="Users" width="100%"/>
+		<js:Label text="2"/>
+	</mdl:CardTitle>
+	<mdl:Grid>
+		<mdl:GridCell column="12">
+			<mdl:Table id="userList" percentWidth="100" dataProvider="{users}" className="tableUserList">
+				<mdl:columns>
+					<mdl:TableColumn headerText="Username"/>
+					<mdl:TableColumn headerText="First name"/>
+					<mdl:TableColumn headerText="Last name"/>
+					<mdl:TableColumn headerText="Email"/>
+					<mdl:TableColumn headerText="Department"/>
+				</mdl:columns>
+				<mdl:beads>
+					<!--Bead for listening changes of collection source-->
+					<js:DataProviderCollectionChangeNotifier sourceID="model" propertyName="users"
+															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+					<!--Bead for listening items events changes-->
+					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="users"
+														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+			</mdl:beads>
+			</mdl:Table>
+		</mdl:GridCell>
+	</mdl:Grid>
+	<mdl:CardActions>
+		<mdl:style>
+			<js:AllCSSStyles textAlign="right"/>
+		</mdl:style>
+		<mdl:Button text="Delete" accent="true" width="100">
+			<js:beads>
+				<mdl:Disabled disabled="{userList.selectedIndex == -1}"/>
+			</js:beads>
+		</mdl:Button>
+		<mdl:Button text="New" accent="true" width="100" click="onNewClick(event)"/>
+	</mdl:CardActions>
+	<fx:Script>
+	<![CDATA[
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.collections.ArrayList;
+			import org.apache.royale.events.Event;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.UserProxy;			
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
+
+			public static const NEW:String 		= "new";
+			public static const DELETE:String 	= "delete";
+			public static const SELECT:String 	= "select";
+			
+			[Bindable]
+			public var users:ArrayList;
+			[Bindable] 
+			public var selectedUser:UserVO;
+			[Bindable] 
+			private var armed:Boolean = false; // delete confirmation
+
+			override public function get model():Object
+			{
+				var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
+				return facade.retrieveProxy(UserProxy.NAME);	
+			}
+			
+			// send the named event and reset armed state 
+			private function sendEvent( eventName:String ):void
+			{
+				armed=false;
+				dispatchEvent( new Event( eventName, true ) );
+			}
+			
+			// remove selection in the user list and reset armed state
+			public function deSelect():void
+			{
+				armed=false;
+				userList.selectedIndex = -1;
+			}
+
+			private function onNewClick(event:Event):void
+			{
+				deSelect();
+				sendEvent(NEW);
+			}
+	]]>
+</fx:Script>
+</mdl:Card>

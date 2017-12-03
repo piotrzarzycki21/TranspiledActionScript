@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+		  xmlns:js="library://ns.apache.org/royale/basic">	
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>	
+	<mdl:CardTitle>
+		<mdl:CardTitleText text="User Profile" percentWidth="100"/>
+		<js:Label text="cstoge" />
+	</mdl:CardTitle>
+	<mdl:Grid nospacing="false" percentWidth="100">
+		<mdl:GridCell strech="false" column="12">
+			<js:Form id="userForm" action="#">
+				<js:beads>
+					<js:DisableBead disabled="{user == null}"/>
+				</js:beads>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="First Name" width="220"/>
+					<mdl:TextField id="first" percentWidth="100"
+								   text="{user.fname}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="First Name"/>
+							<mdl:Tooltip text="First Name"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Last Name" width="220"/>
+					<mdl:TextField id="last" percentWidth="100"
+					               text="{user.lname}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="Last Name"/>
+							<mdl:Tooltip text="Last Name"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Email" width="220"/>
+					<mdl:TextField id="email" percentWidth="100"
+					               text="{user.email}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="Email"/>
+							<mdl:Tooltip text="Email"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Username" width="220"/>
+					<mdl:TextField id="username" percentWidth="100"
+								   text="{user.username}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="Username"/>
+							<mdl:Tooltip text="Username"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Password" width="220"/>
+					<mdl:TextField id="password" percentWidth="100"
+								   text="{user.password}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="Password"/>
+							<mdl:Tooltip text="Password"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Confirm Password" width="220"/>
+					<mdl:TextField id="confirm" percentWidth="100"
+								   text="{user.password}">
+						<mdl:beads>
+							<mdl:TextPrompt prompt="Confirm Password"/>
+							<mdl:Tooltip text="Confirm Password"/>
+						</mdl:beads>
+					</mdl:TextField>
+				</js:Group>
+				<js:Group className="inputFormGroup">
+					<js:H6 text="Department" width="220"/>
+					<mdl:DropDownList id="department" percentWidth="100"
+									  selectedIndex="{user.department.ordinal + 1}" labelField="value" 
+									  dataProvider="{DeptEnum.comboList}">
+						<mdl:beads>
+							<mdl:Disabled strand="{department.dropDown}" disabled="{user == null}"/>
+						</mdl:beads>								
+					</mdl:DropDownList>								
+				</js:Group>
+			</js:Form>					
+		</mdl:GridCell>
+	</mdl:Grid>
+	<mdl:CardActions>
+		<mdl:style>
+			<js:AllCSSStyles textAlign="right"/>
+		</mdl:style>
+		<mdl:Button id="submitButton" text="{mode == MODE_ADD ? 'Add User' : 'Update Profile' }" accent="true" width="160"
+					click="submit()">
+			<mdl:beads>
+				<mdl:Disabled disabled="{!enableSubmit(username.text, confirm.text, password.text, department.selectedItem as DeptEnum)}"/>
+			</mdl:beads>				
+		</mdl:Button>				
+		<mdl:Button id="cancelButton" text="Cancel" accent="true" width="100"
+					click="cancel()">
+			<mdl:beads>
+				<mdl:Disabled disabled="{user == null}"/>
+			</mdl:beads>				
+		</mdl:Button>				
+	</mdl:CardActions>
+	<fx:Script>
+	<![CDATA[
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.events.Event;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
+			import org.apache.royale.html.beads.DisableBead;
+			import org.apache.royale.mdl.beads.Disabled;
+
+			public static const ADD:String 			= "add";
+			public static const UPDATE:String 		= "update";
+			public static const CANCEL:String 		= "cancel";
+
+			public static const MODE_ADD:String 	= "modeAdd";
+			public static const MODE_EDIT:String 	= "modeEdit";
+			
+			[Bindable] 
+			public var user:UserVO;
+			[Bindable] 
+			public var mode:String;
+			
+			// submit the add or update
+			private function submit():void
+			{
+				user = new UserVO( username.text, 
+					  			   first.text, 
+								   last.text, 
+								   email.text, 
+								   password.text,
+								   DeptEnum( department.selectedItem )
+								 );
+								
+				if (user.isValid) 
+				{
+					if (mode == MODE_ADD) 
+					{
+						dispatchEvent(new Event(ADD));
+					} 
+					else 
+					{
+						dispatchEvent(new Event(UPDATE));
+					}
+				}
+				
+			}
+			
+			public function setUser( user:UserVO, mode:String ):void
+			{
+				this.user = user;
+				this.mode = mode;
+				//first.setFocus();
+				refreshDisable();
+			}
+			
+			public function reset():void
+			{
+				user = null;
+				username.text = "";
+				first.text = "";
+				last.text = "";
+				email.text = ""; 
+				password.text = ""; 
+				confirm.text = ""; 
+				department.selectedItem = DeptEnum.NONE_SELECTED;
+			}
+			
+			// cancel the add or update
+			private function cancel():void
+			{
+				dispatchEvent(new Event(CANCEL));
+			}
+			
+			// enable submit button if required fields are satisfied
+			private function enableSubmit( u:String, p:String, c:String, d:DeptEnum ):Boolean
+			{
+				return ( u != "" && p != '' && p == c && d != DeptEnum.NONE_SELECTED );
+			}
+			
+			private function refreshDisable():void
+			{									
+				var disableBead:DisableBead = userForm.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = user == null;
+					
+				var disabledBead:Disabled = submitButton.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;
+	
+				disabledBead = cancelButton.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null; 
+
+				disabledBead = department.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;				
+			}
+	]]>
+</fx:Script>
+</mdl:Card>

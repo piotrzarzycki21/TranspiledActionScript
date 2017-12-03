@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<js:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:js="library://ns.apache.org/royale/basic"
+				xmlns:local="*" xmlns:mdl="library://ns.apache.org/royale/mdl" 
+				xmlns:view="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+				pageTitle="Employee Admin (Apache Royale MDL)" applicationComplete="onApplicationComplete(event)">
+					
+	<fx:Style source="resources/mdl-styles.css"/>
+	
+	<js:valuesImpl>
+		<js:SimpleCSSValuesImpl />
+	</js:valuesImpl>
+		
+	<fx:Script>
+		<![CDATA[
+		import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
+
+		private var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
+	
+		private function onApplicationComplete(event:Event):void
+	    {
+			facade.startup(this);
+		}	
+		]]>
+	</fx:Script>
+	
+	<js:initialView>
+		<js:View>
+			<mdl:Card percentWidth="100" percentHeight="100">
+				<js:style>
+					<js:AllCSSStyles alignItems="center"/>
+				</js:style>
+				<mdl:CardTitle>
+					<mdl:beads>
+						<js:InnerHTML>
+							<![CDATA[<p><b>Employee Admin </b> Pure MVC Apache Royale Demo</p>]]>
+						</js:InnerHTML>
+					</mdl:beads>
+				</mdl:CardTitle>
+				<mdl:Grid>
+					<mdl:style>
+						<js:AllCSSStyles maxWidth="850"/>
+					</mdl:style>
+					<mdl:GridCell column="12">
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>		
+						<view:UserList id="userList" percentWidth="100"/>
+					</mdl:GridCell>	
+					<mdl:GridCell column="6">	
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>			
+						<view:UserForm id="userForm" percentWidth="100"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>	
+						<view:RolePanel id="rolePanel" percentWidth="100" percentHeight="100"/>
+					</mdl:GridCell>					
+				</mdl:Grid>				
+			</mdl:Card>
+		</js:View>
+	</js:initialView>
+
+ </js:Application>

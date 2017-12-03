@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <output>
+    <movie height="600"/>
+    <movie version="11"/>
+    <movie disabled="False"/>
+    <movie path="bin-debug/PureMVCEmployeeAdminMDL.swf"/>
+    <movie background="#FFFFFF"/>
+    <movie fps="60"/>
+    <movie width="800"/>
+    <movie input=""/>
+  </output>
+  &lt;!-- Other classes to be compiled into your SWF --&gt;
+  <classpaths>
+    <class path="src"/>
+    <class path="../../../../Others/puremvc-as3-multicore-framework/src"/>
+  </classpaths>
+  <moonshineResourcePaths></moonshineResourcePaths>
+  <build>
+    <option locale=""/>
+    <option customSDK="D:\flex_sdk\royale_nightly"/>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option useResourceBundleMetadata="True"/>
+    <option benchmark="False"/>
+    <option warnings="True"/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option allowSourcePathOverlap="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option optimize="False"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
+    <option showActionScriptWarnings="True"/>
+    <option staticLinkRSL="False"/>
+    <option showBindingWarnings="True"/>
+    <option compilerConstants=""/>
+    <option showDeprecationWarnings="True"/>
+    <option antBuildPath="build/build.xml"/>
+  </build>
+  <includeLibraries></includeLibraries>
+  <libraryPaths></libraryPaths>
+  <externalLibraryPaths></externalLibraryPaths>
+  <rslPaths></rslPaths>
+  <intrinsics></intrinsics>
+  <library></library>
+  <compileTargets>
+    <compile path="src/PureMVCEmployeeAdminMDL.mxml"/>
+  </compileTargets>
+  <hiddenPaths></hiddenPaths>
+  <preBuildCommand>null</preBuildCommand>
+  <postBuildCommand alwaysRun="False">null</postBuildCommand>
+  <options>
+    <option testMovieCommand=""/>
+    <option defaultBuildTargets=""/>
+    <option showHiddenPaths="False"/>
+    <option testMovie=""/>
+  </options>
+  <moonshineRunCustomization>
+    <option deviceSimulator="null"/>
+    <option projectType="2"/>
+    <option launchMethod="Simulator"/>
+    <option targetPlatform="2"/>
+    <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminMDL\bin\js-debug\index.html"/>
+    <deviceSimulator>null</deviceSimulator>
+    <certAndroid>null</certAndroid>
+    <certIos>null</certIos>
+    <certIosProvisioning>null</certIosProvisioning>
+  </moonshineRunCustomization>
+</project>
