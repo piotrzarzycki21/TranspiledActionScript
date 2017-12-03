@@ -11,7 +11,8 @@
 	</mdl:CardTitle>
 	<mdl:Grid>
 		<mdl:GridCell column="12">
-			<mdl:Table id="userList" percentWidth="100" dataProvider="{users}" className="tableUserList">
+			<mdl:Table id="userList" percentWidth="100" dataProvider="{users}" 
+					   className="tableUserList" change="onUserListChange(event)">
 				<mdl:columns>
 					<mdl:TableColumn headerText="Username"/>
 					<mdl:TableColumn headerText="First name"/>
@@ -42,6 +43,7 @@
 		<mdl:Button text="New" accent="true" width="100" click="onNewClick(event)"/>
 	</mdl:CardActions>
 	<fx:Script>
+	
 	<![CDATA[
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
 			import org.apache.royale.collections.ArrayList;
@@ -85,6 +87,15 @@
 			{
 				deSelect();
 				sendEvent(NEW);
+			}
+			
+			private function onUserListChange(event:Event):void
+			{
+				if (userList.selectedIndex != -1)
+				{
+					selectedUser = userList.selectedItem as UserVO;
+					sendEvent(SELECT);
+				}
 			}
 	]]>
 </fx:Script>
