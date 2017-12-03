@@ -42,7 +42,9 @@ global {
 
 .roleList
 {
-    IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");
+	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.TableRoleListItemRenderer");
+    IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
+	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DynamicItemsRendererFactoryForArrayListData")
 }
 
 .inputFormGroup {

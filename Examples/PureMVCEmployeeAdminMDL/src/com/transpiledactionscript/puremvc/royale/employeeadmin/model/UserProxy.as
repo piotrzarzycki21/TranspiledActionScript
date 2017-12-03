@@ -37,8 +37,10 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model
 			var user:UserVO = item as UserVO;
 			for ( var i:int=0; i<users.length; i++ )
 			{
-				if ( users[i].username == user.username ) {
-					users[i] = user;
+				var currentUser:UserVO = users.getItemAt(i) as UserVO;
+				if (currentUser.username == user.username) 
+				{
+					users.setItemAt(user, i);
 				}
 			}
 		}

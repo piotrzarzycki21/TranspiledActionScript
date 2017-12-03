@@ -7,7 +7,7 @@
 	</mdl:beads>	
 	<mdl:CardTitle>
 		<mdl:CardTitleText text="User Profile" percentWidth="100"/>
-		<js:Label text="cstoge" />
+		<js:Label text="{user.username}" />
 	</mdl:CardTitle>
 	<mdl:Grid nospacing="false" percentWidth="100">
 		<mdl:GridCell strech="false" column="12">
@@ -168,6 +168,7 @@
 				password.text = ""; 
 				confirm.text = ""; 
 				department.selectedItem = DeptEnum.NONE_SELECTED;
+				refreshDisable();
 			}
 			
 			// cancel the add or update

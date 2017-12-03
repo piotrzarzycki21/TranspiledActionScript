@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
-		  xmlns:js="library://ns.apache.org/royale/basic"
-		  initComplete="onRolePanelInitComplete(event)">
+		  xmlns:js="library://ns.apache.org/royale/basic">
 	<mdl:beads>
 		<js:ContainerDataBinding />
 	</mdl:beads>	
 	<mdl:CardTitle>
 		<mdl:CardTitleText text="User Roles" percentWidth="100"/>
-		<js:Label text="Stoge, Curly"/>
+		<js:Label text="{user.lname + ', ' + user.fname}"/>
 	</mdl:CardTitle>
 	<mdl:Grid percentWidth="100" percentHeight="100">
 		<mdl:GridCell column="12">
-			<mdl:List className="roleList"
-					  labelField="value" dataProvider="{userRoles}">
-			</mdl:List>
+			<mdl:Table id="roleList" percentWidth="100" dataProvider="{userRoles}" 
+					   className="roleList" change="onRoleListChange(event)">
+				<mdl:beads>
+					<!--Bead for listening changes of collection source-->
+					<js:DataProviderCollectionChangeNotifier sourceID="model" propertyName="roles"
+															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+					<!--Bead for listening items events changes-->
+					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="roles"
+														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+				</mdl:beads>
+			</mdl:Table>
 		</mdl:GridCell>
 	</mdl:Grid>	
 	<mdl:CardActions>
 		<mdl:style>
 			<js:AllCSSStyles textAlign="right"/>
 		</mdl:style>
-		<mdl:Button text="Add" accent="true" width="100"/>
-		<mdl:Button text="Remove" accent="true" width="100"/>
+		<mdl:DropDownList id="rolesDropDown"
+						  selectedIndex="0" labelField="value" 
+						  dataProvider="{RoleEnum.comboList}" change="onRolesDropDownChange(event)">
+			<mdl:beads>
+				<mdl:Disabled strand="{rolesDropDown.dropDown}" disabled="{user == null}"/>
+			</mdl:beads>								
+		</mdl:DropDownList>	
+		<mdl:Button id="addRole" text="Add" accent="true" width="100" click="onAddClick(event)">
+			<mdl:beads>
+				<mdl:Disabled disabled="{rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED}"/>
+			</mdl:beads>				
+		</mdl:Button>	
+		<mdl:Button id="removeRole" text="Remove" accent="true" width="100" click="onRemoveClick(event)">
+			<mdl:beads>
+				<mdl:Disabled disabled="{roleList.selectedIndex == -1}"/>
+			</mdl:beads>				
+		</mdl:Button>
 	</mdl:CardActions>
 	<fx:Script>
 	<![CDATA[
@@ -30,6 +52,8 @@
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.RoleEnum;
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
 			import org.apache.royale.events.Event;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.RoleProxy;
 
 			public static const ADD:String = "add";
 			public static const REMOVE:String = "remove";
@@ -38,6 +62,11 @@
 			[Bindable] public var selectedRole:RoleEnum;
 			[Bindable] public var userRoles:ArrayList;
 			
+			override public function get model():Object
+			{
+				var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
+				return facade.retrieveProxy(RoleProxy.NAME);	
+			}
 			// send the named event
 			private function sendEvent( eventName:String ):void
 			{
@@ -47,30 +76,55 @@
 			// select role to remove
 			private function selectRoleToRemove():void
 			{
-				//roleCombo.selectedItem = RoleEnum.NONE_SELECTED;
-				//selectedRole=RoleEnum( roleList.selectedItem );
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				selectedRole = RoleEnum(roleList.selectedItem);
 			}
 			
 			// select role to add
 			private function selectRoleToAdd():void
 			{
-				//roleList.selectedIndex = -1;
-				//selectedRole=RoleEnum (roleCombo.selectedItem );
+				roleList.selectedIndex = -1;
+				selectedRole = RoleEnum(rolesDropDown.selectedItem);
 			}
 			
 			public function reset():void
 			{
-				//roleCombo.selectedItem = RoleEnum.NONE_SELECTED;
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
 			}
-	
-			private function onRolePanelInitComplete(event:Event):void
+		
+			private function onAddClick(event:Event):void
 			{
-				userRoles = new ArrayList([
-					RoleEnum.ADMIN,
-					RoleEnum.INVENTORY,
-					RoleEnum.ACCT_PAY
-				]);
-			}		
+				sendEvent(ADD);
+			}	
+			
+			private function onRemoveClick(event:Event):void
+			{
+				sendEvent(REMOVE);
+			}
+			
+			private function onRoleListChange(event:Event):void
+			{
+				selectRoleToRemove();
+				refreshDisable();
+			}
+			
+			private function onRolesDropDownChange(event:Event):void
+			{
+				selectRoleToAdd();
+				refreshDisable();
+			}
+			
+			private function refreshDisable():void
+			{									
+				var disabledBead:Disabled = rolesDropDown.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;
+	
+				disabledBead = addRole.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED; 
+
+				disabledBead = removeRole.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = roleList.selectedIndex == -1;				
+			}
 	]]>
 </fx:Script>
 </mdl:Card>

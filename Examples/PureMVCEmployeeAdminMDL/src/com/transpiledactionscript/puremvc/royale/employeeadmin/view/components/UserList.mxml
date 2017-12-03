@@ -27,7 +27,7 @@
 					<!--Bead for listening items events changes-->
 					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="users"
 														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
-			</mdl:beads>
+				</mdl:beads>
 			</mdl:Table>
 		</mdl:GridCell>
 	</mdl:Grid>
