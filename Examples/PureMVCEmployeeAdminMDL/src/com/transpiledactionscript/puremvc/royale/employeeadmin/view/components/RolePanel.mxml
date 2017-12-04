@@ -16,7 +16,7 @@
 				<mdl:beads>
 					<!--Bead for listening changes of collection source-->
 					<js:DataProviderCollectionChangeNotifier sourceID="model" propertyName="roles"
-															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />													
 					<!--Bead for listening items events changes-->
 					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="roles"
 														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
@@ -90,14 +90,15 @@
 			public function reset():void
 			{
 				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				refreshDisable();
 			}
 		
-			private function onAddClick(event:Event):void
+			private function onAddClick(event:MouseEvent):void
 			{
 				sendEvent(ADD);
 			}	
 			
-			private function onRemoveClick(event:Event):void
+			private function onRemoveClick(event:MouseEvent):void
 			{
 				sendEvent(REMOVE);
 			}

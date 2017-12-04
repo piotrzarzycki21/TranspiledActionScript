@@ -83,7 +83,7 @@
 				userList.selectedIndex = -1;
 			}
 
-			private function onNewClick(event:Event):void
+			private function onNewClick(event:MouseEvent):void
 			{
 				deSelect();
 				sendEvent(NEW);
