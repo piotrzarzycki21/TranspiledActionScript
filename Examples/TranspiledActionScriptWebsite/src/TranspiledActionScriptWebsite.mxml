@@ -21,7 +21,7 @@ limitations under the License.
 				 xmlns:js="library://ns.apache.org/royale/basic" 
 				 xmlns:mdl="library://ns.apache.org/royale/mdl"
 				 xmlns:views="views.*"
-				 pageTitle="Transpiled ActionScript" applicationComplete="onApplicationComplete(event)">
+				 pageTitle="TranspiledActionScript">
 				
 	<fx:Style source="resources/mdl-styles.css"/>	
 
@@ -34,19 +34,4 @@ limitations under the License.
 			<views:MainView />
 		</js:View>
 	</mdl:initialView>
-	<fx:Script>
-	<![CDATA[
-		import utils.Highlight;
-		
-		public var highlight:Highlight = new Highlight();
-			
-		private function onApplicationComplete(event:Event):void
-		{
-			COMPILE::JS
-			{
-				highlight.initHighlight();
-			}
-		}
-	]]>
-</fx:Script>
  </mdl:Application>
