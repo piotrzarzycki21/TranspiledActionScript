@@ -20,6 +20,7 @@ limitations under the License.
 <mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:js="library://ns.apache.org/royale/basic"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl"
+		  xmlns:html="library://ns.apache.org/royale/html"
 		  initComplete="onSnippetBoxInitComplete(event)" width="100%">
 	<mdl:style>
 		<js:AllCSSStyles paddingLeft="20" paddingRight="20"/>
@@ -28,7 +29,7 @@ limitations under the License.
 		<js:ContainerDataBinding />
 	</mdl:beads>		
 	<mdl:CardTitle>
-		<js:A href="{titleLink}" text="{title}"/>
+		<html:A href="{titleLink}" text="{title}"/>
 	</mdl:CardTitle>
 	<mdl:CardSupportingText>
 		<mdl:style>
@@ -36,13 +37,13 @@ limitations under the License.
 		</mdl:style>
 		<js:TextNode text="{description}"/>
 	</mdl:CardSupportingText>	
-	<js:PRE id="preCode">
+	<html:Pre id="preCode">
 		<mdl:style>
 			<js:AllCSSStyles margin="0" padding="0"/>
 		</mdl:style>
-		<js:Code localId="snippetsCode" className="{languages}" text="{code}"/>
+		<html:Code localId="snippetsCode" className="{languages}" text="{code}"/>
 		<mdl:Spinner isActive="{_isSpinnerActive}" width="45" height="45"/>
-	</js:PRE>		
+	</html:Pre>		
 	<fx:Script>
 	<![CDATA[
 		import org.apache.royale.net.URLBinaryLoader;

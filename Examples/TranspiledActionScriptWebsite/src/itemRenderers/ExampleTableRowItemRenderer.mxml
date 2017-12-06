@@ -18,8 +18,9 @@ limitations under the License.
 
 -->
 <mdl:TableRowItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
-			  xmlns:js="library://ns.apache.org/royale/basic"
-			  xmlns:mdl="library://ns.apache.org/royale/mdl">
+						  xmlns:js="library://ns.apache.org/royale/basic"
+						  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+						  xmlns:html="library://ns.apache.org/royale/html">
 	
 	<mdl:beads>
         <js:ItemRendererDataBinding />
@@ -30,10 +31,10 @@ limitations under the License.
 		</mdl:style>
 	</mdl:TableCell>
     <mdl:TableCell>
-        <js:A text="Sources" href="{example.sourceUrl}"/>
+        <html:A text="Sources" href="{example.sourceUrl}"/>
     </mdl:TableCell>
 	<mdl:TableCell>
-        <js:A text="Live" href="{example.liveUrl}"/>
+        <html:A text="Live" href="{example.liveUrl}"/>
     </mdl:TableCell>
 	<mdl:TableCell text="{example.version}"/>
 	<fx:Script>
