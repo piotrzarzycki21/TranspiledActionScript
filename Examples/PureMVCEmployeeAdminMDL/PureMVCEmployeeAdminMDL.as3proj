@@ -18,27 +18,27 @@
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
     <option locale=""/>
-    <option customSDK="D:\flex_sdk\royale_nightly"/>
-    <option strict="True"/>
-    <option accessible="False"/>
-    <option useNetwork="True"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
-    <option useResourceBundleMetadata="True"/>
-    <option benchmark="False"/>
-    <option warnings="True"/>
-    <option es="False"/>
-    <option verboseStackTraces="False"/>
-    <option allowSourcePathOverlap="False"/>
-    <option loadConfig=""/>
-    <option linkReport=""/>
-    <option optimize="False"/>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
     <option showActionScriptWarnings="True"/>
     <option staticLinkRSL="False"/>
     <option showBindingWarnings="True"/>
     <option compilerConstants=""/>
+    <option optimize="False"/>
     <option showDeprecationWarnings="True"/>
     <option antBuildPath="build/build.xml"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option customSDK="D:\flex_sdk\royale_nightly"/>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option allowSourcePathOverlap="False"/>
+    <option useResourceBundleMetadata="True"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
+    <option benchmark="False"/>
+    <option warnings="True"/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -53,17 +53,17 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
+    <option showHiddenPaths="False"/>
     <option testMovieCommand=""/>
     <option defaultBuildTargets=""/>
-    <option showHiddenPaths="False"/>
     <option testMovie=""/>
   </options>
   <moonshineRunCustomization>
     <option deviceSimulator="null"/>
-    <option projectType="2"/>
     <option launchMethod="Simulator"/>
-    <option targetPlatform="2"/>
     <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminMDL\bin\js-debug\index.html"/>
+    <option targetPlatform="2"/>
+    <option projectType="2"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
