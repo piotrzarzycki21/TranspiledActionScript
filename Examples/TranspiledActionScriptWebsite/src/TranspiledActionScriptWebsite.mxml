@@ -25,13 +25,9 @@ limitations under the License.
 				
 	<fx:Style source="resources/mdl-styles.css"/>	
 
-	<mdl:valuesImpl>
-		<js:SimpleCSSValuesImpl />
-	</mdl:valuesImpl>
-	
 	<mdl:initialView>
-		<js:View width="100%" height="100%">
+		<js:View percentWidth="100" percentHeight="100">
 			<views:MainView />
 		</js:View>
 	</mdl:initialView>
- </mdl:Application>
+</mdl:Application>
