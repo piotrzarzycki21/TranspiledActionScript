@@ -26,8 +26,8 @@ package utils
     import org.apache.royale.mdl.Navigation;
 
     /**
-	 *  This bead allow to close Drawer when someone click on Navigation link
-	 *  It fixes issue in MDL https://github.com/google/material-design-lite/issues/1246
+	 *  This Bead allows to close the Drawer when someone clicks on the Navigation link.
+	 *  It fixes the issue in MDL https://github.com/google/material-design-lite/issues/1246
 	 */
 	public class CloseDrawerOnNavigationLinkClick implements IBead
 	{
