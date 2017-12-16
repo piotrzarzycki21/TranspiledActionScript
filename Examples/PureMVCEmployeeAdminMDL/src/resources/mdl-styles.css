@@ -37,14 +37,14 @@ global {
 {
 	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.TableUserListItemRenderer");
 	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
-	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DynamicItemsRendererFactoryForArrayListData")
+	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");	
 }
 
 .roleList
 {
 	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.TableRoleListItemRenderer");
     IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
-	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DynamicItemsRendererFactoryForArrayListData")
+	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");
 }
 
 .inputFormGroup {

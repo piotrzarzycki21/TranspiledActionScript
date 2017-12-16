@@ -14,12 +14,8 @@
 			<mdl:Table id="roleList" percentWidth="100" dataProvider="{userRoles}" 
 					   className="roleList" change="onRoleListChange(event)">
 				<mdl:beads>
-					<!--Bead for listening changes of collection source-->
-					<js:DataProviderCollectionChangeNotifier sourceID="model" propertyName="roles"
-															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />													
-					<!--Bead for listening items events changes-->
-					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="roles"
-														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+					<js:DynamicItemsRendererFactoryForArrayListData />
+					<js:DynamicRemoveAllItemRendererForArrayListData />
 				</mdl:beads>
 			</mdl:Table>
 		</mdl:GridCell>
@@ -52,8 +48,6 @@
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.RoleEnum;
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
 			import org.apache.royale.events.Event;
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.RoleProxy;
 
 			public static const ADD:String = "add";
 			public static const REMOVE:String = "remove";
@@ -61,12 +55,7 @@
 			[Bindable] public var user:UserVO;
 			[Bindable] public var selectedRole:RoleEnum;
 			[Bindable] public var userRoles:ArrayList;
-			
-			override public function get model():Object
-			{
-				var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
-				return facade.retrieveProxy(RoleProxy.NAME);	
-			}
+
 			// send the named event
 			private function sendEvent( eventName:String ):void
 			{

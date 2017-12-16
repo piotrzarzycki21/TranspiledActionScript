@@ -46,12 +46,14 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model
 		}
 		
 		// delete an item in the data
-		public function deleteItem( item:Object ):void
+		public function deleteItem(item:Object):void
 		{
 			var user:UserVO = item as UserVO;
-			for ( var i:int=0; i<users.length; i++ )
+			for (var i:int=0; i<users.length; i++)
 			{
-				if ( users[i].username == user.username ) {
+				var currentUser:UserVO = users.getItemAt(i) as UserVO;
+				if (currentUser.username == user.username) 
+				{
 					users.removeItemAt(i);
 				}
 			}

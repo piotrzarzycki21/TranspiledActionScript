@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
-		  xmlns:js="library://ns.apache.org/royale/basic">
+		  xmlns:js="library://ns.apache.org/royale/basic"
+		  initComplete="onUserListInitComplete(event)">
 	<mdl:beads>
 		<js:ContainerDataBinding />
 	</mdl:beads>	
 	<mdl:CardTitle>
 		<mdl:CardTitleText text="Users" width="100%"/>
-		<js:Label text="2"/>
+		<js:Label text="{users.length}"/>
 	</mdl:CardTitle>
 	<mdl:Grid>
 		<mdl:GridCell column="12">
@@ -21,12 +22,10 @@
 					<mdl:TableColumn headerText="Department"/>
 				</mdl:columns>
 				<mdl:beads>
-					<!--Bead for listening changes of collection source-->
-					<js:DataProviderCollectionChangeNotifier sourceID="model" propertyName="users"
-															 destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
-					<!--Bead for listening items events changes-->
-					<js:DataProviderItemsChangeNotifier sourceID="model" propertyName="users"
-														destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"  />
+					<js:DynamicItemsRendererFactoryForArrayListData />
+					<js:DynamicRemoveItemRendererForArrayListData />
+					<js:DataProviderChangeNotifier sourceID="model" propertyName="users"
+												   destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"/>
 				</mdl:beads>
 			</mdl:Table>
 		</mdl:GridCell>
@@ -35,7 +34,7 @@
 		<mdl:style>
 			<js:AllCSSStyles textAlign="right"/>
 		</mdl:style>
-		<mdl:Button text="Delete" accent="true" width="100">
+		<mdl:Button text="Delete" accent="true" width="100" click="onDeleteClick(event)">
 			<js:beads>
 				<mdl:Disabled disabled="{userList.selectedIndex == -1}"/>
 			</js:beads>
@@ -47,10 +46,10 @@
 	<![CDATA[
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
 			import org.apache.royale.collections.ArrayList;
-			import org.apache.royale.events.Event;
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.UserProxy;			
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.view.dialogs.ConfirmationDialog;
 
 			public static const NEW:String 		= "new";
 			public static const DELETE:String 	= "delete";
@@ -62,7 +61,9 @@
 			public var selectedUser:UserVO;
 			[Bindable] 
 			private var armed:Boolean = false; // delete confirmation
-
+			
+			private var dialogDelete:ConfirmationDialog = new ConfirmationDialog();
+			
 			override public function get model():Object
 			{
 				var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
@@ -89,6 +90,11 @@
 				sendEvent(NEW);
 			}
 			
+			private function onDeleteClick(event:MouseEvent):void
+			{
+				dialogDelete.showModal();
+			}
+			
 			private function onUserListChange(event:Event):void
 			{
 				if (userList.selectedIndex != -1)
@@ -96,6 +102,17 @@
 					selectedUser = userList.selectedItem as UserVO;
 					sendEvent(SELECT);
 				}
+			}
+			
+			private function onDialogDeleteConfirm(event:Event):void
+			{
+				deSelect();
+				sendEvent(DELETE);
+			}			
+			
+			private function onUserListInitComplete(event:Event):void
+			{
+				dialogDelete.addEventListener("confirm", onDialogDeleteConfirm);
 			}
 	]]>
 </fx:Script>
