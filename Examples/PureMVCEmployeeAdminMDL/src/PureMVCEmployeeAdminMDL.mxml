@@ -31,6 +31,9 @@
 					<js:AllCSSStyles alignItems="center"/>
 				</js:style>
 				<mdl:CardTitle>
+					<js:style>
+						<js:AllCSSStyles padding="0"/>
+					</js:style>
 					<mdl:beads>
 						<js:InnerHTML>
 							<![CDATA[<p><b>Employee Admin </b> Pure MVC Apache Royale Demo</p>]]>

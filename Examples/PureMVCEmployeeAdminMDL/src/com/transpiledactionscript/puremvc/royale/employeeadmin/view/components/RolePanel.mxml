@@ -2,10 +2,16 @@
 <mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
 		  xmlns:js="library://ns.apache.org/royale/basic">
+	<mdl:style>
+		<js:SimpleCSSStyles paddingTop="2" paddingLeft="5"/>
+	</mdl:style>
 	<mdl:beads>
 		<js:ContainerDataBinding />
 	</mdl:beads>	
 	<mdl:CardTitle>
+		<mdl:style>
+			<js:SimpleCSSStyles padding="2"/>
+		</mdl:style>
 		<mdl:CardTitleText text="User Roles" percentWidth="100"/>
 		<js:Label text="{user.lname + ', ' + user.fname}"/>
 	</mdl:CardTitle>
@@ -15,7 +21,8 @@
 					   className="roleList" change="onRoleListChange(event)">
 				<mdl:beads>
 					<js:DynamicItemsRendererFactoryForArrayListData />
-					<js:DynamicRemoveAllItemRendererForArrayListData />
+					<js:DynamicRemoveItemRendererForArrayListData />
+					<js:DynamicRemoveAllByNullItemRendererForArrayListData />
 				</mdl:beads>
 			</mdl:Table>
 		</mdl:GridCell>

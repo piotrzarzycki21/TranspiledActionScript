@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mdl:Dialog xmlns:fx="http://ns.adobe.com/mxml/2009"
    		    xmlns:mdl="library://ns.apache.org/royale/mdl" 
-			xmlns:js="library://ns.apache.org/royale/html" >
+			xmlns:html="library://ns.apache.org/royale/html" >
 	<fx:Metadata>
         [Event(name="confirm", type="org.apache.royale.events.Event")]
 	</fx:Metadata>	
 	<mdl:DialogContent>
-		<js:P text="Are you sure ?"/>
+		<html:P text="Are you sure ?"/>
 	</mdl:DialogContent>
 	<mdl:DialogActions>
 		<mdl:Button text="Yes" raised="true" click="onConfirmClick(event)"/>

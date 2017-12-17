@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Dialog xmlns:fx="http://ns.adobe.com/mxml/2009"
+			xmlns:mdl="library://ns.apache.org/royale/mdl" 
+			xmlns:html="library://ns.apache.org/royale/html" 
+			xmlns:js="library://ns.apache.org/royale/basic">
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>		
+	<mdl:DialogContent>
+		<html:P text="{content}"/>
+	</mdl:DialogContent>
+	<mdl:DialogActions>
+		<mdl:Button text="OK" raised="true" click="close()"/>
+	</mdl:DialogActions>
+	<fx:Script>
+	<![CDATA[
+		private var _content:String;
+		
+		[Bindable]
+		public function get content():String
+		{
+			return _content;
+		}
+		
+		public function set content(value:String):void
+		{
+			_content = value;
+		}
+	]]>
+	</fx:Script>
+</mdl:Dialog>
