@@ -66,6 +66,7 @@
 						<mdl:beads>
 							<mdl:TextPrompt prompt="Password"/>
 							<mdl:Tooltip text="Password"/>
+							<js:PasswordInputBead />
 						</mdl:beads>
 					</mdl:TextField>
 				</js:Group>
@@ -76,6 +77,7 @@
 						<mdl:beads>
 							<mdl:TextPrompt prompt="Confirm Password"/>
 							<mdl:Tooltip text="Confirm Password"/>
+							<js:PasswordInputBead />
 						</mdl:beads>
 					</mdl:TextField>
 				</js:Group>

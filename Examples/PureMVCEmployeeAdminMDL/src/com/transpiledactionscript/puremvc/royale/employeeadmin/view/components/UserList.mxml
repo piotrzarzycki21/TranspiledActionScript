@@ -25,10 +25,9 @@
 					<mdl:TableColumn headerText="Department"/>
 				</mdl:columns>
 				<mdl:beads>
-					<js:DynamicItemsRendererFactoryForArrayListData />
+					<js:DynamicAddItemRendererForArrayListData/>
 					<js:DynamicRemoveItemRendererForArrayListData />
-					<js:DataProviderChangeNotifier sourceID="model" propertyName="users"
-												   destinationPropertyName="dataProvider" changeEventName="dataProviderChanged"/>
+					<js:DynamicUpdateItemRendererForArrayListData/>
 				</mdl:beads>
 			</mdl:Table>
 		</mdl:GridCell>

@@ -14,10 +14,10 @@
 	</mdl:DialogActions>
 	<fx:Script>
 	<![CDATA[
-		private function onConfirmClick(event:Event):void
+		private function onConfirmClick(event:MouseEvent):void
 		{
 			dispatchEvent(new Event("confirm"));
-			close();
+			close();			
 		}	
 	]]>
 	</fx:Script>

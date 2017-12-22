@@ -20,7 +20,7 @@
 			<mdl:Table id="roleList" percentWidth="100" dataProvider="{userRoles}" 
 					   className="roleList" change="onRoleListChange(event)">
 				<mdl:beads>
-					<js:DynamicItemsRendererFactoryForArrayListData />
+					<js:DynamicAddItemRendererForArrayListData/>
 					<js:DynamicRemoveItemRendererForArrayListData />
 					<js:DynamicRemoveAllByNullItemRendererForArrayListData />
 				</mdl:beads>
