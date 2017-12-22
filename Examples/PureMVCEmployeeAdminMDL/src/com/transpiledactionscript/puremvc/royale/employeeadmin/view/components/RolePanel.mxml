@@ -12,8 +12,12 @@
 		<mdl:style>
 			<js:SimpleCSSStyles padding="2"/>
 		</mdl:style>
-		<mdl:CardTitleText text="User Roles" percentWidth="100"/>
-		<js:Label text="{user.lname + ', ' + user.fname}"/>
+		<mdl:CardTitleText text="User Roles" percentWidth="100">
+			<mdl:style>
+				<js:SimpleCSSStyles fontSize="18" fontWeight="bold"/>
+			</mdl:style>
+		</mdl:CardTitleText>
+		<js:Label id="usernameLabel" text="{user.lname + ', ' + user.fname}"/>
 	</mdl:CardTitle>
 	<mdl:Grid percentWidth="100" percentHeight="100">
 		<mdl:GridCell column="12">

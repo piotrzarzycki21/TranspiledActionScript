@@ -10,7 +10,11 @@
 		<mdl:style>
 			<js:SimpleCSSStyles padding="0"/>
 		</mdl:style>
-		<mdl:CardTitleText text="Users" width="100%"/>
+		<mdl:CardTitleText text="Users" width="100%">
+			<mdl:style>
+				<js:SimpleCSSStyles fontSize="18" fontWeight="bold"/>
+			</mdl:style>
+		</mdl:CardTitleText>
 		<js:Label text="{users.length}"/>
 	</mdl:CardTitle>
 	<mdl:Grid>
