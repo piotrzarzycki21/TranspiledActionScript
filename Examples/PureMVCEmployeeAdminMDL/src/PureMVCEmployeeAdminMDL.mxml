@@ -30,16 +30,33 @@
 				<js:style>
 					<js:AllCSSStyles alignItems="center"/>
 				</js:style>
-				<mdl:CardTitle>
-					<js:style>
-						<js:AllCSSStyles padding="0"/>
-					</js:style>
-					<mdl:beads>
-						<js:InnerHTML>
-							<![CDATA[<p><b>Employee Admin </b> Pure MVC Apache Royale Demo</p>]]>
-						</js:InnerHTML>
-					</mdl:beads>
-				</mdl:CardTitle>
+				<mdl:Grid percentWidth="100">
+					<mdl:style>
+						<js:AllCSSStyles alignItems="left"/>
+					</mdl:style>
+					<mdl:GridCell width="210">
+						<mdl:CardTitle>
+							<js:style>
+								<js:AllCSSStyles padding="0" paddingLeft="15"/>
+							</js:style>
+							<mdl:CardTitleText percentWidth="100" text="Employee Admin">
+								<mdl:style>
+									<js:AllCSSStyles textAlign="left" color="0xff4081" fontWeight="bold"/>
+								</mdl:style>
+							</mdl:CardTitleText>
+						</mdl:CardTitle>
+					</mdl:GridCell>
+					<mdl:GridCell>
+						<mdl:CardTitle>
+							<js:style>
+								<js:AllCSSStyles padding="0" paddingTop="7"/>
+							</js:style>
+							<mdl:beads>
+								<js:InnerHTML><![CDATA[<span>PureMVC AS3 / Apache Royale&trade; Demo</span>]]></js:InnerHTML>
+							</mdl:beads>
+						</mdl:CardTitle>
+					</mdl:GridCell>
+				</mdl:Grid>
 				<mdl:Grid>
 					<mdl:style>
 						<js:AllCSSStyles maxWidth="850"/>
