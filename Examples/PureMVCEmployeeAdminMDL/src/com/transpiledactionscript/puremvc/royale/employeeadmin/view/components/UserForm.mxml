@@ -50,7 +50,7 @@
 						<mdl:beads>
 							<mdl:TextPrompt prompt="Email"/>
 							<mdl:Tooltip text="Email"/>
-							<mdl:RestrictTextField pattern="{_emailRegex}" error="This is not an email!"/>
+							<mdl:RestrictTextField pattern="{emailRegex}" error="This is not an email!"/>
 						</mdl:beads>
 					</mdl:TextField>
 				</js:Group>
@@ -139,7 +139,8 @@
 			[Bindable] 
 			public var mode:String;
 			
-			private var _emailRegex:String = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$";
+			[Bindable]
+			private var emailRegex:String = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$";
 			
 			// submit the add or update
 			private function submit():void

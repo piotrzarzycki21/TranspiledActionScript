@@ -50,6 +50,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 			{
 				case ApplicationFacade.NEW_USER:
 					userForm.setUser( UserVO( note.getBody() ), UserForm.MODE_ADD );
+								
+					sendNotification(ApplicationFacade.REFRESH_USER_COUNT, userProxy.users.length);
 					break;
 					
 				case ApplicationFacade.USER_DELETED:
@@ -68,6 +70,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 			userProxy.addItem( userForm.user );
 			sendNotification( ApplicationFacade.USER_ADDED, userForm.user );
 			userForm.reset();
+			sendNotification(ApplicationFacade.REFRESH_USER_COUNT, userProxy.users.length);
 		}
 		
 		private function onUpdate( event:Event ):void

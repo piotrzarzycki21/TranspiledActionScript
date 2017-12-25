@@ -32,6 +32,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 
 			userProxy = UserProxy( facade.retrieveProxy( UserProxy.NAME ) );
 			userList.users = userProxy.users;
+			userList.refreshUsersCount(userList.users.length);
 		}
 		
 		private function get userList():UserList
@@ -43,7 +44,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 		{
 			return [
 					ApplicationFacade.CANCEL_SELECTED,
-					ApplicationFacade.USER_UPDATED
+					ApplicationFacade.USER_UPDATED,
+					ApplicationFacade.REFRESH_USER_COUNT
 				   ];
 		}
 		
@@ -59,6 +61,9 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 					userList.deSelect();
 					break;
 					
+				case ApplicationFacade.REFRESH_USER_COUNT:
+					userList.refreshUsersCount(note.getBody() as int);
+					break;
 			}
 		}
 		

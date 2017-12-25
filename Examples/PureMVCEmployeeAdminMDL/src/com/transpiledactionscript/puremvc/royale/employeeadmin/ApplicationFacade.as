@@ -23,7 +23,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin
 		public static const USER_ADDED:String		= "userAdded";
 		public static const USER_UPDATED:String		= "userUpdated";
 		public static const USER_DELETED:String		= "userDeleted";
-
+		public static const REFRESH_USER_COUNT:String = "refreshUserCount";
 		public static const ADD_ROLE:String 		= "addRole";
 		public static const ADD_ROLE_RESULT:String 	= "addRoleResult";
 		

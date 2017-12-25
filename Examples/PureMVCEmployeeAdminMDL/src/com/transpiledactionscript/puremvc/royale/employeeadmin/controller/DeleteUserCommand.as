@@ -24,8 +24,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 			var roleProxy:RoleProxy = RoleProxy( facade.retrieveProxy( RoleProxy.NAME ) );
 			userProxy.deleteItem( user );		
 			roleProxy.deleteItem( user );
-			sendNotification( ApplicationFacade.USER_DELETED );
-			
+			sendNotification(ApplicationFacade.USER_DELETED );
+			sendNotification(ApplicationFacade.REFRESH_USER_COUNT, userProxy.users.length);
 		}
 		
 	}
