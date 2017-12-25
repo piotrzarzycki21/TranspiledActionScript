@@ -6,8 +6,16 @@ This example illustrates how can look like the MDL Apache Royale™ port of orig
 ## How to build example:
 
 [Moonshine IDE](http://moonshine-ide.com/)
+   - Setup [Nightly build](http://apacheflexbuild.cloudapp.net:8080/job/royale-asjs/lastSuccessfulBuild/artifact/out/) of Apache Royale™ using instruction [Add the Royale SDK](https://github.com/apache/royale-asjs/wiki/Moonshine-IDE#add-the-royale-sdk) instruction. 
+   - Clone sources of [PureMVC ActionScript 3 MultiCore Framework](https://github.com/PureMVC/puremvc-as3-multicore-framework)
+   - In the "**Home**" tab, choose "**Open Apache Flex/JS Project...**" and select the folder with your example. 
+   - Right click on the "**PureMVCEmployeeAdminMDL**" in the project tree and choose "**Settings**"
+   - Go to the "**Path**" tab and add new "**Class paths**" to source folder ("src") of cloned PureMVC repository 
+   - Go to the "**Project**" menu and choose "**Build as JavaScript**" or "**Build & Run as JavaScript**".
 
 [Visual Studio Code](https://nextgenactionscript.com/)
+
+   Support for Apache Royale in VSCode will be added after official release of framework. More details [here](https://github.com/BowlerHatLLC/vscode-nextgenas/issues/144)
 
 [Apache Maven™](https://maven.apache.org/)
 
