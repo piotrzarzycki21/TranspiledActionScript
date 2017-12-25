@@ -17,16 +17,21 @@
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
-    <option allowSourcePathOverlap="False"/>
-    <option useResourceBundleMetadata="True"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
+    <option customSDK=""/>
     <option strict="True"/>
-    <option warnings="True"/>
-    <option es="False"/>
-    <option verboseStackTraces="False"/>
-    <option loadConfig=""/>
-    <option linkReport=""/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option useResourceBundleMetadata="True"/>
     <option benchmark="False"/>
     <option locale=""/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option allowSourcePathOverlap="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option warnings="True"/>
     <option showActionScriptWarnings="True"/>
     <option staticLinkRSL="False"/>
     <option showBindingWarnings="True"/>
@@ -34,11 +39,6 @@
     <option optimize="False"/>
     <option showDeprecationWarnings="True"/>
     <option antBuildPath="build/build.xml"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
-    <option customSDK=""/>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
-    <option accessible="False"/>
-    <option useNetwork="True"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -53,17 +53,17 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
-    <option defaultBuildTargets=""/>
     <option testMovie=""/>
     <option testMovieCommand=""/>
     <option showHiddenPaths="False"/>
+    <option defaultBuildTargets=""/>
   </options>
   <moonshineRunCustomization>
-    <option deviceSimulator="null"/>
-    <option targetPlatform="2"/>
     <option launchMethod="Simulator"/>
     <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminMDL\bin\js-debug\index.html"/>
     <option projectType="2"/>
+    <option deviceSimulator="null"/>
+    <option targetPlatform="2"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
