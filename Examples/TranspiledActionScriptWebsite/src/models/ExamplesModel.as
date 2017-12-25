@@ -25,10 +25,14 @@ package models
 	{
 		private var _examples:Array = [
 			new ExampleVO(
-			"The TranspiledActionScript.com website example has been created using MaterialDesignLight module of Apache Royale (FlexJS). "
+			"The TranspiledActionScript.com website example has been created using MaterialDesignLight module of Apache Royale. "
 			+ "It is still work in progress, however you can learn how to use MDL library by checking source code.", 
 			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/TranspiledActionScriptWebsite", 
-			"https://transpiledactionscript.com/", "0.0.1-Pending")
+			"https://transpiledactionscript.com/", "0.0.1-Pending"),
+			new ExampleVO("Employee Admin example is representation of application transition from Flex and PureMVC to Apache Royale.", 
+			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
+			"https://transpiledactionscript.com/examples/PureMVCEmployeeAdminMDL", 
+			"0.0.1-Pending")
 		];
 		
 		public function get examples():Array

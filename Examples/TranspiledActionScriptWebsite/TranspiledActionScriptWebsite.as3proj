@@ -16,17 +16,19 @@
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
+    <option accessible="False"/>
     <option locale=""/>
-    <option useResourceBundleMetadata="True"/>
-    <option strict="True"/>
-    <option warnings="True"/>
-    <option es="False"/>
-    <option verboseStackTraces="False"/>
     <option allowSourcePathOverlap="False"/>
+    <option useResourceBundleMetadata="True"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
+    <option warnings="True"/>
+    <option useNetwork="True"/>
+    <option verboseStackTraces="False"/>
     <option loadConfig=""/>
     <option linkReport=""/>
     <option benchmark="False"/>
     <option optimize="False"/>
+    <option es="False"/>
     <option showActionScriptWarnings="True"/>
     <option staticLinkRSL="False"/>
     <option showBindingWarnings="True"/>
@@ -35,9 +37,7 @@
     <option antBuildPath="build/build.xml"/>
     <option showUnusedTypeSelectorWarnings="True"/>
     <option customSDK="D:\flex_sdk\royale_nightly"/>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
-    <option accessible="False"/>
-    <option useNetwork="True"/>
+    <option strict="True"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -52,17 +52,17 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
-    <option showHiddenPaths="False"/>
-    <option testMovie=""/>
     <option testMovieCommand=""/>
+    <option showHiddenPaths="False"/>
     <option defaultBuildTargets=""/>
+    <option testMovie=""/>
   </options>
   <moonshineRunCustomization>
-    <option targetPlatform="2"/>
-    <option deviceSimulator="null"/>
-    <option projectType="2"/>
-    <option launchMethod="Simulator"/>
     <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\TranspiledActionScriptWebsite\bin\js-debug\index.html"/>
+    <option projectType="2"/>
+    <option deviceSimulator="null"/>
+    <option targetPlatform="2"/>
+    <option launchMethod="Simulator"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
