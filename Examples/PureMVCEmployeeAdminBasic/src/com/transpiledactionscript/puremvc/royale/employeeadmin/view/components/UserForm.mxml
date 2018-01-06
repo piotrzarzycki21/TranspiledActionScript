@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<js:PanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
+					    xmlns:js="library://ns.apache.org/royale/basic" 
+					    xmlns:html="library://ns.apache.org/royale/html"
+						title="User Profile">	
+	<js:beads>
+		<js:ContainerDataBinding />
+	</js:beads>	
+	<js:Group height="150" width="100">
+	</js:Group>
+	<js:controlBar>
+		<js:Group percentWidth="100"/>
+		<js:Group>
+			<js:beads>
+				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
+			</js:beads>
+			<js:TextButton text="Update Profile" width="130"/>
+			<js:TextButton text="Cancel" width="70"/>
+		</js:Group>		
+	</js:controlBar>
+	<fx:Script>
+	<![CDATA[
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.events.Event;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
+			import org.apache.royale.html.beads.DisableBead;
+			import org.apache.royale.mdl.beads.Disabled;
+
+			public static const ADD:String 			= "add";
+			public static const UPDATE:String 		= "update";
+			public static const CANCEL:String 		= "cancel";
+
+			public static const MODE_ADD:String 	= "modeAdd";
+			public static const MODE_EDIT:String 	= "modeEdit";
+			
+			[Bindable] 
+			public var user:UserVO;
+			[Bindable] 
+			public var mode:String;
+			
+			[Bindable]
+			private var emailRegex:String = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$";
+			
+			// submit the add or update
+			private function submit():void
+			{
+				/*user = new UserVO( username.text, 
+					  			   first.text, 
+								   last.text, 
+								   email.text, 
+								   password.text,
+								   DeptEnum( department.selectedItem )
+								 );*/
+								
+				if (user.isValid) 
+				{
+					if (mode == MODE_ADD) 
+					{
+						dispatchEvent(new Event(ADD));
+					} 
+					else 
+					{
+						dispatchEvent(new Event(UPDATE));
+					}
+				}
+				
+			}
+			
+			public function setUser( user:UserVO, mode:String ):void
+			{
+				this.user = user;
+				this.mode = mode;
+				//first.setFocus();
+				refreshDisable();
+			}
+			
+			public function reset():void
+			{
+				user = null;
+				/*usernameLabel.text = "";
+				username.text = "";
+				first.text = "";
+				last.text = "";
+				email.text = ""; 
+				password.text = ""; 
+				confirm.text = ""; 
+				department.selectedItem = DeptEnum.NONE_SELECTED;
+				refreshDisable();*/
+			}
+			
+			// cancel the add or update
+			private function cancel():void
+			{
+				dispatchEvent(new Event(CANCEL));
+			}
+			
+			// enable submit button if required fields are satisfied
+			private function enableSubmit( u:String, p:String, c:String, d:DeptEnum ):Boolean
+			{
+				return ( u != "" && p != '' && p == c && d != DeptEnum.NONE_SELECTED );
+			}
+			
+			private function refreshDisable():void
+			{									
+				/*var disableBead:DisableBead = userForm.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = user == null;
+					
+				var disabledBead:Disabled = submitButton.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;
+	
+				disabledBead = cancelButton.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null; 
+
+				disabledBead = department.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;	*/			
+			}
+	]]>
+</fx:Script>
+</js:PanelWithControlBar>
