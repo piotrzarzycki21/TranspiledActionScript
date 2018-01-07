@@ -44,15 +44,18 @@ global {
 	IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.HorizontalFlexLayout");
 }
 
+.vgroup
+{
+   IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.VerticalFlexLayout");
+}
+
 .unsetPosition
 {
 	position: unset !important;
 }
 
-/*.tableUserList
+/*.userList
 {
-	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.TableUserListItemRenderer");
-	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
 	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");	
 }*/
 

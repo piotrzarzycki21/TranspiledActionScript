@@ -71,8 +71,8 @@ limitations under the License.
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Update Profile" width="130"/>
-			<js:TextButton text="Cancel" width="70"/>
+			<js:TextButton text="Update Profile" width="130" click="submit()"/>
+			<js:TextButton text="Cancel" width="70" click="cancel()"/>
 		</js:Group>		
 	</js:controlBar>
 	<fx:Script>

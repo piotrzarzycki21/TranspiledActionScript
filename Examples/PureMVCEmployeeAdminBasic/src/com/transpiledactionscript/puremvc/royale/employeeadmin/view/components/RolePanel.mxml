@@ -22,18 +22,33 @@ limitations under the License.
 						title="User Roles">
 	<js:beads>
 		<js:ContainerDataBinding />
-	</js:beads>	
-	<js:List id="roleList" labelField="value" className="roleList"
-			 dataProvider="{userRoles}" 
-	         change="onRoleListChange(event)"/>
+	</js:beads>
+	<js:Group className="vgroup" percentWidth="100" percentHeight="100">	
+		<js:List id="roleList" labelField="value" percentHeight="100" className="roleList"
+				 dataProvider="{userRoles}" 
+		         change="onRoleListChange(event)">
+			<js:beads>
+				<js:DynamicAddItemRendererForArrayListData/>
+				<js:DynamicRemoveItemRendererForArrayListData />
+				<js:DynamicRemoveAllByNullItemRendererForArrayListData />
+			</js:beads>
+		</js:List>
+		<js:DropDownList id="rolesDropDown"
+						 selectedIndex="0" labelField="value" dataProvider="{RoleEnum.comboList}" 
+						 change="onRolesDropDownChange(event)">
+			<js:beads>
+				<js:DisableBead disabled="{user == null}"/>
+			</js:beads>								
+		</js:DropDownList>	
+	</js:Group>
 	<js:controlBar>
 		<js:Group percentWidth="100"/>
 		<js:Group>
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Add" width="70"/>
-			<js:TextButton text="Remove" width="80"/>
+			<js:TextButton text="Add" width="70" click="onAddClick(event)"/>
+			<js:TextButton text="Remove" width="80" click="onRemoveClick(event)"/>
 		</js:Group>
 	</js:controlBar>
 	<fx:Script>
@@ -62,20 +77,20 @@ limitations under the License.
 			// select role to remove
 			private function selectRoleToRemove():void
 			{
-				//rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
-			//	selectedRole = RoleEnum(roleList.selectedItem);
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				selectedRole = RoleEnum(roleList.selectedItem);
 			}
 			
 			// select role to add
 			private function selectRoleToAdd():void
 			{
-				//roleList.selectedIndex = -1;
-				//selectedRole = RoleEnum(rolesDropDown.selectedItem);
+				roleList.selectedIndex = -1;
+				selectedRole = RoleEnum(rolesDropDown.selectedItem);
 			}
 			
 			public function reset():void
 			{
-				//rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
 				refreshDisable();
 			}
 		
