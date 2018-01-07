@@ -49,10 +49,10 @@ limitations under the License.
 					<js:beads>
 						<js:VerticalLayout/>
 					</js:beads>
-					<view:UserList id="userList" percentWidth="100" height="150"/>
+					<view:UserList id="userList" percentWidth="100"/>
 					<js:Group className="hgroup">
-						<view:UserForm id="userForm" percentWidth="50" height="150"/>
-						<view:RolePanel id="rolePanel" percentWidth="50" height="150"/>
+						<view:UserForm id="userForm" percentWidth="50"/>
+						<view:RolePanel id="rolePanel" percentWidth="50"/>
 					</js:Group>
 				</js:Panel>
 			</js:Group>

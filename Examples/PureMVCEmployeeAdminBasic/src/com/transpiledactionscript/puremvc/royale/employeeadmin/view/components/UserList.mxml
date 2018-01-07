@@ -18,11 +18,24 @@ limitations under the License.
 
 -->
 <js:PanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
-					    xmlns:js="library://ns.apache.org/royale/basic"
+					    xmlns:js="library://ns.apache.org/royale/basic" 
 					    initComplete="onUserListInitComplete(event)" title="Users">
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>	
+	<js:DataGrid id="userList" percentWidth="100" rowHeight="30" className="unsetPosition" 
+	             dataProvider="{users}" change="onUserListChange(event)">
+		<js:beads>
+			<js:DataGridPercentageView />
+		</js:beads>
+		<js:columns>
+			<js:DataGridColumn label="Username" dataField="username" columnWidth="25"/>
+			<js:DataGridColumn label="First name" dataField="fname" columnWidth="25"/>
+			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="25"/>
+			<js:DataGridColumn label="Email" dataField="email" columnWidth="25"/>
+			<js:DataGridColumn label="Department" columnWidth="25"/>
+		</js:columns>
+	</js:DataGrid>
 	<js:controlBar>
 		<js:Group percentWidth="100"/>
 		<js:Group>
@@ -32,37 +45,7 @@ limitations under the License.
 			<js:TextButton text="Delete" width="80"/>
 			<js:TextButton text="New" width="70"/>
 		</js:Group>		
-	</js:controlBar>
-	<!--<mdl:Grid>
-		<mdl:GridCell column="12">
-			<mdl:Table id="userList" percentWidth="100" dataProvider="{users}" 
-					   className="tableUserList" change="onUserListChange(event)">
-				<mdl:columns>
-					<mdl:TableColumn headerText="Username"/>
-					<mdl:TableColumn headerText="First name"/>
-					<mdl:TableColumn headerText="Last name"/>
-					<mdl:TableColumn headerText="Email"/>
-					<mdl:TableColumn headerText="Department"/>
-				</mdl:columns>
-				<mdl:beads>
-					<js:DynamicAddItemRendererForArrayListData/>
-					<js:DynamicRemoveItemRendererForArrayListData />
-					<js:DynamicUpdateItemRendererForArrayListData/>
-				</mdl:beads>
-			</mdl:Table>
-		</mdl:GridCell>
-	</mdl:Grid>
-	<mdl:CardActions>
-		<mdl:style>
-			<js:AllCSSStyles textAlign="right"/>
-		</mdl:style>
-		<mdl:Button text="Delete" accent="true" width="100" click="onDeleteClick(event)">
-			<js:beads>
-				<mdl:Disabled disabled="{userList.selectedIndex == -1}"/>
-			</js:beads>
-		</mdl:Button>
-		<mdl:Button text="New" accent="true" width="100" click="onNewClick(event)"/>
-	</mdl:CardActions>-->	
+	</js:controlBar>	
 	<fx:Script>
 	
 	<![CDATA[
@@ -99,7 +82,7 @@ limitations under the License.
 			public function deSelect():void
 			{
 				armed=false;
-				//userList.selectedIndex = -1;
+				userList.selectedIndex = -1;
 			}
 
 			public function refreshUsersCount(count:int):void
@@ -120,11 +103,11 @@ limitations under the License.
 			
 			private function onUserListChange(event:Event):void
 			{
-				/*if (userList.selectedIndex != -1)
+				if (userList.selectedIndex != -1)
 				{
-					selectedUser = userList.selectedItem as UserVO;
+					selectedUser = users.getItemAt(userList.selectedIndex)  as UserVO;
 					sendEvent(SELECT);
-				}*/
+				}
 			}
 			
 			private function onDialogDeleteConfirm(event:Event):void
