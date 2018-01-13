@@ -17,28 +17,28 @@
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
-    <option showBindingWarnings="True"/>
-    <option compilerConstants=""/>
-    <option showDeprecationWarnings="True"/>
-    <option antBuildPath="build/build.xml"/>
     <option showUnusedTypeSelectorWarnings="True"/>
-    <option customSDK="D:\flex_sdk\royale_jsonly_nightly"/>
+    <option customSDK=""/>
     <option strict="True"/>
     <option accessible="False"/>
-    <option locale=""/>
+    <option useNetwork="True"/>
     <option allowSourcePathOverlap="False"/>
     <option useResourceBundleMetadata="True"/>
-    <option benchmark="False"/>
-    <option warnings="True"/>
     <option additional="-debug=true"/>
-    <option useNetwork="True"/>
+    <option benchmark="False"/>
+    <option locale=""/>
+    <option es="False"/>
     <option verboseStackTraces="False"/>
     <option loadConfig=""/>
     <option linkReport=""/>
-    <option optimize="False"/>
-    <option es="False"/>
+    <option warnings="True"/>
     <option showActionScriptWarnings="True"/>
     <option staticLinkRSL="False"/>
+    <option showBindingWarnings="True"/>
+    <option compilerConstants=""/>
+    <option optimize="False"/>
+    <option showDeprecationWarnings="True"/>
+    <option antBuildPath="build/build.xml"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -59,11 +59,11 @@
     <option showHiddenPaths="False"/>
   </options>
   <moonshineRunCustomization>
+    <option targetPlatform="2"/>
+    <option deviceSimulator="null"/>
     <option projectType="2"/>
     <option launchMethod="Simulator"/>
-    <option targetPlatform="2"/>
     <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminBasic\bin\js-debug\index.html"/>
-    <option deviceSimulator="null"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>

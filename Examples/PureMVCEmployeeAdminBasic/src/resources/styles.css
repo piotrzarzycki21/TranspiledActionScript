@@ -19,18 +19,11 @@
 ////////////////////////////////////////////////////////////////////////////////
 */
 
-@namespace "http://www.w3.org/1999/xhtml";
 @namespace js "library://ns.apache.org/royale/basic";
 	
 global {
    IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
-}
-
-.royale *, . royale *:before, . royale *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+}	
 
 .centerElement
 {
@@ -54,16 +47,22 @@ global {
 	position: unset !important;
 }
 
-/*.userList
-{
-	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");	
-}*/
-
 .roleList
 {
 	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");
 }
 
+.userList
+{
+	position: unset !important;
+	IBeadModel: ClassReference("org.apache.royale.html.beads.models.DataGridModel");
+	IBeadView: ClassReference("org.apache.royale.html.beads.DataGridPercentageView");
+}
+
+.userListColumn {
+	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForCollectionView");
+}
+		
 .inputFormGroup {
     flex-wrap: nowrap;
     display: flex;

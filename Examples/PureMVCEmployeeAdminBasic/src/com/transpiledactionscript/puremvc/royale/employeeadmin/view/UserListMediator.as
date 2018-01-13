@@ -76,7 +76,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 		
 		private function onDelete( event:Event ):void
 		{
-			super.sendNotification( ApplicationFacade.DELETE_USER,
+			super.sendNotification( ApplicationFacade.CONFIRM_DELETE_USER,
 							  userList.selectedUser );
 		}
 		

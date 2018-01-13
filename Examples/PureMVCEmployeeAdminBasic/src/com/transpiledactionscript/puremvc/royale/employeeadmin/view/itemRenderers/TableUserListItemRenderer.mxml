@@ -17,9 +17,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<mdl:TableRowItemSingleSelectionMouseRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
-                       		   				  xmlns:js="library://ns.apache.org/royale/basic"
-                       		   				  xmlns:mdl="library://ns.apache.org/royale/mdl">
+<js:StringItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                       xmlns:js="library://ns.apache.org/royale/basic">
   <fx:Script>
 		<![CDATA[
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
@@ -31,7 +30,7 @@ limitations under the License.
 			{
 				super.data = value;
 				
-				if (value)
+				if (labelField == "departament")
 				{
 					departament = value.department.value;
 				}
@@ -47,9 +46,4 @@ limitations under the License.
 	<mdl:beads>
         <js:ItemRendererDataBinding />
     </mdl:beads>
-	<mdl:TableCell text="{user.username}"/>
-	<mdl:TableCell text="{user.fname}"/>
-	<mdl:TableCell text="{user.lname}"/> 
-	<mdl:TableCell text="{user.email}"/> 
-	<mdl:TableCell text="{user.department.value}"/>
-</mdl:TableRowItemSingleSelectionMouseRenderer>
+</js:StringItemRenderer>

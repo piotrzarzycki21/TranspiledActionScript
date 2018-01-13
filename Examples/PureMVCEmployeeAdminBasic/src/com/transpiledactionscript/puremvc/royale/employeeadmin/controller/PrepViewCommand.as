@@ -10,6 +10,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 	import com.transpiledactionscript.puremvc.royale.employeeadmin.view.UserListMediator;
 	import org.puremvc.as3.multicore.interfaces.INotification;
 	import org.puremvc.as3.multicore.patterns.command.SimpleCommand;
+	import com.transpiledactionscript.puremvc.royale.employeeadmin.view.MainAppMediator;
 
 	public class PrepViewCommand extends SimpleCommand
 	{
@@ -23,6 +24,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 		override public function execute( note:INotification ) : void	
 		{
 			var app:PureMVCEmployeeAdminBasic = PureMVCEmployeeAdminBasic ( note.getBody() );
+			facade.registerMediator( new MainAppMediator( app ) );
 		    facade.registerMediator( new UserFormMediator( app.userForm ) );
 			facade.registerMediator( new UserListMediator( app.userList ) );
 			facade.registerMediator( new RolePanelMediator( app.rolePanel ) );

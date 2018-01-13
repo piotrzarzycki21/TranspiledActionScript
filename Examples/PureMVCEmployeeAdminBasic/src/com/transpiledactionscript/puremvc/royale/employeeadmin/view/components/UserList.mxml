@@ -19,21 +19,20 @@ limitations under the License.
 -->
 <js:PanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
 					    xmlns:js="library://ns.apache.org/royale/basic" 
-					    initComplete="onUserListInitComplete(event)" title="Users">
+					    title="Users">
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>	
-	<js:DataGrid id="userList" percentWidth="100" rowHeight="30" className="unsetPosition" 
+	
+	<js:DataGrid id="userList" percentWidth="100" rowHeight="30" 
+				 className="userList" 
 	             dataProvider="{users}" change="onUserListChange(event)">
-		<js:beads>
-			<js:DataGridPercentageView />
-		</js:beads>
 		<js:columns>
-			<js:DataGridColumn label="Username" dataField="username" columnWidth="25"/>
-			<js:DataGridColumn label="First name" dataField="fname" columnWidth="25"/>
-			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="25"/>
-			<js:DataGridColumn label="Email" dataField="email" columnWidth="25"/>
-			<js:DataGridColumn label="Department" columnWidth="25"/>
+			<js:DataGridColumn label="Username" dataField="username" columnWidth="25" className="userListColumn" />
+			<js:DataGridColumn label="First name" dataField="fname" columnWidth="25" className="userListColumn"/>
+			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="25" className="userListColumn"/>
+			<js:DataGridColumn label="Email" dataField="email" columnWidth="25" className="userListColumn"/>
+			<js:DataGridColumn label="Department" dataField="department" columnWidth="25" className="userListColumn"/>
 		</js:columns>
 	</js:DataGrid>
 	<js:controlBar>
@@ -42,7 +41,7 @@ limitations under the License.
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Delete" width="80"/>
+			<js:TextButton text="Delete" width="80" click="onDeleteClick(event)"/>
 			<js:TextButton text="New" width="70"/>
 		</js:Group>		
 	</js:controlBar>	
@@ -50,11 +49,7 @@ limitations under the License.
 	
 	<![CDATA[
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
-			import org.apache.royale.collections.ArrayList;
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.UserProxy;			
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
-			import com.transpiledactionscript.puremvc.royale.employeeadmin.view.dialogs.ConfirmationDialog;
+			import org.apache.royale.collections.ArrayList;			
 
 			public static const NEW:String 		= "new";
 			public static const DELETE:String 	= "delete";
@@ -68,8 +63,6 @@ limitations under the License.
 			private var armed:Boolean = false; // delete confirmation
 			[Bindable]
 			private var usersCount:int;
-	
-			private var dialogDelete:ConfirmationDialog = new ConfirmationDialog();
 
 			// send the named event and reset armed state 
 			private function sendEvent( eventName:String ):void
@@ -98,7 +91,8 @@ limitations under the License.
 			
 			private function onDeleteClick(event:MouseEvent):void
 			{
-				dialogDelete.showModal();
+				deSelect();
+				sendEvent(DELETE);
 			}
 			
 			private function onUserListChange(event:Event):void
@@ -108,18 +102,7 @@ limitations under the License.
 					selectedUser = users.getItemAt(userList.selectedIndex)  as UserVO;
 					sendEvent(SELECT);
 				}
-			}
-			
-			private function onDialogDeleteConfirm(event:Event):void
-			{
-				deSelect();
-				sendEvent(DELETE);
 			}			
-			
-			private function onUserListInitComplete(event:Event):void
-			{
-				dialogDelete.addEventListener("confirm", onDialogDeleteConfirm);
-			}
 	]]>
 </fx:Script>
 </js:PanelWithControlBar>

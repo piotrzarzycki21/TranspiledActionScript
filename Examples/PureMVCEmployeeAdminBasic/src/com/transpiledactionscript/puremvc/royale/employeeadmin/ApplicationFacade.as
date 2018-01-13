@@ -15,6 +15,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin
 		public static const STARTUP:String 			= "startup";
 		
 		public static const NEW_USER:String 		= "newUser";
+		public static const CONFIRM_DELETE_USER:String = "confirmDeleteUser";
 		public static const DELETE_USER:String 		= "deleteUser";
 		public static const CANCEL_SELECTED:String	= "cancelSelected";
 		
