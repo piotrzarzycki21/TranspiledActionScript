@@ -7,8 +7,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 {
 	import org.puremvc.as3.multicore.interfaces.INotification;
 	import org.puremvc.as3.multicore.patterns.command.SimpleCommand;
-	import org.apache.royale.html.Alert;
-	import com.transpiledactionscript.puremvc.royale.employeeadmin.view.dialogs.InfoDialog;
+	import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
 
 	public class AddRoleResultCommand extends SimpleCommand
 	{
@@ -16,11 +15,9 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 		{
 			var result:Boolean = Boolean( notification.getBody() );
 			
-			if ( result == false ) 
-			{
-				var infoDialog:InfoDialog = new InfoDialog();
-				infoDialog.content = "Role already exists for this user!";
-				infoDialog.showModal();
+			if (result == false) 
+			{			
+				sendNotification(ApplicationFacade.ROLE_EXISTS);
 			}
 		}
 		

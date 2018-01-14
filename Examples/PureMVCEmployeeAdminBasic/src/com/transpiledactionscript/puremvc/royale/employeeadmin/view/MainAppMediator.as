@@ -22,7 +22,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 		override public function listNotificationInterests():Array
 		{
 			return [
-				ApplicationFacade.CONFIRM_DELETE_USER
+				ApplicationFacade.CONFIRM_DELETE_USER,
+				ApplicationFacade.ROLE_EXISTS
 			];
 		}
 		
@@ -36,6 +37,11 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 					currentAlert.addEventListener("close", onDialogDeleteConfirm);
 					centerPopup();
 					break;
+				case ApplicationFacade.ROLE_EXISTS:
+					currentAlert = Alert.show("Role already exists for this user!", this.viewComponent, "", Alert.OK);
+					currentAlert.addEventListener("close", onDialogDeleteConfirm);
+					centerPopup();
+					break;				
 			}
 		}
 		
@@ -47,7 +53,16 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 			{
 				sendNotification(ApplicationFacade.DELETE_USER, userForDelete);
 			}
+			
+			currentAlert.removeEventListener("close", onDialogDeleteConfirm);
+			currentAlert = null;
 		}
+		
+		private function onDialogRoleExists(event:CloseEvent):void
+		{
+			currentAlert.removeEventListener("close", onDialogRoleExists);
+			currentAlert = null;	
+		}		
 		
 		private function centerPopup():void
 		{

@@ -27,6 +27,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin
 		public static const REFRESH_USER_COUNT:String = "refreshUserCount";
 		public static const ADD_ROLE:String 		= "addRole";
 		public static const ADD_ROLE_RESULT:String 	= "addRoleResult";
+		public static const ROLE_EXISTS:String      = "roleExists";
 		
 		public function ApplicationFacade(key:String):void
 		{

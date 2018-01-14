@@ -17,12 +17,20 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<js:PanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
-		  				xmlns:js="library://ns.apache.org/royale/basic"
-						title="User Roles">
+<components:CustomPanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  				              xmlns:js="library://ns.apache.org/royale/basic" 
+						              xmlns:components="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+						              xmlns:model="com.transpiledactionscript.puremvc.royale.employeeadmin.model.*"
+						              title="User Roles">
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>
+	<js:model>
+		<model:CustomPanelWithControlBarModel />
+	</js:model>
+	<js:view>
+		<components:CustomPanelWithControlBarView />
+	</js:view>
 	<js:style>
 		<js:SimpleCSSStyles marginLeft="2" margin="4"/>
 	</js:style>
@@ -56,7 +64,7 @@ limitations under the License.
 				</js:beads>
 			</js:TextButton>
 			<js:TextButton id="removeRole" text="Remove" width="80" click="onRemoveClick(event)">
-			<js:beads>
+				<js:beads>
 					<js:DisableBead disabled="true"/>
 				</js:beads>
 			</js:TextButton>
@@ -140,4 +148,4 @@ limitations under the License.
 			}
 	]]>
 </fx:Script>
-</js:PanelWithControlBar>
+</components:CustomPanelWithControlBar>

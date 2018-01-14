@@ -77,9 +77,11 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 					break;
 					
 				case ApplicationFacade.USER_SELECTED:
-					rolePanel.user = UserVO( note.getBody() );
+					var user:UserVO = UserVO(note.getBody());
+					rolePanel.user = user;
 					rolePanel.userRoles = roleProxy.getUserRoles( rolePanel.user.username );
 					rolePanel.reset();
+					rolePanel.info = user.lname + ', ' + user.fname;
 					break;
 					
 				case ApplicationFacade.ADD_ROLE_RESULT:
@@ -102,6 +104,7 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.view
 		
 		private function clearForm():void
 		{		
+			rolePanel.info = null;
 			rolePanel.user = null;
 			rolePanel.userRoles = null;
 			rolePanel.reset();

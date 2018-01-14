@@ -17,13 +17,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<js:PanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
-					    xmlns:js="library://ns.apache.org/royale/basic" 
-					    xmlns:html="library://ns.apache.org/royale/html"
-						title="User Profile">	
+<components:CustomPanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
+					    			  xmlns:js="library://ns.apache.org/royale/basic" 
+						              xmlns:components="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+									  xmlns:model="com.transpiledactionscript.puremvc.royale.employeeadmin.model.*"
+					                  xmlns:html="library://ns.apache.org/royale/html"
+						              title="User Profile">	
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>	
+	<js:model>
+		<model:CustomPanelWithControlBarModel />
+	</js:model>
+	<js:view>
+		<components:CustomPanelWithControlBarView />
+	</js:view>
 	<js:style>
 		<js:SimpleCSSStyles marginRight="2" margin="4"/>
 	</js:style>
@@ -153,13 +161,14 @@ limitations under the License.
 			{
 				this.user = user;
 				this.mode = mode;
+				this.info = user.username;
 				refreshDisable();
 			}
 			
 			public function reset():void
 			{
 				user = null;
-				//usernameLabel.text = "";
+				this.info = null;
 				username.text = "";
 				first.text = "";
 				last.text = "";
@@ -197,4 +206,4 @@ limitations under the License.
 			}
 	]]>
 </fx:Script>
-</js:PanelWithControlBar>
+</components:CustomPanelWithControlBar>
