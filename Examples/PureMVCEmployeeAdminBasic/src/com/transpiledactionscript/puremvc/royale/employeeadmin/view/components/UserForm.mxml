@@ -46,23 +46,35 @@ limitations under the License.
 			<js:Group className="inputFormGroup">
 				<html:H6 text="Username" width="270" className="inputFormItem"/>
 				<js:TextInput id="username" percentWidth="100"
-							   text="{user.username}" className="inputFormItem"/>
+							   text="{user.username}" className="inputFormItem"
+  							  change="onUserFormChange(event)"/>
 			</js:Group>
 			<js:Group className="inputFormGroup">
 				<html:H6 text="Password" width="270" className="inputFormItem"/>
 				<js:TextInput id="password" percentWidth="100"
-							   text="{user.password}" className="inputFormItem"/>
+							   text="{user.password}" className="inputFormItem"
+							  change="onUserFormChange(event)">
+					<js:beads>
+						<js:PasswordInputBead />
+					</js:beads>						
+				</js:TextInput>						
 			</js:Group>
 			<js:Group className="inputFormGroup">
 				<html:H6 text="Confirm Password" width="270" className="inputFormItem"/>
 				<js:TextInput id="confirm" percentWidth="100"
-							   text="{user.password}" className="inputFormItem"/>
+							   text="{user.password}" className="inputFormItem"
+							 change="onUserFormChange(event)">
+					<js:beads>
+						<js:PasswordInputBead />
+					</js:beads>						
+				</js:TextInput>	
 			</js:Group>
 			<js:Group className="inputFormGroup">
 				<html:H6 text="Department" width="270" className="inputFormItem"/>
 				<js:DropDownList id="department" percentWidth="100"
 								  selectedIndex="{user.department.ordinal + 1}" labelField="value" 
-								  dataProvider="{DeptEnum.comboList}" className="inputFormItem"/>														
+								  dataProvider="{DeptEnum.comboList}" className="inputFormItem"
+								 change="onUserFormChange(event)"/>														
 			</js:Group>
 	</js:Form>	
 	<js:controlBar>
@@ -104,6 +116,11 @@ limitations under the License.
 			[Bindable]
 			private var emailRegex:String = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$";
 
+			private function onUserFormChange(event:Event):void
+			{
+				refreshDisable();	
+			}
+		
 			// submit the add or update
 			private function submit():void
 			{

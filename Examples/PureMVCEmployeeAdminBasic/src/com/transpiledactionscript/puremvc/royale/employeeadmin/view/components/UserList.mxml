@@ -46,7 +46,7 @@ limitations under the License.
 					<js:DisableBead disabled="true"/>
 				</js:beads>
 			</js:TextButton>
-			<js:TextButton text="New" width="70"/>
+			<js:TextButton text="New" width="70" click="onNewClick(event)"/>
 		</js:Group>		
 	</js:controlBar>	
 	<fx:Script>
