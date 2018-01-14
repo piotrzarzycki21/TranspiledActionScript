@@ -41,7 +41,11 @@ limitations under the License.
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Delete" width="80" click="onDeleteClick(event)"/>
+			<js:TextButton id="userDeleteButton" text="Delete" width="80" click="onDeleteClick(event)">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
 			<js:TextButton text="New" width="70"/>
 		</js:Group>		
 	</js:controlBar>	
@@ -102,7 +106,15 @@ limitations under the License.
 					selectedUser = users.getItemAt(userList.selectedIndex)  as UserVO;
 					sendEvent(SELECT);
 				}
+				
+				refreshDisable();
 			}			
+			
+			private function refreshDisable():void
+			{									
+				var disableBead:DisableBead = userDeleteButton.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = userList.selectedIndex == -1;	
+			}
 	]]>
 </fx:Script>
 </js:PanelWithControlBar>

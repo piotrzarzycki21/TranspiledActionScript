@@ -67,18 +67,25 @@ limitations under the License.
 	</js:Form>	
 	<js:controlBar>
 		<js:Group percentWidth="100"/>
-		<js:Group>
+		<js:Group id="userFormControlBar">
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Update Profile" width="130" click="submit()"/>
-			<js:TextButton text="Cancel" width="70" click="cancel()"/>
+			<js:TextButton id="submitData" text="Update Profile" width="130" click="submit()">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
+			<js:TextButton id="cancelSubmit" text="Cancel" width="70" click="cancel()">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
 		</js:Group>		
 	</js:controlBar>
 	<fx:Script>
 	<![CDATA[
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
-			import org.apache.royale.events.Event;
 			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.DeptEnum;
 			import org.apache.royale.html.beads.DisableBead;
 
@@ -96,7 +103,7 @@ limitations under the License.
 			
 			[Bindable]
 			private var emailRegex:String = "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$";
-			
+
 			// submit the add or update
 			private function submit():void
 			{
@@ -159,6 +166,14 @@ limitations under the License.
 			{									
 				var disableBead:DisableBead = userForm.getBeadByType(DisableBead) as DisableBead;
 				disableBead.disabled = user == null;		
+				
+				disableBead = submitData.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = !enableSubmit(username.text, confirm.text, password.text, department.selectedItem as DeptEnum);
+				
+				disableBead = cancelSubmit.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = user == null;
+				
+				submitData.text = mode == MODE_ADD ? 'Add User' : 'Update Profile';
 			}
 	]]>
 </fx:Script>

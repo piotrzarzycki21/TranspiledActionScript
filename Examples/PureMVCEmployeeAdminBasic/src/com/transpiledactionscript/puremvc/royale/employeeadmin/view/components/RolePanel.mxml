@@ -47,8 +47,16 @@ limitations under the License.
 			<js:beads>
 				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
 			</js:beads>
-			<js:TextButton text="Add" width="70" click="onAddClick(event)"/>
-			<js:TextButton text="Remove" width="80" click="onRemoveClick(event)"/>
+			<js:TextButton id="addRole" text="Add" width="70" click="onAddClick(event)">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
+			<js:TextButton id="removeRole" text="Remove" width="80" click="onRemoveClick(event)">
+			<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
 		</js:Group>
 	</js:controlBar>
 	<fx:Script>
@@ -118,14 +126,14 @@ limitations under the License.
 			
 			private function refreshDisable():void
 			{									
-				/*var disabledBead:Disabled = rolesDropDown.getBeadByType(Disabled) as Disabled;
+				var disabledBead:DisableBead = rolesDropDown.getBeadByType(DisableBead) as DisableBead;
 				disabledBead.disabled = user == null;
 	
-				disabledBead = addRole.getBeadByType(Disabled) as Disabled;
+				disabledBead = addRole.getBeadByType(DisableBead) as DisableBead;
 				disabledBead.disabled = rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED; 
 
-				disabledBead = removeRole.getBeadByType(Disabled) as Disabled;
-				disabledBead.disabled = roleList.selectedIndex == -1;	*/			
+				disabledBead = removeRole.getBeadByType(DisableBead) as DisableBead;
+				disabledBead.disabled = roleList.selectedIndex == -1;			
 			}
 	]]>
 </fx:Script>
