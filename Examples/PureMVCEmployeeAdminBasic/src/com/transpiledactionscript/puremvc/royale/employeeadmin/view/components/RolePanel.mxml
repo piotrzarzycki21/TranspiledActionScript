@@ -23,6 +23,9 @@ limitations under the License.
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>
+	<js:style>
+		<js:SimpleCSSStyles marginLeft="2" margin="4"/>
+	</js:style>
 	<js:Group className="vgroup" percentWidth="100" percentHeight="100">	
 		<js:List id="roleList" labelField="value" percentHeight="100" className="roleList"
 				 dataProvider="{userRoles}" 

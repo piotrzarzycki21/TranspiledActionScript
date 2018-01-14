@@ -59,6 +59,11 @@ global {
 	IBeadView: ClassReference("org.apache.royale.html.beads.DataGridPercentageView");
 }
 
+.userListDepartmentColumn {
+	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.UserListDepartmentItemRenderer");
+   	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForCollectionView");
+}
+
 .userListColumn {
 	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForCollectionView");
 }

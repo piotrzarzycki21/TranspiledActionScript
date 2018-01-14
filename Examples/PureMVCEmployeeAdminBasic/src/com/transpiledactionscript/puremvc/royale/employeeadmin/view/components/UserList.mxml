@@ -23,7 +23,9 @@ limitations under the License.
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>	
-	
+	<js:style>
+		<js:SimpleCSSStyles margin="4"/>
+	</js:style>
 	<js:DataGrid id="userList" percentWidth="100" rowHeight="30" 
 				 className="userList" 
 	             dataProvider="{users}" change="onUserListChange(event)">
@@ -32,7 +34,8 @@ limitations under the License.
 			<js:DataGridColumn label="First name" dataField="fname" columnWidth="25" className="userListColumn"/>
 			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="25" className="userListColumn"/>
 			<js:DataGridColumn label="Email" dataField="email" columnWidth="25" className="userListColumn"/>
-			<js:DataGridColumn label="Department" dataField="department" columnWidth="25" className="userListColumn"/>
+			<js:DataGridColumn label="Department" dataField="department" columnWidth="25" 
+							   className="userListDepartmentColumn"/>
 		</js:columns>
 	</js:DataGrid>
 	<js:controlBar>

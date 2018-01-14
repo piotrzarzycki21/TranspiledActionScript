@@ -24,6 +24,9 @@ limitations under the License.
 	<js:beads>
 		<js:ContainerDataBinding />
 	</js:beads>	
+	<js:style>
+		<js:SimpleCSSStyles marginRight="2" margin="4"/>
+	</js:style>
 	<js:Form id="userForm" action="#" className="unsetPosition">
 			<js:beads>
 				<js:DisableBead disabled="{user == null}"/>

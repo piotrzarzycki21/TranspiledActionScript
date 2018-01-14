@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<js:MXMLItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+			 		 xmlns:js="library://ns.apache.org/royale/basic">
+	<js:beads>
+        <js:ItemRendererDataBinding />
+    </js:beads>
+	<js:Label text="{data[labelField].value}"/>
+</js:MXMLItemRenderer>
