@@ -6,7 +6,7 @@ This example illustrates how the MDL Apache Royale™ [Employee Admin (Flex)](ht
 ## How to build the example:
 
 [Moonshine IDE](http://moonshine-ide.com/)
-   - Setup the Apache Royale™ [Nightly build](http://apacheflexbuild.cloudapp.net:8080/job/royale-asjs/lastSuccessfulBuild/artifact/out/) using the [Add the Royale SDK](https://github.com/apache/royale-asjs/wiki/Moonshine-IDE#add-the-royale-sdk) instruction. 
+   - Setup the Apache Royale™ [Nightly build](http://royale.apache.org/download/) using the [Add the Royale SDK](https://github.com/apache/royale-asjs/wiki/Moonshine-IDE#add-the-royale-sdk) instruction. 
    - Clone the sources of the [PureMVC ActionScript 3 MultiCore Framework](https://github.com/PureMVC/puremvc-as3-multicore-framework)
    - In the "**Home**" tab, choose "**Open Apache Flex/JS Project...**" and select the folder with your example. 
    - Right click on the "**PureMVCEmployeeAdminMDL**" in the project tree and choose "**Settings**".

@@ -17,28 +17,28 @@
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
-    <option customSDK=""/>
+    <option customSDK="D:\flex_sdk\royale_asjs_nightly"/>
     <option strict="True"/>
     <option accessible="False"/>
     <option useNetwork="True"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
+    <option allowSourcePathOverlap="False"/>
     <option useResourceBundleMetadata="True"/>
     <option benchmark="False"/>
-    <option locale=""/>
+    <option warnings="True"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html -debug=true"/>
     <option es="False"/>
-    <option verboseStackTraces="False"/>
-    <option allowSourcePathOverlap="False"/>
+    <option locale=""/>
     <option loadConfig=""/>
     <option linkReport=""/>
-    <option warnings="True"/>
-    <option showActionScriptWarnings="True"/>
+    <option optimize="False"/>
+    <option verboseStackTraces="False"/>
     <option staticLinkRSL="False"/>
     <option showBindingWarnings="True"/>
     <option compilerConstants=""/>
-    <option optimize="False"/>
     <option showDeprecationWarnings="True"/>
     <option antBuildPath="build/build.xml"/>
+    <option showActionScriptWarnings="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -53,17 +53,17 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
+    <option defaultBuildTargets=""/>
     <option testMovie=""/>
     <option testMovieCommand=""/>
     <option showHiddenPaths="False"/>
-    <option defaultBuildTargets=""/>
   </options>
   <moonshineRunCustomization>
-    <option launchMethod="Simulator"/>
-    <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminMDL\bin\js-debug\index.html"/>
-    <option projectType="2"/>
     <option deviceSimulator="null"/>
     <option targetPlatform="2"/>
+    <option projectType="2"/>
+    <option launchMethod="Simulator"/>
+    <option urlToLaunch=""/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
