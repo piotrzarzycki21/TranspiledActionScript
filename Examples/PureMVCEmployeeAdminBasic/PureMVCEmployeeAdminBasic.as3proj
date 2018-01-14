@@ -63,7 +63,7 @@
     <option deviceSimulator="null"/>
     <option projectType="2"/>
     <option launchMethod="Simulator"/>
-    <option urlToLaunch="D:\flex_sdk\Projects\TranspiledActionScript_Project\transpiledactionscript\Examples\PureMVCEmployeeAdminBasic\bin\js-debug\index.html"/>
+    <option urlToLaunch=""/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
