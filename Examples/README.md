@@ -5,3 +5,12 @@
 - Provides information how to use states
 - Provides information how to use "inject_html" feature
 - Provides information how to use Binding
+
+### PureMVCEmployeeAdminBasic and PureMVCEmployeeAdminMDL
+- PureMVCEmployeeAdminBasic example uses [Basic](https://github.com/apache/royale-asjs/tree/develop/frameworks/projects/Basic) module components
+- PureMVCEmployeeAdminMDL example uses (MaterialDesignLite)[https://github.com/apache/royale-asjs/tree/develop/frameworks/projects/MaterialDesignLite] module components.
+- Provides information how to use PureMVC with Apache Royale™
+- Provides the possible scenario how existing Flex application migration to JavaScript using Apache Royale™ might look like 
+- Provides information how create and manage lists where you can add/remove/update items dynamically
+
+
