@@ -25,6 +25,17 @@ global {
    IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
 }	
 
+js|DataGrid .DataItemRenderer {
+	border: solid 0.5px #ACACAC;
+	border-top: none;
+}
+
+js|DataGrid .StringItemRenderer {
+	border: solid 0.5px #ACACAC;
+	border-top: none;
+    border-right: none;
+}
+
 .centerElement
 {
 	display: flex;
@@ -55,17 +66,11 @@ global {
 .userList
 {
 	position: unset !important;
-	IBeadModel: ClassReference("org.apache.royale.html.beads.models.DataGridModel");
 	IBeadView: ClassReference("org.apache.royale.html.beads.DataGridPercentageView");
 }
 
 .userListDepartmentColumn {
 	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.UserListDepartmentItemRenderer");
-   	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForCollectionView");
-}
-
-.userListColumn {
-	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForCollectionView");
 }
 	
 .titleBarWithAdditionalInfo {
