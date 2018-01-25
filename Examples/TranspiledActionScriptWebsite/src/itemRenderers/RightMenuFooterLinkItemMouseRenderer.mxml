@@ -4,7 +4,7 @@
 			  					 xmlns:mdl="library://ns.apache.org/royale/mdl">
 	
 	<mdl:style>
-		<js:AllCSSStyles fontFamily="Poppins" color="#FFFFFF" marginRight="30"/>
+		<js:AllCSSStyles fontFamily="Poppins" color="#FFFFFF" marginTop="15" marginRight="30"/>
 	</mdl:style>		
 	<fx:Script>
 	<![CDATA[
