@@ -41,7 +41,13 @@ global {
 
 .navigationChange
 {
-	IItemRenderer: ClassReference("org.apache.royale.mdl.itemRenderers.NavigationLinkItemMouseRenderer");
+	IItemRenderer: ClassReference("itemRenderers.MainMenuNavigationLinkItemMouseRenderer");
+	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
+}
+
+.navigationRightFooter
+{
+	IItemRenderer: ClassReference("itemRenderers.RightMenuFooterLinkItemMouseRenderer");
 	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
 }
 
@@ -50,4 +56,34 @@ global {
 	IItemRenderer: ClassReference("itemRenderers.ExampleTableRowItemRenderer");
 }
 
+.examplesBackground
+{
+  background-image: url(./resources/images/1x/1_top/1_top.png), url(./resources/images/1x/1_top/HexBox.png), url(./resources/images/1x/1_top/Wave1.png), url(./resources/images/1x/1_top/Wave2.png);
+  background-repeat: no-repeat, no-repeat, no-repeat; 
+  background-position-x: right;
+  background-position-y: top;
+}
 
+.snippetsBackground
+{
+  background-image: url(./resources/images/1x/2_snippets/2_snippets.png), url(./resources/images/1x/2_snippets/HexBox2.png), url(./resources/images/1x/2_snippets/Wave2a.png), url(./resources/images/1x/2_snippets/Wave2b.png);
+  background-repeat: no-repeat, no-repeat, no-repeat; 
+  background-position-x: left;
+  background-position-y: top;
+}
+
+.utilsBackground
+{
+  background-image: url(./resources/images/1x/3_utils/3_utils.png), url(./resources/images/1x/3_utils/wave3b.png), url(./resources/images/1x/3_utils/wave3d.png), url(./resources/images/1x/3_utils/weave3a.png), url(./resources/images/1x/3_utils/weave3c.png);
+  background-repeat: no-repeat, no-repeat, no-repeat; 
+  background-position-x: right;
+  background-position-y: center;
+}
+
+.legalBackground
+{
+  background-image: url(./resources/images/1x/5_legal/5_legal.png), url(./resources/images/1x/5_legal/Wave1.png), url(./resources/images/1x/5_legal/Wave2.png), url(./resources/images/1x/5_legal/Wave3.png), url(./resources/images/1x/5_legal/Wave4.png);
+  background-repeat: no-repeat, no-repeat, no-repeat; 
+  background-position-x: left;
+  background-position-y: center;
+}

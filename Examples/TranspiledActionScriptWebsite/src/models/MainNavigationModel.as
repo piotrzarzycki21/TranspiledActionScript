@@ -26,9 +26,22 @@ package models
 		private var _mainNavigation:Array = [
 		   new NavigationVO("Examples"),
 		   new NavigationVO("Snippets"),
+		   new NavigationVO("Utils"),
+           new NavigationVO("About"),
+		   new NavigationVO("|", null),
 		   new NavigationVO("GitHub", "https://github.com/piotrzarzycki21/TranspiledActionScript"),
-		   new NavigationVO("Patreon", "https://www.patreon.com/piotrzarzycki"),
-           new NavigationVO("About")
+		   new NavigationVO("Patreon", "https://www.patreon.com/piotrzarzycki")
+        ];
+		
+		private var _rightFooterNavigation:Array = [
+		   new NavigationVO("Examples"),
+		   new NavigationVO("Snippets"),
+		   new NavigationVO("Utils"),
+           new NavigationVO("About"),
+		   new NavigationVO("Lega"),	
+		   new NavigationVO("|", null),
+		   new NavigationVO("GitHub", "https://github.com/piotrzarzycki21/TranspiledActionScript"),
+		   new NavigationVO("Patreon", "https://www.patreon.com/piotrzarzycki")
         ];
 
 		public function get mainNavigation():Array
@@ -36,19 +49,6 @@ package models
             return _mainNavigation;
         }
 
-		private var _leftFooterNavigation:Array = [
-			new NavigationVO("Support this project on Patreon", "https://www.patreon.com/piotrzarzycki")
-		];
-		
-		public function get leftFooterNavigation():Array
-		{
-			return _leftFooterNavigation;
-		}
-		
-		private var _rightFooterNavigation:Array = [
-			new NavigationVO("Legal")
-		];
-		
 		public function get rightFooterNavigation():Array
 		{
 			return _rightFooterNavigation;

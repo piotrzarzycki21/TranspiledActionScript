@@ -21,7 +21,9 @@ limitations under the License.
 					  xmlns:js="library://ns.apache.org/royale/basic" 
 					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
 					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
-					  currentState="Examples" fixedHeader="true">
+					  currentState="Examples" fixedHeader="true" 
+					  className.Examples="examplesBackground" className.Snippets="snippetsBackground"
+					  className.Legal="legalBackground">			
 	<mdl:states>
 		<js:State name="Examples"/>
 		<js:State name="Snippets"/>	
@@ -32,16 +34,19 @@ limitations under the License.
 		<models:MainNavigationModel id="mainNavigationModel"/>
 	</mdl:model>				
 	<mdl:Header>
+		<mdl:style>
+			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
+		</mdl:style>
 		<mdl:HeaderRow>
-			<mdl:style>
-				<js:AllCSSStyles justifyContent="center"/>
-			</mdl:style>
-			<mdl:LayoutTitle text="TranspiledActionScript"/>
-		</mdl:HeaderRow>
-		<mdl:HeaderRow className="mdl-layout--large-screen-only">
-			<mdl:style>
-				<js:AllCSSStyles justifyContent="center"/>
-			</mdl:style>
+			<js:Image src="./resources/images/1x/icons/LOGO.png">
+				<js:model>
+					<js:ImageModel />
+				</js:model>
+				<js:view>
+					<js:ImageView />
+				</js:view>
+			</js:Image>
+			<mdl:Spacer />
 			<mdl:Navigation className="navigationChange"
 						    change="onNavigationChange(event)" >			
 				<mdl:beads>
@@ -57,7 +62,14 @@ limitations under the License.
 		<mdl:beads>
 			<utils:CloseDrawerOnNavigationLinkClick />
 		</mdl:beads>
-		<mdl:LayoutTitle text="TranspiledActionScript"/>
+		<js:Image src="./resources/images/1x/icons/LOGO.png">
+				<js:model>
+					<js:ImageModel />
+				</js:model>
+				<js:view>
+					<js:ImageView />
+				</js:view>
+		</js:Image>
 		<mdl:Navigation className="navigationChange"
 					    change="onNavigationChange(event)" >			
 				<mdl:beads>
@@ -69,34 +81,40 @@ limitations under the License.
 		</mdl:Navigation>
 	</mdl:Drawer>
 	<mdl:NavigationLayoutContent>
+		<mdl:style>
+			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0"/>
+		</mdl:style>
 		<views:ExamplesView includeIn="Examples"/>
 		<views:SnippetsView includeIn="Snippets"/>
 		<views:AboutView includeIn="About"/>
 		<views:LegalView includeIn="Legal"/>
+    </mdl:NavigationLayoutContent>	
 		
-		<mdl:Footer mini="true">
-			<mdl:FooterLeftSection>
-				<mdl:FooterLinkList labelField="label">
-                        <mdl:beads>
-                            <js:ConstantBinding
-                                sourceID="model"
-                                sourcePropertyName="leftFooterNavigation"
-                                destinationPropertyName="dataProvider" />
-                        </mdl:beads>
-                 </mdl:FooterLinkList>
-			</mdl:FooterLeftSection>
-			<mdl:FooterMiddleSection>
-				<mdl:FooterHeading>
-					<mdl:beads>
-                    		<js:InnerHTML>
-                         	<![CDATA[Copyright 2017 Nellix Software. All rights reserved.]]>
-                    		</js:InnerHTML>
-                 	</mdl:beads>	
-				</mdl:FooterHeading>
-			</mdl:FooterMiddleSection>
-			<mdl:FooterRightSection>
-				<mdl:FooterLinkList labelField="label" className="navigationChange" 
-									change="onNavigationChange(event)">
+	<mdl:Footer mini="true">
+		<mdl:style>
+			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0"/>
+		</mdl:style>
+		<mdl:FooterLeftSection>
+			<mdl:FooterHeading text="Copyright 2018 Nellix Software. All rights reserved.">
+				<mdl:style>
+					<js:AllCSSStyles fontFamily="Poppins"/>
+				</mdl:style>	
+				<js:Image src="./resources/images/1x/icons/LOGO.png">
+					<js:style>
+						<js:AllCSSStyles display="block" paddingTop="15"/>
+					</js:style>
+					<js:model>
+						<js:ImageModel />
+					</js:model>
+					<js:view>
+						<js:ImageView />
+					</js:view>
+				</js:Image>	
+			</mdl:FooterHeading>
+		</mdl:FooterLeftSection>
+		<mdl:FooterRightSection>
+			<mdl:FooterLinkList labelField="label" className="navigationRightFooter" 
+								change="onNavigationChange(event)">
                         <mdl:beads>
                             <js:ConstantBinding
                                 sourceID="model"
@@ -105,11 +123,10 @@ limitations under the License.
 							<js:DataFieldProviderBead dataField="href"/>
                         </mdl:beads>
                  </mdl:FooterLinkList>
-			</mdl:FooterRightSection>
-			<mdl:beads>
-			</mdl:beads>
-		</mdl:Footer>
-    </mdl:NavigationLayoutContent>	
+		</mdl:FooterRightSection>
+		<mdl:beads>
+		</mdl:beads>
+	</mdl:Footer>
 	<fx:Script>
 	<![CDATA[
 		import vos.NavigationVO;

@@ -21,15 +21,22 @@ limitations under the License.
 			  xmlns:js="library://ns.apache.org/royale/basic"
 			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*">
 	<mdl:style>
-		<js:AllCSSStyles maxWidth="900" minHeight="445" margin="auto"/>
+		<js:AllCSSStyles margin="auto" background="transparent"/>
 	</mdl:style>	
 	<mdl:model>
 		<models:ExamplesModel />
 	</mdl:model> 		
 	<mdl:GridCell column="12">
 		<mdl:Card width="100%">
+			<mdl:style>
+				<js:AllCSSStyles background="transparent"/>
+			</mdl:style>	
 			<mdl:CardTitle>
-				<mdl:CardTitleText text="Examples"/>
+				<mdl:CardTitleText text="Examples">
+					<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" fontSize="48"/>
+					</mdl:style>
+				</mdl:CardTitleText>
 			</mdl:CardTitle>
 			<js:Container>	
 				<js:beads>

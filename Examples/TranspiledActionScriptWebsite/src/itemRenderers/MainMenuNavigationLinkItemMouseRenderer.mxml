@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:NavigationLinkItemMouseRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+			  xmlns:js="library://ns.apache.org/royale/basic"
+			  xmlns:mdl="library://ns.apache.org/royale/mdl">
+	<mdl:style>
+		<js:AllCSSStyles fontFamily="Poppins" 
+						 paddingLeft="15" paddingRight="15"/>
+	</mdl:style>		
+	<fx:Script>
+	<![CDATA[
+		override public function set data(value:Object):void
+		{
+			super.data = value;
+		
+			if (value && !value.href)
+			{
+				element.style["color"] = "#7451BC";
+			}	
+		}		
+
+		override public function updateRenderer():void
+		{
+			if (data && !data.href) return;
+			
+			if (hovered)
+			{
+				element.style["textDecorationLine"] = "underline";
+				element.style["textDecorationColor"] = "#d52d28";
+			}
+			else
+			{
+				element.style["textDecorationLine"] = "none";			
+			}
+		}
+	]]>
+	</fx:Script>
+</mdl:NavigationLinkItemMouseRenderer>
