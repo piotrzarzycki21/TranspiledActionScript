@@ -40,7 +40,7 @@ limitations under the License.
 		<mdl:style>
 			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
 		</mdl:style>
-		<mdl:HeaderRow>
+		<mdl:HeaderRow className="mdl-layout--large-screen-only">
 			<js:Image src="./resources/images/1x/icons/LOGO.png">
 				<js:model>
 					<js:ImageModel />
@@ -60,19 +60,21 @@ limitations under the License.
                 </mdl:beads>
 			</mdl:Navigation>
 		</mdl:HeaderRow>
-	</mdl:Header>		
-	<mdl:Drawer className="mdl-layout--small-screen-only">
-		<mdl:beads>
-			<utils:CloseDrawerOnNavigationLinkClick />
-		</mdl:beads>
-		<js:Image src="./resources/images/1x/icons/LOGO.png">
+				<mdl:HeaderRow className="mdl-layout--small-screen-only">
+			<js:Image src="./resources/images/1x/icons/LOGO.png">
 				<js:model>
 					<js:ImageModel />
 				</js:model>
 				<js:view>
 					<js:ImageView />
 				</js:view>
-		</js:Image>
+			</js:Image>
+		</mdl:HeaderRow>
+	</mdl:Header>		
+	<mdl:Drawer className="mdl-layout--small-screen-only">
+		<mdl:beads>
+			<utils:CloseDrawerOnNavigationLinkClick />
+		</mdl:beads>
 		<mdl:Navigation className="navigationChange"
 					    change="onNavigationChange(event)" >			
 				<mdl:beads>
