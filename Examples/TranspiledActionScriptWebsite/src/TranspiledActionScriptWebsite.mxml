@@ -21,13 +21,21 @@ limitations under the License.
 				 xmlns:js="library://ns.apache.org/royale/basic" 
 				 xmlns:mdl="library://ns.apache.org/royale/mdl"
 				 xmlns:views="views.*"
-				 pageTitle="TranspiledActionScript">
+				 pageTitle="TranspiledActionScript" applicationComplete="onAppComplete(event)">
 				
 	<fx:Style source="resources/mdl-styles.css"/>	
-
 	<mdl:initialView>
 		<js:View percentWidth="100" percentHeight="100">
 			<views:MainView />
 		</js:View>
 	</mdl:initialView>
+	<fx:Script>
+	<![CDATA[
+		private function onAppComplete(event:Event):void
+		{
+			this.element.style["width"] = "unset";
+			this.element.style["height"] = "unset";
+		}
+	]]>
+</fx:Script>
 </mdl:Application>

@@ -32,7 +32,10 @@ limitations under the License.
 	</mdl:states>
 	<mdl:model>
 		<models:MainNavigationModel id="mainNavigationModel"/>
-	</mdl:model>				
+	</mdl:model>		
+	<mdl:style>
+		<js:AllCSSStyles minHeight="800"/>
+	</mdl:style>		
 	<mdl:Header>
 		<mdl:style>
 			<js:SimpleCSSStyles backgroundColor="#5126ab"/>

@@ -21,20 +21,76 @@ limitations under the License.
 			  xmlns:js="library://ns.apache.org/royale/basic"
 			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*">
 	<mdl:style>
-		<js:AllCSSStyles margin="auto" background="transparent"/>
+		<js:AllCSSStyles margin="auto" paddingLeft="0" background="transparent"/>
 	</mdl:style>	
 	<mdl:model>
 		<models:ExamplesModel />
 	</mdl:model> 		
 	<mdl:GridCell column="12">
-		<mdl:Card width="100%">
+		<mdl:style>
+			<js:AllCSSStyles marginLeft="0"/>
+		</mdl:style>	
+		<mdl:Card percentWidth="100">
 			<mdl:style>
 				<js:AllCSSStyles background="transparent"/>
 			</mdl:style>	
 			<mdl:CardTitle>
-				<mdl:CardTitleText text="Examples">
+				<mdl:style>
+					<js:AllCSSStyles paddingLeft="5"/>
+				</mdl:style>	
+				<mdl:CardTitleText text="HELLO ROYALE DEVELOPERS!">
 					<mdl:style>
-						<js:SimpleCSSStyles fontFamily="Poppins" fontSize="48"/>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="36pt"/>
+					</mdl:style>
+				</mdl:CardTitleText>
+			</mdl:CardTitle>		
+			<js:Group className="horizontalFlexGroup">
+				<js:style>
+					<js:AllCSSStyles paddingLeft="8"/>
+				</js:style>	
+				<js:Group>
+					<js:Image src="./resources/images/1x/icons/vector_smart_obj.png">
+						<js:model>
+							<js:ImageModel />
+						</js:model>
+						<js:view>
+							<js:ImageView />
+						</js:view>
+					</js:Image>
+				</js:Group>
+				<mdl:CardSupportingText>
+					<mdl:style>
+						<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt"
+										 padding="0" paddingLeft="25" maxWidth="820"/>
+					</mdl:style>
+				 	<mdl:beads>
+	                    <js:InnerHTML>
+	                         <![CDATA[
+								I would like to present my idea of helping you with your first steps in <a href="http://royale.apache.org/">Apache Royale&trade;</a> framework. Basically, I will provide brief information, tutorials and updates from the community area using <a href="https://www.patreon.com/piotrzarzycki">Patreon</a>, <a href="https://github.com/piotrzarzycki21/TranspiledActionScript">GitHub</a> and <a href="https://transpiledactionscript.com/">TranspiledActionScript.com</a> website.
+								]]>
+	                    </js:InnerHTML>
+	                 </mdl:beads>		
+	            </mdl:CardSupportingText>
+			</js:Group>
+		</mdl:Card>
+	</mdl:GridCell>
+	<mdl:GridCell column="12">
+		<mdl:style>
+			<js:AllCSSStyles marginLeft="0"/>
+		</mdl:style>	
+		<mdl:Card percentWidth="100">
+			<mdl:style>
+				<js:AllCSSStyles background="transparent"/>
+			</mdl:style>	
+			<mdl:CardTitle>
+				<mdl:style>
+					<js:AllCSSStyles paddingLeft="5"/>
+				</mdl:style>	
+				<mdl:CardTitleText text="EXAMPLES">
+					<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="36pt"/>
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
@@ -42,6 +98,9 @@ limitations under the License.
 				<js:beads>
 					<js:ScrollingViewport />
 				</js:beads>		
+				<js:style>
+					<js:AllCSSStyles paddingLeft="5"/>
+				</js:style>	
 				<mdl:Table className="exampleTable">
 					<mdl:columns>
 						<mdl:TableColumn headerText="Description"/>

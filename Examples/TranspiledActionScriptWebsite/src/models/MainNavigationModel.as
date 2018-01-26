@@ -38,7 +38,7 @@ package models
 		   new NavigationVO("Snippets"),
 		   new NavigationVO("Utils"),
            new NavigationVO("About"),
-		   new NavigationVO("Lega"),	
+		   new NavigationVO("Legal"),	
 		   new NavigationVO("|", null),
 		   new NavigationVO("GitHub", "https://github.com/piotrzarzycki21/TranspiledActionScript"),
 		   new NavigationVO("Patreon", "https://www.patreon.com/piotrzarzycki")
