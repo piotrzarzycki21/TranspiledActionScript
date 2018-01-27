@@ -21,13 +21,15 @@ package vos
 	[Bindable]
 	public class ExampleVO
 	{
+		public var title:String;
 		public var description:String;
 		public var sourceUrl:String;
 		public var liveUrl:String;
 		public var version:String;
 		
-		public function ExampleVO(description:String, sourceUrl:String, liveUrl:String, version:String)
+		public function ExampleVO(title:String, description:String, sourceUrl:String, liveUrl:String, version:String)
 		{
+			this.title = title;
 			this.description = description;
 			this.sourceUrl = sourceUrl;
 			this.liveUrl = liveUrl;

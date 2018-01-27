@@ -19,10 +19,14 @@ limitations under the License.
 -->
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
 			  xmlns:js="library://ns.apache.org/royale/basic"
-			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*">
+			  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*" 
+			  xmlns:html="library://ns.apache.org/royale/html">
 	<mdl:style>
 		<js:AllCSSStyles margin="auto" paddingLeft="0" background="transparent"/>
 	</mdl:style>	
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>
 	<mdl:model>
 		<models:ExamplesModel />
 	</mdl:model> 		
@@ -75,6 +79,13 @@ limitations under the License.
 			</js:Group>
 		</mdl:Card>
 	</mdl:GridCell>
+	<mdl:GridCell column="8">
+		<html:Hr width="5630">
+			<html:style>
+				<js:AllCSSStyles marginLeft="-5000" backgroundColor="#CFCFCF"/>
+			</html:style>	
+		</html:Hr>
+	</mdl:GridCell>
 	<mdl:GridCell column="12">
 		<mdl:style>
 			<js:AllCSSStyles marginLeft="0"/>
@@ -94,28 +105,16 @@ limitations under the License.
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
-			<js:Container>	
-				<js:beads>
-					<js:ScrollingViewport />
-				</js:beads>		
+			<js:Group>	
 				<js:style>
 					<js:AllCSSStyles paddingLeft="5"/>
 				</js:style>	
-				<mdl:Table className="exampleTable">
-					<mdl:columns>
-						<mdl:TableColumn headerText="Description"/>
-						<mdl:TableColumn headerText="Source Code"/>
-						<mdl:TableColumn headerText="Preview"/>
-						<mdl:TableColumn headerText="Version"/>
-					</mdl:columns>
-					<mdl:beads>
-	                    <js:ConstantBinding
-	                        sourceID="model"
-	                        sourcePropertyName="examples"
-	                        destinationPropertyName="dataProvider" />
-	                </mdl:beads>
-				</mdl:Table>
-			</js:Container>				
+				<mdl:List percentWidth="100" className="exampleTable" dataProvider="{model.examples}">
+					<mdl:style>
+						<js:AllCSSStyles maxWidth="880" padding="0"/>
+					</mdl:style>
+				</mdl:List>
+			</js:Group>				
 		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>

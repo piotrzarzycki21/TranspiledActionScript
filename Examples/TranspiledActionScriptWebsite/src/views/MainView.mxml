@@ -34,7 +34,7 @@ limitations under the License.
 		<models:MainNavigationModel id="mainNavigationModel"/>
 	</mdl:model>		
 	<mdl:style>
-		<js:AllCSSStyles minHeight="800"/>
+		<js:AllCSSStyles minHeight="800" height="auto"/>
 	</mdl:style>		
 	<mdl:Header>
 		<mdl:style>
@@ -60,7 +60,7 @@ limitations under the License.
                 </mdl:beads>
 			</mdl:Navigation>
 		</mdl:HeaderRow>
-				<mdl:HeaderRow className="mdl-layout--small-screen-only">
+		<mdl:HeaderRow className="mdl-layout--small-screen-only">
 			<js:Image src="./resources/images/1x/icons/LOGO.png">
 				<js:model>
 					<js:ImageModel />

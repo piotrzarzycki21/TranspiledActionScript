@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:ListItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						  xmlns:js="library://ns.apache.org/royale/basic"
+						  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+						  xmlns:html="library://ns.apache.org/royale/html">
+	
+	<mdl:beads>
+        <js:ItemRendererDataBinding />
+    </mdl:beads>
+	<mdl:style>
+		<js:AllCSSStyles fontFamily="Sintony" padding="0"/>
+	</mdl:style>
+    <mdl:Card percentWidth="100">
+		<mdl:CardTitle className="horizontalFlexGroup">
+			<mdl:style>
+				<js:SimpleCSSStyles paddingLeft="0"/>
+			</mdl:style>
+			<mdl:CardTitleText text="{example.title}" className="bigitem">
+				<mdl:style>
+					<js:AllCSSStyles fontFamily="Sintony"/>
+				</mdl:style>
+			</mdl:CardTitleText>
+			<js:Group className="smallitem">	
+				<html:Span text="{example.version}"/>
+			</js:Group>
+		</mdl:CardTitle>
+		<js:Group className="horizontalFlexGroup" percentWidth="100">
+			<mdl:style>
+				<js:SimpleCSSStyles padding="0"/>
+			</mdl:style>
+			<js:Group className="bigitem">
+				<html:Span text="{example.description}"/>
+			</js:Group>
+			<js:Group className="smallitem verticalFlexGroup">
+				<mdl:ButtonChip text="Source">
+					<mdl:beads>
+						<mdl:ContactImageChip source="./resources/images/1x/icons/examples_code.png"/>
+					</mdl:beads>
+					<mdl:style>
+						<js:AllCSSStyles fontFamily="Sintony"/>
+					</mdl:style>
+				</mdl:ButtonChip>
+				<mdl:ButtonChip text="Preview">
+					<mdl:beads>
+						<mdl:ContactImageChip source="./resources/images/1x/icons/examples_preview.png"/>
+					</mdl:beads>
+					<mdl:style>
+						<js:AllCSSStyles fontFamily="Sintony"/>
+					</mdl:style>
+				</mdl:ButtonChip>
+			</js:Group>
+		</js:Group>
+	</mdl:Card>
+	<fx:Script>
+		<![CDATA[
+			import vos.ExampleVO;
+            
+            [Bindable("dataChange")]
+            public function get example():ExampleVO
+            {
+                return data as ExampleVO;
+            }
+		]]>
+	</fx:Script>
+</mdl:ListItemRenderer>
