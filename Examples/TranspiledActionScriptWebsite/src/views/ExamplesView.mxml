@@ -53,20 +53,11 @@ limitations under the License.
 				<js:style>
 					<js:AllCSSStyles paddingLeft="8"/>
 				</js:style>	
-				<js:Group>
-					<js:Image src="./resources/images/1x/icons/vector_smart_obj.png">
-						<js:model>
-							<js:ImageModel />
-						</js:model>
-						<js:view>
-							<js:ImageView />
-						</js:view>
-					</js:Image>
-				</js:Group>
+				<js:Group className="vectorExamples"/>
 				<mdl:CardSupportingText>
 					<mdl:style>
 						<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt"
-										 padding="0" paddingLeft="25" maxWidth="820"/>
+										 padding="0" paddingLeft="25" maxWidth="700"/>
 					</mdl:style>
 				 	<mdl:beads>
 	                    <js:InnerHTML>

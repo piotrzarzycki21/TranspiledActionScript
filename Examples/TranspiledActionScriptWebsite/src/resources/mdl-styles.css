@@ -56,25 +56,159 @@ global {
 	IItemRenderer: ClassReference("itemRenderers.ExampleListRowItemRenderer");
 }
 
-.examplesBackground
-{
-  background-image: url(./resources/images/1x/1_top/1_top.png), url(./resources/images/1x/1_top/HexBox.png), url(./resources/images/1x/1_top/Wave1.png), url(./resources/images/1x/1_top/Wave2.png);
+.imageLOGO {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/LOGO.png) no-repeat;
+  width: 250px; 
+  height: 38px; 
+}
+
+.vectorExamples {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/vector_smart_obj.png) no-repeat;
+  width: 67px; 
+  height: 67px; 
+}
+
+.sourceCode {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_code_red.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.sourceCodeHover {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_code_green.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.previewCode {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_preview_red.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.previewCodeHover {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_preview_green.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.examplesBackground {
+  background-image: url(./resources/images/1x/1_top/1_top_full.png);
   background-repeat: no-repeat, no-repeat, no-repeat; 
   background-position-x: right;
   background-position-y: top;
+  background-size: 50% auto;
 }
+
+
+@media (min-width: 1650px) {
+	.examplesBackground {
+	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: top;
+	}
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+	
+	.sourceCode {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/ico_code_red@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.sourceCode:hover {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/ico_code_green@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.previewCode {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/1x/icons/ico_preview_red@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.previewCode:hover {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/1x/icons/ico_preview_green@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.examplesBackground {
+	    background-image: url(./resources/images/2x/1_top/1_top_full.png);
+	    background-repeat: no-repeat, no-repeat, no-repeat; 
+		background-position-x: right;
+		background-position-y: top;
+	}
+	
+	.imageLOGO {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/LOGO.png) no-repeat;
+	  width: 500px; 
+	  height: 76px; 
+	}
+	
+	.vectorExamples {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/vector_smart_obj.png) no-repeat;
+	  width: 67px; 
+	  height: 67px; 
+	}
+}
+
 
 .snippetsBackground
 {
-  background-image: url(./resources/images/1x/2_snippets/2_snippets.png), url(./resources/images/1x/2_snippets/HexBox2.png), url(./resources/images/1x/2_snippets/Wave2a.png), url(./resources/images/1x/2_snippets/Wave2b.png);
+  background-image: url(./resources/images/1x/2_snippets/2_snippets_full.png);
   background-repeat: no-repeat, no-repeat, no-repeat; 
   background-position-x: left;
   background-position-y: top;
+  background-size: 50% auto;
 }
 
 .utilsBackground
 {
-  background-image: url(./resources/images/1x/3_utils/3_utils.png), url(./resources/images/1x/3_utils/wave3b.png), url(./resources/images/1x/3_utils/wave3d.png), url(./resources/images/1x/3_utils/weave3a.png), url(./resources/images/1x/3_utils/weave3c.png);
+  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
   background-repeat: no-repeat, no-repeat, no-repeat; 
   background-position-x: right;
   background-position-y: center;
@@ -82,7 +216,7 @@ global {
 
 .legalBackground
 {
-  background-image: url(./resources/images/1x/5_legal/5_legal.png), url(./resources/images/1x/5_legal/Wave1.png), url(./resources/images/1x/5_legal/Wave2.png), url(./resources/images/1x/5_legal/Wave3.png), url(./resources/images/1x/5_legal/Wave4.png);
+  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
   background-repeat: no-repeat, no-repeat, no-repeat; 
   background-position-x: left;
   background-position-y: center;

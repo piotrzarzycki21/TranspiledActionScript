@@ -21,9 +21,9 @@ limitations under the License.
 					  xmlns:js="library://ns.apache.org/royale/basic" 
 					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
 					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
-					  currentState="Examples" fixedHeader="true" 
-					  className.Examples="examplesBackground" className.Snippets="snippetsBackground"
-					  className.Legal="legalBackground">			
+					  currentState="Examples" fixedHeader="true"
+					  className.Snippets="snippetsBackground"
+				 	  className.Legal="legalBackground" className.Examples="examplesBackground">			
 	<mdl:states>
 		<js:State name="Examples"/>
 		<js:State name="Snippets"/>	
@@ -35,20 +35,13 @@ limitations under the License.
 	</mdl:model>		
 	<mdl:style>
 		<js:AllCSSStyles minHeight="800" height="auto"/>
-	</mdl:style>		
+	</mdl:style>	
 	<mdl:Header>
 		<mdl:style>
 			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
 		</mdl:style>
 		<mdl:HeaderRow className="mdl-layout--large-screen-only">
-			<js:Image src="./resources/images/1x/icons/LOGO.png">
-				<js:model>
-					<js:ImageModel />
-				</js:model>
-				<js:view>
-					<js:ImageView />
-				</js:view>
-			</js:Image>
+			<js:Group className="imageLOGO" />
 			<mdl:Spacer />
 			<mdl:Navigation className="navigationChange"
 						    change="onNavigationChange(event)" >			
@@ -61,14 +54,7 @@ limitations under the License.
 			</mdl:Navigation>
 		</mdl:HeaderRow>
 		<mdl:HeaderRow className="mdl-layout--small-screen-only">
-			<js:Image src="./resources/images/1x/icons/LOGO.png">
-				<js:model>
-					<js:ImageModel />
-				</js:model>
-				<js:view>
-					<js:ImageView />
-				</js:view>
-			</js:Image>
+			<js:Group className="imageLOGO"/>
 		</mdl:HeaderRow>
 	</mdl:Header>		
 	<mdl:Drawer className="mdl-layout--small-screen-only">
@@ -85,16 +71,16 @@ limitations under the License.
                 </mdl:beads>
 		</mdl:Navigation>
 	</mdl:Drawer>
+	
 	<mdl:NavigationLayoutContent>
 		<mdl:style>
-			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0"/>
+			<js:SimpleCSSStyles paddingLeft="80" padding="0"/>
 		</mdl:style>
 		<views:ExamplesView includeIn="Examples"/>
 		<views:SnippetsView includeIn="Snippets"/>
 		<views:AboutView includeIn="About"/>
 		<views:LegalView includeIn="Legal"/>
     </mdl:NavigationLayoutContent>	
-		
 	<mdl:Footer mini="true">
 		<mdl:style>
 			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0"/>
