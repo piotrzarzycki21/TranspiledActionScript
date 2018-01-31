@@ -62,7 +62,7 @@ limitations under the License.
 				 	<mdl:beads>
 	                    <js:InnerHTML>
 	                         <![CDATA[
-								I would like to present my idea of helping you with your first steps in <a href="http://royale.apache.org/">Apache Royale&trade;</a> framework. Basically, I will provide brief information, tutorials and updates from the community area using <a href="https://www.patreon.com/piotrzarzycki">Patreon</a>, <a href="https://github.com/piotrzarzycki21/TranspiledActionScript">GitHub</a> and <a href="https://transpiledactionscript.com/">TranspiledActionScript.com</a> website.
+								I would like to present my idea of helping you with your first steps in <a href="http://royale.apache.org/" style="color: #d52d28">Apache Royale&trade;</a> framework. Basically, I will provide brief information, tutorials and updates from the community area using <a href="https://www.patreon.com/piotrzarzycki" style="color: #d52d28">Patreon</a>, <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" style="color: #d52d28">GitHub</a> and <a href="https://transpiledactionscript.com/" style="color: #d52d28">TranspiledActionScript.com</a> website.
 								]]>
 	                    </js:InnerHTML>
 	                 </mdl:beads>		
@@ -84,7 +84,7 @@ limitations under the License.
 		<mdl:Card percentWidth="100">
 			<mdl:style>
 				<js:AllCSSStyles background="transparent"/>
-			</mdl:style>	
+			</mdl:style>
 			<mdl:CardTitle>
 				<mdl:style>
 					<js:AllCSSStyles paddingLeft="5"/>
@@ -96,16 +96,11 @@ limitations under the License.
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
-			<js:Group>	
-				<js:style>
-					<js:AllCSSStyles paddingLeft="5"/>
-				</js:style>	
-				<mdl:List percentWidth="100" className="exampleTable" dataProvider="{model.examples}">
+				<mdl:List percentWidth="100" className="examplesList" dataProvider="{model.examples}">
 					<mdl:style>
-						<js:AllCSSStyles maxWidth="880" padding="0"/>
+						<js:AllCSSStyles maxWidth="880" marginTop="0" paddingTop="0"/>
 					</mdl:style>
-				</mdl:List>
-			</js:Group>				
+				</mdl:List>		
 		</mdl:Card>
 	</mdl:GridCell>	
 </mdl:Grid>

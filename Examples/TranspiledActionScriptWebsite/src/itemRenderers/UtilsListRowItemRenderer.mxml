@@ -64,16 +64,6 @@ limitations under the License.
 											 cursor="pointer" color="#d52d28"/>
 						</comp:style>
 					</comp:ButtonChipWithHover>
-					<comp:ButtonChipWithHover text="Preview">
-						<mdl:beads>
-							<utils:ContactDivChipWithCssClass className="previewCode" hoverClassName="previewCodeHover"
-												  			  imageWidth="30" imageHeight="30"/>
-						</mdl:beads>
-						<comp:style>
-							<js:AllCSSStyles fontFamily="Sintony" backgroundColor="#FFFFFF" 
-											 cursor="pointer" color="#d52d28"/>
-						</comp:style>
-					</comp:ButtonChipWithHover>
 				</js:Group>
 			</js:Group>
 		</mdl:CardActions>

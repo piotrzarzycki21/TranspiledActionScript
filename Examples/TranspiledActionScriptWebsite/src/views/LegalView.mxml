@@ -22,39 +22,80 @@ limitations under the License.
 		  xmlns:mdl="library://ns.apache.org/royale/mdl"
 		  xmlns:html="library://ns.apache.org/royale/html">
 	<mdl:style>
-		<js:AllCSSStyles minHeight="445" maxWidth="900"/>
+		<js:AllCSSStyles paddingTop="0" />
 	</mdl:style>
-	<mdl:GridCell column="12">
-		<html:H4 text="Legal"/>
-		<mdl:Card width="100%">
+	<mdl:GridCell column="12" className="verticalFlexGroup">
+		<mdl:style>
+			<js:AllCSSStyles flexDirection="column" alignItems="flex-end" />
+		</mdl:style>
+		<mdl:Card className="demo-card-wide">
 		    <mdl:style>
-				<js:AllCSSStyles minHeight="0"/>
-			</mdl:style>
+				<js:AllCSSStyles background="transparent" minHeight="auto"/>
+			</mdl:style>	
 			<mdl:CardTitle>
-				<mdl:CardTitleText text="Source Code License"/>
-			</mdl:CardTitle>
-			<mdl:CardSupportingText>
 				<mdl:style>
-					<js:SimpleCSSStyles fontSize="16"/>
+					<js:AllCSSStyles flexDirection="column"/>
+				</mdl:style>	
+				<mdl:CardTitleText text="LEGAL">
+					<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="36pt"/>
+					</mdl:style>
+				</mdl:CardTitleText>
+			</mdl:CardTitle>		
+		</mdl:Card>	
+		<html:Hr percentWidth="65">
+			<html:style>
+				<js:AllCSSStyles marginRight="-15" backgroundColor="#CFCFCF"/>
+			</html:style>	
+		</html:Hr>
+		<mdl:Card className="demo-card-wide" percentWidth="65">
+			<mdl:style>
+				<js:AllCSSStyles background="transparent" minHeight="auto"/>
+			</mdl:style>	
+			<mdl:CardTitle>
+				<mdl:style>
+						<js:AllCSSStyles />
+					</mdl:style>	
+				<mdl:CardTitleText text="Source Code License">
+					<mdl:style>
+							<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+												fontSize="14pt" fontWeight="bold" />
+					</mdl:style>
+				</mdl:CardTitleText>
+			</mdl:CardTitle>
+			<mdl:CardSupportingText percentWidth="100">
+				<mdl:style>
+					<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt"
+									 paddingTop="0" paddingRight="0" lineHeight="2.3em"/>
 				</mdl:style>
-			 	<mdl:beads>
-                    <js:InnerHTML>
-                         <![CDATA[All source code appearing on this website is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.]]>
-                    </js:InnerHTML>
-                 </mdl:beads>		
-            </mdl:CardSupportingText>
-		</mdl:Card>
-		<mdl:Card width="100%">
+		 		<mdl:beads>
+	            		<js:InnerHTML>
+	                         <![CDATA[All source code appearing on this website is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" style="color: #d52d28">Apache License 2.0</a>.]]>
+	                </js:InnerHTML>
+	            </mdl:beads>		
+	       </mdl:CardSupportingText>
+		</mdl:Card>	
+		<mdl:Card className="demo-card-wide" percentWidth="65">
+			<mdl:style>
+				<js:AllCSSStyles background="transparent" minHeight="auto"/>
+			</mdl:style>	
 			<mdl:CardTitle>
-				<mdl:CardTitleText text="Trademarks"/>
+				<mdl:CardTitleText text="Trademarks">
+					<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="14pt" fontWeight="bold"/>
+					</mdl:style>
+				</mdl:CardTitleText>
 			</mdl:CardTitle>
-			<mdl:CardSupportingText>
+			<mdl:CardSupportingText percentWidth="100">
 				<mdl:style>
-					<js:SimpleCSSStyles fontSize="16"/>
+					<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt"
+									 paddingTop="0" paddingRight="0" lineHeight="2.3em"/>
 				</mdl:style>
 				<mdl:beads>
 					  <js:InnerHTML>
-                         <![CDATA[Apache, <a href="http://royale.apache.org/">Apache Royale&trade;</a>, <a href="http://maven.apache.org/">Apache Maven&trade;</a>, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/">Apache Software Foundation</a> in the United States and/or other countries. 
+                         <![CDATA[Apache, <a href="http://royale.apache.org/" style="color: #d52d28">Apache Royale&trade;</a>, <a href="http://maven.apache.org/" style="color: #d52d28">Apache Maven&trade;</a>, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/" style="color: #d52d28">Apache Software Foundation</a> in the United States and/or other countries. 
 								   No endorsement by The Apache Software Foundation is implied by the use of these marks. </br></br>
 								  ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.]]>
                       </js:InnerHTML>

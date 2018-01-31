@@ -51,9 +51,14 @@ global {
 	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
 }
 
-.exampleTable
+.examplesList
 {
 	IItemRenderer: ClassReference("itemRenderers.ExampleListRowItemRenderer");
+}
+
+.utilsList
+{
+	IItemRenderer: ClassReference("itemRenderers.UtilsListRowItemRenderer");
 }
 
 .imageLOGO {
@@ -110,20 +115,50 @@ global {
   height: 30px;
 }
 
-.examplesBackground {
-  background-image: url(./resources/images/1x/1_top/1_top_full.png);
-  background-repeat: no-repeat, no-repeat, no-repeat; 
-  background-position-x: right;
-  background-position-y: top;
-  background-size: 50% auto;
+@media (max-width: 1650px) {
+	.examplesBackground {
+	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: top;
+	  background-size: 50% auto;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: center;
+	  background-size: 28% auto;
+	}
+	
+	.legalBackground {
+	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: -30%;
+	  background-position-y: top;
+	}
 }
-
 
 @media (min-width: 1650px) {
 	.examplesBackground {
 	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
 	  background-position-x: right;
+	  background-position-y: top;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: center;
+	}	
+	
+	.legalBackground {
+	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: left;
 	  background-position-y: top;
 	}
 }
@@ -143,7 +178,7 @@ global {
 	  height: 58px;
 	}
 	
-	.sourceCode:hover {
+	.sourceCodeHover {
 	  display: block;
 	  -moz-box-sizing: border-box;
 	  box-sizing: border-box;
@@ -161,7 +196,7 @@ global {
 	  height: 58px;
 	}
 	
-	.previewCode:hover {
+	.previewCodeHover {
 	  display: block;
 	  -moz-box-sizing: border-box;
 	  box-sizing: border-box;
@@ -175,6 +210,20 @@ global {
 	    background-repeat: no-repeat, no-repeat, no-repeat; 
 		background-position-x: right;
 		background-position-y: top;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/2x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: center;
+	}
+	
+	.legalBackground {
+	  background-image: url(./resources/images/2x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: left;
+	  background-position-y: top;
 	}
 	
 	.imageLOGO {
@@ -204,22 +253,6 @@ global {
   background-position-x: left;
   background-position-y: top;
   background-size: 50% auto;
-}
-
-.utilsBackground
-{
-  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
-  background-repeat: no-repeat, no-repeat, no-repeat; 
-  background-position-x: right;
-  background-position-y: center;
-}
-
-.legalBackground
-{
-  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
-  background-repeat: no-repeat, no-repeat, no-repeat; 
-  background-position-x: left;
-  background-position-y: center;
 }
 
 .horizontalFlexGroup

@@ -30,7 +30,7 @@ package components
 			var divBead:ContactDivChipWithCssClass = getBeadByType(ContactDivChipWithCssClass) as ContactDivChipWithCssClass;
 			divBead.hover();
 			
-			chipTextSpan.style["color"] = "rgba(0,0,0,.87)";
+			chipTextSpan.style["color"] = "#d52d28";
 		}
 		
 		override public function addedToParent():void

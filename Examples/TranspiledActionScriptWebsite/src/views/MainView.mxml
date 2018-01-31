@@ -22,20 +22,22 @@ limitations under the License.
 					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
 					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
 					  currentState="Examples" fixedHeader="true"
-					  className.Snippets="snippetsBackground"
-				 	  className.Legal="legalBackground" className.Examples="examplesBackground">			
+					  className.Snippets="snippetsBackground" className.Utils="utilsBackground"
+				 	  className.Legal="legalBackground" className.Examples="examplesBackground"
+				      stateChangeComplete="onMainViewStateChangeComplete(event)">			
 	<mdl:states>
 		<js:State name="Examples"/>
+		<js:State name="Utils"/>
 		<js:State name="Snippets"/>	
 		<js:State name="About"/>
 		<js:State name="Legal"/>
 	</mdl:states>
+	<mdl:style>
+			<js:AllCSSStyles height="auto" minHeight="100%"/>
+	</mdl:style>	
 	<mdl:model>
 		<models:MainNavigationModel id="mainNavigationModel"/>
 	</mdl:model>		
-	<mdl:style>
-		<js:AllCSSStyles minHeight="800" height="auto"/>
-	</mdl:style>	
 	<mdl:Header>
 		<mdl:style>
 			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
@@ -74,16 +76,17 @@ limitations under the License.
 	
 	<mdl:NavigationLayoutContent>
 		<mdl:style>
-			<js:SimpleCSSStyles paddingLeft="80" padding="0"/>
+			<js:AllCSSStyles overflowY="hidden" paddingLeft="80" padding="0" minHeight="100%"/>
 		</mdl:style>
 		<views:ExamplesView includeIn="Examples"/>
+		<views:UtilsView includeIn="Utils"/>
 		<views:SnippetsView includeIn="Snippets"/>
 		<views:AboutView includeIn="About"/>
 		<views:LegalView includeIn="Legal"/>
     </mdl:NavigationLayoutContent>	
 	<mdl:Footer mini="true">
 		<mdl:style>
-			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0"/>
+			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0" />
 		</mdl:style>
 		<mdl:FooterLeftSection>
 			<mdl:FooterHeading text="Copyright 2018 Nellix Software. All rights reserved.">
@@ -121,7 +124,7 @@ limitations under the License.
 	<fx:Script>
 	<![CDATA[
 		import vos.NavigationVO;
-	
+
 		private function onNavigationChange(event:Event):void
 		{
 			var navigationVO:NavigationVO = event.currentTarget.selectedItem as NavigationVO;
@@ -130,6 +133,18 @@ limitations under the License.
 				currentState = navigationVO.label;	
 			}
 		}		
+		
+		private function onMainViewStateChangeComplete(event:Event):void
+		{
+			if (currentState == "Legal")
+			{
+				element.style["backgroundColor"] = "#F1F1F1";
+			}
+			else
+			{
+				element.style["backgroundColor"] = "#FFFFFF";
+			}
+		}
 	]]>
 </fx:Script>
 </mdl:NavigationLayout>
