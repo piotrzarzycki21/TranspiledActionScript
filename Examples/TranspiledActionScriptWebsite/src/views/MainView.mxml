@@ -20,6 +20,7 @@ limitations under the License.
 <mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:js="library://ns.apache.org/royale/basic" 
 					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+					  xmlns:html="library://ns.apache.org/royale/html"
 					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
 					  currentState="Examples" fixedHeader="true"
 					  className.Snippets="snippetsBackground" className.Utils="utilsBackground"
@@ -84,6 +85,45 @@ limitations under the License.
 		<views:AboutView includeIn="About"/>
 		<views:LegalView includeIn="Legal"/>
     </mdl:NavigationLayoutContent>	
+	<mdl:Grid includeIn="Examples">
+		<mdl:GridCell column="12" className="centeredFlexGroup">
+			<mdl:style>
+				<js:SimpleCSSStyles marginLeft="-1.5%"/>
+			</mdl:style>
+			<html:H2 text="TECHNOLOGIES">
+				<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="36pt"/>
+				</mdl:style>
+			</html:H2>
+		</mdl:GridCell>	
+		<mdl:GridCell column="12" className="centeredFlexGroup">
+			<js:Group className="hexagon">
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">
+					<html:A className="techRoyale" href="http://royale.apache.org/" />
+				</js:Group>
+			</js:Group>
+			<js:Group className="hexagon">	
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">	
+					<html:A className="techMoonshine" href="http://moonshine-ide.com/" />
+				</js:Group>
+			</js:Group>
+			<js:Group className="hexagon">
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">
+					<html:A className="techNextGenAS" href="https://nextgenactionscript.com/" />
+				</js:Group>
+			</js:Group>
+		</mdl:GridCell>
+	</mdl:Grid>
 	<mdl:Footer mini="true">
 		<mdl:style>
 			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0" />

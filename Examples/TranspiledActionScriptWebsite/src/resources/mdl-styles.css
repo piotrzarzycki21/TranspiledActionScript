@@ -115,6 +115,33 @@ global {
   height: 30px;
 }
 
+.techMoonshine {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_moonshine.png) no-repeat;
+  width: 161px;
+  height: 142px;
+}
+
+.techRoyale {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_apache.png) no-repeat;
+  width: 180px;
+  height: 152px;
+}
+
+.techNextGenAS {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_nextgen.png) no-repeat;
+  width: 217px;
+  height: 62px;
+}
+
 @media (max-width: 1650px) {
 	.examplesBackground {
 	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
@@ -138,7 +165,7 @@ global {
 	  background-position-x: -90%;
 	  background-position-y: top;
 	  background-size: auto 100%;
-	}
+	}	
 }
 
 @media (min-width: 1650px) {
@@ -248,6 +275,33 @@ global {
 	  width: 67px; 
 	  height: 67px; 
 	}
+	
+	.techMoonshine {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_moonshine.png) no-repeat;
+	  width: 322px;
+	  height: 283px;
+	}
+	
+	.techRoyale {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_apache.png) no-repeat;
+	  width: 360px;
+	  height: 304px;
+	}
+	
+	.techNextGenAS {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_nextgen.png) no-repeat;
+	  width: 434px;
+	  height: 124px;
+	}
 }
 
 
@@ -278,6 +332,17 @@ global {
    flex-direction: column;
    -webkit-align-items: flex-start;
    align-items: flex-start;
+}
+
+.centeredFlexGroup {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
 }
 
 .bigitem {

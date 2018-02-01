@@ -1,0 +1,96 @@
+@namespace mx "http://www.adobe.com/2006/mxml";
+@namespace s "library://ns.adobe.com/flex/spark";
+
+.hexagon {
+  position: relative;
+  width: 250px; 
+  height: 144.34px;
+  background-color: #ffffff;
+  margin: 72.17px 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 176.78px;
+  height: 176.78px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 36.6117px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.hexagon:before {
+  top: -88.3883px;
+}
+
+.hexagon:after {
+  bottom: -88.3883px;
+}
+
+/*cover up extra shadows*/
+.hexagon div {
+  position: absolute;
+  top:0px;
+  left: 0;
+  width:250px;
+  height:144.3376px;
+  z-index: 2;
+  background: inherit;
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+  
+    .hexagon {
+	  position: relative;
+	  width: 500px; 
+	  height: 288.68px;
+	  background-color: #ffffff;
+	  margin: 144.34px 0;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+	}
+	
+	.hexagon:before,
+	.hexagon:after {
+	  content: "";
+	  position: absolute;
+	  z-index: 1;
+	  width: 353.55px;
+	  height: 353.55px;
+	  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+	  -ms-transform: scaleY(0.5774) rotate(-45deg);
+	  transform: scaleY(0.5774) rotate(-45deg);
+	  background-color: inherit;
+	  left: 73.2233px;
+	  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+	}
+	
+	.hexagon:before {
+	  top: -176.7767px;
+	}
+	
+	.hexagon:after {
+	  bottom: -176.7767px;
+	}
+	
+	/*cover up extra shadows*/
+	.hexagon div {
+	  position: absolute;
+	  top:0px;
+	  left: 0;
+	  width:500px;
+	  height:288.6751px;
+	  z-index: 2;
+	  background: inherit;
+	}
+}
+
