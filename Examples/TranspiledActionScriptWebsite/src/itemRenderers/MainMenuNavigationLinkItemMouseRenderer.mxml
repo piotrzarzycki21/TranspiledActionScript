@@ -12,9 +12,9 @@
 		{
 			super.data = value;
 		
-			if (value && !value.href)
+			if (value)
 			{
-				element.style["color"] = "#7451BC";
+				element.style["color"] = value.color;
 			}	
 		}		
 

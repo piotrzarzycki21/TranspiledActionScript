@@ -49,9 +49,9 @@ limitations under the License.
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
-				<mdl:List percentWidth="100" className="utilsList" dataProvider="{model.utils}">
+				<mdl:List percentWidth="60" className="utilsList" dataProvider="{model.utils}">
 					<mdl:style>
-						<js:AllCSSStyles maxWidth="880" marginTop="0" paddingTop="0"/>
+						<js:AllCSSStyles marginTop="0" paddingTop="0"/>
 					</mdl:style>
 				</mdl:List>		
 		</mdl:Card>

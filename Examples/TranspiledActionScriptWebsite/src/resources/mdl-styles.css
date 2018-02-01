@@ -127,16 +127,17 @@ global {
 	.utilsBackground {
 	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
-	  background-position-x: right;
-	  background-position-y: center;
-	  background-size: 28% auto;
+	  background-position-x: 145%;
+	  background-position-y: top;
+	  background-size: auto 100%;
 	}
 	
 	.legalBackground {
 	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
-	  background-position-x: -30%;
+	  background-position-x: -90%;
 	  background-position-y: top;
+	  background-size: auto 100%;
 	}
 }
 
@@ -152,14 +153,16 @@ global {
 	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
 	  background-position-x: right;
-	  background-position-y: center;
+	  background-position-y: top;
+	  background-size: auto 100%;
 	}	
 	
 	.legalBackground {
 	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
-	  background-position-x: left;
+	  background-position-x: -50%;
 	  background-position-y: top;
+	  background-size: auto 100%;
 	}
 }
 
@@ -217,6 +220,7 @@ global {
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
 	  background-position-x: right;
 	  background-position-y: center;
+	  background-size: auto 100%;
 	}
 	
 	.legalBackground {
@@ -224,6 +228,7 @@ global {
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
 	  background-position-x: left;
 	  background-position-y: top;
+	  background-size: auto 100%;
 	}
 	
 	.imageLOGO {

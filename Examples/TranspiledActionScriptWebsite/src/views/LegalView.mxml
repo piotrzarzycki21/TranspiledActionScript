@@ -22,7 +22,7 @@ limitations under the License.
 		  xmlns:mdl="library://ns.apache.org/royale/mdl"
 		  xmlns:html="library://ns.apache.org/royale/html">
 	<mdl:style>
-		<js:AllCSSStyles paddingTop="0" />
+		<js:AllCSSStyles paddingTop="50" paddingRight="40"/>
 	</mdl:style>
 	<mdl:GridCell column="12" className="verticalFlexGroup">
 		<mdl:style>
@@ -44,12 +44,12 @@ limitations under the License.
 				</mdl:CardTitleText>
 			</mdl:CardTitle>		
 		</mdl:Card>	
-		<html:Hr percentWidth="65">
+		<html:Hr percentWidth="100">
 			<html:style>
-				<js:AllCSSStyles marginRight="-15" backgroundColor="#CFCFCF"/>
+				<js:AllCSSStyles marginRight="-31%" backgroundColor="#CFCFCF"/>
 			</html:style>	
 		</html:Hr>
-		<mdl:Card className="demo-card-wide" percentWidth="65">
+		<mdl:Card className="demo-card-wide" percentWidth="70">
 			<mdl:style>
 				<js:AllCSSStyles background="transparent" minHeight="auto"/>
 			</mdl:style>	
@@ -76,7 +76,7 @@ limitations under the License.
 	            </mdl:beads>		
 	       </mdl:CardSupportingText>
 		</mdl:Card>	
-		<mdl:Card className="demo-card-wide" percentWidth="65">
+		<mdl:Card className="demo-card-wide" percentWidth="70">
 			<mdl:style>
 				<js:AllCSSStyles background="transparent" minHeight="auto"/>
 			</mdl:style>	

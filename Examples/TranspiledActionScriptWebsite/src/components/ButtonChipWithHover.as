@@ -1,8 +1,8 @@
 package components
 {
-	import org.apache.royale.mdl.ButtonChip;
 	import org.apache.royale.events.MouseEvent;
 	import utils.ContactDivChipWithCssClass;
+    import org.apache.royale.mdl.Chip;
 	
 	COMPILE::JS
     {
@@ -10,7 +10,7 @@ package components
         import utils.ContactDivChipWithCssClass;
     }
 
-	public class ButtonChipWithHover extends ButtonChip
+	public class ButtonChipWithHover extends Chip
 	{
 		public function ButtonChipWithHover()
 		{

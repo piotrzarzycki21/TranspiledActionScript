@@ -45,6 +45,9 @@ limitations under the License.
 			</js:Group>
 		</mdl:CardTitle>
 		<mdl:CardActions border="true">
+			<mdl:style>
+				<js:SimpleCSSStyles marginLeft="8px"/>
+			</mdl:style>
 			<js:Group className="horizontalFlexGroup" percentWidth="100">
 				<js:Group className="bigitem">
 					<html:Span text="{example.description}">

@@ -70,10 +70,10 @@ limitations under the License.
 			</js:Group>
 		</mdl:Card>
 	</mdl:GridCell>
-	<mdl:GridCell column="8">
-		<html:Hr width="5630">
+	<mdl:GridCell column="12">
+		<html:Hr percentWidth="100">
 			<html:style>
-				<js:AllCSSStyles marginLeft="-5000" backgroundColor="#CFCFCF"/>
+				<js:AllCSSStyles marginLeft="-60%" backgroundColor="#CFCFCF"/>
 			</html:style>	
 		</html:Hr>
 	</mdl:GridCell>
@@ -96,9 +96,9 @@ limitations under the License.
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
-				<mdl:List percentWidth="100" className="examplesList" dataProvider="{model.examples}">
+				<mdl:List percentWidth="60" className="examplesList" dataProvider="{model.examples}">
 					<mdl:style>
-						<js:AllCSSStyles maxWidth="880" marginTop="0" paddingTop="0"/>
+						<js:AllCSSStyles marginTop="0" paddingTop="0"/>
 					</mdl:style>
 				</mdl:List>		
 		</mdl:Card>
