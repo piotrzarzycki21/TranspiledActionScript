@@ -3,14 +3,14 @@ package utils
 	public class Copy  
 	{
 		COMPILE::JS	
-		public static function copyToClipboard(target:String)
+		public static function copyToClipboard(target:String):void
 		{
 			var clipboard:Object = new window["Clipboard"](target);	
-			clipboard.on('success', testFunction);	
-			clipboard.on('error', testFunction);
+			clipboard.on('success', onSuccess);	
+			clipboard.on('error', onSuccess);
 		}
 		
-		private static function testFunction(event):void 
+		private static function onSuccess(event):void 
 		{
 			var obj:Object = event;
 		}

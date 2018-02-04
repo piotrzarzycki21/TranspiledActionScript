@@ -30,19 +30,17 @@ limitations under the License.
 		<js:AllCSSStyles fontFamily="Sintony" marginLeft="-10"/>
 	</mdl:style>
     <mdl:Card percentWidth="100" shadow="2" className="demo-card-wide">
-		<mdl:CardTitle className="horizontalFlexGroup">
+		<mdl:CardTitle className="horizontalFlexGroup" percentWidth="100">
 			<mdl:CardTitleText text="{example.title}" className="bigitem">
 				<mdl:style>
 					<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" fontWeight="bold"/>
 				</mdl:style>
 			</mdl:CardTitleText>
-			<js:Group className="smallitem">	
-				<html:Span text="{example.version}">
-					<html:style>
-						<js:AllCSSStyles fontFamily="Sintony" color="#9E9E9E" fontSize="14pt" />
-					</html:style>
-				</html:Span>
-			</js:Group>
+			<html:Span text="{example.version}">
+				<html:style>
+					<js:AllCSSStyles fontFamily="Sintony" color="#9E9E9E" fontSize="14pt"  whiteSpace="nowrap"/>
+				</html:style>
+			</html:Span>
 		</mdl:CardTitle>
 		<mdl:CardActions border="true">
 			<mdl:style>
@@ -57,7 +55,10 @@ limitations under the License.
 					</html:Span>				
 				</js:Group>
 				<js:Group className="smallitem verticalFlexGroup">
-					<comp:ButtonChipWithHover text="Source Code">
+					<js:style>
+						<js:SimpleCSSStyles marginLeft="5%"/>
+					</js:style>
+					<comp:ButtonChipWithHover text="Source Code" click="onSourceCodeClick(event)">
 						<comp:beads>
 							<utils:ContactDivChipWithCssClass className="sourceCode" hoverClassName="sourceCodeHover"
 												  			  imageWidth="30" imageHeight="30"/>
@@ -75,12 +76,18 @@ limitations under the License.
 		<![CDATA[
 			import vos.ExampleVO;
 			import org.apache.royale.mdl.ButtonChip;
+			import utils.NavigateTo;
 
             [Bindable("dataChange")]
             public function get example():ExampleVO
             {
                 return data as ExampleVO;
             }
+
+			private function onSourceCodeClick(event:MouseEvent):void
+			{
+				NavigateTo.navigateTo(example.sourceUrl);
+			}
 		]]>
 	</fx:Script>
 </mdl:ListItemRenderer>

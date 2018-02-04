@@ -37,6 +37,7 @@ package components
 		{
 			super.addedToParent();
 			
+			chipTextSpan.style["fontSize"] = "14pt";
 			super.addEventListener("mouseover", onButtonChipMouseOver);
 			super.addEventListener("mouseout", onButtonChipMouseOut);
 		}
