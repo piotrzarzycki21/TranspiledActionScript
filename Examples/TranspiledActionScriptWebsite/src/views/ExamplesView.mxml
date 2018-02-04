@@ -22,7 +22,7 @@ limitations under the License.
 		  xmlns:mdl="library://ns.apache.org/royale/mdl" xmlns:models="models.*" 
 		  xmlns:html="library://ns.apache.org/royale/html">
 	<mdl:style>
-		<js:AllCSSStyles margin="auto" paddingLeft="0" background="transparent"/>
+		<js:AllCSSStyles paddingLeft="0"/>
 	</mdl:style>	
 	<mdl:beads>
 		<js:ContainerDataBinding />

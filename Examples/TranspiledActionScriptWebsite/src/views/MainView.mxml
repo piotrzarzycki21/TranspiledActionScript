@@ -176,7 +176,7 @@ limitations under the License.
 		
 		private function onMainViewStateChangeComplete(event:Event):void
 		{
-			if (currentState == "Legal")
+			if (currentState == "Legal" || currentState == "Snippets")
 			{
 				element.style["backgroundColor"] = "#F1F1F1";
 			}
@@ -185,13 +185,20 @@ limitations under the License.
 				element.style["backgroundColor"] = "#FFFFFF";
 			}
 			
-			if (currentState == "About")
+			if (currentState == "About" || currentState == "Snippets")
 			{
 				mainLayoutContent.element.style["paddingLeft"] = "0px";
+				mainLayoutContent.element.style["paddingRight"] = "0px";
 			}
-			else
+			
+			if (currentState == "Examples" || currentState == "Utils")
 			{
 				mainLayoutContent.element.style["paddingLeft"] = "80px";
+			}
+			
+			if (currentState == "Snippets")
+			{
+				mainLayoutContent.element.style["paddingRight"] = "80px";
 			}
 		}
 	]]>

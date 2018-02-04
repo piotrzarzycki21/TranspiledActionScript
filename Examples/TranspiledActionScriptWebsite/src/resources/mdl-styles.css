@@ -413,6 +413,15 @@ global {
 	  min-width: 402px;
 	  min-height: 459px;
 	}
+	
+	.circleRed {
+		background: #D52D28;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		width: 58px;
+		height: 58px;
+	}
 }
 
 
@@ -472,4 +481,12 @@ global {
 .smallitemAbout {
    -webkit-flex: 1 0 0;
    flex: 1 0 0;
+}
+.circleRed {
+	background: #D52D28;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
 }

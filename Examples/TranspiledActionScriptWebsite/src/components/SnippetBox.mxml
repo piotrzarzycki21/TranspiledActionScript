@@ -20,51 +20,79 @@ limitations under the License.
 <mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:js="library://ns.apache.org/royale/basic"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl"
-		  xmlns:html="library://ns.apache.org/royale/html"
-		  initComplete="onSnippetBoxInitComplete(event)" width="100%">
+		  xmlns:html="library://ns.apache.org/royale/html" 
+		  initComplete="onSnippetBoxInitComplete(event)"
+		  percentWidth="60">
 	<mdl:style>
-		<js:AllCSSStyles paddingLeft="20" paddingRight="20"/>
+		<js:AllCSSStyles paddingLeft="0" paddingRight="5" marginBottom="40px"
+						 background="transparent"/>
 	</mdl:style>	
 	<mdl:beads>
 		<js:ContainerDataBinding />
 	</mdl:beads>		
-	<mdl:CardTitle>
-		<html:A href="{titleLink}" text="{title}"/>
-	</mdl:CardTitle>
-	<mdl:CardSupportingText>
+	<mdl:CardTitle className="horizontalFlexGroup">
 		<mdl:style>
-			<js:SimpleCSSStyles fontSize="16" paddingBottom="0"/>
+			<js:AllCSSStyles paddingLeft="0" paddingTop="0"/>
 		</mdl:style>
-		<js:TextNode text="{description}"/>
-	</mdl:CardSupportingText>	
-	<html:Pre id="preCode">
+		<js:Group className="circleRed centeredFlexGroup">
+			<html:Span text="{snippetNumber}">
+				<html:style>
+					<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" color="#FFFFFF" />
+				</html:style>
+			</html:Span>
+		</js:Group>
+		<html:A href="{titleLink}" text="{title}">
+			<html:style>
+				<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" color="#d52d28" 
+				                 paddingLeft="10"/>
+			</html:style>
+		</html:A>
+	</mdl:CardTitle>	
+	<mdl:Card percentWidth="100" shadow="2" 
+			  rollOver="onCodeCardRollOver(event)" rollOut="onCodeCardRollOut(event)">
 		<mdl:style>
-			<js:AllCSSStyles margin="0" padding="0"/>
+			<js:AllCSSStyles maxHeight="410px"/>
 		</mdl:style>
-		<html:Code localId="snippetsCode" className="{languages}" text="{code}"/>
-		<mdl:Spinner isActive="{_isSpinnerActive}" width="45" height="45"/>
-	</html:Pre>		
+		<html:Pre localId="preCode">
+			<mdl:style>
+				<js:AllCSSStyles margin="0" padding="0" fontFamily="Sintony" fontSize="14px" 
+				                 backgroundColor="#FFFFFF" overflow="auto"/>
+			</mdl:style>
+			<html:Code localId="snippetsCode" className="{languages}" text="{code}">
+				<html:style>
+					<js:AllCSSStyles padding="0" overflowX="unset"
+									 backgroundColor="#FFFFFF"/>
+				</html:style>
+			</html:Code>
+			<mdl:Spinner localId="spinner" isActive="false" width="45" height="45" />		
+		</html:Pre>	
+		<mdl:Button localId="copyButton" text="Copy" raised="true" accent="true" colored="true" width="150"
+					visible="false" click="onCopyButtonClick(event)">
+			<mdl:style>
+				<js:AllCSSStyles fontFamily="Poppins" 
+								 bottom="30px" right="30px" position="absolute" backgroundColor="#D52D28" />
+			</mdl:style>
+		</mdl:Button>
+	</mdl:Card>
 	<fx:Script>
 	<![CDATA[
 		import org.apache.royale.net.URLBinaryLoader;
 		import org.apache.royale.net.URLRequest;
 		import utils.Highlight;
-
+		import utils.Copy;
+		
+		[Bindable]
+		public var snippetNumber:int = 1;
 		[Bindable]
 		public var title:String;
 		[Bindable]
 		public var titleLink:String;
-		[Bindable]
-		public var description:String;
 		[Bindable]
 		public var link:String;
 		[Bindable]
 		public var languages:String;
 		[Bindable]
 		private var code:String;
-		[Bindable]
-		private var _isSpinnerActive:Boolean;
-		
 		private var _loader:URLBinaryLoader;
 		
 		private function onSnippetBoxInitComplete(event:Event):void
@@ -75,8 +103,10 @@ limitations under the License.
 			
 			//Set spinner in the center
 			preCode.style = "textAlign:center;";
-			_isSpinnerActive = true;
+			spinner.visible = spinner.isActive = false;
 			_loader.load(new URLRequest(link));
+			
+			snippetsCode.element["data-clipboard-target"] = "";
 		}
 		
 		private function onLoaderComplete(event:Event):void
@@ -94,7 +124,7 @@ limitations under the License.
 			
 			//Bring back text to the left
 			preCode.style = "textAlign:left;";
-			_isSpinnerActive = false;
+			spinner.visible = spinner.isActive = false;
 		}
 		
 		private function onLoaderCommunicationError(event:Event):void
@@ -103,7 +133,25 @@ limitations under the License.
 			_loader.close();
 			
 			preCode.style = "textAlign:left;";
-			_isSpinnerActive = false;
+			spinner.visible = spinner.isActive = false;
+		}
+		
+		private function onCodeCardRollOver(event:MouseEvent):void
+		{
+			//copyButton.visible = true;	
+		}
+		
+		private function onCodeCardRollOut(event:MouseEvent):void
+		{
+			copyButton.visible = false;
+		}
+		
+		private function onCopyButtonClick(event:MouseEvent):void
+		{
+			COMPILE::JS
+			{
+				Copy.copyToClipboard(".codeForCopy");
+			}
 		}
 	]]>
 	</fx:Script>

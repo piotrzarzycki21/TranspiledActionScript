@@ -20,21 +20,36 @@ limitations under the License.
 <mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:js="library://ns.apache.org/royale/basic"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+		  xmlns:html="library://ns.apache.org/royale/html"
 		  xmlns:components="components.*">
 	<mdl:style>
-		<js:AllCSSStyles minHeight="445" maxWidth="900"/>
-	</mdl:style>
-	<mdl:GridCell column="12">
-		<mdl:Card percentWidth="100">
-			<mdl:CardTitle>
-				<mdl:CardTitleText text="Snippets"/>
-			</mdl:CardTitle>		
-			<components:SnippetBox title="#1 Hello World MXML" languages="xml" 
-								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
-								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>	
-			<components:SnippetBox title="#2 Apache Maven pom template" languages="xml"
-								   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Maven/pom.xml"
-								   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Maven/pom.xml"/>							
-		</mdl:Card>
+		<js:AllCSSStyles paddingRight="0"/>
+	</mdl:style>	
+	<mdl:GridCell column="12" className="verticalFlexGroup">
+		<mdl:style>
+			<js:AllCSSStyles alignItems="flex-end" marginRight="0" marginBottom="30px"/>
+		</mdl:style>	
+		<html:H2 text="Snippets">
+			<mdl:style>
+				<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+									fontSize="36pt"/>
+			</mdl:style>
+		</html:H2>
+		<html:Hr percentWidth="100">
+			<html:style>
+				<js:AllCSSStyles backgroundColor="#CFCFCF" marginRight="-40%"/>
+			</html:style>	
+		</html:Hr>	
+	</mdl:GridCell>
+	<mdl:GridCell column="12" className="verticalFlexGroup">
+		<mdl:style>
+			<js:AllCSSStyles marginRight="0" alignItems="flex-end"/>
+		</mdl:style>	
+		<components:SnippetBox snippetNumber="1" title="Hello World MXML" languages="xml codeForCopy" 
+							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
+							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>	
+					<components:SnippetBox snippetNumber="2" title="Apache Maven pom template" languages="xml codeForCopy"
+							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Maven/pom.xml"
+							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Maven/pom.xml"/>					
 	</mdl:GridCell>	
 </mdl:Grid>
