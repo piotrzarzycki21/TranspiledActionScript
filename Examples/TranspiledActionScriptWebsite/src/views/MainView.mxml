@@ -75,9 +75,9 @@ limitations under the License.
 		</mdl:Navigation>
 	</mdl:Drawer>
 	
-	<mdl:NavigationLayoutContent>
+	<mdl:NavigationLayoutContent id="mainLayoutContent">
 		<mdl:style>
-			<js:AllCSSStyles overflowY="hidden" paddingLeft="80" padding="0" minHeight="100%"/>
+			<js:AllCSSStyles overflowY="hidden" paddingLeft="80" padding="0" minHeight="100%" />
 		</mdl:style>
 		<views:ExamplesView includeIn="Examples"/>
 		<views:UtilsView includeIn="Utils"/>
@@ -98,20 +98,20 @@ limitations under the License.
 			</html:H2>
 		</mdl:GridCell>	
 		<mdl:GridCell column="12" className="centeredFlexGroup">
-			<js:Group className="hexagon">
-				<js:style>
-					<js:AllCSSStyles marginRight="5%"/>
-				</js:style>
-				<js:Group className="centeredFlexGroup">
-					<html:A className="techRoyale" href="http://royale.apache.org/" />
-				</js:Group>
-			</js:Group>
 			<js:Group className="hexagon">	
 				<js:style>
 					<js:AllCSSStyles marginRight="5%"/>
 				</js:style>
 				<js:Group className="centeredFlexGroup">	
 					<html:A className="techMoonshine" href="http://moonshine-ide.com/" />
+				</js:Group>
+			</js:Group>
+			<js:Group className="hexagon">
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">
+					<html:A className="techRoyale" href="http://royale.apache.org/" />
 				</js:Group>
 			</js:Group>
 			<js:Group className="hexagon">
@@ -183,6 +183,15 @@ limitations under the License.
 			else
 			{
 				element.style["backgroundColor"] = "#FFFFFF";
+			}
+			
+			if (currentState == "About")
+			{
+				mainLayoutContent.element.style["paddingLeft"] = "0px";
+			}
+			else
+			{
+				mainLayoutContent.element.style["paddingLeft"] = "80px";
 			}
 		}
 	]]>

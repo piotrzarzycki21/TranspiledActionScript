@@ -142,6 +142,70 @@ global {
   height: 62px;
 }
 
+.hexAbout {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/4_about/hex.png) no-repeat;
+  background-position-x: center;
+  background-size: 201px 230px;
+  width: 201px;
+  height: 230px;
+  min-width: 201px;
+  min-height: 230px;
+}
+
+.aboutIcons {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: center;
+}
+
+.helloIco {
+  background: url(./resources/images/1x/4_about/ico_hello.png) no-repeat;
+  background-size: 89px 89px;
+  width: 89px;
+  height: 89px;
+}
+
+.patreonIco {
+  background: url(./resources/images/1x/4_about/ico_patreon.png) no-repeat;
+  background-size: 94px 94px;
+  width: 94px;
+  height: 94px;
+}
+
+.helloIco {
+  background: url(./resources/images/1x/4_about/ico_hello.png) no-repeat;
+  background-size: 89px 89px;
+  width: 89px;
+  height: 89px;
+}
+
+.tasIco {
+  background: url(./resources/images/1x/4_about/ico_TAS_logo.png) no-repeat;
+  background-size: 83px 101px;
+  width: 83px;
+  height: 101px;
+}
+
+.githubIco {
+  background: url(./resources/images/1x/4_about/ico_github.png) no-repeat;
+  background-size: 97px 95px;
+  width: 97px;
+  height: 95px;
+}
+
+.questionIco {
+  background: url(./resources/images/1x/4_about/ico_question.png) no-repeat;
+  background-size: 101px 83px;
+  width: 101px;
+  height: 83px;
+}
+
+.hrAbout {
+  z-index: -1;
+}
+
 @media (max-width: 1650px) {
 	.examplesBackground {
 	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
@@ -302,6 +366,53 @@ global {
 	  width: 434px;
 	  height: 124px;
 	}
+	
+	.helloIco {
+	  background: url(./resources/images/2x/4_about/ico_hello.png) no-repeat;
+	  background-size: 178px 178px;
+	  width: 178px;
+	  height: 178px;
+	}
+	
+	.patreonIco {
+	  background: url(./resources/images/2x/4_about/ico_patreon.png) no-repeat;
+	  background-size: 188px 188px;
+	  width: 188px;
+	  height: 188px;
+	}
+	
+	.tasIco {
+	  background: url(./resources/images/2x/4_about/ico_TAS_logo.png) no-repeat;
+	  background-size: 166px 202px;
+	  width: 166px;
+	  height: 202px;
+	}
+	
+	.githubIco {
+	  background: url(./resources/images/2x/4_about/ico_github.png) no-repeat;
+	  background-size: 194px 190px;
+	  width: 194px;
+	  height: 190px;
+	}
+	
+	.questionIco {
+	  background: url(./resources/images/2x/4_about/ico_question.png) no-repeat;
+	  background-size: 202px 166px;
+	  width: 202px;
+	  height: 166px;
+	}
+	
+	.hexAbout {
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/4_about/hex.png) no-repeat;
+	  background-position-x: center;	
+	  background-size: 402px 459px;
+	  width: 402px;
+	  height: 459px;
+	  min-width: 402px;
+	  min-height: 459px;
+	}
 }
 
 
@@ -352,4 +463,13 @@ global {
 .smallitem {
    -webkit-flex: 0.5 0 0;
    flex: 0.5 0 0;
+}
+
+.bigitemAbout {
+   -webkit-flex: 3 0 0;
+   flex: 3 0 0;
+}
+.smallitemAbout {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
 }
