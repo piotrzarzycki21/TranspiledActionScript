@@ -14,30 +14,32 @@
   <classpaths>
     <class path="src"/>
   </classpaths>
-  <moonshineResourcePaths></moonshineResourcePaths>
+  <moonshineResourcePaths>
+    <class path="src/resources"/>
+  </moonshineResourcePaths>
   <build>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html"/>
-    <option benchmark="False"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/resources/mdl-js-index-template.html -debug=true +configname=royale"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option antBuildPath="build/build.xml"/>
+    <option allowSourcePathOverlap="False"/>
+    <option useResourceBundleMetadata="True"/>
+    <option customSDK=""/>
+    <option locale=""/>
     <option warnings="True"/>
-    <option es="False"/>
+    <option useNetwork="True"/>
     <option verboseStackTraces="False"/>
     <option loadConfig=""/>
     <option linkReport=""/>
+    <option benchmark="False"/>
     <option optimize="False"/>
-    <option locale=""/>
+    <option es="False"/>
+    <option showActionScriptWarnings="True"/>
     <option staticLinkRSL="False"/>
     <option showBindingWarnings="True"/>
     <option compilerConstants=""/>
     <option showDeprecationWarnings="True"/>
-    <option antBuildPath="build/build.xml"/>
-    <option showActionScriptWarnings="True"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
-    <option customSDK="D:\flex_sdk\royale_asjs_nightly"/>
-    <option strict="True"/>
-    <option accessible="False"/>
-    <option useNetwork="True"/>
-    <option allowSourcePathOverlap="False"/>
-    <option useResourceBundleMetadata="True"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -58,11 +60,11 @@
     <option testMovieCommand=""/>
   </options>
   <moonshineRunCustomization>
-    <option deviceSimulator="null"/>
-    <option projectType="2"/>
+    <option targetPlatform="2"/>
     <option launchMethod="Simulator"/>
     <option urlToLaunch=""/>
-    <option targetPlatform="2"/>
+    <option projectType="2"/>
+    <option deviceSimulator="null"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>

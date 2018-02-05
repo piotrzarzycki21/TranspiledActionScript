@@ -33,6 +33,10 @@ global {
     box-sizing: border-box;
 }
 
+.viewPosition {
+	position: unset !important;
+}
+
 .page-content
 {
 	padding: 10px;
@@ -218,7 +222,7 @@ global {
 	.utilsBackground {
 	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
 	  background-repeat: no-repeat, no-repeat, no-repeat; 
-	  background-position-x: 145%;
+	  background-position-x: 100%;
 	  background-position-y: top;
 	  background-size: auto 100%;
 	}

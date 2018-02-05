@@ -30,6 +30,9 @@ limitations under the License.
 		<js:AllCSSStyles fontFamily="Sintony" marginLeft="-10"/>
 	</mdl:style>
     <mdl:Card percentWidth="100" shadow="2" className="demo-card-wide">
+		<mdl:style>
+			<js:AllCSSStyles minHeight="auto"/>
+		</mdl:style>
 		<mdl:CardTitle className="horizontalFlexGroup" percentWidth="100">
 			<mdl:CardTitleText text="{example.title}" className="bigitem">
 				<mdl:style>
@@ -50,7 +53,7 @@ limitations under the License.
 				<js:Group className="bigitem">
 					<html:Span text="{example.description}">
 						<html:style>
-							<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"/>
+							<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="1.4em"/>
 						</html:style>
 					</html:Span>				
 				</js:Group>

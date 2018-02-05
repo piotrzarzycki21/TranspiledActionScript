@@ -13,12 +13,6 @@ package models
 			"", "0.0.1"),
 			new ExampleVO("PureMVC Employee Admin", "The Employee Admin example presents a transition of an application from Flex and PureMVC to Apache Royale.", 
 			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
-			"", "0.0.1-Pending"),
-			new ExampleVO("PureMVC Employee Admin", "The Employee Admin example presents a transition of an application from Flex and PureMVC to Apache Royale.", 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
-			"", "0.0.1-Pending"),
-			new ExampleVO("PureMVC Employee Admin", "The Employee Admin example presents a transition of an application from Flex and PureMVC to Apache Royale.", 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
 			"", "0.0.1-Pending")
 		];
 		

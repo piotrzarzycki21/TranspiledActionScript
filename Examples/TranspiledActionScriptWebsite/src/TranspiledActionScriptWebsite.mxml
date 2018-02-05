@@ -21,20 +21,32 @@ limitations under the License.
 				 xmlns:js="library://ns.apache.org/royale/basic" 
 				 xmlns:mdl="library://ns.apache.org/royale/mdl"
 				 xmlns:views="views.*"
-				 pageTitle="TranspiledActionScript" applicationComplete="onAppComplete(event)">
-				
+				 pageTitle="TranspiledActionScript" applicationComplete="onAppComplete(event)">			
 	<fx:Style source="resources/mdl-styles.css"/>	
 	<mdl:initialView>
-		<js:View percentWidth="100" percentHeight="100">
-			<views:MainView />
+		<js:View localId="mainView" percentWidth="100" percentHeight="100" className="viewPosition" currentState="Desktop">
+			<js:states>
+				<js:State name="Desktop"/>
+				<js:State name="Mobile"/>
+			</js:states>
+			<views:MainView includeIn="Desktop"/>
+			<views:MainMobileView includeIn="Mobile"/>
 		</js:View>
 	</mdl:initialView>
 	<fx:Script>
 	<![CDATA[
+		import org.apache.royale.utils.BrowserInfo;
+
 		private function onAppComplete(event:Event):void
 		{
 			this.element.style["width"] = "unset";
 			this.element.style["height"] = "unset";
+			
+			var browserInfo:BrowserInfo = BrowserInfo.current();
+			if (browserInfo.isMobile())
+			{
+				mainView.currentState = "Mobile";
+			}
 		}
 	]]>
 </fx:Script>

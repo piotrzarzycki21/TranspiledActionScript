@@ -31,32 +31,52 @@
 
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src/resources</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
     <plugins>
-	<plugin>
-	  <groupId>org.apache.royale.compiler</groupId>
-      <artifactId>royale-maven-plugin</artifactId>
-      <version>0.9.1-SNAPSHOT</version>
-      <extensions>true</extensions>
-      <configuration>
-			<mainClass>TranspiledActionScriptWebsite.mxml</mainClass>
-            <targets>JSRoyale</targets>
-            <htmlTemplate>${basedir}/src/resources/mdl-js-index-template.html</htmlTemplate>
-            <additionalCompilerOptions>-compiler.exclude-defaults-css-files=Basic-0.9.1-SNAPSHOT-js.swc:defaults.css</additionalCompilerOptions>
-       </configuration>
-       <dependencies>
-          <dependency>
-            <groupId>org.apache.royale.compiler</groupId>
-            <artifactId>compiler-jx</artifactId>
-            <version>0.9.1-SNAPSHOT</version>
-          </dependency>
-        </dependencies>
+		<plugin>
+		  <groupId>org.apache.royale.compiler</groupId>
+		  <artifactId>royale-maven-plugin</artifactId>
+		  <version>0.9.1-SNAPSHOT</version>
+		  <extensions>true</extensions>
+		  <configuration>
+				<mainClass>TranspiledActionScriptWebsite.mxml</mainClass>
+				<targets>JSRoyale</targets>
+				<htmlTemplate>${basedir}/src/resources/mdl-js-index-template.html</htmlTemplate>
+				<additionalCompilerOptions>-compiler.exclude-defaults-css-files=Basic-0.9.1-SNAPSHOT-js.swc:defaults.css -compiler.include-resource-bundles=additional.css</additionalCompilerOptions>
+				<debug>true</debug>
+		   </configuration>
+		   <dependencies>
+			  <dependency>
+				<groupId>org.apache.royale.compiler</groupId>
+				<artifactId>compiler-jx</artifactId>
+				<version>0.9.1-SNAPSHOT</version>
+			  </dependency>
+			</dependencies>
         </plugin>
+		<plugin>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>3.0.2</version>
+			<executions>
+			  <execution>
+				<id>copy-resources</id>
+				<phase>validate</phase>
+				<goals>
+				  <goal>copy-resources</goal>
+				</goals>
+				<configuration>
+					  <outputDirectory>target/javascript/bin/js-debug/resources/</outputDirectory>
+				      <resources>
+						  <resource>
+							<directory>src/resources</directory>
+							<filtering>true</filtering>
+							<includes>
+								<include>additional.css</include>
+							</includes>
+						  </resource>
+					  </resources>             
+				</configuration>            
+			  </execution>
+			</executions>
+		</plugin>
     </plugins>
   </build>
 

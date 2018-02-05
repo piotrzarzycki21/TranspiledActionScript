@@ -56,14 +56,14 @@ limitations under the License.
 				<js:Group className="vectorExamples"/>
 				<mdl:CardSupportingText>
 					<mdl:style>
-						<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt"
+						<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" lineHeight="1.4em"
 										 padding="0" paddingLeft="25" maxWidth="700"/>
 					</mdl:style>
 				 	<mdl:beads>
 	                    <js:InnerHTML>
 	                         <![CDATA[
-								Everything what you are seeing here is created with <a href="http://royale.apache.org/" style="color: #d52d28">Apache Royale&trade;</a>. Enjoy yourself and take a tour, read About, review Snippets, Utils,</br> dig into code and join me on <a href="https://www.patreon.com/piotrzarzycki/" style="color: #d52d28">Patreon</a>! 
-								</br></br>Let's write some awesome application or maybe port your old one from Flex to Apache Royale&trade;.
+								Everything that you see here is created with <a href="http://royale.apache.org/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache Royale&trade;</a>.</br>Enjoy yourself and have a look at the materials, read the About section, review Snippets or Utils, dig into the code and join me on <a href="https://www.patreon.com/piotrzarzycki/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Patreon</a>! 
+								</br></br>Let's write some awesome applications together or maybe port your old applications from Flex into Apache Royale&trade;.
 								]]>
 	                    </js:InnerHTML>
 	                 </mdl:beads>		

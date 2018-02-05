@@ -85,10 +85,13 @@ limitations under the License.
 		<views:AboutView includeIn="About"/>
 		<views:LegalView includeIn="Legal"/>
     </mdl:NavigationLayoutContent>	
-	<mdl:Grid includeIn="Examples">
+	<mdl:Grid includeIn="Examples" percentWidth="100">
+		<mdl:style>
+			<js:AllCSSStyles backgroundColor="#FAFAFA"/>
+		</mdl:style>
 		<mdl:GridCell column="12" className="centeredFlexGroup">
 			<mdl:style>
-				<js:SimpleCSSStyles marginLeft="-1.5%"/>
+				<js:SimpleCSSStyles marginLeft="-1.5%" marginTop="3%"/>
 			</mdl:style>
 			<html:H2 text="TECHNOLOGIES">
 				<mdl:style>
@@ -98,6 +101,9 @@ limitations under the License.
 			</html:H2>
 		</mdl:GridCell>	
 		<mdl:GridCell column="12" className="centeredFlexGroup">
+			<mdl:style>
+				<js:AllCSSStyles marginBottom="3%"/>
+			</mdl:style>
 			<js:Group className="hexagon">	
 				<js:style>
 					<js:AllCSSStyles marginRight="5%"/>
