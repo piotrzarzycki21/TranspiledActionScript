@@ -6,14 +6,10 @@ package models
 	public class UtilsModel
 	{
 		private var _utils:Array = [
-			new ExampleVO("The TranspiledActionScript",
-			"The TranspiledActionScript.com website example has been created using MaterialDesignLight module of Apache Royale."
-			+ "It is still work in progress, however you can learn how to use MDL library by checking source code.", 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/TranspiledActionScriptWebsite", 
-			"", "0.0.1"),
-			new ExampleVO("PureMVC Employee Admin", "The Employee Admin example presents a transition of an application from Flex and PureMVC to Apache Royale.", 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
-			"", "0.0.1-Pending")
+			new ExampleVO("Beads: CloseDrawerOnNavigationLinkClick",
+			'This bead resolves problem existing in original <a href="https://getmdl.io/components/" class="linksStyle">MDL</a> library <a href="https://github.com/google/material-design-lite/issues/1246" class="linksStyle">#1246</a>.'
+			+ ' It was not possible to close <a href="https://getmdl.io/components/index.html#layout-section/layout" class="linksStyle">Drawer</a> component by clicking on navigation link. You can find how to use bead in the <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/tree/utils/Utils#closedraweronnavigationlinkclick" class="linksStyle">README</a>.', 
+			"https://github.com/piotrzarzycki21/TranspiledActionScript/blob/utils/Utils/Beads/CloseDrawerOnNavigationLinkClick.as","", "0.0.1")
 		];
 		
 		public function get utils():Array

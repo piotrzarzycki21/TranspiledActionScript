@@ -62,7 +62,7 @@ limitations under the License.
 				 	<mdl:beads>
 	                    <js:InnerHTML>
 	                         <![CDATA[
-								Everything that you see here is created with <a href="http://royale.apache.org/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache Royale&trade;</a>.</br>Enjoy yourself and have a look at the materials, read the About section, review Snippets or Utils, dig into the code and join me on <a href="https://www.patreon.com/piotrzarzycki/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Patreon</a>! 
+								Everything that you see here is created with <a href="http://royale.apache.org/" class="linksStyle">Apache Royale&trade;</a>.</br>Enjoy yourself and have a look at the materials, read the About section, review Snippets or Utils, dig into the code and join me on <a href="https://www.patreon.com/piotrzarzycki/" class="linksStyle">Patreon</a>! 
 								</br></br>Let's write some awesome applications together or maybe port your old applications from Flex into Apache Royale&trade;.
 								]]>
 	                    </js:InnerHTML>

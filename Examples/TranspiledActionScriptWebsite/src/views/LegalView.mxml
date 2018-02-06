@@ -71,7 +71,7 @@ limitations under the License.
 				</mdl:style>
 		 		<mdl:beads>
 	            		<js:InnerHTML>
-	                         <![CDATA[All source code appearing on this website is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache License 2.0</a>.]]>
+	                         <![CDATA[All source code appearing on this website is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" class="linksStyle">Apache License 2.0</a>.]]>
 	                </js:InnerHTML>
 	            </mdl:beads>		
 	       </mdl:CardSupportingText>
@@ -95,7 +95,7 @@ limitations under the License.
 				</mdl:style>
 				<mdl:beads>
 					  <js:InnerHTML>
-                         <![CDATA[Apache, <a href="http://royale.apache.org/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache Royale&trade;</a>, <a href="http://maven.apache.org/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache Maven&trade;</a>, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/" style="color: #d52d28; font-family: Sintony; font-size: 14pt; text-decoration: none;">Apache Software Foundation</a> in the United States and/or other countries. 
+                         <![CDATA[Apache, <a href="http://royale.apache.org/" class="linksStyle">Apache Royale&trade;</a>, <a href="http://maven.apache.org/" class="linksStyle">Apache Maven&trade;</a>, and the Apache Maven&trade;, Apache Royale&trade; logo are either registered trademarks or trademarks of the <a href="https://www.apache.org/" class="linksStyle">Apache Software Foundation</a> in the United States and/or other countries. 
 								   No endorsement by The Apache Software Foundation is implied by the use of these marks. </br></br>
 								  ActionScript are registered trademarks or trademarks of Adobe Systems Incorporated in the United States and/or other countries. No endorsement by Adobe Systems Incorporated is implied by the use of these marks.]]>
                       </js:InnerHTML>

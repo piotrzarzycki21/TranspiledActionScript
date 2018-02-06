@@ -51,7 +51,10 @@ limitations under the License.
 			</mdl:style>
 			<js:Group className="horizontalFlexGroup" percentWidth="100">
 				<js:Group className="bigitem">
-					<html:Span text="{example.description}">
+					<html:Span>
+					    <mdl:beads>
+		                    <js:InnerHTML text="{example.description}" />
+						</mdl:beads>
 						<html:style>
 							<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="1.4em"/>
 						</html:style>
@@ -63,8 +66,7 @@ limitations under the License.
 					</js:style>
 					<comp:ButtonChipWithHover text="Source Code" click="onSourceCodeClick(event)">
 						<comp:beads>
-							<utils:ContactDivChipWithCssClass className="sourceCode" hoverClassName="sourceCodeHover"
-												  			  imageWidth="30" imageHeight="30"/>
+							<utils:ContactDivChipWithCssClass className="sourceCode" hoverClassName="sourceCodeHover"/>
 						</comp:beads>
 						<comp:style>
 							<js:AllCSSStyles fontFamily="Sintony" backgroundColor="#FFFFFF" 

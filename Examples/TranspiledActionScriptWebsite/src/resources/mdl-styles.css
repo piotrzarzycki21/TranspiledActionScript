@@ -494,3 +494,9 @@ global {
 	width: 30px;
 	height: 30px;
 }
+.linksStyle {
+	color: #d52d28; 
+	font-family: Sintony; 
+	font-size: 14pt; 
+	text-decoration: none;
+}
