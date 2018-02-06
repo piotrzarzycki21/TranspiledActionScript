@@ -4,17 +4,22 @@
 			  					 xmlns:mdl="library://ns.apache.org/royale/mdl">
 	
 	<mdl:style>
-		<js:AllCSSStyles fontFamily="Poppins" color="#FFFFFF" marginTop="15" marginRight="30"/>
+		<js:AllCSSStyles color="#FFFFFF" marginTop="15" marginRight="30"/>
 	</mdl:style>		
 	<fx:Script>
 	<![CDATA[
+	    COMPILE::JS
+    	{
+        		import org.apache.royale.core.WrappedHTMLElement;
+    	}
+
 		override public function set data(value:Object):void
 		{
 			super.data = value;
 		
 			if (value && !value.href)
 			{
-				element.style["color"] = "#696969";
+				link.style["color"] = "#696969";
 			}	
 		}		
 
@@ -24,13 +29,23 @@
 			
 			if (hovered)
 			{
-				element.style["textDecorationLine"] = "underline";
-				element.style["textDecorationColor"] = "#d52d28";
+				link.style["textDecorationLine"] = "underline";
+				link.style["textDecorationColor"] = "#d52d28";
 			}
 			else
 			{
-				element.style["textDecorationLine"] = "none";			
+				link.style["textDecorationLine"] = "none";			
 			}
+		}
+		
+		COMPILE::JS
+		override protected function createElement():WrappedHTMLElement
+		{
+			element = super.createElement();
+			link.style["fontFamily"] = "Poppins";
+			link.style["fontSize"] = "14px"
+			
+			return element;
 		}
 	]]>
 	</fx:Script>

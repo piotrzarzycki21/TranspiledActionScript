@@ -35,7 +35,8 @@ package models
 			"https://transpiledactionscript.com/examples/PureMVCEmployeeAdminMDL", 
 			"0.0.1"),
 			new ExampleVO("Basic PureMVC Employee Admin", 'That is copy of previous example, but in this case module <a href="https://github.com/apache/royale-asjs/tree/develop/frameworks/projects/Basic" class="linksStyle">Basic</a> has been used to build UI part. '
-			+ ' This module does not have default theme, so visually it is far from perfection. Althought you can learn how to use DataGrid, explore Binding mechanism and usage of PureMVC framework.', 
+			+ ' This module does not have default theme, so visually it is far from perfection. Althought you can learn how to use DataGrid, explore Binding mechanism and usage of PureMVC framework.'
+			+ ' It contains also implementation of custom <a href="https://github.com/apache/royale-asjs/blob/develop/frameworks/projects/Basic/src/main/royale/org/apache/royale/html/Panel.as" class="linksStyle">Panel</a> component which displays additional information in the title.', 
 			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminBasic", 
 			"https://transpiledactionscript.com/examples/PureMVCEmployeeAdminBasic/", 
 			"0.0.1")
