@@ -1,0 +1,18 @@
+{
+
+"compilerOptions": {
+		"targets": [
+			"JSRoyale"
+        ],
+        "source-path": [
+            "src"
+        ],
+        "source-map": true,
+        "html-template": "src/resources/mdl-js-index-template.html"
+    },
+    "copySourcePathAssets": true,
+	"files": [
+		"src/TranspiledActionScriptWebsite.mxml"
+    ],
+    "additionalOptions": "-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css"
+}
