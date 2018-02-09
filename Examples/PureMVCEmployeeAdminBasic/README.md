@@ -3,29 +3,4 @@ This example illustrates how the [Basic](https://github.com/apache/royale-asjs/t
 
 [Live Example](https://transpiledactionscript.com/examples/PureMVCEmployeeAdminBasic/)
 
-## How to build the example:
-
-[Moonshine IDE](http://moonshine-ide.com/)
-   - Setup the Apache Royale™ [Nightly build](http://royale.apache.org/download/) using the [Add the Royale SDK](https://github.com/apache/royale-asjs/wiki/Moonshine-IDE#add-the-royale-sdk) instruction. 
-   - Clone the sources of the [PureMVC ActionScript 3 MultiCore Framework](https://github.com/PureMVC/puremvc-as3-multicore-framework)
-   - In the "**Home**" tab, choose "**Open Apache Flex/JS Project...**" and select the folder with your example. 
-   - Right click on the "**PureMVCEmployeeAdminBasic**" in the project tree and choose "**Settings**".
-   - Go to the "**Path**" tab and add new "**Class paths**" to source folder ("**src**") of the cloned PureMVC repository.
-   - Go to the "**Project**" menu and choose "**Build as JavaScript**" or "**Build & Run as JavaScript**".
-
-[Visual Studio Code](https://nextgenactionscript.com/)
-   - Install [VSCode](https://code.visualstudio.com/) and [NextGen ActionScript](https://github.com/BowlerHatLLC/vscode-nextgenas/wiki/Install-the-ActionScript-and-MXML-extension-for-Visual-Studio-Code) plugin.
-   - Setup Apache Royale™ [Nightly build](http://royale.apache.org/download/) using following [instruction](https://github.com/BowlerHatLLC/vscode-nextgenas/wiki/Choose-an-ActionScript-SDK-for-the-current-workspace-in-Visual-Studio-Code).
-   - Got to the "**File**" menu, choose "**Open Folder...**" and select folder with example.
-   - Go to the "**Tasks**" menu and select "**Run Build Task...**"
-   
-
-[Apache Maven™](https://maven.apache.org/)
-
-  - Install Apache Maven™ using the following [instruction](https://maven.apache.org/install.html).
-  - The most recommended way for building this example is to prepare PureMVC Maven artifacts. The sources of PureMVC have to be build with Apache Royale™, because they are not available in the Maven central repository. Therefore, clone the following [fork of PureMVC](https://github.com/piotrzarzycki21/puremvc-as3-multicore-framework).
-  - Use the maven pom file in the cloned sources by running the below command that uses the [settings-template.xml](https://github.com/apache/royale-asjs/blob/develop/settings-template.xml):
-  
-        mvn clean install -s settings-template.xml
-        
-  - Go to the folder root of the example and run the same command.
+[How to build Examples](https://github.com/piotrzarzycki21/TranspiledActionScript/wiki/How-to-build-Examples)
