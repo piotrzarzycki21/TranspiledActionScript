@@ -14,8 +14,10 @@ This example illustrates how the [MDL](https://github.com/apache/royale-asjs/tre
    - Go to the "**Project**" menu and choose "**Build as JavaScript**" or "**Build & Run as JavaScript**".
 
 [Visual Studio Code](https://nextgenactionscript.com/)
-
-   Support for Apache Royale™ in VSCode will be added after the official release of the framework. More details can be found [here](https://github.com/BowlerHatLLC/vscode-nextgenas/issues/144).
+   - Install [VSCode](https://code.visualstudio.com/) and [NextGen ActionScript](https://github.com/BowlerHatLLC/vscode-nextgenas/wiki/Install-the-ActionScript-and-MXML-extension-for-Visual-Studio-Code) plugin.
+   - Setup Apache Royale™ [Nightly build](http://royale.apache.org/download/) using following [instruction](https://github.com/BowlerHatLLC/vscode-nextgenas/wiki/Choose-an-ActionScript-SDK-for-the-current-workspace-in-Visual-Studio-Code).
+   - Got to the "**File**" menu, choose "**Open Folder...**" and select folder with example.
+   - Go to the "**Tasks**" menu and select "**Run Build Task...**"
 
 [Apache Maven™](https://maven.apache.org/)
 
