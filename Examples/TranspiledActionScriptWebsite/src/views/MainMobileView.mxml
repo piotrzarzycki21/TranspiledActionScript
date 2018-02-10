@@ -47,7 +47,7 @@ limitations under the License.
 			<mdl:beads>
 	            <js:InnerHTML>
 					<![CDATA[
-					The TranspiledActionScript Mobile version is in progress. Check out <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" class="linksStyle">GitHub</a> for more information.
+					The TranspiledActionScript Mobile version is in progress. Check out <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" class="linksStyle">GitHub</a> for more information or join me on <a href="https://www.patreon.com/piotrzarzycki/" class="linksStyle">Patreon</a>.
 					]]>
 				</js:InnerHTML>
 			</mdl:beads>	
