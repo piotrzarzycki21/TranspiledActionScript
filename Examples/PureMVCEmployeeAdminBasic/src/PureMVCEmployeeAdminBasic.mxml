@@ -45,7 +45,7 @@ limitations under the License.
 	<js:initialView>
 		<js:View percentWidth="100" percentHeight="100" className="centerElement">
 			<js:Group>
-				<js:Panel title="PureMVC AS3 / Apache Royale Demo" width="800">
+				<js:Panel title="Employee Admin | PureMVC AS3/Apache Royale Demo" width="800">
 					<js:beads>
 						<js:VerticalLayout/>
 					</js:beads>

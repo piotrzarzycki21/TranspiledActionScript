@@ -28,7 +28,9 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 			userProxy.addItem( new UserVO("lstooge","Larry", "Stooge", "larry@stooges.com", "ijk456",DeptEnum.ACCT ) );
 			userProxy.addItem( new UserVO("cstooge","Curly", "Stooge", "curly@stooges.com", "xyz987",DeptEnum.SALES ) );
 			userProxy.addItem( new UserVO("mstooge","Moe", "Stooge", "moe@stooges.com", "abc123",DeptEnum.PLANT ) );
-
+			userProxy.addItem( new UserVO("piotrz","Piotr", "Zarzycki", "myemail@gmail.com", "abc123",DeptEnum.ACCT) );
+			userProxy.addItem( new UserVO("jess","Jessica", "Jones", "jess@gmail.com", "abc124",DeptEnum.SALES) );
+			
 			// register it
 			facade.registerProxy( userProxy );
 
@@ -44,6 +46,14 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.controller
 			roleProxy.addItem( new RoleVO( "mstooge", [ RoleEnum.INVENTORY,
 											  			RoleEnum.PRODUCTION,
 											  			RoleEnum.SALES,
+											  			RoleEnum.SHIPPING ] ) );
+			roleProxy.addItem( new RoleVO( "piotrz", [ RoleEnum.EMP_BENEFITS,
+											  			RoleEnum.CUSTOMERS,
+											  			RoleEnum.EMP_BENEFITS,
+											  			RoleEnum.SHIPPING ] ) );
+			roleProxy.addItem( new RoleVO( "jess", [ RoleEnum.RETURNS,
+											  			RoleEnum.CUSTOMERS,
+											  			RoleEnum.EMP_BENEFITS,
 											  			RoleEnum.SHIPPING ] ) );
 			// register it
 			facade.registerProxy( roleProxy );
