@@ -97,10 +97,16 @@ limitations under the License.
 					</mdl:style>
 				</mdl:CardTitleText>
 			</mdl:CardTitle>
-				<mdl:List percentWidth="65" className="examplesList" dataProvider="{model.examples}">
+				<mdl:List percentWidth="65" className="examplesList">
 					<mdl:style>
 						<js:AllCSSStyles marginTop="0" paddingTop="0"/>
 					</mdl:style>
+					<mdl:beads>
+						<js:ConstantBinding
+							sourceID="model"
+							sourcePropertyName="examples"
+							destinationPropertyName="dataProvider" />
+					</mdl:beads>
 				</mdl:List>		
 		</mdl:Card>
 	</mdl:GridCell>	
