@@ -1,5 +1,5 @@
 ## The TranspiledActionScript
-This example illustrates that Apache Royale™ can be used to build websites.
+This example proves that Apache Royale™ can be used to build websites.
 
 [Live Example](https://transpiledactionscript.com/)
 
