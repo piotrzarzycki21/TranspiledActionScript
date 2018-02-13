@@ -41,6 +41,7 @@
 		{
 			element = super.createElement();
 			element.style["fontFamily"] = "Poppins";
+			element.style["fontSize"] = "16px"
 			
 			return element;
 		}

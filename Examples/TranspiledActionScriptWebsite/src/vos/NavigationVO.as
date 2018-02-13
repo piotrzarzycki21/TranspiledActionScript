@@ -25,7 +25,7 @@ package vos
 		public var href:String;
 		public var color:String;
 		
-		public function NavigationVO(label:String, href:String = "#", color:String = "#FFFFFF"):void
+		public function NavigationVO(label:String, href:String = "#", color:String = "#FAFAFA"):void
 		{
 			this.label = label;
 			this.href = href;

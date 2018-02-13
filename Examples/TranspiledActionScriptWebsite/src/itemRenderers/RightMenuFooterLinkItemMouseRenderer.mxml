@@ -4,7 +4,7 @@
 			  					 xmlns:mdl="library://ns.apache.org/royale/mdl">
 	
 	<mdl:style>
-		<js:AllCSSStyles color="#FFFFFF" marginTop="15" marginRight="30"/>
+		<js:AllCSSStyles color="#FAFAFA" marginTop="15" marginRight="30"/>
 	</mdl:style>		
 	<fx:Script>
 	<![CDATA[
@@ -43,7 +43,7 @@
 		{
 			element = super.createElement();
 			link.style["fontFamily"] = "Poppins";
-			link.style["fontSize"] = "14px"
+			link.style["fontSize"] = "16px"
 			
 			return element;
 		}
