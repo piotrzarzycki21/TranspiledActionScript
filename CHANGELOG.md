@@ -15,5 +15,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
  * CloseDrawerOnNavigationLinkClick bead fixes issue [#1246](https://github.com/google/material-design-lite/issues/1246)
  
 ### Snippets 
- * Snippets: Hello world snippet
- * Snippets: Maven template for new project
+ * Hello World snippet
+ * Maven template for new project
