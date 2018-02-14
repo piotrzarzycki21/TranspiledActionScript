@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:NavigationLinkItemMouseRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+			  xmlns:js="library://ns.apache.org/royale/basic"
+			  xmlns:mdl="library://ns.apache.org/royale/mdl">
+	<mdl:style>
+		<js:AllCSSStyles paddingLeft="15" paddingRight="15"/>
+	</mdl:style>		
+	<fx:Script>
+	<![CDATA[
+		COMPILE::JS
+    	{
+        		import org.apache.royale.core.WrappedHTMLElement;
+    	}
+
+		override public function set data(value:Object):void
+		{
+			super.data = value;
+			
+			if (value)
+			{										
+			   element.style["color"] = value.color;
+			}
+		}		
+		override public function updateRenderer():void
+		{
+			if (data && !data.href) return;
+
+			if (hovered)
+			{
+				element.style["textDecorationLine"] = "underline";
+				element.style["textDecorationColor"] = "#d52d28";
+			}
+			else
+			{
+				element.style["textDecorationLine"] = "none";			
+			}
+		}
+		
+		COMPILE::JS
+		override protected function createElement():WrappedHTMLElement
+		{
+			element = super.createElement();
+			element.style["fontFamily"] = "Poppins";
+			element.style["fontSize"] = "16px"
+			
+			return element;
+		}
+	]]>
+	</fx:Script>
+</mdl:NavigationLinkItemMouseRenderer>

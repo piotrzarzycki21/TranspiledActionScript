@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:Grid xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:js="library://ns.apache.org/royale/basic"
+		  xmlns:mdl="library://ns.apache.org/royale/mdl"
+		  xmlns:html="library://ns.apache.org/royale/html">
+	<mdl:style>
+		<js:SimpleCSSStyles paddingLeft="0" paddingRight="0"/>
+	</mdl:style>		
+	<mdl:GridCell column="12" className="centeredFlexGroup" percentWidth="100">
+		<mdl:style>
+			<js:SimpleCSSStyles marginLeft="0" marginRight="0"/>
+		</mdl:style>		
+		<mdl:Card>
+			<mdl:style>
+				<js:AllCSSStyles width="auto"/>
+			</mdl:style>
+			<mdl:CardTitle>
+				<mdl:style>
+					<js:AllCSSStyles alignItems="center" justifyContent="center" paddingTop="0"/>
+				</mdl:style>
+				<mdl:CardTitleText text="ABOUT">
+					<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" fontSize="36pt"/>
+					</mdl:style>
+				</mdl:CardTitleText>
+			</mdl:CardTitle>
+			<mdl:Grid>
+				<mdl:style>
+					<js:AllCSSStyles maxWidth="80%" margin="auto" paddingTop="0" paddingLeft="0" paddingRight="0"/>
+				</mdl:style>		
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>	
+					<js:Group className="horizontalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="center" justifyContent="center"/>
+						</js:style>		
+						<html:Hr percentWidth="100">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginLeft="-95%"/>
+							</html:style>	
+						</html:Hr>				
+						<js:Group className="hexAbout smallitemAbout centeredFlexGroup">
+							<js:style>
+								<js:SimpleCSSStyles marginLeft="-10%"/>
+							</js:style>
+							<js:Group className="aboutIcons helloIco"/>
+						</js:Group>						
+						<mdl:Card className="bigitemAbout">
+							<mdl:style>
+								<js:AllCSSStyles width="auto"/>
+							</mdl:style>
+							<mdl:CardTitle>
+								<mdl:CardTitleText text="Hello Royale Developers!">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 paddingTop="0" paddingRight="0" width="auto"/>
+									</mdl:style>							
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" width="auto"/>
+								</html:style>
+							 	<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+											I would like to present my idea of helping you with your first steps in <a href="http://royale.apache.org/" class="linksStyle">Apache Royale&trade;</a> framework. Basically, I will provide brief information, tutorials and updates from the community area using <a href="https://www.patreon.com/piotrzarzycki" class="linksStyle">Patreon</a>, <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" class="linksStyle">GitHub</a> and <a href="https://transpiledactionscript.com/" class="linksStyle">TranspiledActionScript.com</a> website.
+											]]>
+				                    </js:InnerHTML>
+				                 </mdl:beads>		
+				            </mdl:CardSupportingText>
+						</mdl:Card>
+					</js:Group>						
+				</mdl:GridCell>
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>				
+					<js:Group className="horizontalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="center" justifyContent="center"/>
+						</js:style>						
+						<mdl:Card className="bigitemAbout">
+							<mdl:style>
+								<js:AllCSSStyles width="auto"/>
+							</mdl:style>
+							<mdl:CardTitle>
+								<mdl:CardTitleText text="Patreon">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 paddingTop="0" paddingRight="0" width="auto"/>
+									</mdl:style>							
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>							
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" width="auto"/>
+								</html:style>
+							 	<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+											This place will be the central point of information. I will provide you updates from the Apache Royale&trade; community, some development nuances and some examples through the GitHub repository. However, my support will have a <b class="linksStyle">time limit of one year</b>, counting from the start date. After that time, I will review what I was able to achieve and whether people are still seeking my help. Each donation through <a href="https://www.patreon.com/piotrzarzycki" class="linksStyle">Patreon</a> will allow me to extend the amount of time, which I can spend on this idea, and thus to be more flexible in terms of the content that can appear here.
+										]]>
+				                    </js:InnerHTML>
+				                 </mdl:beads>		
+				            </mdl:CardSupportingText>
+						</mdl:Card>
+						<js:Group className="hexAbout smallitemAbout centeredFlexGroup">
+							<js:style>
+								<js:SimpleCSSStyles marginRight="-10%"/>
+							</js:style>
+							<js:Group className="aboutIcons patreonIco"/>
+						</js:Group>	
+						<html:Hr percentWidth="100" className="hrAbout">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginRight="-95%"/>
+							</html:style>	
+						</html:Hr>							
+					</js:Group>							
+				</mdl:GridCell>
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>				
+					<js:Group className="horizontalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="center" justifyContent="center"/>
+						</js:style>	
+						<html:Hr percentWidth="100">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginLeft="-95%"/>
+							</html:style>	
+						</html:Hr>			
+						<js:Group className="hexAbout smallitemAbout centeredFlexGroup">
+							<js:style>
+								<js:SimpleCSSStyles marginLeft="-10%"/>
+							</js:style>
+							<js:Group className="aboutIcons tasIco"/>
+						</js:Group>				
+						<mdl:Card className="bigitemAbout">
+							<mdl:style>
+								<js:AllCSSStyles width="auto"/>
+							</mdl:style>
+							<mdl:CardTitle>
+								<mdl:CardTitleText text="Website">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 paddingTop="0" paddingRight="0" width="auto"/>
+									</mdl:style>							
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>							
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" width="auto"/>
+								</html:style>
+							 	<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+											The <a href="https://transpiledactionscript.com/" class="linksStyle">TranspiledActionScript.com</a> website will serve as a gateway to Patreon and the Github repository, as well as a place where you will be able to see all created examples live. The website will be developed using Apache Royale&trade; and its <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/TranspiledActionScriptWebsite" class="linksStyle">sources</a> will become a part of the repository examples.
+											]]>
+				                    </js:InnerHTML>
+				                 </mdl:beads>		
+				            </mdl:CardSupportingText>
+						</mdl:Card>
+					</js:Group>							
+				</mdl:GridCell>
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>				
+					<js:Group className="horizontalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="center" justifyContent="center"/>
+						</js:style>						
+						<mdl:Card className="bigitemAbout">
+							<mdl:style>
+								<js:AllCSSStyles width="auto"/>
+							</mdl:style>
+							<mdl:CardTitle>
+								<mdl:CardTitleText text="GitHub Repository">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 paddingTop="0" paddingRight="0" width="auto"/>
+									</mdl:style>							
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>							
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" width="auto"/>
+								</html:style>
+							 	<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+										The <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" class="linksStyle">TranspiledActionScript</a> repository will store not only the source code of the provided examples, but also all articles not restricted to patrons in the form of <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/wiki/How-it-works%3F" class="linksStyle">Wiki</a> pages. The idea of how the repository is going to work as well as the release process is described in <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/master/README.md" class="linksStyle">README</a> file.
+									  ]]>
+				                    </js:InnerHTML>
+				                 </mdl:beads>		
+				            </mdl:CardSupportingText>
+						</mdl:Card>
+						<js:Group className="hexAbout smallitemAbout centeredFlexGroup">
+							<js:style>
+								<js:SimpleCSSStyles marginRight="-10%"/>
+							</js:style>
+							<js:Group className="aboutIcons githubIco"/>
+						</js:Group>	
+						<html:Hr percentWidth="100" className="hrAbout">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginRight="-95%" />
+							</html:style>	
+						</html:Hr>	
+					</js:Group>							
+				</mdl:GridCell>
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>				
+					<js:Group className="horizontalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="center" justifyContent="center"/>
+						</js:style>			
+						<html:Hr percentWidth="100">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginLeft="-95%"/>
+							</html:style>	
+						</html:Hr>	
+						<js:Group className="hexAbout smallitemAbout centeredFlexGroup">
+							<js:style>
+								<js:SimpleCSSStyles marginLeft="-10%"/>
+							</js:style>
+							<js:Group className="aboutIcons questionIco"/>
+						</js:Group>				
+						<mdl:Card className="bigitemAbout">
+							<mdl:style>
+								<js:AllCSSStyles width="auto"/>
+							</mdl:style>
+							<mdl:CardTitle>
+								<mdl:CardTitleText text="I have a question related to Apache Royale. Where should I ask it?">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 paddingTop="0" paddingRight="0" width="auto"/>
+									</mdl:style>							
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>							
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" width="auto"/>
+								</html:style>
+							 	<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+											The best place to ask questions is Apache Royale&trade; <a href="http://apache-royale-development.20373.n8.nabble.com/" class="linksStyle">development</a> or <a href="http://apache-royale-users.20374.n8.nabble.com/" class="linksStyle">users</a> mailing lists. However, I will also be happy to answer to any issues raised in the <a href="https://github.com/piotrzarzycki21/TranspiledActionScript/issues" class="linksStyle">GitHub repository</a> or in the comments section under Patreon articles.
+										]]>
+				                    </js:InnerHTML>
+				                 </mdl:beads>		
+				            </mdl:CardSupportingText>
+						</mdl:Card>
+					</js:Group>							
+				</mdl:GridCell>
+				<mdl:GridCell column="12">
+					<mdl:style>
+						<js:AllCSSStyles marginLeft="0" marginRight="0"/>
+					</mdl:style>				
+					<js:Group className="verticalFlexGroup">
+						<js:style>
+							<js:AllCSSStyles alignItems="flex-end" justifyContent="center"/>
+						</js:style>			
+						<html:Hr percentWidth="100">
+							<html:style>
+								<js:AllCSSStyles backgroundColor="#CFCFCF" marginRight="-40%"/>
+							</html:style>	
+						</html:Hr>
+						<mdl:Card percentWidth="60">
+							<mdl:style>
+								<js:AllCSSStyles minHeight="auto"/>
+							</mdl:style>
+							<mdl:CardSupportingText>
+								<html:style>
+									<js:AllCSSStyles fontFamily="Sintony" color="#444444" fontSize="14pt" lineHeight="2.3em"
+													 paddingTop="0" paddingRight="0" paddingLeft="0" width="auto"/>
+								</html:style>
+								<mdl:beads>
+				                    <js:InnerHTML>
+				                         <![CDATA[
+											I hope you will enjoy this place and find the answers you seek,
+										]]>
+				                    </js:InnerHTML>
+			                 	</mdl:beads>	
+							</mdl:CardSupportingText>							
+							<mdl:CardTitle>
+								<mdl:style>
+									<js:SimpleCSSStyles padding="0"/>
+								</mdl:style>
+								<mdl:CardTitleText text="Piotr">
+									<mdl:style>
+										<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" fontWeight="bold"
+														 width="auto"/>
+									</mdl:style>						
+								</mdl:CardTitleText>								
+							</mdl:CardTitle>
+						</mdl:Card>
+					</js:Group>							
+				</mdl:GridCell>
+			</mdl:Grid>
+		</mdl:Card>		
+	</mdl:GridCell>		
+</mdl:Grid>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:js="library://ns.apache.org/royale/basic" 
+					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+					  xmlns:html="library://ns.apache.org/royale/html"
+					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
+					  fixedHeader="true">			
+	<mdl:style>
+			<js:AllCSSStyles height="auto" minHeight="100%"/>
+	</mdl:style>		
+	<mdl:Header>
+		<mdl:style>
+			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
+		</mdl:style>
+		<mdl:HeaderRow className="mdl-layout--small-screen-only">
+			<js:Group className="imageLOGO"/>
+		</mdl:HeaderRow>
+	</mdl:Header>	
+	<mdl:NavigationLayoutContent id="mainLayoutContent">
+		<mdl:style>
+			<js:AllCSSStyles overflowY="hidden" paddingLeft="80" 
+			                 paddingRight="80" padding="0" minHeight="100%"
+			                 display="flex" flexDirection="row" alignItems="center"/>
+		</mdl:style>
+		<js:Group>
+			<mdl:style>
+				<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" lineHeight="1.4em"/>
+			</mdl:style>
+			<mdl:beads>
+	            <js:InnerHTML>
+					<![CDATA[
+					The TranspiledActionScript Mobile version is in progress. Check out <a href="https://github.com/piotrzarzycki21/TranspiledActionScript" class="linksStyle">GitHub</a> for more information or join me on <a href="https://www.patreon.com/piotrzarzycki/" class="linksStyle">Patreon</a>.
+					]]>
+				</js:InnerHTML>
+			</mdl:beads>	
+		</js:Group>
+    </mdl:NavigationLayoutContent>	
+	<mdl:Footer mini="true">
+		<mdl:style>
+			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0" />
+		</mdl:style>
+		<mdl:FooterLeftSection>
+			<mdl:FooterHeading>
+				<mdl:beads>
+                    <js:InnerHTML>
+						<![CDATA[
+						Copyright 2018 Nellix Software.</br>All rights reserved.
+						]]>
+					</js:InnerHTML>
+				</mdl:beads>					
+				<mdl:style>
+					<js:AllCSSStyles fontFamily="Poppins"/>
+				</mdl:style>	
+				<js:Image src="./resources/images/1x/icons/LOGO.png">
+					<js:style>
+						<js:AllCSSStyles display="block" paddingTop="15"/>
+					</js:style>
+					<js:model>
+						<js:ImageModel />
+					</js:model>
+					<js:view>
+						<js:ImageView />
+					</js:view>
+				</js:Image>	
+			</mdl:FooterHeading>
+		</mdl:FooterLeftSection>
+		<mdl:beads>
+		</mdl:beads>
+	</mdl:Footer>
+</mdl:NavigationLayout>

@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+ 	"configurations": [
+ 		{
+ 			"name": "Launch Firefox against localhost, with sourcemaps",
+ 			"type": "firefox",
+ 			"request": "launch",
+ 			"file": "${workspaceRoot}/bin/js-debug/index.html"
+ 		}
+ 	]
+}

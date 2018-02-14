@@ -1,0 +1,99 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Licensed to the Apache Software Foundation (ASF) under one or more
+//  contributor license agreements.  See the NOTICE file distributed with
+//  this work for additional information regarding copyright ownership.
+//  The ASF licenses this file to You under the Apache License, Version 2.0
+//  (the "License"); you may not use this file except in compliance with
+//  the License.  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+@namespace js "library://ns.apache.org/royale/basic";
+	
+global {
+   IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
+}	
+
+js|DataGrid .DataItemRenderer {
+	border: solid 0.5px #ACACAC;
+	border-top: none;
+}
+
+js|DataGrid .StringItemRenderer {
+	border: solid 0.5px #ACACAC;
+	border-top: none;
+    border-right: none;
+}
+
+.centerElement
+{
+	display: flex;
+	alignItems: center;
+	justify-content: center;
+}
+
+.hgroup
+{
+	IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.HorizontalFlexLayout");
+}
+
+.vgroup
+{
+   IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.VerticalFlexLayout");
+}
+
+.unsetPosition
+{
+	position: unset !important;
+}
+
+.roleList
+{
+	IDataProviderItemRendererMapper: ClassReference("org.apache.royale.html.beads.DataItemRendererFactoryForArrayList");
+}
+
+.userList
+{
+	position: unset !important;
+	IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.DataGridPercentageLayout");
+}
+
+.userListDepartmentColumn {
+	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.UserListDepartmentItemRenderer");
+}
+	
+.titleBarWithAdditionalInfo {
+	IBeadView: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.TitleBarWithAdditionalInfoView");
+	IBeadModel: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.model.CustomPanelWithControlBarModel");
+	background-color: #E2E2E2;
+	padding: 2px;
+	height: 30px;
+	flex-grow: 0;
+	min-height: 30px;	
+	border-bottom: 1px solid #333333;
+}
+		
+.inputFormGroup {
+    flex-wrap: nowrap;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.inputFormItem {
+   margin: 5px;
+}
+
+

@@ -1,0 +1,16 @@
+{
+
+"compilerOptions": {
+		"targets": [
+			"JSRoyale"
+        ],
+        "source-path": [
+            "src",
+            "../../../../Others/puremvc-as3-multicore-framework/src"
+        ],
+        "source-map": true
+	},
+	"files": [
+		"src/PureMVCEmployeeAdminBasic.mxml"
+    ]
+}

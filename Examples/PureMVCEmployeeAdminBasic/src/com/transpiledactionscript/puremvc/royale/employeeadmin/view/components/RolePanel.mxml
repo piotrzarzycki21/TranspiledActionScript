@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<components:CustomPanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  				              xmlns:js="library://ns.apache.org/royale/basic" 
+						              xmlns:components="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+						              xmlns:model="com.transpiledactionscript.puremvc.royale.employeeadmin.model.*"
+						              title="User Roles">
+	<js:beads>
+		<js:ContainerDataBinding />
+	</js:beads>
+	<js:model>
+		<model:CustomPanelWithControlBarModel />
+	</js:model>
+	<js:view>
+		<components:CustomPanelWithControlBarView />
+	</js:view>
+	<js:style>
+		<js:SimpleCSSStyles marginLeft="2" margin="4"/>
+	</js:style>
+	<js:Group className="vgroup" percentWidth="100" percentHeight="100">	
+		<js:List id="roleList" labelField="value" percentHeight="100" className="roleList"
+				 dataProvider="{userRoles}" 
+		         change="onRoleListChange(event)">
+			<js:beads>
+				<js:DynamicAddItemRendererForArrayListData/>
+				<js:DynamicRemoveItemRendererForArrayListData />
+				<js:DynamicRemoveAllByNullItemRendererForArrayListData />
+			</js:beads>
+		</js:List>
+		<js:DropDownList id="rolesDropDown"
+						 selectedIndex="0" labelField="value" dataProvider="{RoleEnum.comboList}" 
+						 change="onRolesDropDownChange(event)">
+			<js:beads>
+				<js:DisableBead disabled="{user == null}"/>
+			</js:beads>								
+		</js:DropDownList>	
+	</js:Group>
+	<js:controlBar>
+		<js:Group percentWidth="100"/>
+		<js:Group>
+			<js:beads>
+				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
+			</js:beads>
+			<js:TextButton id="addRole" text="Add" width="70" click="onAddClick(event)">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
+			<js:TextButton id="removeRole" text="Remove" width="80" click="onRemoveClick(event)">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
+		</js:Group>
+	</js:controlBar>
+	<fx:Script>
+	<![CDATA[
+			import org.apache.royale.collections.ArrayList;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.RoleEnum;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.events.Event;
+
+			public static const ADD:String = "add";
+			public static const REMOVE:String = "remove";
+
+			[Bindable] 
+			public var user:UserVO;
+			[Bindable] 
+			public var selectedRole:RoleEnum;
+			[Bindable] 
+			public var userRoles:ArrayList;
+
+			// send the named event
+			private function sendEvent( eventName:String ):void
+			{
+				dispatchEvent( new Event( eventName, true ) );
+			}
+			
+			// select role to remove
+			private function selectRoleToRemove():void
+			{
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				selectedRole = RoleEnum(roleList.selectedItem);
+			}
+			
+			// select role to add
+			private function selectRoleToAdd():void
+			{
+				roleList.selectedIndex = -1;
+				selectedRole = RoleEnum(rolesDropDown.selectedItem);
+			}
+			
+			public function reset():void
+			{
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				refreshDisable();
+			}
+		
+			private function onAddClick(event:MouseEvent):void
+			{
+				sendEvent(ADD);
+			}	
+			
+			private function onRemoveClick(event:MouseEvent):void
+			{
+				sendEvent(REMOVE);
+			}
+			
+			private function onRoleListChange(event:Event):void
+			{
+				selectRoleToRemove();
+				refreshDisable();
+			}
+			
+			private function onRolesDropDownChange(event:Event):void
+			{
+				selectRoleToAdd();
+				refreshDisable();
+			}
+			
+			private function refreshDisable():void
+			{									
+				var disabledBead:DisableBead = rolesDropDown.getBeadByType(DisableBead) as DisableBead;
+				disabledBead.disabled = user == null;
+	
+				disabledBead = addRole.getBeadByType(DisableBead) as DisableBead;
+				disabledBead.disabled = rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED; 
+
+				disabledBead = removeRole.getBeadByType(DisableBead) as DisableBead;
+				disabledBead.disabled = roleList.selectedIndex == -1;			
+			}
+	]]>
+</fx:Script>
+</components:CustomPanelWithControlBar>

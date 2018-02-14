@@ -1,0 +1,18 @@
+{
+
+"compilerOptions": {
+		"targets": [
+			"JSRoyale"
+        ],
+        "source-path": [
+            "src",
+            "../../../../Others/puremvc-as3-multicore-framework/src"
+        ],
+        "source-map": true,
+        "html-template": "src/resources/mdl-js-index-template.html"
+	},
+	"files": [
+		"src/PureMVCEmployeeAdminMDL.mxml"
+    ],
+    "additionalOptions": "-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css"
+}

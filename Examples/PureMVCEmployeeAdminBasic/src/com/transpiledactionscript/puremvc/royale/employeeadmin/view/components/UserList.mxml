@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<components:CustomPanelWithControlBar xmlns:fx="http://ns.adobe.com/mxml/2009"
+					    			  xmlns:js="library://ns.apache.org/royale/basic" 
+									  xmlns:components="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+						              xmlns:model="com.transpiledactionscript.puremvc.royale.employeeadmin.model.*"
+					                  title="Users">
+	<js:beads>
+		<js:ContainerDataBinding />
+	</js:beads>	
+	<js:model>
+		<model:CustomPanelWithControlBarModel />
+	</js:model>
+	<js:view>
+		<components:CustomPanelWithControlBarView />
+	</js:view>
+	<js:style>
+		<js:SimpleCSSStyles margin="4"/>
+	</js:style>
+	<js:DataGrid id="userList" width="100%" rowHeight="30" 
+				 className="userList DynamicDataGrid DataGrid" 
+	             dataProvider="{users}" change="onUserListChange(event)">
+		<js:columns>
+			<js:DataGridColumn label="Username" dataField="username" columnWidth="20" />
+			<js:DataGridColumn label="First name" dataField="fname" columnWidth="20"/>
+			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="20"/>
+			<js:DataGridColumn label="Email" dataField="email" columnWidth="20"/>
+			<js:DataGridColumn label="Department" dataField="department" columnWidth="20" 
+							   className="userListDepartmentColumn DynamicDataGridColumnList"/>
+		</js:columns>
+	</js:DataGrid>
+	<js:controlBar>
+		<js:Group percentWidth="100"/>
+		<js:Group>
+			<js:beads>
+				<js:HorizontalLayoutWithPaddingAndGap gap="5"/>
+			</js:beads>
+			<js:TextButton id="userDeleteButton" text="Delete" width="80" click="onDeleteClick(event)">
+				<js:beads>
+					<js:DisableBead disabled="true"/>
+				</js:beads>
+			</js:TextButton>
+			<js:TextButton text="New" width="70" click="onNewClick(event)"/>
+		</js:Group>		
+	</js:controlBar>	
+	<fx:Script>
+	
+	<![CDATA[
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.collections.ArrayList;			
+
+			public static const NEW:String 		= "new";
+			public static const DELETE:String 	= "delete";
+			public static const SELECT:String 	= "select";
+			
+			[Bindable]
+			public var users:ArrayList;
+			[Bindable] 
+			public var selectedUser:UserVO;
+			[Bindable] 
+			private var armed:Boolean = false; // delete confirmation
+
+			// send the named event and reset armed state 
+			private function sendEvent( eventName:String ):void
+			{
+				armed=false;
+				dispatchEvent( new Event( eventName, true ) );
+			}
+			
+			// remove selection in the user list and reset armed state
+			public function deSelect():void
+			{
+				armed=false;
+				userList.selectedIndex = -1;
+			}
+
+			public function refreshUsersCount(count:int):void
+			{
+				info = String(count);	
+			}			
+			
+			private function onNewClick(event:MouseEvent):void
+			{
+				deSelect();
+				sendEvent(NEW);
+			}
+			
+			private function onDeleteClick(event:MouseEvent):void
+			{
+				deSelect();
+				sendEvent(DELETE);
+			}
+			
+			private function onUserListChange(event:Event):void
+			{
+				if (userList.selectedIndex != -1)
+				{
+					selectedUser = users.getItemAt(userList.selectedIndex)  as UserVO;
+					sendEvent(SELECT);
+				}
+				
+				refreshDisable();
+			}			
+			
+			private function refreshDisable():void
+			{									
+				var disableBead:DisableBead = userDeleteButton.getBeadByType(DisableBead) as DisableBead;
+				disableBead.disabled = userList.selectedIndex == -1;	
+			}
+	]]>
+</fx:Script>
+</components:CustomPanelWithControlBar>

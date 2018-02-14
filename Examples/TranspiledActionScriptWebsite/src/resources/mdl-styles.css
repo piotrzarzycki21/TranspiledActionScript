@@ -1,0 +1,502 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Licensed to the Apache Software Foundation (ASF) under one or more
+//  contributor license agreements.  See the NOTICE file distributed with
+//  this work for additional information regarding copyright ownership.
+//  The ASF licenses this file to You under the Apache License, Version 2.0
+//  (the "License"); you may not use this file except in compliance with
+//  the License.  You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing, software
+//  distributed under the License is distributed on an "AS IS" BASIS,
+//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//  See the License for the specific language governing permissions and
+//  limitations under the License.
+//
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+@namespace "http://www.w3.org/1999/xhtml";
+@namespace js "library://ns.apache.org/royale/basic";
+@namespace mdl "library://ns.apache.org/royale/mdl";
+	
+global {
+   IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
+}
+
+.royale *, . royale *:before, . royale *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.viewPosition {
+	position: unset !important;
+}
+
+.page-content
+{
+	padding: 10px;
+	margin: 10px;
+}
+
+.navigationChange
+{
+	IItemRenderer: ClassReference("itemRenderers.MainMenuNavigationLinkItemMouseRenderer");
+	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
+}
+
+.navigationRightFooter
+{
+	IItemRenderer: ClassReference("itemRenderers.RightMenuFooterLinkItemMouseRenderer");
+	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
+}
+
+.examplesList
+{
+	IItemRenderer: ClassReference("itemRenderers.ExampleListRowItemRenderer");
+}
+
+.utilsList
+{
+	IItemRenderer: ClassReference("itemRenderers.UtilsListRowItemRenderer");
+}
+
+.imageLOGO {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/LOGO.png) no-repeat;
+  width: 250px; 
+  height: 38px; 
+}
+
+.vectorExamples {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/vector_smart_obj.png) no-repeat;
+  width: 67px; 
+  height: 67px; 
+}
+
+.sourceCode {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_code_red.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.sourceCodeHover {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_code_green.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.previewCode {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_preview_red.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.previewCodeHover {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/ico_preview_green.png) no-repeat;
+  width: 30px;
+  height: 30px;
+}
+
+.techMoonshine {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_moonshine.png) no-repeat;
+  width: 161px;
+  height: 142px;
+}
+
+.techRoyale {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_apache.png) no-repeat;
+  width: 180px;
+  height: 152px;
+}
+
+.techNextGenAS {
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/icons/tech_nextgen.png) no-repeat;
+  width: 217px;
+  height: 62px;
+}
+
+.hexAbout {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(./resources/images/1x/4_about/hex.png) no-repeat;
+  background-position-x: center;
+  background-size: 201px 230px;
+  width: 201px;
+  height: 230px;
+  min-width: 201px;
+  min-height: 230px;
+}
+
+.aboutIcons {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: center;
+}
+
+.helloIco {
+  background: url(./resources/images/1x/4_about/ico_hello.png) no-repeat;
+  background-size: 89px 89px;
+  width: 89px;
+  height: 89px;
+}
+
+.patreonIco {
+  background: url(./resources/images/1x/4_about/ico_patreon.png) no-repeat;
+  background-size: 94px 94px;
+  width: 94px;
+  height: 94px;
+}
+
+.helloIco {
+  background: url(./resources/images/1x/4_about/ico_hello.png) no-repeat;
+  background-size: 89px 89px;
+  width: 89px;
+  height: 89px;
+}
+
+.tasIco {
+  background: url(./resources/images/1x/4_about/ico_TAS_logo.png) no-repeat;
+  background-size: 83px 101px;
+  width: 83px;
+  height: 101px;
+}
+
+.githubIco {
+  background: url(./resources/images/1x/4_about/ico_github.png) no-repeat;
+  background-size: 97px 95px;
+  width: 97px;
+  height: 95px;
+}
+
+.questionIco {
+  background: url(./resources/images/1x/4_about/ico_question.png) no-repeat;
+  background-size: 101px 83px;
+  width: 101px;
+  height: 83px;
+}
+
+.hrAbout {
+  z-index: -1;
+}
+
+@media (max-width: 1650px) {
+	.examplesBackground {
+	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: top;
+	  background-size: 50% auto;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: 100%;
+	  background-position-y: top;
+	  background-size: auto 100%;
+	}
+	
+	.legalBackground {
+	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: -90%;
+	  background-position-y: top;
+	  background-size: auto 100%;
+	}	
+}
+
+@media (min-width: 1650px) {
+	.examplesBackground {
+	  background-image: url(./resources/images/1x/1_top/1_top_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: top;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/1x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: top;
+	  background-size: auto 100%;
+	}	
+	
+	.legalBackground {
+	  background-image: url(./resources/images/1x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: -50%;
+	  background-position-y: top;
+	  background-size: auto 100%;
+	}
+}
+
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+	
+	.sourceCode {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/ico_code_red@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.sourceCodeHover {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/ico_code_green@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.previewCode {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/1x/icons/ico_preview_red@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.previewCodeHover {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/1x/icons/ico_preview_green@2x.png) no-repeat;
+	  width: 58px;
+	  height: 58px;
+	}
+	
+	.examplesBackground {
+	    background-image: url(./resources/images/2x/1_top/1_top_full.png);
+	    background-repeat: no-repeat, no-repeat, no-repeat; 
+		background-position-x: right;
+		background-position-y: top;
+	}
+	
+	.utilsBackground {
+	  background-image: url(./resources/images/2x/3_utils/3_utils_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: right;
+	  background-position-y: center;
+	  background-size: auto 100%;
+	}
+	
+	.legalBackground {
+	  background-image: url(./resources/images/2x/5_legal/5_legal_full.png);
+	  background-repeat: no-repeat, no-repeat, no-repeat; 
+	  background-position-x: left;
+	  background-position-y: top;
+	  background-size: auto 100%;
+	}
+	
+	.imageLOGO {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/LOGO.png) no-repeat;
+	  width: 500px; 
+	  height: 76px; 
+	}
+	
+	.vectorExamples {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/vector_smart_obj.png) no-repeat;
+	  width: 67px; 
+	  height: 67px; 
+	}
+	
+	.techMoonshine {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_moonshine.png) no-repeat;
+	  width: 322px;
+	  height: 283px;
+	}
+	
+	.techRoyale {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_apache.png) no-repeat;
+	  width: 360px;
+	  height: 304px;
+	}
+	
+	.techNextGenAS {
+	  display: block;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/icons/tech_nextgen.png) no-repeat;
+	  width: 434px;
+	  height: 124px;
+	}
+	
+	.helloIco {
+	  background: url(./resources/images/2x/4_about/ico_hello.png) no-repeat;
+	  background-size: 178px 178px;
+	  width: 178px;
+	  height: 178px;
+	}
+	
+	.patreonIco {
+	  background: url(./resources/images/2x/4_about/ico_patreon.png) no-repeat;
+	  background-size: 188px 188px;
+	  width: 188px;
+	  height: 188px;
+	}
+	
+	.tasIco {
+	  background: url(./resources/images/2x/4_about/ico_TAS_logo.png) no-repeat;
+	  background-size: 166px 202px;
+	  width: 166px;
+	  height: 202px;
+	}
+	
+	.githubIco {
+	  background: url(./resources/images/2x/4_about/ico_github.png) no-repeat;
+	  background-size: 194px 190px;
+	  width: 194px;
+	  height: 190px;
+	}
+	
+	.questionIco {
+	  background: url(./resources/images/2x/4_about/ico_question.png) no-repeat;
+	  background-size: 202px 166px;
+	  width: 202px;
+	  height: 166px;
+	}
+	
+	.hexAbout {
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	  background: url(./resources/images/2x/4_about/hex.png) no-repeat;
+	  background-position-x: center;	
+	  background-size: 402px 459px;
+	  width: 402px;
+	  height: 459px;
+	  min-width: 402px;
+	  min-height: 459px;
+	}
+	
+	.circleRed {
+		background: #D52D28;
+		-moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+		border-radius: 50%;
+		width: 58px;
+		height: 58px;
+	}
+}
+
+
+.snippetsBackground
+{
+  background-image: url(./resources/images/1x/2_snippets/2_snippets_full.png);
+  background-repeat: no-repeat, no-repeat, no-repeat; 
+  background-position-x: left;
+  background-position-y: top;
+  background-size: 50% auto;
+}
+
+.horizontalFlexGroup
+{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+}
+
+.verticalFlexGroup
+{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: column;
+   flex-direction: column;
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+}
+
+.centeredFlexGroup {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.bigitem {
+   -webkit-flex: 2.5 0 0;
+   flex: 2.5 0 0;
+}
+.smallitem {
+   -webkit-flex: 0.5 0 0;
+   flex: 0.5 0 0;
+}
+
+.bigitemAbout {
+   -webkit-flex: 3 0 0;
+   flex: 3 0 0;
+}
+.smallitemAbout {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+}
+.circleRed {
+	background: #D52D28;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+.linksStyle {
+	color: #d52d28; 
+	font-family: Sintony; 
+	font-size: 14pt; 
+	text-decoration: none;
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<js:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:js="library://ns.apache.org/royale/basic"
+				xmlns:local="*" xmlns:mdl="library://ns.apache.org/royale/mdl" 
+				xmlns:view="com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.*"
+				pageTitle="Employee Admin (Apache Royale MDL)" applicationComplete="onApplicationComplete(event)">
+					
+	<fx:Style source="resources/mdl-styles.css"/>
+	
+	<js:valuesImpl>
+		<js:SimpleCSSValuesImpl />
+	</js:valuesImpl>
+		
+	<fx:Script>
+		<![CDATA[
+		import com.transpiledactionscript.puremvc.royale.employeeadmin.ApplicationFacade;
+
+		private var facade:ApplicationFacade = ApplicationFacade.getInstance(ApplicationFacade.NAME);
+	
+		private function onApplicationComplete(event:Event):void
+	    {
+			facade.startup(this);
+		}	
+		]]>
+	</fx:Script>
+	
+	<js:initialView>
+		<js:View>
+			<mdl:Card percentWidth="100" percentHeight="100">
+				<js:style>
+					<js:AllCSSStyles alignItems="center"/>
+				</js:style>
+				<mdl:Grid percentWidth="100">
+					<mdl:style>
+						<js:AllCSSStyles alignItems="left"/>
+					</mdl:style>
+					<mdl:GridCell width="210">
+						<mdl:CardTitle>
+							<js:style>
+								<js:AllCSSStyles padding="0" paddingLeft="15"/>
+							</js:style>
+							<mdl:CardTitleText percentWidth="100" text="Employee Admin">
+								<mdl:style>
+									<js:AllCSSStyles textAlign="left" color="0xff4081" fontWeight="bold"/>
+								</mdl:style>
+							</mdl:CardTitleText>
+						</mdl:CardTitle>
+					</mdl:GridCell>
+					<mdl:GridCell>
+						<mdl:CardTitle>
+							<js:style>
+								<js:AllCSSStyles padding="0" paddingTop="7"/>
+							</js:style>
+							<mdl:beads>
+								<js:InnerHTML><![CDATA[<span>PureMVC AS3 / Apache Royale&trade; Demo</span>]]></js:InnerHTML>
+							</mdl:beads>
+						</mdl:CardTitle>
+					</mdl:GridCell>
+				</mdl:Grid>
+				<mdl:Grid>
+					<mdl:style>
+						<js:AllCSSStyles maxWidth="850"/>
+					</mdl:style>
+					<mdl:GridCell column="12">
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>		
+						<view:UserList id="userList" percentWidth="100"/>
+					</mdl:GridCell>	
+					<mdl:GridCell column="6">	
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>			
+						<view:UserForm id="userForm" percentWidth="100"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<mdl:style>
+							<js:SimpleCSSStyles padding="0" margin="0"/>
+						</mdl:style>	
+						<view:RolePanel id="rolePanel" percentWidth="100" percentHeight="100"/>
+					</mdl:GridCell>					
+				</mdl:Grid>				
+			</mdl:Card>
+		</js:View>
+	</js:initialView>
+
+ </js:Application>

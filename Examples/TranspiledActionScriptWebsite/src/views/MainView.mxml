@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:NavigationLayout xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:js="library://ns.apache.org/royale/basic" 
+					  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+					  xmlns:html="library://ns.apache.org/royale/html"
+					  xmlns:models="models.*" xmlns:views="views.*" xmlns:utils="utils.*" 
+					  currentState="Examples" fixedHeader="true"
+					  className.Snippets="snippetsBackground" className.Utils="utilsBackground"
+				 	  className.Legal="legalBackground" className.Examples="examplesBackground"
+				      stateChangeComplete="onMainViewStateChangeComplete(event)">			
+	<mdl:states>
+		<js:State name="Examples"/>
+		<js:State name="Utils"/>
+		<js:State name="Snippets"/>	
+		<js:State name="About"/>
+		<js:State name="Legal"/>
+	</mdl:states>
+	<mdl:style>
+			<js:AllCSSStyles height="auto" minHeight="100%"/>
+	</mdl:style>	
+	<mdl:model>
+		<models:MainNavigationModel id="mainNavigationModel"/>
+	</mdl:model>		
+	<mdl:Header>
+		<mdl:style>
+			<js:SimpleCSSStyles backgroundColor="#5126ab"/>
+		</mdl:style>
+		<mdl:HeaderRow className="mdl-layout--large-screen-only">
+			<js:Group className="imageLOGO" />
+			<mdl:Spacer />
+			<mdl:Navigation className="navigationChange"
+						    change="onNavigationChange(event)" >			
+				<mdl:beads>
+                    <js:ConstantBinding
+                            sourceID="model"
+                            sourcePropertyName="mainNavigation"
+                            destinationPropertyName="dataProvider" />
+                </mdl:beads>
+			</mdl:Navigation>
+		</mdl:HeaderRow>
+		<mdl:HeaderRow className="mdl-layout--small-screen-only">
+			<js:Group className="imageLOGO"/>
+		</mdl:HeaderRow>
+	</mdl:Header>		
+	<mdl:Drawer className="mdl-layout--small-screen-only">
+		<mdl:beads>
+			<utils:CloseDrawerOnNavigationLinkClick />
+		</mdl:beads>
+		<mdl:Navigation className="navigationChange"
+					    change="onNavigationChange(event)" >			
+				<mdl:beads>
+                    <js:ConstantBinding
+                            sourceID="model"
+                            sourcePropertyName="mainNavigation"
+                            destinationPropertyName="dataProvider" />
+                </mdl:beads>
+		</mdl:Navigation>
+	</mdl:Drawer>
+	
+	<mdl:NavigationLayoutContent id="mainLayoutContent">
+		<mdl:style>
+			<js:AllCSSStyles overflowY="hidden" paddingLeft="80" padding="0" minHeight="100%" />
+		</mdl:style>
+		<views:ExamplesView includeIn="Examples"/>
+		<views:UtilsView includeIn="Utils"/>
+		<views:SnippetsView includeIn="Snippets"/>
+		<views:AboutView includeIn="About"/>
+		<views:LegalView includeIn="Legal"/>
+    </mdl:NavigationLayoutContent>	
+	<mdl:Grid includeIn="Examples" percentWidth="100">
+		<mdl:style>
+			<js:AllCSSStyles backgroundColor="#FAFAFA"/>
+		</mdl:style>
+		<mdl:GridCell column="12" className="centeredFlexGroup">
+			<mdl:style>
+				<js:SimpleCSSStyles marginLeft="-1.5%" marginTop="3%"/>
+			</mdl:style>
+			<html:H2 text="TECHNOLOGIES">
+				<mdl:style>
+						<js:SimpleCSSStyles fontFamily="Poppins" color="#444444" 
+											fontSize="36pt"/>
+				</mdl:style>
+			</html:H2>
+		</mdl:GridCell>	
+		<mdl:GridCell column="12" className="centeredFlexGroup">
+			<mdl:style>
+				<js:AllCSSStyles marginBottom="3%"/>
+			</mdl:style>
+			<js:Group className="hexagon">	
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">	
+					<html:A className="techMoonshine" href="http://moonshine-ide.com/" />
+				</js:Group>
+			</js:Group>
+			<js:Group className="hexagon">
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">
+					<html:A className="techRoyale" href="http://royale.apache.org/" />
+				</js:Group>
+			</js:Group>
+			<js:Group className="hexagon">
+				<js:style>
+					<js:AllCSSStyles marginRight="5%"/>
+				</js:style>
+				<js:Group className="centeredFlexGroup">
+					<html:A className="techNextGenAS" href="https://nextgenactionscript.com/" />
+				</js:Group>
+			</js:Group>
+		</mdl:GridCell>
+	</mdl:Grid>
+	<mdl:Footer mini="true">
+		<mdl:style>
+			<js:SimpleCSSStyles paddingLeft="80" paddingRight="40" padding="0" />
+		</mdl:style>
+		<mdl:FooterLeftSection>
+			<mdl:FooterHeading text="Copyright 2018 Nellix Software. All rights reserved.">
+				<mdl:style>
+					<js:AllCSSStyles fontFamily="Poppins"/>
+				</mdl:style>	
+				<js:Image src="./resources/images/1x/icons/LOGO.png">
+					<js:style>
+						<js:AllCSSStyles display="block" paddingTop="15"/>
+					</js:style>
+					<js:model>
+						<js:ImageModel />
+					</js:model>
+					<js:view>
+						<js:ImageView />
+					</js:view>
+				</js:Image>	
+			</mdl:FooterHeading>
+		</mdl:FooterLeftSection>
+		<mdl:FooterRightSection>
+			<mdl:FooterLinkList labelField="label" className="navigationRightFooter" 
+								change="onNavigationChange(event)">
+                        <mdl:beads>
+                            <js:ConstantBinding
+                                sourceID="model"
+                                sourcePropertyName="rightFooterNavigation"
+                                destinationPropertyName="dataProvider" />
+							<js:DataFieldProviderBead dataField="href"/>
+                        </mdl:beads>
+                 </mdl:FooterLinkList>
+		</mdl:FooterRightSection>
+		<mdl:beads>
+		</mdl:beads>
+	</mdl:Footer>
+	<fx:Script>
+	<![CDATA[
+		import vos.NavigationVO;
+
+		private function onNavigationChange(event:Event):void
+		{
+			var navigationVO:NavigationVO = event.currentTarget.selectedItem as NavigationVO;
+			if (hasState(navigationVO.label))
+			{
+				currentState = navigationVO.label;	
+			}
+		}		
+		
+		private function onMainViewStateChangeComplete(event:Event):void
+		{
+			if (currentState == "Legal" || currentState == "Snippets")
+			{
+				element.style["backgroundColor"] = "#F1F1F1";
+			}
+			else
+			{
+				element.style["backgroundColor"] = "#FFFFFF";
+			}
+			
+			if (currentState == "About" || currentState == "Snippets")
+			{
+				mainLayoutContent.element.style["paddingLeft"] = "0px";
+				mainLayoutContent.element.style["paddingRight"] = "0px";
+			}
+			
+			if (currentState == "Examples" || currentState == "Utils")
+			{
+				mainLayoutContent.element.style["paddingLeft"] = "80px";
+			}
+			
+			if (currentState == "Snippets")
+			{
+				mainLayoutContent.element.style["paddingRight"] = "80px";
+			}
+		}
+	]]>
+</fx:Script>
+</mdl:NavigationLayout>

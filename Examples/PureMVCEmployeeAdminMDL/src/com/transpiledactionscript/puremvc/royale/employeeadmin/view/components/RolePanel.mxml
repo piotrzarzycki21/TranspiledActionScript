@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:mdl="library://ns.apache.org/royale/mdl" 
+		  xmlns:js="library://ns.apache.org/royale/basic">
+	<mdl:style>
+		<js:SimpleCSSStyles paddingTop="2" paddingLeft="5"/>
+	</mdl:style>
+	<mdl:beads>
+		<js:ContainerDataBinding />
+	</mdl:beads>	
+	<mdl:CardTitle>
+		<mdl:style>
+			<js:SimpleCSSStyles padding="2"/>
+		</mdl:style>
+		<mdl:CardTitleText text="User Roles" percentWidth="100">
+			<mdl:style>
+				<js:SimpleCSSStyles fontSize="18" fontWeight="bold"/>
+			</mdl:style>
+		</mdl:CardTitleText>
+		<js:Label id="usernameLabel" text="{user.lname + ', ' + user.fname}"/>
+	</mdl:CardTitle>
+	<mdl:Grid percentWidth="100" percentHeight="100">
+		<mdl:GridCell column="12">
+			<mdl:Table id="roleList" percentWidth="100" dataProvider="{userRoles}" 
+					   className="roleList" change="onRoleListChange(event)">
+				<mdl:beads>
+					<js:DynamicAddItemRendererForArrayListData/>
+					<js:DynamicRemoveItemRendererForArrayListData />
+					<js:DynamicRemoveAllByNullItemRendererForArrayListData />
+				</mdl:beads>
+			</mdl:Table>
+		</mdl:GridCell>
+	</mdl:Grid>	
+	<mdl:CardActions>
+		<mdl:style>
+			<js:AllCSSStyles textAlign="right"/>
+		</mdl:style>
+		<mdl:DropDownList id="rolesDropDown"
+						  selectedIndex="0" labelField="value" 
+						  dataProvider="{RoleEnum.comboList}" change="onRolesDropDownChange(event)">
+			<mdl:beads>
+				<mdl:Disabled strand="{rolesDropDown.dropDown}" disabled="{user == null}"/>
+			</mdl:beads>								
+		</mdl:DropDownList>	
+		<mdl:Button id="addRole" text="Add" accent="true" width="100" click="onAddClick(event)">
+			<mdl:beads>
+				<mdl:Disabled disabled="{rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED}"/>
+			</mdl:beads>				
+		</mdl:Button>	
+		<mdl:Button id="removeRole" text="Remove" accent="true" width="100" click="onRemoveClick(event)">
+			<mdl:beads>
+				<mdl:Disabled disabled="{roleList.selectedIndex == -1}"/>
+			</mdl:beads>				
+		</mdl:Button>
+	</mdl:CardActions>
+	<fx:Script>
+	<![CDATA[
+			import org.apache.royale.collections.ArrayList;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum.RoleEnum;
+			import com.transpiledactionscript.puremvc.royale.employeeadmin.model.vo.UserVO;
+			import org.apache.royale.events.Event;
+
+			public static const ADD:String = "add";
+			public static const REMOVE:String = "remove";
+
+			[Bindable] public var user:UserVO;
+			[Bindable] public var selectedRole:RoleEnum;
+			[Bindable] public var userRoles:ArrayList;
+
+			// send the named event
+			private function sendEvent( eventName:String ):void
+			{
+				dispatchEvent( new Event( eventName, true ) );
+			}
+			
+			// select role to remove
+			private function selectRoleToRemove():void
+			{
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				selectedRole = RoleEnum(roleList.selectedItem);
+			}
+			
+			// select role to add
+			private function selectRoleToAdd():void
+			{
+				roleList.selectedIndex = -1;
+				selectedRole = RoleEnum(rolesDropDown.selectedItem);
+			}
+			
+			public function reset():void
+			{
+				rolesDropDown.selectedItem = RoleEnum.NONE_SELECTED;
+				refreshDisable();
+			}
+		
+			private function onAddClick(event:MouseEvent):void
+			{
+				sendEvent(ADD);
+			}	
+			
+			private function onRemoveClick(event:MouseEvent):void
+			{
+				sendEvent(REMOVE);
+			}
+			
+			private function onRoleListChange(event:Event):void
+			{
+				selectRoleToRemove();
+				refreshDisable();
+			}
+			
+			private function onRolesDropDownChange(event:Event):void
+			{
+				selectRoleToAdd();
+				refreshDisable();
+			}
+			
+			private function refreshDisable():void
+			{									
+				var disabledBead:Disabled = rolesDropDown.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = user == null;
+	
+				disabledBead = addRole.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = rolesDropDown.selectedItem == RoleEnum.NONE_SELECTED; 
+
+				disabledBead = removeRole.getBeadByType(Disabled) as Disabled;
+				disabledBead.disabled = roleList.selectedIndex == -1;				
+			}
+	]]>
+</fx:Script>
+</mdl:Card>
