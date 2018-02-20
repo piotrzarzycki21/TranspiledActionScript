@@ -46,10 +46,10 @@ limitations under the License.
 			<js:AllCSSStyles marginRight="0" alignItems="flex-end"/>
 		</mdl:style>	
 		<components:SnippetBox snippetNumber="1" title="Hello World MXML" languages="xml codeForCopy" 
-							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Basic/HelloWorldMxml.mxml"
-							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Basic/HelloWorldMxml.mxml"/>	
+							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/v0.1.0/Snippets/Basic/HelloWorldMxml.mxml"
+							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/v0.1.0/Snippets/Basic/HelloWorldMxml.mxml"/>	
 					<components:SnippetBox snippetNumber="2" title="Apache Maven pom template" languages="xml codeForCopy"
-							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/snippets/Snippets/Maven/pom.xml"
-							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/Maven/pom.xml"/>					
+							   titleLink="https://github.com/piotrzarzycki21/TranspiledActionScript/blob/v0.1.0/Snippets/Maven/pom.xml"
+							   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/v0.1.0/Snippets/Maven/pom.xml"/>					
 	</mdl:GridCell>	
 </mdl:Grid>

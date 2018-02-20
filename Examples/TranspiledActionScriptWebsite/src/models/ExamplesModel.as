@@ -27,17 +27,17 @@ package models
 			new ExampleVO("The TranspiledActionScript Website",
 			'The TranspiledActionScript.com website example was created using <a href="https://github.com/apache/royale-asjs/tree/develop/frameworks/projects/MaterialDesignLite" class="linksStyle">MaterialDesignLight</a> module of Apache Royale.'
 			+ ' Yes, the website which you are about to explore was fully created in Royale. When you dig into the code, you will learn how to use States, models, item renderers or styling components in CSS.', 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/TranspiledActionScriptWebsite", 
+			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/v0.1.0/Examples/TranspiledActionScriptWebsite", 
 			"https://transpiledactionscript.com/", "0.0.1"),
 			new ExampleVO("MDL PureMVC Employee Admin", 'This example presents a transition of an existing Flex application (<a href="https://github.com/PureMVC/puremvc-as3-demo-flex-employeeadmin/" class="linksStyle">PureMVC Employee Admin</a>) to Apache Royale using MDL module.' 
 			+ ' First of all, it shows that <a href="https://github.com/PureMVC/puremvc-as3-multicore-framework" class="linksStyle">PureMVC Multicore Framework</a> can be used in Royale and it is possible to migrate an application by changing its UI part without touching too much business logic.', 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminMDL", 
+			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/v0.1.0/Examples/PureMVCEmployeeAdminMDL", 
 			"https://transpiledactionscript.com/examples/PureMVCEmployeeAdminMDL", 
 			"0.0.1"),
 			new ExampleVO("Basic PureMVC Employee Admin", 'That was a copy of the previous example, but in this case the <a href="https://github.com/apache/royale-asjs/tree/develop/frameworks/projects/Basic" class="linksStyle">Basic</a> module was used for building the UI part.'
 			+ ' The module does not have a default theme, so visually it is far from perfection. However, you can still learn how to use DataGrid, explore Binding mechanism and use the PureMVC framework.'
 			+ ' It also contains the implementation of a custom <a href="https://github.com/apache/royale-asjs/blob/develop/frameworks/projects/Basic/src/main/royale/org/apache/royale/html/Panel.as" class="linksStyle">Panel</a> component, which displays additional information in the title.', 
-			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/examples/Examples/PureMVCEmployeeAdminBasic", 
+			"https://github.com/piotrzarzycki21/TranspiledActionScript/tree/v0.1.0/Examples/PureMVCEmployeeAdminBasic", 
 			"https://transpiledactionscript.com/examples/PureMVCEmployeeAdminBasic/", 
 			"0.0.1")
 		];
