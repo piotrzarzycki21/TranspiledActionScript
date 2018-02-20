@@ -8,3 +8,6 @@ Examples/PureMVCEmployeeAdminBasic/target/
 Examples/PureMVCEmployeeAdminMDL/obj/PureMVCEmployeeAdminMDLConfig.xml
 Examples/TranspiledActionScriptWebsite/obj/TranspiledActionScriptWebsiteConfig.xml
 Examples/PureMVCEmployeeAdminBasic/obj/PureMVCEmployeeAdminBasicConfig.xml
+Examples/MDLExample/bin/
+Examples/MDLExample/obj/
+Examples/MDLExample/target/

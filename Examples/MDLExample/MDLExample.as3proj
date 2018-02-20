@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <output>
+    <movie platform="Flash Player"/>
+    <movie version="11"/>
+    <movie disabled="False"/>
+    <movie height="600"/>
+    <movie fps="60"/>
+    <movie background="#FFFFFF"/>
+    <movie path="bin-debug/App.swf"/>
+    <movie width="800"/>
+    <movie input=""/>
+  </output>
+  &lt;!-- Other classes to be compiled into your SWF --&gt;
+  <classpaths>
+    <class path="src/main/royale"/>
+  </classpaths>
+  <moonshineResourcePaths></moonshineResourcePaths>
+  <build>
+    <option showBindingWarnings="True"/>
+    <option compilerConstants=""/>
+    <option showDeprecationWarnings="True"/>
+    <option antBuildPath="build/build.xml"/>
+    <option showActionScriptWarnings="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option locale=""/>
+    <option allowSourcePathOverlap="False"/>
+    <option useResourceBundleMetadata="True"/>
+    <option customSDK=""/>
+    <option benchmark="False"/>
+    <option warnings="True"/>
+    <option useNetwork="True"/>
+    <option verboseStackTraces="False"/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option optimize="False"/>
+    <option es="False"/>
+    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/main/resources/mdl-js-index-template.html -debug=true +configname=royale"/>
+    <option staticLinkRSL="False"/>
+  </build>
+  <includeLibraries></includeLibraries>
+  <libraryPaths></libraryPaths>
+  <externalLibraryPaths></externalLibraryPaths>
+  <rslPaths></rslPaths>
+  <intrinsics>
+    <element path="Library/AS3/frameworks/Flex4"/>
+  </intrinsics>
+  <library></library>
+  <compileTargets>
+    <compile path="src/main/royale/App.mxml"/>
+  </compileTargets>
+  <hiddenPaths></hiddenPaths>
+  <preBuildCommand>null</preBuildCommand>
+  <postBuildCommand alwaysRun="False">null</postBuildCommand>
+  <options>
+    <option showHiddenPaths="False"/>
+    <option isPrimeFacesVisualEditor="False"/>
+    <option defaultBuildTargets=""/>
+    <option testMovie=""/>
+    <option testMovieCommand=""/>
+  </options>
+  <moonshineRunCustomization>
+    <option urlToLaunch=""/>
+    <option projectType="2"/>
+    <option deviceSimulator="null"/>
+    <option launchMethod="Simulator"/>
+    <option targetPlatform="2"/>
+    <deviceSimulator>null</deviceSimulator>
+    <certAndroid>null</certAndroid>
+    <certIos>null</certIos>
+    <certIosProvisioning>null</certIosProvisioning>
+  </moonshineRunCustomization>
+</project>

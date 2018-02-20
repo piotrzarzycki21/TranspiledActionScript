@@ -1,0 +1,14 @@
+{
+    "config": "royale",
+    "compilerOptions": {
+        "debug": false,
+        "targets": ["JSRoyale"],
+        "source-map": true,
+        "html-template": "src/main/resources/mdl-js-index-template.html"
+    },
+    "additionalOptions": "-remove-circulars -js-output-optimization=skipAsCoercions -compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css",
+    "files":
+    [
+        "src/main/royale/App.mxml"
+    ]
+}
