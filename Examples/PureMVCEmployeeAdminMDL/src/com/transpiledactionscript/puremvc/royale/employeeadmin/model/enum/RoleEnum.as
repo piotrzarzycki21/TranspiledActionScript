@@ -5,8 +5,6 @@
  */
 package com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum
 {
-	
-	[Bindable]
 	public class RoleEnum
 	{
 		public static const NONE_SELECTED:RoleEnum 	= new RoleEnum( "--None Selected--"		,-1 );

@@ -27,12 +27,6 @@ global {
    IStatesImpl: ClassReference("org.apache.royale.core.SimpleStatesImpl");
 }
 
-.royale *, . royale *:before, . royale *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 .tableUserList
 {
 	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.TableUserListItemRenderer");
