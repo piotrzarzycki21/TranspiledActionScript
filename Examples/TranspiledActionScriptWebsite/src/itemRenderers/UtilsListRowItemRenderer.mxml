@@ -29,7 +29,7 @@ limitations under the License.
 	<mdl:style>
 		<js:AllCSSStyles fontFamily="Sintony" marginLeft="-10"/>
 	</mdl:style>
-    <mdl:Card percentWidth="100" shadow="2" className="demo-card-wide">
+    <mdl:Card percentWidth="100" className="demo-card-wide" shadow="2">
 		<mdl:style>
 			<js:AllCSSStyles minHeight="auto"/>
 		</mdl:style>

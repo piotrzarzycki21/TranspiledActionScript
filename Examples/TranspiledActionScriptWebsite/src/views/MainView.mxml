@@ -89,7 +89,7 @@ limitations under the License.
 		<mdl:style>
 			<js:AllCSSStyles backgroundColor="#FAFAFA"/>
 		</mdl:style>
-		<mdl:GridCell column="12" className="centeredFlexGroup">
+		<mdl:GridCell className="centeredFlexGroup" column="12">
 			<mdl:style>
 				<js:SimpleCSSStyles marginLeft="-1.5%" marginTop="3%"/>
 			</mdl:style>
@@ -100,7 +100,7 @@ limitations under the License.
 				</mdl:style>
 			</html:H2>
 		</mdl:GridCell>	
-		<mdl:GridCell column="12" className="centeredFlexGroup">
+		<mdl:GridCell className="centeredFlexGroup" column="12">
 			<mdl:style>
 				<js:AllCSSStyles marginBottom="3%"/>
 			</mdl:style>

@@ -25,7 +25,7 @@ limitations under the License.
 	<mdl:style>
 		<js:AllCSSStyles paddingRight="0"/>
 	</mdl:style>	
-	<mdl:GridCell column="12" className="verticalFlexGroup">
+	<mdl:GridCell className="verticalFlexGroup" column="12">
 		<mdl:style>
 			<js:AllCSSStyles alignItems="flex-end" marginRight="0" marginBottom="30px"/>
 		</mdl:style>	
@@ -41,7 +41,7 @@ limitations under the License.
 			</html:style>	
 		</html:Hr>	
 	</mdl:GridCell>
-	<mdl:GridCell column="12" className="verticalFlexGroup">
+	<mdl:GridCell className="verticalFlexGroup" column="12">
 		<mdl:style>
 			<js:AllCSSStyles marginRight="0" alignItems="flex-end"/>
 		</mdl:style>	

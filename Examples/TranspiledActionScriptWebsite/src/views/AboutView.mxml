@@ -24,7 +24,7 @@ limitations under the License.
 	<mdl:style>
 		<js:SimpleCSSStyles paddingLeft="0" paddingRight="0"/>
 	</mdl:style>		
-	<mdl:GridCell column="12" className="centeredFlexGroup" percentWidth="100">
+	<mdl:GridCell className="centeredFlexGroup" column="12" percentWidth="100">
 		<mdl:style>
 			<js:SimpleCSSStyles marginLeft="0" marginRight="0"/>
 		</mdl:style>		
