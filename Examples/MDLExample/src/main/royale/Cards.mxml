@@ -35,8 +35,8 @@ limitations under the License.
 
     <mdl:Grid className="center-items">
         
-            <mdl:Card id="mycard" shadow="2" className="demo-card-wide">
-                <mdl:CardTitle>
+            <mdl:Card id="mycard" className="demo-card-wide" shadow="2">
+                <mdl:CardTitle expand="true">
                     <mdl:CardTitleText text="Welcome"/>
                 </mdl:CardTitle>
                 <mdl:CardSupportingText>
@@ -93,7 +93,6 @@ limitations under the License.
                     <mdl:MaterialIcon text="{MaterialIconType.EVENT}"/>
                 </mdl:CardActions>
             </mdl:Card>
-        
     </mdl:Grid>
     
 </mdl:TabBarPanel>

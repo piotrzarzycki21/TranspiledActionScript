@@ -32,7 +32,7 @@ limitations under the License.
             <js:AllCSSStyles maxWidth="450"/>
         </mdl:style>
        <mdl:GridCell column="12">
-           <mdl:Table shadow="2" selectable="true" className="customTableRowItemRenderer">
+           <mdl:Table shadow="2" className="customTableRowItemRenderer" selectable="true">
                 <mdl:columns>
                     <mdl:TableColumn headerText="Material"/>
                     <mdl:TableColumn headerText="Quantity">
@@ -87,7 +87,7 @@ limitations under the License.
                 </mdl:CardActions>
             </mdl:Card>
 
-            <mdl:Table shadow="8" className="tableRowItemRendererWithIcons">
+            <mdl:Table className="tableRowItemRendererWithIcons" shadow="8">
                 <mdl:columns>
                     <mdl:TableColumn headerText="Material"/>
                     <mdl:TableColumn headerText="Quantity">
