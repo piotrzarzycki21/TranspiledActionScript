@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:NavigationLinkItemMouseRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+				                      xmlns:js="library://ns.apache.org/royale/basic"
+				                      xmlns:mdl="library://ns.apache.org/royale/mdl"
+				                      xmlns:html="library://ns.apache.org/royale/html"
+				                      xmlns="http://www.w3.org/1999/xhtml">
+	<mdl:style>
+		<js:SimpleCSSStyles paddingTop="0" paddingBottom="0" paddingRight="0"/>
+	</mdl:style>
+	<fx:Script>
+		<![CDATA[
+            import vos.NavigationLinkVO;
+            
+            [Bindable("dataChange")]
+            public function get navigationVO():NavigationLinkVO
+            {
+                return data as NavigationLinkVO;
+            }
+		]]>
+	</fx:Script>
+	
+	<mdl:beads>
+        <js:ItemRendererDataBinding />
+    </mdl:beads>
+		
+	<mdl:Grid>
+		<mdl:style>
+			<js:AllCSSStyles margin="0" paddingLeft="0"/>
+		</mdl:style>
+		<mdl:GridCell width="46">	
+			<js:Image width="46" height="46" src="{navigationVO.imgHref}">
+				<js:model>
+					<js:ImageModel />
+				</js:model>
+				<js:view>
+					<js:ImageView />
+				</js:view>
+			</js:Image>
+		</mdl:GridCell>
+		<mdl:GridCell alignMiddle="true">
+			<html:Span text="{navigationVO.label}"/>
+		</mdl:GridCell>
+	</mdl:Grid>
+</mdl:NavigationLinkItemMouseRenderer>

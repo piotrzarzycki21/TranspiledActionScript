@@ -42,6 +42,11 @@ js|Image
 	IBeadView:  ClassReference("org.apache.royale.html.beads.ImageView");
 }
 
+.mainMenuNavigation
+{
+	IItemRenderer: ClassReference("itemRenderers.MainMenuNavigationItemRenderer");
+}
+
 /* Lists */
 .actorNameListItemRenderer
 {

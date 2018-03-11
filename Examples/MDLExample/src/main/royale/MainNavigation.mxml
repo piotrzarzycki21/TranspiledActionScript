@@ -22,66 +22,73 @@ limitations under the License.
                       xmlns:local="*"
                       xmlns:mdl="library://ns.apache.org/royale/mdl"
                       xmlns="http://www.w3.org/1999/xhtml" xmlns:models="models.*"
-                      fixedHeader="true">
-    
+                      fixedDrawer="true" fixedHeader="true">
+
     <mdl:model>
         <models:MainNavigationModel id="mainNavigationModel"/>
     </mdl:model>
 
     <mdl:Header>
         <mdl:HeaderRow>
-            <mdl:LayoutTitle text="Royale Material Design Layout"/>
-            <mdl:Spacer/>
-            <mdl:Navigation>
-                <mdl:beads>
-                    <js:ConstantBinding
-                            sourceID="mainNavigationModel"
-                            sourcePropertyName="mainNavigation"
-                            destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:Navigation>
+            <mdl:LayoutTitle text="Apache Royale MDL"/>
         </mdl:HeaderRow>
-        <mdl:TabBar ripple="true" selectedIndex="0" labelField="label" tabIdField="href" className="customTabBarSetup">
-            <mdl:beads>
-                <js:ConstantBinding
-                        sourceID="mainNavigationModel"
-                        sourcePropertyName="componentsTabs"
+    </mdl:Header>
+	<mdl:Drawer>
+		<mdl:style>
+			<js:AllCSSStyles overflowY="unset" height="auto" maxHeight="unset"/>
+		</mdl:style>
+		<mdl:LayoutTitle text="Apache Royale MDL">
+			<mdl:style>
+				<js:SimpleCSSStyles fontSize="16" fontWeight="bold"/>
+			</mdl:style>
+		</mdl:LayoutTitle>
+		<mdl:Navigation className="mainMenuNavigation" change="onNavigationChange(event)">
+			<mdl:beads>
+                    <js:ConstantBinding
+                        sourceID="model"
+                        sourcePropertyName="mainNavigation"
                         destinationPropertyName="dataProvider" />
             </mdl:beads>
-        </mdl:TabBar>
-    </mdl:Header>
-    
-    <mdl:Drawer>
-        <mdl:LayoutTitle text="Drawer"/>
-        <mdl:Navigation>
-                <mdl:beads>
-                    <js:ConstantBinding
-                            sourceID="mainNavigationModel"
-                            sourcePropertyName="drawerNavigation"
-                            destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:Navigation>
-    </mdl:Drawer>
-    
-    <mdl:NavigationLayoutContent>
-        <local:Cards id="cards_panel" isActive="true"/>
-        <local:Chips id="chips_panel" />
-        <local:Sliders id="sliders_panel" />
-        <local:Grids id="grids_panel"/>
-        <local:Tabs id="tabs_panel"/>
-        <local:Buttons id="buttons_panel"/>
-        <local:TextFields id="textfield_panel"/>
-        <local:Toggles id="toggles_panel"/>
-        <local:Snackbar id="snackbar_panel"/>
-        <local:Dialogs id="dialogs_panel"/>
-        <local:Lists id="lists_panel"/>
-        <local:Tables id="tables_panel"/>
-        <local:Loading id="loading_panel"/>
-        <local:Menus id="menus_panel"/>
-        <local:Badges id="badges_panel"/>
-        <local:Footers id="footers_panel"/>
-        <local:Icons id="icons_panel"/>
-        <local:DropDownList id="dropdownlist_panel"/>
+		</mdl:Navigation>
+	</mdl:Drawer>
+    <mdl:NavigationLayoutContent id="content">
+ 		<local:Badges id="badges" isActive="true"/>
+		<local:Buttons id="buttons" />
+		<local:Cards id="cards"/>
+		<local:Chips id="chips"/>
+		<local:Dialogs id="dialogs"/>
+		<local:Lists id="list"/>
+		<local:Loading id="loading"/>
+		<local:Menus id="menus"/>
+		<local:Sliders id="sliders"/>
+		<local:Snackbar id="snackbar"/>
+		<local:Toggles id="toggles"/>
+		<local:Tables id="tables"/>
+		<local:TextFields id="textFields"/>
     </mdl:NavigationLayoutContent>
-    
+    <fx:Script>
+	<![CDATA[
+		import vos.NavigationLinkVO;
+		import org.apache.royale.mdl.TabBarPanel;
+
+
+		private function onNavigationChange(event:Event):void
+		{
+			var navigationVO:NavigationLinkVO = event.currentTarget.selectedItem as NavigationLinkVO;
+			var elementsCount:int = content.numElements;
+			for (var i:int = 0; i < elementsCount; i++)
+			{
+				var view:TabBarPanel = content.getElementAt(i) as TabBarPanel;
+				if (view.id == navigationVO.id)
+				{
+					view.isActive = true;
+				}
+				else
+				{
+					view.isActive = false;
+				}
+			}
+		}
+	]]>
+</fx:Script>
 </mdl:NavigationLayout>

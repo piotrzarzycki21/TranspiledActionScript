@@ -21,13 +21,17 @@ package vos
     [Bindable]
     public class NavigationLinkVO
     {
+		public var id:String;
         public var label:String;
         public var href:String;
-
-        public function NavigationLinkVO(label:String, href:String)
+		public var imgHref:String;
+		
+        public function NavigationLinkVO(label:String, href:String, imgHref:String = "#", id:String = "")
         {
             this.label = label;
             this.href = href;
+			this.imgHref = imgHref;
+			this.id = id;
         }
     }
 }

@@ -25,10 +25,21 @@ package models
     public class MainNavigationModel
     {
         private var _mainNavigation:Array = [
-                new NavigationLinkVO("About", "https://getmdl.io/index.html"),
-                new NavigationLinkVO("Getting Started", "https://getmdl.io/started/index.html"),
-                new NavigationLinkVO("Components", "https://getmdl.io/components/index.html"),
-                new NavigationLinkVO("Customize", "https://getmdl.io/customize/index.html")
+                new NavigationLinkVO("Badges", "#", "https://getmdl.io/assets/comp_badges.png", "badges"),
+                new NavigationLinkVO("Buttons", "#", "https://getmdl.io/assets/comp_buttons.png", "buttons"),
+                new NavigationLinkVO("Cards", "#", "https://getmdl.io/assets/comp_cards.png", "cards"),
+                new NavigationLinkVO("Chips", "#", "https://getmdl.io/assets/comp_chips.png", "chips"),
+                new NavigationLinkVO("Dialogs", "#", "https://getmdl.io/assets/comp_dialog.png", "dialogs"),
+                new NavigationLinkVO("Layout", "#", "https://getmdl.io/assets/comp_layout.png", "layout"),
+                new NavigationLinkVO("List", "#", "https://getmdl.io/assets/comp_lists.png", "list"),
+                new NavigationLinkVO("Loading", "#", "https://getmdl.io/assets/comp_loading.png", "loading"),
+                new NavigationLinkVO("Menus", "#", "https://getmdl.io/assets/comp_menus.png", "menus"),
+                new NavigationLinkVO("Sliders", "#", "https://getmdl.io/assets/comp_sliders.png", "sliders"),
+                new NavigationLinkVO("Snackbar", "#", "https://getmdl.io/assets/comp_snackbar.png", "snackbar"),
+                new NavigationLinkVO("Toggles", "#", "https://getmdl.io/assets/comp_toggles.png", "toggles"),
+                new NavigationLinkVO("Tables", "#", "https://getmdl.io/assets/comp_tables.png", "tables"),
+                new NavigationLinkVO("Text Fields", "#", "https://getmdl.io/assets/comp_textfields.png", "textFields"),
+                new NavigationLinkVO("Tooltips", "#", "https://getmdl.io/assets/comp_tooltips.png", "tooltips")
         ];
 
         public function get mainNavigation():Array
