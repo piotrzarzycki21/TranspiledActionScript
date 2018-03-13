@@ -34,8 +34,8 @@ limitations under the License.
 	<js:style>
 		<js:SimpleCSSStyles margin="4"/>
 	</js:style>
-	<js:DataGrid id="userList" width="100%" rowHeight="30" 
-				 className="userList DynamicDataGrid DataGrid" 
+	<js:DataGrid id="userList" percentWidth="100" rowHeight="30" 
+				 className="DynamicDataGrid userList" 
 	             dataProvider="{users}" change="onUserListChange(event)">
 		<js:columns>
 			<js:DataGridColumn label="Username" dataField="username" columnWidth="20" />
@@ -43,7 +43,7 @@ limitations under the License.
 			<js:DataGridColumn label="Last name" dataField="lname" columnWidth="20"/>
 			<js:DataGridColumn label="Email" dataField="email" columnWidth="20"/>
 			<js:DataGridColumn label="Department" dataField="department" columnWidth="20" 
-							   className="userListDepartmentColumn DynamicDataGridColumnList"/>
+							   className="DynamicDataGridColumnList userListDepartmentColumn"/>
 		</js:columns>
 	</js:DataGrid>
 	<js:controlBar>
