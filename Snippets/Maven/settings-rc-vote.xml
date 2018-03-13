@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+          xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <profiles>
+        <profile>
+            <id>apache-staged-artifacts</id>
+            <!-- Add links to the staged artifacts which should be used to test release candidate 
+				 In most cases you will find link in the VOTE thread ex: http://apache-royale-development.20373.n8.nabble.com/VOTE-Release-Apache-Royale-0-9-2-RC2-tp3177.html -->
+            <repositories>
+                <repository>
+                    <id>apache-staged</id>
+                    <url>{link}</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>apache-staged</id>
+                    <url>{link}</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <!-- Activate the apache-staged-artifacts profile -->
+    <activeProfiles>
+        <activeProfile>apache-staged-artifacts</activeProfile>
+    </activeProfiles>
+</settings>
