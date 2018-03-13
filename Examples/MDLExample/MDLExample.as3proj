@@ -17,28 +17,28 @@
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
   <build>
+    <option strict="True"/>
+    <option accessible="False"/>
+    <option useNetwork="True"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
+    <option useResourceBundleMetadata="True"/>
+    <option benchmark="False"/>
+    <option warnings="True"/>
+    <option es="False"/>
+    <option verboseStackTraces="False"/>
+    <option locale=""/>
+    <option loadConfig=""/>
+    <option linkReport=""/>
+    <option optimize="False"/>
+    <option showActionScriptWarnings="True"/>
+    <option staticLinkRSL="False"/>
+    <option allowSourcePathOverlap="False"/>
     <option showBindingWarnings="True"/>
     <option compilerConstants=""/>
     <option showDeprecationWarnings="True"/>
     <option antBuildPath="build/build.xml"/>
-    <option showActionScriptWarnings="True"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
-    <option strict="True"/>
-    <option accessible="False"/>
-    <option locale=""/>
-    <option allowSourcePathOverlap="False"/>
-    <option useResourceBundleMetadata="True"/>
+    <option additional="-html-template=src/main/resources/mdl-js-index-template.html -debug=true +configname=royale"/>
     <option customSDK=""/>
-    <option benchmark="False"/>
-    <option warnings="True"/>
-    <option useNetwork="True"/>
-    <option verboseStackTraces="False"/>
-    <option loadConfig=""/>
-    <option linkReport=""/>
-    <option optimize="False"/>
-    <option es="False"/>
-    <option additional="-compiler.exclude-defaults-css-files=BasicJS.swc:defaults.css -html-template=src/main/resources/mdl-js-index-template.html -debug=true +configname=royale"/>
-    <option staticLinkRSL="False"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -55,11 +55,11 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
-    <option showHiddenPaths="False"/>
+    <option testMovieCommand=""/>
     <option isPrimeFacesVisualEditor="False"/>
     <option defaultBuildTargets=""/>
     <option testMovie=""/>
-    <option testMovieCommand=""/>
+    <option showHiddenPaths="False"/>
   </options>
   <moonshineRunCustomization>
     <option urlToLaunch=""/>

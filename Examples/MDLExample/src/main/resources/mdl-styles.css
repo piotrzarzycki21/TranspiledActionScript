@@ -20,14 +20,7 @@
 */
 
 @namespace "http://www.w3.org/1999/xhtml";
-@namespace js "library://ns.apache.org/royale/basic";
 @namespace mdl "library://ns.apache.org/royale/mdl";
-
-.royale *, . royale *:before, . royale *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 .page-content
 {
@@ -35,12 +28,6 @@
 	margin: 10px;
 }
 
-js|Image
-{
-	vertical-align: top;
-	IBeadModel: ClassReference("org.apache.royale.html.beads.models.ImageModel");
-	IBeadView:  ClassReference("org.apache.royale.html.beads.ImageView");
-}
 
 .mainMenuNavigation
 {
