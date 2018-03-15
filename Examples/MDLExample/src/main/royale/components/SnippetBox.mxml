@@ -17,76 +17,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 -->
-<mdl:Card xmlns:fx="http://ns.adobe.com/mxml/2009"
+<js:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
 		  xmlns:js="library://ns.apache.org/royale/basic"
 		  xmlns:mdl="library://ns.apache.org/royale/mdl"
 		  xmlns:html="library://ns.apache.org/royale/html" 
-		  initComplete="onSnippetBoxInitComplete(event)"
-		  percentWidth="60">
-	<mdl:style>
-		<js:AllCSSStyles paddingLeft="0" paddingRight="5" marginBottom="40px"
-						 background="transparent"/>
-	</mdl:style>	
-	<mdl:beads>
+		  initComplete="onSnippetBoxInitComplete(event)">
+    <js:beads>
 		<js:ContainerDataBinding />
-	</mdl:beads>		
-	<mdl:CardTitle className="horizontalFlexGroup">
-		<mdl:style>
-			<js:AllCSSStyles paddingLeft="0" paddingTop="0"/>
-		</mdl:style>
-		<js:Group className="circleRed centeredFlexGroup">
-			<html:Span text="{snippetNumber}">
-				<html:style>
-					<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" color="#FFFFFF" />
-				</html:style>
-			</html:Span>
-		</js:Group>
-		<html:A href="{titleLink}" text="{title}">
+	</js:beads>	
+	<html:Pre localId="preCode">	
+		<html:style>
+			<js:AllCSSStyles margin="0" padding="0" fontSize="14px" 
+			                 backgroundColor="#FFFFFF" overflow="auto"/>
+		</html:style>
+		<html:Code localId="snippetsCode" className="{languages}" text="{code}">
 			<html:style>
-				<js:AllCSSStyles fontFamily="Sintony" fontSize="14pt" color="#d52d28" 
-				                 paddingLeft="10"/>
+				<js:AllCSSStyles padding="0" overflowX="unset"
+								 backgroundColor="#FFFFFF"/>
 			</html:style>
-		</html:A>
-	</mdl:CardTitle>	
-	<mdl:Card percentWidth="100" shadow="2" 
-			  rollOver="onCodeCardRollOver(event)" rollOut="onCodeCardRollOut(event)">
-		<mdl:style>
-			<js:AllCSSStyles maxHeight="410px"/>
-		</mdl:style>
-		<html:Pre localId="preCode">
-			<mdl:style>
-				<js:AllCSSStyles margin="0" padding="0" fontFamily="Sintony" fontSize="14px" 
-				                 backgroundColor="#FFFFFF" overflow="auto"/>
-			</mdl:style>
-			<html:Code localId="snippetsCode" className="{languages}" text="{code}">
-				<html:style>
-					<js:AllCSSStyles padding="0" overflowX="unset"
-									 backgroundColor="#FFFFFF"/>
-				</html:style>
-			</html:Code>
-			<mdl:Spinner localId="spinner" isActive="false" width="45" height="45" />		
-		</html:Pre>	
-		<mdl:Button localId="copyButton" text="Copy" raised="true" accent="true" colored="true" width="150"
-					visible="false" click="onCopyButtonClick(event)">
-			<mdl:style>
-				<js:AllCSSStyles fontFamily="Poppins" 
-								 bottom="30px" right="30px" position="absolute" backgroundColor="#D52D28" />
-			</mdl:style>
-		</mdl:Button>
-	</mdl:Card>
+		</html:Code>
+		<mdl:Spinner localId="spinner" isActive="false" width="45" height="45" />	
+	</html:Pre>		
 	<fx:Script>
 	<![CDATA[
 		import org.apache.royale.net.URLBinaryLoader;
 		import org.apache.royale.net.URLRequest;
 		import utils.Highlight;
-		import utils.Copy;
 		
-		[Bindable]
-		public var snippetNumber:int = 1;
-		[Bindable]
-		public var title:String;
-		[Bindable]
-		public var titleLink:String;
 		[Bindable]
 		public var link:String;
 		[Bindable]
@@ -135,24 +92,6 @@ limitations under the License.
 			preCode.style = "textAlign:left;";
 			spinner.visible = spinner.isActive = false;
 		}
-		
-		private function onCodeCardRollOver(event:MouseEvent):void
-		{
-			//copyButton.visible = true;	
-		}
-		
-		private function onCodeCardRollOut(event:MouseEvent):void
-		{
-			copyButton.visible = false;
-		}
-		
-		private function onCopyButtonClick(event:MouseEvent):void
-		{
-			COMPILE::JS
-			{
-				Copy.copyToClipboard(".codeForCopy");
-			}
-		}
 	]]>
 	</fx:Script>
-</mdl:Card>
+</js:Group>

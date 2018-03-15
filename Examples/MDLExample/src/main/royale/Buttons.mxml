@@ -20,44 +20,51 @@ limitations under the License.
 <mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
                  xmlns:js="library://ns.apache.org/royale/basic"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
-                 xmlns="http://www.w3.org/1999/xhtml">
+                 xmlns="http://www.w3.org/1999/xhtml" xmlns:components="components.*">
     <mdl:beads>
         <js:ContainerDataBinding/>
     </mdl:beads>
 
 	<mdl:Grid percentWidth="100">
-		<mdl:GridCell column="12" height="120">
-		    <mdl:Grid percentWidth="100" percentHeight="100">
-		  		<mdl:GridCell column="12">
-					<mdl:Button text="Button"/>
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-		    </mdl:Grid>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Flat Button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button text="Button"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Button.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Button.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
 		</mdl:GridCell>
-		<mdl:GridCell column="12" height="120">
-		    <mdl:Grid percentWidth="100" percentHeight="100">
-		  		<mdl:GridCell column="12">
-					<mdl:Button text="Button"/>
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-		    </mdl:Grid>
-		</mdl:GridCell>
-		<mdl:GridCell column="12" height="120">
-		    <mdl:Grid percentWidth="100" percentHeight="100">
-		  		<mdl:GridCell column="12">
-					<mdl:Button text="Button"/>
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-				<mdl:GridCell column="6">
-				</mdl:GridCell>
-		    </mdl:Grid>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Flat button with ripple"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button text="Button" ripple="true"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/ButtonRipple.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/ButtonRipple.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
 		</mdl:GridCell>
 	</mdl:Grid>
 
