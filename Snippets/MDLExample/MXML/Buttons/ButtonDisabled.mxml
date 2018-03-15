@@ -1,0 +1,5 @@
+<mdl:Button text="Button" raised="true">
+	<mdl:beads>
+		<mdl:Disabled />
+	</mdl:beads>
+</mdl:Button>
