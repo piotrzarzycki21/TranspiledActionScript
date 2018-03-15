@@ -1,4 +1,5 @@
-<html:Div className="material-icons" text="{MaterialIconType.ACCOUNT_BOX}">
+<html:Div className="material-icons" 
+		  text="{MaterialIconType.ACCOUNT_BOX}">
 	<js:beads>
 		<mdl:Badge dataBadge="♥" overlap="true"/>
 	</js:beads>
