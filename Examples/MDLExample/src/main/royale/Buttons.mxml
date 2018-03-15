@@ -29,6 +29,54 @@ limitations under the License.
 		<mdl:GridCell column="12">
 			<mdl:Card percentWidth="100">
 				<mdl:CardTitle>
+					<mdl:CardTitleText text="Colored FAB button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button colored="true" fab="true">
+							<mdl:materialIcon>
+								<mdl:MaterialIcon text="add"/>
+							</mdl:materialIcon>
+						</mdl:Button>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/ButtonColoredFab.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/ButtonColoredFab.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Colored FAB button with ripple"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button colored="true" fab="true" ripple="true">
+							<mdl:materialIcon>
+								<mdl:MaterialIcon text="add"/>
+							</mdl:materialIcon>
+						</mdl:Button>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/ButtonColoredRipple.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/ButtonColoredRipple.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
 					<mdl:CardTitleText text="Flat Button"/>
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
@@ -37,11 +85,11 @@ limitations under the License.
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Button.mxml"/>
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/Button.mxml"/>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Button.html"/>
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/Button.html"/>
 					</mdl:GridCell>
 			    </mdl:Grid>
 			</mdl:Card>
@@ -57,11 +105,55 @@ limitations under the License.
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/ButtonRipple.mxml"/>
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/ButtonRipple.mxml"/>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/ButtonRipple.html"/>
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/ButtonRipple.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Raised button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button text="Button" raised="true"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/ButtonRaised.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/ButtonRaised.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Raised disabled button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Button text="Button" raised="true">
+							<mdl:beads>
+								<mdl:Disabled />
+							</mdl:beads>
+						</mdl:Button>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Buttons/ButtonDisabled.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Buttons/ButtonDisabled.html"/>
 					</mdl:GridCell>
 			    </mdl:Grid>
 			</mdl:Card>
