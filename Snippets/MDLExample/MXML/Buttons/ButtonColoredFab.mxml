@@ -1,0 +1,6 @@
+<mdl:Button text="Button" colored="true" 
+            fab="true">
+	<mdl:beads>
+		<mdl:MaterialIcon text="add"/>
+	</mdl:beads>
+</mdl:Button>
