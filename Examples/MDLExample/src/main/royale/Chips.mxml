@@ -19,7 +19,8 @@ limitations under the License.
 -->
 <mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
                  xmlns:js="library://ns.apache.org/royale/basic"
-                 xmlns:mdl="library://ns.apache.org/royale/mdl">
+                 xmlns:mdl="library://ns.apache.org/royale/mdl"
+				 xmlns:components="components.*">
 
     <fx:Script>
         <![CDATA[
@@ -30,63 +31,127 @@ limitations under the License.
     <mdl:beads>
         <js:ContainerDataBinding/>
     </mdl:beads>
-    
-    <mdl:Grid>
-        <mdl:style>
-            <js:AllCSSStyles maxWidth="120"/>
-        </mdl:style>
-        <mdl:GridCell column="12">
-            <mdl:Chip text="Basic Chip" />
-
-            <mdl:ButtonChip text="Button Chip" />
-
-            <mdl:Chip text="Deletable Chip">
-                <mdl:beads>
-                    <mdl:DeletableChip />
-                </mdl:beads>
-                <mdl:materialIcon>
-                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
-                </mdl:materialIcon>
-            </mdl:Chip>
-
-            <mdl:ButtonChip text="Deletable Button Chip">
-                <mdl:beads>
-                    <mdl:DeletableChip />
-                </mdl:beads>
-                <mdl:materialIcon>
-                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
-                </mdl:materialIcon>
-            </mdl:ButtonChip>
-
-            <mdl:Chip text="Contact Chip">
-                <mdl:beads>
-                    <mdl:MdlColor color="teal" />
-                    <mdl:MdlTextColor textColor="white" />
-                    <mdl:ContactChip contactText="A" />
-                </mdl:beads>
-            </mdl:Chip>
-
-            <mdl:Chip text="Contact Chip">
-                <mdl:beads>
-                    <mdl:MdlColor color="teal" />
-                    <mdl:MdlTextColor textColor="white" />
-                    <mdl:ContactChip contactText="A" />
-                    <mdl:DeletableChip />
-                </mdl:beads>
-                <mdl:materialIcon>
-                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
-                </mdl:materialIcon>
-            </mdl:Chip>
-
-            <mdl:Chip text="Contact Link Chip">
-                <mdl:beads>
-                    <mdl:ContactImageChip />
-                    <mdl:DeletableLinkChip href="http://royale.apache.org/"/>
-                </mdl:beads>
-                <mdl:materialIcon>
-                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
-                </mdl:materialIcon>
-            </mdl:Chip>
-        </mdl:GridCell>
-    </mdl:Grid>
+    <mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Basic Chip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Chip text="Chip" />
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Chips/ChipBasic.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Chips/ChipBasic.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Button Chip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:ButtonChip text="Button" />
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Chips/ChipButton.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Chips/ChipButton.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Deletable Chip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Chip text="Deletable">
+			                <mdl:beads>
+			                    <mdl:DeletableChip />
+			                </mdl:beads>
+			                <mdl:materialIcon>
+			                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
+			                </mdl:materialIcon>
+			            </mdl:Chip>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Chips/ChipDeletable.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Chips/ChipDeletable.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Contact Chip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Chip text="Contact">
+			                <mdl:beads>
+			                    <mdl:MdlColor color="teal" />
+			                    <mdl:MdlTextColor textColor="white" />
+			                    <mdl:ContactChip contactText="A" />
+			                </mdl:beads>
+			            </mdl:Chip>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Chips/ChipContact.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Chips/ChipContact.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Deletable Contact Chip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Chip text="Deletable Contact">
+			                <mdl:beads>
+			                    <mdl:ContactImageChip source="resources/assets/user.jpg"/>
+			                    <mdl:DeletableLinkChip href="http://royale.apache.org/"/>
+			                </mdl:beads>
+			                <mdl:materialIcon>
+			                    <mdl:MaterialIcon text="{MaterialIconType.CANCEL}"/>
+			                </mdl:materialIcon>
+			            </mdl:Chip>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Chips/ChipDeletableContact.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Chips/ChipDeletableContact.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>
 </mdl:TabBarPanel>
