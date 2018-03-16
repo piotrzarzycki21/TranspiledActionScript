@@ -1,0 +1,14 @@
+<mdl:Card className="demo-card-square" shadow="2">
+	<mdl:CardTitle expand="true">
+		<mdl:CardTitleText text="Update"/>
+	</mdl:CardTitle>
+	<mdl:CardSupportingText>
+		<html:TextNode text="Lorem ipsum dolor sit amet, 
+		consectetur adipiscing elit. Aenan convallis."/>
+	</mdl:CardSupportingText>
+	<mdl:CardActions border="true">
+		<mdl:Button colored="true" 
+					ripple="true" 
+					text="View Updates"/>
+	</mdl:CardActions>
+</mdl:Card>
