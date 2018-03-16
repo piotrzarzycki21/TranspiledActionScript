@@ -1,11 +1,11 @@
 <fx:Script>
-  <![CDATA[
-    private function onShowModalDialog(event:MouseEvent):void
-    {
-	var dialog:TestDialog = new TestDialog();
-	dialog.showModal();
-    }
-  ]]>
+ <![CDATA[
+  private function onShowModalDialog(event:MouseEvent):void
+  {
+    var dialog:TestDialog = new TestDialog();
+        dialog.showModal();
+  }
+ ]]>
 </fx:Script>
 <mdl:Button text="Show Modal Dialog" 
 	    raised="true" 
@@ -18,7 +18,7 @@
     
     <mdl:DialogContent>
         <html:P text="Allowing us to collect data 
-		will let us get you the 
+                will let us get you the 
 		information you want faster."/>
     </mdl:DialogContent>
     
