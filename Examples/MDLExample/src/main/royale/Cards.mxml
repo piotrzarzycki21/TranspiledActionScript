@@ -21,7 +21,7 @@ limitations under the License.
                  xmlns:js="library://ns.apache.org/royale/basic"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
                  xmlns:html="library://ns.apache.org/royale/html"
-                 xmlns="http://www.w3.org/1999/xhtml">
+                 xmlns="http://www.w3.org/1999/xhtml" xmlns:components="components.*">
 
     <fx:Script>
         <![CDATA[
@@ -32,7 +32,50 @@ limitations under the License.
     <mdl:beads>
         <js:ContainerDataBinding/>
     </mdl:beads>
-
+	<mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Wide card with share menu button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:Card className="demo-card-wide" shadow="2">
+			                <mdl:CardTitle expand="true">
+			                    <mdl:CardTitleText text="Welcome"/>
+			                </mdl:CardTitle>
+			                <mdl:CardSupportingText>
+			                    <mdl:beads>
+			                        <html:InnerHTML>
+			                            <![CDATA[Lorem ipsum dolor sit <b>amet</b>, consectetur <i>adipiscing elit</i>. Mauris sagittis pellentesque lacus eleifend lacinia...]]>
+			                        </html:InnerHTML>
+			                    </mdl:beads>
+			                </mdl:CardSupportingText>
+			                <mdl:CardActions border="true">
+			                    <mdl:Button text="Get Started" ripple="true" colored="true"/>
+			                </mdl:CardActions>
+			                <mdl:CardMenu>
+			                    <mdl:Button icon="true" ripple="true">
+			                        <mdl:materialIcon>
+			                            <mdl:MaterialIcon text="{MaterialIconType.SHARE}"/>
+			                        </mdl:materialIcon>
+			                    </mdl:Button>
+			                </mdl:CardMenu>
+			            </mdl:Card>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Cards/CardWide.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Cards/CardWide.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>	
+	<!--
     <mdl:Grid className="center-items">
         
             <mdl:Card id="mycard" className="demo-card-wide" shadow="2">
@@ -93,6 +136,6 @@ limitations under the License.
                     <mdl:MaterialIcon text="{MaterialIconType.EVENT}"/>
                 </mdl:CardActions>
             </mdl:Card>
-    </mdl:Grid>
+    </mdl:Grid>-->
     
 </mdl:TabBarPanel>

@@ -34,6 +34,17 @@
 	IItemRenderer: ClassReference("itemRenderers.MainMenuNavigationItemRenderer");
 }
 
+
+.horizontalFlexGroup
+{
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-justify-content: flex-start;
+   justify-content: flex-start;
+}
+
 /* Lists */
 .actorNameListItemRenderer
 {
@@ -112,7 +123,7 @@
 .demo-card-wide > .mdl-card__title {
   color: #fff;
   height: 176px;
-  background: url('assets/welcome_card.jpg') center / cover;
+  background: url('resources/assets/welcome_card.jpg') center / cover;
 }
 .demo-card-wide > .mdl-card__menu {
   color: #fff;
@@ -126,7 +137,7 @@
 
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background: url('assets/dog.png') bottom right 15% no-repeat #46B6AC;
+  background: url('resources/assets/dog.png') bottom right 15% no-repeat #46B6AC;
 }
 
 /* card event */
