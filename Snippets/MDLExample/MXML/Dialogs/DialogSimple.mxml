@@ -1,0 +1,29 @@
+<fx:Script>
+	<![CDATA[
+		private function onShowModalDialog(event:MouseEvent):void
+		{
+			var dialog:TestDialog = new TestDialog();
+			dialog.showModal();
+		}
+	]]>
+</fx:Script>
+<mdl:Button text="Show Modal Dialog" raised="true" click="onShowModalDialog(event)"/>
+<mdl:Dialog xmlns:fx="http://ns.adobe.com/mxml/2009"
+            xmlns:mdl="library://ns.apache.org/royale/mdl"
+            xmlns:html="library://ns.apache.org/royale/html"
+            xmlns="http://www.w3.org/1999/xhtml">
+    <mdl:DialogTitle text="Allow data collection?"/>
+    
+    <mdl:DialogContent>
+        <html:P text="Allowing us to collect data 
+				will let us get you the 
+				information you want faster."/>
+    </mdl:DialogContent>
+    
+    <mdl:DialogActions>
+        <mdl:Button text="Agree" raised="true"/>
+        <mdl:Button text="Disagree" 
+					raised="true" 
+					click="close()"/>
+    </mdl:DialogActions>
+</mdl:Dialog>
