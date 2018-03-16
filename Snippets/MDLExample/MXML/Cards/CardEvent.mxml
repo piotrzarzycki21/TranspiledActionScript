@@ -1,20 +1,20 @@
 <mdl:Card className="demo-card-event" shadow="2">
-	<mdl:CardTitle expand="true">
-		<mdl:CardTitleText text="Welcome">
-			<mdl:beads>
-				<html:InnerHTML>
-					<![CDATA[<h4>Featured 
-					event:<br>May 24, 
-					2016<br>7-11pm</h4>]]>
-				</html:InnerHTML>
-			</mdl:beads>
-		</mdl:CardTitleText>
-	</mdl:CardTitle>
-	<mdl:CardActions border="true">
-		<mdl:Button colored="true" 
-					ripple="true" 
-					text="Add to Calendar"/>
-		<mdl:Spacer/>
-		<mdl:MaterialIcon text="{MaterialIconType.EVENT}"/>
-	</mdl:CardActions>
+  <mdl:CardTitle expand="true">
+	<mdl:CardTitleText text="Welcome">
+		<mdl:beads>
+			<html:InnerHTML>
+				<![CDATA[<h4>Featured 
+				event:<br>May 24, 
+				2016<br>7-11pm</h4>]]>
+			</html:InnerHTML>
+		</mdl:beads>
+	</mdl:CardTitleText>
+  </mdl:CardTitle>
+  <mdl:CardActions border="true">
+	<mdl:Button colored="true" 
+		    ripple="true" 
+		    text="Add to Calendar"/>
+	<mdl:Spacer/>
+	<mdl:MaterialIcon text="{MaterialIconType.EVENT}"/>
+  </mdl:CardActions>
 </mdl:Card>
