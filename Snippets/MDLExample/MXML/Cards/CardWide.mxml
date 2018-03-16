@@ -1,28 +1,29 @@
 <mdl:Card className="demo-card-wide" shadow="2">
-	<mdl:CardTitle expand="true">
-		<mdl:CardTitleText text="Welcome"/>
-	</mdl:CardTitle>
-	<mdl:CardSupportingText>
-		<mdl:beads>
-			<html:InnerHTML>
-				<![CDATA[
-				Lorem ipsum dolor sit <b>amet</b>, 
-				consectetur <i>adipiscing elit</i>. 
-				Mauris sagittis pellentesque 
-				lacus eleifend lacinia...
-				]]>
-			</html:InnerHTML>
+  <mdl:CardTitle expand="true">
+	  <mdl:CardTitleText text="Welcome"/>
+  </mdl:CardTitle>
+  <mdl:CardSupportingText>
+	  <mdl:beads>
+		  <html:InnerHTML>
+			<![CDATA[
+			Lorem ipsum dolor sit <b>amet</b>, 
+			consectetur <i>adipiscing elit</i>. 
+			Mauris sagittis pellentesque 
+			lacus eleifend lacinia...
+			]]>
+		  </html:InnerHTML>
 		</mdl:beads>
-	</mdl:CardSupportingText>
-	<mdl:CardActions border="true">
-		<mdl:Button text="Get Started" 
-					ripple="true" colored="true"/>
-	</mdl:CardActions>
-	<mdl:CardMenu>
-		<mdl:Button icon="true" ripple="true">
-			<mdl:materialIcon>
-				<mdl:MaterialIcon text="{MaterialIconType.SHARE}"/>
-			</mdl:materialIcon>
-		</mdl:Button>
-	</mdl:CardMenu>
+  </mdl:CardSupportingText>
+  <mdl:CardActions border="true">
+	  <mdl:Button text="Get Started" 
+				  ripple="true" colored="true"/>
+  </mdl:CardActions>
+  <mdl:CardMenu>
+	  <mdl:Button icon="true" ripple="true">
+		  <mdl:materialIcon>
+			  <mdl:MaterialIcon 
+			   text="{MaterialIconType.SHARE}"/>
+		  </mdl:materialIcon>
+	  </mdl:Button>
+  </mdl:CardMenu>
 </mdl:Card>
