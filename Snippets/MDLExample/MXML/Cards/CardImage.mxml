@@ -1,0 +1,10 @@
+<mdl:Card width="256" height="256" shadow="2" 
+		  style="background: url('resources/assets/image_card.jpg') center / cover">
+	<mdl:CardTitle expand="true"/>
+	<mdl:CardActions style="height: 52px; padding: 16px; 
+							background: rgba(0, 0, 0, 0.2);">
+		<html:Span text="Image.jpg" 
+				   style="color: #fff; font-size: 14px; 
+						  font-weight: 500;"/>
+	</mdl:CardActions>
+</mdl:Card>
