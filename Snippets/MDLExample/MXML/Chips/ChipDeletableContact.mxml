@@ -1,0 +1,12 @@
+<mdl:Chip text="Deletable Contact">
+	<mdl:beads>
+	  <mdl:ContactImageChip 
+		source="resources/assets/user.jpg"/>
+	  <mdl:DeletableLinkChip 
+		href="http://royale.apache.org/"/>
+	</mdl:beads>
+	<mdl:materialIcon>
+	  <mdl:MaterialIcon 
+		text="{MaterialIconType.CANCEL}"/>
+	</mdl:materialIcon>
+</mdl:Chip>

@@ -1,0 +1,7 @@
+<mdl:Chip text="Contact">
+	<mdl:beads>
+	  <mdl:MdlColor color="teal" />
+	  <mdl:MdlTextColor textColor="white" />
+	  <mdl:ContactChip contactText="A" />
+	</mdl:beads>
+</mdl:Chip>

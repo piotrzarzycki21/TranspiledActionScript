@@ -1,0 +1,9 @@
+<mdl:Chip text="Deletable">
+	<mdl:beads>
+		<mdl:DeletableChip />
+	</mdl:beads>
+	<mdl:materialIcon>
+		<mdl:MaterialIcon 
+		text="{MaterialIconType.CANCEL}"/>
+	</mdl:materialIcon>
+</mdl:Chip>
