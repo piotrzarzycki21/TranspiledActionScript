@@ -19,24 +19,60 @@ limitations under the License.
 -->
 <mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
-                 xmlns:js="library://ns.apache.org/royale/basic">
-    <mdl:Grid>
-        <mdl:style>
-            <js:AllCSSStyles maxWidth="500"/>
-        </mdl:style>
-        <mdl:GridCell column="6">
-            <mdl:Button id="showToast" click="onShowToastClick(event)"
-                        text="Show Toast!" width="180" accent="true" colored="true" raised="true"/>
-            <mdl:Toast id="toast" message="Toast message" timeout="3000"/>
-        </mdl:GridCell>
-        <mdl:GridCell column="6">
-            <mdl:Button id="showSnackbar" click="onShowSnackbarClick(event)"
-                        text="Show Snackbar!" width="180" accent="true" colored="true" raised="true"/>
-            <mdl:Snackbar id="snackbar" message="Snackbar message" actionText="Undo" timeout="3000"
-                          action="onSnackBarAction(event)"/>
-        </mdl:GridCell>
-    </mdl:Grid>
-    <fx:Script><![CDATA[
+                 xmlns:js="library://ns.apache.org/royale/basic"
+				 xmlns:components="components.*">
+	<mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Snackbar"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell> 
+							 <mdl:Button id="showSnackbar" click="onShowSnackbarClick(event)"
+				                        text="Show Snackbar!" width="180" accent="true" colored="true" raised="true"/>
+				             <mdl:Snackbar id="snackbar" message="Snackbar message" actionText="Undo" timeout="3000"
+				                          action="onSnackBarAction(event)"/>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Snackbar/Snackbar.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Snackbar/Snackbar.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Toast"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:Button id="showToast" click="onShowToastClick(event)"
+					                        text="Show Toast!" width="180" accent="true" colored="true" raised="true"/>
+				             <mdl:Toast id="toast" message="Toast message" timeout="3000"/>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Snackbar/Toast.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Snackbar/Toast.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>
+	<fx:Script><![CDATA[
         private function onShowToastClick(event:MouseEvent):void
         {
             toast.show();
@@ -52,5 +88,5 @@ limitations under the License.
             //some action here
         }
 
-        ]]></fx:Script>
+     ]]></fx:Script>
 </mdl:TabBarPanel>
