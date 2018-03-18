@@ -25,21 +25,6 @@ package models
 		/**
 		 * Used in the List example.
 		 */
-		private var _things:Array = [
-			"A", 
-			"Simple", 
-			"List",
-			"Example"
-		];
-		
-		public function get things():Array
-		{
-			return _things;
-		}
-
-		/**
-		 * Used in the List example.
-		 */
 		private var _actors:Array = [
 			new ActorVO("Bryan Cranston", "62 Episodes", "Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle."),
 			new ActorVO("Aaron Paul", "61 Episodes", "Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the 'Need For Speed' Movie."),

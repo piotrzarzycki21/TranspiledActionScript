@@ -21,72 +21,95 @@ limitations under the License.
                  xmlns:js="library://ns.apache.org/royale/basic"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
                  xmlns="http://www.w3.org/1999/xhtml"
-                 xmlns:models="models.*">
+                 xmlns:models="models.*" xmlns:components="components.*">
     
     <mdl:model>
         <models:ListsModel/>
 	</mdl:model>
-
-    <mdl:Grid>
-        <mdl:GridCell>
-            <mdl:List>
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="things"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-        <mdl:GridCell>
-            <mdl:List labelField="actorName" className="actorNameListItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="actors"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-        <mdl:GridCell>
-            <mdl:List labelField="actorName" className="actorNameAndIconListItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="actors"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-        <mdl:GridCell>
-            <mdl:List labelField="actorName" className="avatarAndActionListItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="actors"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-        <mdl:GridCell>
-            <mdl:List labelField="actorName" className="avatarAndActionTwoLineListItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="actors"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-        <mdl:GridCell column="12">
-            <mdl:List labelField="actorName" className="avatarAndActionThreeLineListItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                        sourceID="model"
-                        sourcePropertyName="actors"
-                        destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:List>
-        </mdl:GridCell>
-    </mdl:Grid>
+	<mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Simple list"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+				            <mdl:List labelField="actorName" className="actorNameListItemRenderer">
+				                <mdl:beads>
+				                    <js:ConstantBinding
+				                        sourceID="model"
+				                        sourcePropertyName="actors"
+				                        destinationPropertyName="dataProvider" />
+				                </mdl:beads>
+				            </mdl:List>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Lists/ListSimple.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Lists/ListSimple.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="List items with avatar and action"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+				            <mdl:List labelField="actorName" className="avatarAndActionListItemRenderer">
+				                <mdl:beads>
+				                    <js:ConstantBinding
+				                        sourceID="model"
+				                        sourcePropertyName="actors"
+				                        destinationPropertyName="dataProvider" />
+				                </mdl:beads>
+				            </mdl:List>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Lists/ListAvatarAndAction.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Lists/ListAvatarAndAction.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="List simple item renderer"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+					<mdl:GridCell column="12">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Lists/ItemRendererSimple.mxml"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="List with avatar and action item renderer"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+					<mdl:GridCell column="12">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Lists/ItemRendererExampleAvatarAndActions.mxml"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>	
 </mdl:TabBarPanel>
