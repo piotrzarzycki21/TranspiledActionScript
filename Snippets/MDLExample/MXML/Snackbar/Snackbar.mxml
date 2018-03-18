@@ -8,13 +8,13 @@
 			  action="onSnackBarAction(event)"/>
 			  
 <fx:Script><![CDATA[
-	private function onShowSnackbarClick(event:MouseEvent):void
-	{
-		snackbar.show();
-	}
+  private function onShowSnackbarClick(event:MouseEvent):void
+  {
+	snackbar.show();
+  }
 
-	private function onSnackBarAction(event:Event):void
-	{
-		//some action here
-	}
+  private function onSnackBarAction(event:Event):void
+  {
+	//some action here
+  }
 ]]></fx:Script>
