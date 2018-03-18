@@ -1,0 +1,9 @@
+<mdl:List labelField="actorName" 
+		  className="avatarAndActionListItemRenderer">
+	<mdl:beads>
+		<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="actors"
+			destinationPropertyName="dataProvider" />
+	</mdl:beads>
+</mdl:List>
