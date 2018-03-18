@@ -1,0 +1,14 @@
+<mdl:Button id="showToast"
+			width="180" accent="true" 
+			colored="true" raised="true"
+			text="Show Toast!" 
+			click="onShowToastClick(event)"/>
+<mdl:Toast id="toast" timeout="3000" 
+		   message="Toast message" />
+		   
+<fx:Script><![CDATA[
+	private function onShowToastClick(event:MouseEvent):void
+	{
+		toast.show();
+	}
+ ]]></fx:Script>

@@ -1,0 +1,20 @@
+<mdl:Button id="showSnackbar" 
+		    width="180" accent="true" 
+			colored="true" raised="true"
+			text="Show Snackbar!" 
+			click="onShowSnackbarClick(event)"/>
+<mdl:Snackbar id="snackbar" message="Snackbar message" 
+			  actionText="Undo" timeout="3000"
+			  action="onSnackBarAction(event)"/>
+			  
+<fx:Script><![CDATA[
+	private function onShowSnackbarClick(event:MouseEvent):void
+	{
+		snackbar.show();
+	}
+
+	private function onSnackBarAction(event:Event):void
+	{
+		//some action here
+	}
+]]></fx:Script>
