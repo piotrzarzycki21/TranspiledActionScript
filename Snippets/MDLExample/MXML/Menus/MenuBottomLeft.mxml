@@ -1,0 +1,18 @@
+<mdl:Button id="menu_btn" icon="true">
+	<mdl:materialIcon>
+		<mdl:MaterialIcon 
+			text="{MaterialIconType.MORE_VERT}"/>
+	</mdl:materialIcon>
+</mdl:Button>
+
+<mdl:Menu id="myMenu" dataMdlFor="menu_btn" 
+		  ripple="true" left="true" bottom="true" 
+		  labelField="label" 
+		  className="customMenuItemRenderer">
+	<mdl:beads>
+		<js:ConstantBinding
+				sourceID="menuModel"
+				sourcePropertyName="menuItems"
+				destinationPropertyName="dataProvider"/>
+	</mdl:beads>
+</mdl:Menu>
