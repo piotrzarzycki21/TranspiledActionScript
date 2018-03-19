@@ -118,26 +118,4 @@ limitations under the License.
 		import org.apache.royale.mdl.materialIcons.MaterialIconType;
 	]]>
 	</fx:Script>
-  <!--  <mdl:Grid>
-        <mdl:style>
-            <js:AllCSSStyles maxWidth="100"/>
-        </mdl:style>
-        <mdl:GridCell column="12">
-            <mdl:Button id="menu_btn" icon="true">
-                <mdl:materialIcon>
-                    <mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
-                </mdl:materialIcon>
-            </mdl:Button>
-
-            <mdl:Menu id="myMenu" dataMdlFor="menu_btn" ripple="true" bottom="false" left="false" change="onMyMenuChange(event)"
-                      labelField="label" className="customMenuItemRenderer">
-                <mdl:beads>
-                    <js:ConstantBinding
-                            sourceID="menuModel"
-                            sourcePropertyName="menuItems"
-                            destinationPropertyName="dataProvider" />
-                </mdl:beads>
-            </mdl:Menu>
-        </mdl:GridCell>
-    </mdl:Grid>-->
 </mdl:TabBarPanel>

@@ -20,46 +20,119 @@ limitations under the License.
 <mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
                  xmlns:js="library://ns.apache.org/royale/basic"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
-                 xmlns="http://www.w3.org/1999/xhtml">
-    
+                 xmlns="http://www.w3.org/1999/xhtml" xmlns:components="components.*">
+   <mdl:beads>
+        <js:ContainerDataBinding/>
+    </mdl:beads>
+
+    <mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Check on"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:CheckBox text="Checkbox" selected="true"/>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Toggles/Checkbox.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Toggles/Checkbox.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Radio on"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:RadioButton text="Radiobutton" 
+							                 selected="true" value="1"/>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Toggles/Radiobutton.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Toggles/Radiobutton.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Icon off"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:IconToggle dataMdlFor="mdlItalicIcon">
+				                <mdl:materialIcon>
+				                    <mdl:MaterialIcon text="{MaterialIconType.FORMAT_ITALIC}"/>
+				                </mdl:materialIcon>
+				            </mdl:IconToggle>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Toggles/IconToggle.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Toggles/IconToggle.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Switch on"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:Switch text="Switch" ripple="true" selected="true"/>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Toggles/Switch.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Toggles/Switch.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>
+	
     <fx:Script>
         <![CDATA[
         import org.apache.royale.mdl.materialIcons.MaterialIconType;
 
-            [Bindable]
-            private var counter:int = 0;
-
-            [Bindable]
-            private var counter2:int = 0;
-
-            [Bindable]
-            private var counter3:int = 0;
-
-            [Bindable]
-            private var counter4:int = 0;
-
-            [Bindable]
-            private var counter5:int = 0;
-
-            [Bindable]
-            private var counter6:int = 0;
-
-            [Bindable]
-            private var counter7:int = 0;
-
         ]]>
 	</fx:Script>
 
-    <mdl:beads>
-        <js:ContainerDataBinding/>
-    </mdl:beads>
-
-    <mdl:Grid>
+   <!-- <mdl:Grid>
         <mdl:style>
             <js:AllCSSStyles maxWidth="250"/>
         </mdl:style>
         <mdl:GridCell column="12">
-            <!-- Toggles :: https://getmdl.io/components/index.html#toggles-section -->
             <mdl:CheckBox id="mdlchk" text="Disabled at start" value="CheckBox Description" change="counter++"/>
             <js:Label text="Chebox throw 'change' event {counter} times"/>
             <mdl:CheckBox id="mdlchk1" text="Selected and with Ripple" selected="true" ripple="true"/>
@@ -101,6 +174,6 @@ limitations under the License.
 
             <js:Label text="RadioButtons throw 'click' event {counter7} times"/>
         </mdl:GridCell>
-    </mdl:Grid>
+    </mdl:Grid>-->
 
 </mdl:TabBarPanel>
