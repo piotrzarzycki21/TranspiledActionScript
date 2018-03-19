@@ -1,0 +1,6 @@
+<mdl:IconToggle dataMdlFor="mdlItalicIcon">
+	<mdl:materialIcon>
+		<mdl:MaterialIcon 
+		text="{MaterialIconType.FORMAT_ITALIC}"/>
+	</mdl:materialIcon>
+</mdl:IconToggle>
