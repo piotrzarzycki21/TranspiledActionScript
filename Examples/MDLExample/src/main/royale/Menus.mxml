@@ -20,20 +20,7 @@ limitations under the License.
 <mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
                  xmlns:js="library://ns.apache.org/royale/basic"
                  xmlns:mdl="library://ns.apache.org/royale/mdl"
-                 xmlns:models="models.*">
-
-    <fx:Script>
-        <![CDATA[
-        import org.apache.royale.mdl.materialIcons.MaterialIconType;
-        import org.apache.royale.html.SimpleAlert;
-
-        protected function onMyMenuChange(event:Event):void
-        {
-            SimpleAlert.show("You selected: " + myMenu.selectedItem.label, topMostEventDispatcher);
-        }
-        ]]>
-	</fx:Script>
-
+                 xmlns:models="models.*" xmlns:components="components.*">
     <mdl:beads>
         <js:ContainerDataBinding/>
     </mdl:beads>
@@ -42,7 +29,96 @@ limitations under the License.
         <models:MenuModel id="menuModel"/>
     </mdl:model>
 
-    <mdl:Grid>
+	<mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Left aligned menu below button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:Card width="300" height="250" shadow="2">
+								<mdl:Button id="menu_btn" icon="true">
+				                	<mdl:materialIcon>
+				                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
+					                </mdl:materialIcon>
+					            </mdl:Button>
+					
+					            <mdl:Menu dataMdlFor="menu_btn" 
+					                      ripple="true" left="true" bottom="true" 
+					                      labelField="label" className="customMenuItemRenderer">
+					                <mdl:beads>
+					                    <js:ConstantBinding
+					                            sourceID="menuModel"
+					                            sourcePropertyName="menuItems"
+					                            destinationPropertyName="dataProvider" />
+					                </mdl:beads>
+					            </mdl:Menu>
+							</mdl:Card>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Menus/MenuBottomLeft.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Menus/MenuBottomLeft.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Right aligned menu on top of button"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12">
+						<mdl:GridCell>
+							<mdl:Card width="300" height="250" shadow="2">
+								<js:Group height="210" percentWidth="100"/>
+								<mdl:Button id="menuRight" icon="true">
+									<mdl:style>
+										<js:SimpleCSSStyles marginLeft="260"/>
+									</mdl:style>
+				                	<mdl:materialIcon>
+				                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
+					                </mdl:materialIcon>
+					            </mdl:Button>
+					
+					            <mdl:Menu dataMdlFor="menuRight" 
+					                      ripple="true" left="false" bottom="false" 
+					                      labelField="label" className="customMenuItemRenderer">
+					                <mdl:beads>
+					                    <js:ConstantBinding
+					                            sourceID="menuModel"
+					                            sourcePropertyName="menuItems"
+					                            destinationPropertyName="dataProvider" />
+					                </mdl:beads>
+					            </mdl:Menu>
+							</mdl:Card>
+				        </mdl:GridCell>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Menus/MenuTopRight.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Menus/MenuTopRight.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>
+	<fx:Script>
+	<![CDATA[
+		import org.apache.royale.mdl.materialIcons.MaterialIconType;
+	]]>
+	</fx:Script>
+  <!--  <mdl:Grid>
         <mdl:style>
             <js:AllCSSStyles maxWidth="100"/>
         </mdl:style>
@@ -53,7 +129,7 @@ limitations under the License.
                 </mdl:materialIcon>
             </mdl:Button>
 
-            <mdl:Menu id="myMenu" dataMdlFor="menu_btn" ripple="true" bottom="true" left="false" change="onMyMenuChange(event)"
+            <mdl:Menu id="myMenu" dataMdlFor="menu_btn" ripple="true" bottom="false" left="false" change="onMyMenuChange(event)"
                       labelField="label" className="customMenuItemRenderer">
                 <mdl:beads>
                     <js:ConstantBinding
@@ -63,5 +139,5 @@ limitations under the License.
                 </mdl:beads>
             </mdl:Menu>
         </mdl:GridCell>
-    </mdl:Grid>
+    </mdl:Grid>-->
 </mdl:TabBarPanel>
