@@ -1,2 +1,2 @@
 <mdl:RadioButton text="Checkbox" 
-				 selected="true" value="1"/>
+		 selected="true" value="1"/>
