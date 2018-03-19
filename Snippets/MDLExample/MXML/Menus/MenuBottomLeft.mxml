@@ -11,8 +11,8 @@
 		  className="customMenuItemRenderer">
 	<mdl:beads>
 		<js:ConstantBinding
-				sourceID="menuModel"
-				sourcePropertyName="menuItems"
-				destinationPropertyName="dataProvider"/>
+			sourceID="menuModel"
+			sourcePropertyName="menuItems"
+			destinationPropertyName="dataProvider"/>
 	</mdl:beads>
 </mdl:Menu>
