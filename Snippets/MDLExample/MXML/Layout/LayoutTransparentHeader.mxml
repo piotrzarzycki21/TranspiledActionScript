@@ -3,15 +3,15 @@
 		<mdl:HeaderRow>
 			<mdl:LayoutTitle text="Title"/>
 			<mdl:Spacer />
+			<mdl:Navigation labelField="link">
+				<mdl:beads>
+					<js:ConstantBinding
+						sourceID="model"
+						sourcePropertyName="layoutData"
+						destinationPropertyName="dataProvider"/>
+				</mdl:beads>
+			</mdl:Navigation>
 		</mdl:HeaderRow>
-		<mdl:Navigation labelField="link">
-			<mdl:beads>
-				<js:ConstantBinding
-					sourceID="model"
-					sourcePropertyName="layoutData"
-					destinationPropertyName="dataProvider"/>
-			</mdl:beads>
-		</mdl:Navigation>
 	</mdl:Header>
 	<mdl:Drawer>
 		<mdl:LayoutTitle text="Title"/>
