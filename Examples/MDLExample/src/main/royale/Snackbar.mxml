@@ -29,12 +29,10 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell> 
-							 <mdl:Button id="showSnackbar" click="onShowSnackbarClick(event)"
-				                        text="Show Snackbar!" width="180" accent="true" colored="true" raised="true"/>
-				             <mdl:Snackbar id="snackbar" message="Snackbar message" actionText="Undo" timeout="3000"
-				                          action="onSnackBarAction(event)"/>
-				        </mdl:GridCell>
+						 <mdl:Button id="showSnackbar" click="onShowSnackbarClick(event)"
+			                        text="Show Snackbar!" width="180" accent="true" colored="true" raised="true"/>
+			             <mdl:Snackbar id="snackbar" message="Snackbar message" actionText="Undo" timeout="3000"
+			                          action="onSnackBarAction(event)"/>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -54,11 +52,9 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:Button id="showToast" click="onShowToastClick(event)"
 					                        text="Show Toast!" width="180" accent="true" colored="true" raised="true"/>
 				             <mdl:Toast id="toast" message="Toast message" timeout="3000"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"

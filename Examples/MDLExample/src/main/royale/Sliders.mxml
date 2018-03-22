@@ -29,9 +29,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
-							<mdl:Slider minimum="0" maximum="100" value="25"/>
-				        </mdl:GridCell>
+						<mdl:Slider minimum="0" maximum="100" value="25"/>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"

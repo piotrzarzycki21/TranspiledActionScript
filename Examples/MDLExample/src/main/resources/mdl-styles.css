@@ -102,8 +102,7 @@
 }
 
 .layoutTransparent {
-  background: url('assets/transparent.jpg') center / cover;
-  color: white;
+  background: url('resources/assets/transparent.jpg') center / cover;
 }
 
 .customTabBarPanelItemRenderer

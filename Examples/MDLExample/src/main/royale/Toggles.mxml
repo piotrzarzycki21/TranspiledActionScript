@@ -33,9 +33,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:CheckBox text="Checkbox" selected="true"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -55,10 +53,8 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:RadioButton text="Radiobutton" 
 							                 selected="true" value="1"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -78,13 +74,11 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:IconToggle dataMdlFor="mdlItalicIcon">
 				                <mdl:materialIcon>
 				                    <mdl:MaterialIcon text="{MaterialIconType.FORMAT_ITALIC}"/>
 				                </mdl:materialIcon>
-				            </mdl:IconToggle>
-				        </mdl:GridCell>
+				            </mdl:IconToggle>			
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -104,9 +98,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:Switch text="Switch" ripple="true" selected="true"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"

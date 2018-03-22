@@ -28,9 +28,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:ProgressBar currentProgress="47" />
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -50,9 +48,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:ProgressBar currentProgress="47" indeterminate="true"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -72,9 +68,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:ProgressBar currentProgress="47" currentBuffer="25"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -94,9 +88,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:Spinner isActive="true"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -116,9 +108,7 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
 							<mdl:Spinner isActive="true" singleColor="true"/>
-				        </mdl:GridCell>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"

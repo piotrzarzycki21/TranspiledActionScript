@@ -37,26 +37,24 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
-							<mdl:Card width="300" height="250" shadow="2">
-								<mdl:Button id="menu_btn" icon="true">
-				                	<mdl:materialIcon>
-				                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
-					                </mdl:materialIcon>
-					            </mdl:Button>
-					
-					            <mdl:Menu dataMdlFor="menu_btn" 
-					                      ripple="true" left="true" bottom="true" 
-					                      labelField="label" className="customMenuItemRenderer">
-					                <mdl:beads>
-					                    <js:ConstantBinding
-					                            sourceID="menuModel"
-					                            sourcePropertyName="menuItems"
-					                            destinationPropertyName="dataProvider" />
-					                </mdl:beads>
-					            </mdl:Menu>
-							</mdl:Card>
-				        </mdl:GridCell>
+						<mdl:Card width="300" height="250" shadow="2">
+							<mdl:Button id="menu_btn" icon="true">
+			                	<mdl:materialIcon>
+			                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
+				                </mdl:materialIcon>
+				            </mdl:Button>
+				
+				            <mdl:Menu dataMdlFor="menu_btn" 
+				                      ripple="true" left="true" bottom="true" 
+				                      labelField="label" className="customMenuItemRenderer">
+				                <mdl:beads>
+				                    <js:ConstantBinding
+				                            sourceID="menuModel"
+				                            sourcePropertyName="menuItems"
+				                            destinationPropertyName="dataProvider" />
+				                </mdl:beads>
+				            </mdl:Menu>
+						</mdl:Card>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
@@ -76,30 +74,28 @@ limitations under the License.
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
 			  		<mdl:GridCell column="12">
-						<mdl:GridCell>
-							<mdl:Card width="300" height="250" shadow="2">
-								<js:Group height="210" percentWidth="100"/>
-								<mdl:Button id="menuRight" icon="true">
-									<mdl:style>
-										<js:SimpleCSSStyles marginLeft="260"/>
-									</mdl:style>
-				                	<mdl:materialIcon>
-				                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
-					                </mdl:materialIcon>
-					            </mdl:Button>
-					
-					            <mdl:Menu dataMdlFor="menuRight" 
-					                      ripple="true" left="false" bottom="false" 
-					                      labelField="label" className="customMenuItemRenderer">
-					                <mdl:beads>
-					                    <js:ConstantBinding
-					                            sourceID="menuModel"
-					                            sourcePropertyName="menuItems"
-					                            destinationPropertyName="dataProvider" />
-					                </mdl:beads>
-					            </mdl:Menu>
-							</mdl:Card>
-				        </mdl:GridCell>
+						<mdl:Card width="300" height="250" shadow="2">
+							<js:Group height="210" percentWidth="100"/>
+							<mdl:Button id="menuRight" icon="true">
+								<mdl:style>
+									<js:SimpleCSSStyles marginLeft="260"/>
+								</mdl:style>
+			                	<mdl:materialIcon>
+			                    		<mdl:MaterialIcon text="{MaterialIconType.MORE_VERT}"/>
+				                </mdl:materialIcon>
+				            </mdl:Button>
+				
+				            <mdl:Menu dataMdlFor="menuRight" 
+				                      ripple="true" left="false" bottom="false" 
+				                      labelField="label" className="customMenuItemRenderer">
+				                <mdl:beads>
+				                    <js:ConstantBinding
+				                            sourceID="menuModel"
+				                            sourcePropertyName="menuItems"
+				                            destinationPropertyName="dataProvider" />
+				                </mdl:beads>
+				            </mdl:Menu>
+						</mdl:Card>
 					</mdl:GridCell>
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"

@@ -57,6 +57,7 @@ limitations under the License.
 		<local:Cards id="cards"/>
 		<local:Chips id="chips"/>
 		<local:Dialogs id="dialogs"/>
+		<local:Layout id="layouts"/>
 		<local:Lists id="list"/>
 		<local:Loading id="loading"/>
 		<local:Menus id="menus"/>

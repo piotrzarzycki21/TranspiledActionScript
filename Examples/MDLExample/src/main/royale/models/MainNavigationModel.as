@@ -30,7 +30,7 @@ package models
                 new NavigationLinkVO("Cards", "#", "https://getmdl.io/assets/comp_cards.png", "cards"),
                 new NavigationLinkVO("Chips", "#", "https://getmdl.io/assets/comp_chips.png", "chips"),
                 new NavigationLinkVO("Dialogs", "#", "https://getmdl.io/assets/comp_dialog.png", "dialogs"),
-                new NavigationLinkVO("Layout", "#", "https://getmdl.io/assets/comp_layout.png", "layout"),
+                new NavigationLinkVO("Layout", "#", "https://getmdl.io/assets/comp_layout.png", "layouts"),
                 new NavigationLinkVO("List", "#", "https://getmdl.io/assets/comp_lists.png", "list"),
                 new NavigationLinkVO("Loading", "#", "https://getmdl.io/assets/comp_loading.png", "loading"),
                 new NavigationLinkVO("Menus", "#", "https://getmdl.io/assets/comp_menus.png", "menus"),
