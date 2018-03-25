@@ -1,15 +1,15 @@
 <mdl:NavigationLayout height="320" fixedDrawer="true">
-	<mdl:Drawer>
-		<mdl:LayoutTitle text="Title"/>
-		<mdl:Navigation labelField="link">
-			<mdl:beads>
-				<js:ConstantBinding
-					sourceID="model"
-					sourcePropertyName="layoutData"
-					destinationPropertyName="dataProvider"/>
-			</mdl:beads>
-		</mdl:Navigation>
-	</mdl:Drawer>
-	<mdl:NavigationLayoutContent>
-	</mdl:NavigationLayoutContent>
+  <mdl:Drawer>
+    <mdl:LayoutTitle text="Title"/>
+      <mdl:Navigation labelField="link">
+	<mdl:beads>
+		<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="layoutData"
+			destinationPropertyName="dataProvider"/>
+	</mdl:beads>
+       </mdl:Navigation>
+     </mdl:Drawer>
+  <mdl:NavigationLayoutContent>
+  </mdl:NavigationLayoutContent>
 </mdl:NavigationLayout>
