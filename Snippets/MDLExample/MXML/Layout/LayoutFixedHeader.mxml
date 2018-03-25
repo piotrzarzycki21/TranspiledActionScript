@@ -3,10 +3,10 @@
     <mdl:LayoutTitle text="Title"/>
       <mdl:Navigation labelField="link">
 	<mdl:beads>
-		<js:ConstantBinding
-			sourceID="model"
-			sourcePropertyName="layoutData"
-			destinationPropertyName="dataProvider"/>
+	  <js:ConstantBinding
+		sourceID="model"
+		sourcePropertyName="layoutData"
+		destinationPropertyName="dataProvider"/>
 	</mdl:beads>
        </mdl:Navigation>
      </mdl:Drawer>
