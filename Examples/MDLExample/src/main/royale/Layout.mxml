@@ -73,5 +73,79 @@ limitations under the License.
 			    </mdl:Grid>
 			</mdl:Card>
 		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Fixed drawer, no header"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12" height="320">
+						<mdl:NavigationLayout height="320" fixedDrawer="true">
+							<mdl:Drawer>
+								<mdl:LayoutTitle text="Title"/>
+								<mdl:Navigation labelField="link">
+									<mdl:beads>
+						                    <js:ConstantBinding
+						                        sourceID="model"
+						                        sourcePropertyName="layoutData"
+						                        destinationPropertyName="dataProvider" />
+						            </mdl:beads>
+								</mdl:Navigation>
+							</mdl:Drawer>
+							<mdl:NavigationLayoutContent>
+							</mdl:NavigationLayoutContent>
+						</mdl:NavigationLayout>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/LayoutFixedHeader.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/LayoutFixedHeader.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Content tabs"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12" height="320">
+						<mdl:Tabs width="400" selectedIndex="1" tabIdField="tabId" labelField="label" className="customTabBarPanelItemRenderer">
+			                <mdl:beads>
+			                    <js:ConstantBinding
+			                            sourceID="model"
+			                            sourcePropertyName="tabs"
+			                            destinationPropertyName="dataProvider" />
+			                </mdl:beads>
+			            </mdl:Tabs>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/TabsContent.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/TabsContent.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Tabs customTabBarPanelItemRenderer"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+					<mdl:GridCell column="12">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/CustomTabBarPanelItemRenderer.mxml"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
 	</mdl:Grid>
 </mdl:TabBarPanel>
