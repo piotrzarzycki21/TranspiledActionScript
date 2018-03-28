@@ -1,0 +1,10 @@
+<mdl:Tabs width="400" selectedIndex="1" 
+          tabIdField="tabId" labelField="label" 
+		  className="customTabBarPanelItemRenderer">
+	<mdl:beads>
+		<js:ConstantBinding
+				sourceID="model"
+				sourcePropertyName="tabs"
+				destinationPropertyName="dataProvider" />
+	</mdl:beads>
+</mdl:Tabs>
