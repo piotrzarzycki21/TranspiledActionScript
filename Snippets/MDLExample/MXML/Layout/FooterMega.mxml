@@ -50,6 +50,7 @@
 	</mdl:FooterMiddleSection>
 
 	<mdl:FooterBottomSection>
+		<mdl:FooterLogo text="Title"/>
 		<mdl:FooterLinkList>
 			<mdl:beads>
 				<js:ConstantBinding
