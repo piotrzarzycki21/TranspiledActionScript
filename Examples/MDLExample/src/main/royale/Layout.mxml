@@ -147,5 +147,87 @@ limitations under the License.
 			    </mdl:Grid>
 			</mdl:Card>
 		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Mega footer"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12" height="320">
+						<mdl:Footer>
+				            <mdl:FooterMiddleSection>		                
+				                <mdl:FooterDropDownSection>
+				                    <mdl:FooterHeading text="Features"/>
+				                    <mdl:FooterLinkList>
+				                        <mdl:beads>
+				                            <js:ConstantBinding
+				                                sourceID="model"
+				                                sourcePropertyName="featuresFooter"
+				                                destinationPropertyName="dataProvider" />
+				                        </mdl:beads>
+				                    </mdl:FooterLinkList>
+				                </mdl:FooterDropDownSection>
+				
+				                <mdl:FooterDropDownSection>
+				                    <mdl:FooterHeading text="Details"/>
+				                    <mdl:FooterLinkList>
+				                        <mdl:beads>
+				                            <js:ConstantBinding
+				                                sourceID="model"
+				                                sourcePropertyName="detailsFooter"
+				                                destinationPropertyName="dataProvider" />
+				                        </mdl:beads>
+				                    </mdl:FooterLinkList>
+				                </mdl:FooterDropDownSection>
+				
+				                <mdl:FooterDropDownSection>
+				                    <mdl:FooterHeading text="Technology"/>
+				                    <mdl:FooterLinkList>
+				                        <mdl:beads>
+				                            <js:ConstantBinding
+				                                sourceID="model"
+				                                sourcePropertyName="technologyFooter"
+				                                destinationPropertyName="dataProvider" />
+				                        </mdl:beads>
+				                    </mdl:FooterLinkList>
+				                </mdl:FooterDropDownSection>
+				
+								<mdl:FooterDropDownSection>
+				                    <mdl:FooterHeading text="FAQ"/>
+				                    <mdl:FooterLinkList>
+				                        <mdl:beads>
+				                            <js:ConstantBinding
+				                                sourceID="model"
+				                                sourcePropertyName="faqFooter"
+				                                destinationPropertyName="dataProvider" />
+				                        </mdl:beads>
+				                    </mdl:FooterLinkList>
+				                </mdl:FooterDropDownSection>
+				            </mdl:FooterMiddleSection>
+				
+				            <mdl:FooterBottomSection>
+								<mdl:FooterLogo text="Title"/>
+				                <mdl:FooterLinkList>
+				                    <mdl:beads>
+				                        <js:ConstantBinding
+				                            sourceID="model"
+				                            sourcePropertyName="bottomFooter"
+				                            destinationPropertyName="dataProvider" />
+				                    </mdl:beads>
+				                </mdl:FooterLinkList>
+				            </mdl:FooterBottomSection>
+				        </mdl:Footer>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/FooterMega.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/FooterMega.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
 	</mdl:Grid>
 </mdl:TabBarPanel>
