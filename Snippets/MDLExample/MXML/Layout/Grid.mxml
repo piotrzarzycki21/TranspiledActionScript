@@ -1,0 +1,53 @@
+<mdl:Grid>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+	<mdl:GridCell column="1">
+    </mdl:GridCell>
+</mdl:Grid>
+<mdl:Grid>
+	<mdl:GridCell column="4">
+	</mdl:GridCell>
+	<mdl:GridCell column="4">
+	</mdl:GridCell>
+	<mdl:GridCell column="4">
+	</mdl:GridCell>
+</mdl:Grid>
+<mdl:Grid>
+	<mdl:GridCell column="6">
+    </mdl:GridCell>
+	<mdl:GridCell column="4">
+	</mdl:GridCell>
+	<mdl:GridCell column="2">
+	</mdl:GridCell>				
+</mdl:Grid>
+<mdl:Grid>
+	<mdl:GridCell column="6"
+	              columnTablet="8">
+	</mdl:GridCell>
+	<mdl:GridCell column="4"
+	              columnTablet="6">
+	</mdl:GridCell>
+	<mdl:GridCell column="2" 
+	              columnPhone="4">
+	</mdl:GridCell>				
+</mdl:Grid>
