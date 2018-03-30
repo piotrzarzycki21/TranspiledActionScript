@@ -178,7 +178,7 @@
 }
 
 /* Grids Example */
-.demo-grid .mdl-cell {
+.demo-grid-cell {
   box-sizing: border-box;
   background-color: #BDBDBD;
   height: 200px;
@@ -186,21 +186,9 @@
   padding-top: 4px;
   color: white;
 }
-.demo-grid .mdl-grid:first-of-type .mdl-cell {
+.demo-grid:first-of-type .demo-grid-cell {
   height: 50px;
 }
-
-/* center items in grid */
-.mdl-grid.center-items {
-  flex-direction: column;
-  align-items: center;
-}
-
-/* make center items have some padding */
-.mdl-grid.center-items > .mdl-card {
-  margin: 10px;
-}
-
 
 /* Icons */
 .material-icons.orange600 { color: #FB8C00; }

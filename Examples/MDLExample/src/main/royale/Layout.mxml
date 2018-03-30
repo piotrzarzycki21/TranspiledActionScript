@@ -150,6 +150,54 @@ limitations under the License.
 		<mdl:GridCell column="12">
 			<mdl:Card percentWidth="100">
 				<mdl:CardTitle>
+					<mdl:CardTitleText text="Content tabs"/>
+				</mdl:CardTitle>			
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+					<mdl:GridCell column="12">
+						<mdl:Grid className="demo-grid">
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="1"></mdl:GridCell>
+						</mdl:Grid>
+						<mdl:Grid className="demo-grid">
+							<mdl:GridCell className="demo-grid-cell" column="4"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="4"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="4"></mdl:GridCell>
+						</mdl:Grid>
+						<mdl:Grid className="demo-grid">
+							<mdl:GridCell className="demo-grid-cell" column="6"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="4"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="2"></mdl:GridCell>				
+						</mdl:Grid>
+						<mdl:Grid className="demo-grid">
+							<mdl:GridCell className="demo-grid-cell" column="6" columnTablet="8"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="4" columnTablet="6"></mdl:GridCell>
+							<mdl:GridCell className="demo-grid-cell" column="2" columnPhone="4"></mdl:GridCell>				
+						</mdl:Grid>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/Grid.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/Grid.html"/>
+					</mdl:GridCell>
+				</mdl:Grid>
+			</mdl:Card>			
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
 					<mdl:CardTitleText text="Mega footer"/>
 				</mdl:CardTitle>
 			    <mdl:Grid percentWidth="100" percentHeight="100">
@@ -225,6 +273,38 @@ limitations under the License.
 					<mdl:GridCell column="6">
 						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
 											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/FooterMega.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Mini footer"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="12" height="320">
+						<mdl:Footer mini="true">
+				            <mdl:FooterLeftSection>
+								<mdl:FooterLogo text="Title"/>
+				                <mdl:FooterLinkList>
+				                    <mdl:beads>
+				                        <js:ConstantBinding
+				                            sourceID="model"
+				                            sourcePropertyName="bottomFooter"
+				                            destinationPropertyName="dataProvider" />
+				                    </mdl:beads>
+				                </mdl:FooterLinkList>
+				            </mdl:FooterLeftSection>				
+				        </mdl:Footer>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Layout/FooterMini.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Layout/FooterMini.html"/>
 					</mdl:GridCell>
 			    </mdl:Grid>
 			</mdl:Card>
