@@ -1,13 +1,13 @@
 <mdl:Footer mini="true">
   <mdl:FooterLeftSection>
-	<mdl:FooterLogo text="Title"/>
-	<mdl:FooterLinkList>
-	  <mdl:beads>
-		<js:ConstantBinding
-		sourceID="model"
-		sourcePropertyName="bottomFooter"
-		destinationPropertyName="dataProvider"/>
-	  </mdl:beads>
-	</mdl:FooterLinkList>
+    <mdl:FooterLogo text="Title"/>
+      <mdl:FooterLinkList>
+        <mdl:beads>
+	  <js:ConstantBinding
+	     sourceID="model"
+	     sourcePropertyName="bottomFooter"
+	     destinationPropertyName="dataProvider"/>
+        </mdl:beads>
+      </mdl:FooterLinkList>
   </mdl:FooterLeftSection>				
 </mdl:Footer>
