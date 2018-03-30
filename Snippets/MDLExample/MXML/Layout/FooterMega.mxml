@@ -3,48 +3,48 @@
 	  <mdl:FooterDropDownSection>
 		<mdl:FooterHeading text="Features"/>
 		<mdl:FooterLinkList>
-			<mdl:beads>
-				<js:ConstantBinding
-				sourceID="model"
-				sourcePropertyName="featuresFooter"
-				destinationPropertyName="dataProvider"/>
-			</mdl:beads>
+		  <mdl:beads>
+			<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="featuresFooter"
+			destinationPropertyName="dataProvider"/>
+		  </mdl:beads>
 		</mdl:FooterLinkList>
 	  </mdl:FooterDropDownSection>
 
 	  <mdl:FooterDropDownSection>
 		<mdl:FooterHeading text="Details"/>
 		<mdl:FooterLinkList>
-			<mdl:beads>
-				<js:ConstantBinding
-				sourceID="model"
-				sourcePropertyName="detailsFooter"
-				destinationPropertyName="dataProvider"/>
-			</mdl:beads>
+		  <mdl:beads>
+			<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="detailsFooter"
+			destinationPropertyName="dataProvider"/>
+		  </mdl:beads>
 		</mdl:FooterLinkList>
 	  </mdl:FooterDropDownSection>
 
 	  <mdl:FooterDropDownSection>
 		<mdl:FooterHeading text="Technology"/>
 		<mdl:FooterLinkList>
-			<mdl:beads>
-				<js:ConstantBinding
-				sourceID="model"
-				sourcePropertyName="technologyFooter"
-				destinationPropertyName="dataProvider"/>
-			</mdl:beads>
+		  <mdl:beads>
+			<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="technologyFooter"
+			destinationPropertyName="dataProvider"/>
+		  </mdl:beads>
 		</mdl:FooterLinkList>
 	  </mdl:FooterDropDownSection>
 
 	  <mdl:FooterDropDownSection>
 		<mdl:FooterHeading text="FAQ"/>
 		<mdl:FooterLinkList>
-			<mdl:beads>
-				<js:ConstantBinding
-				sourceID="model"
-				sourcePropertyName="faqFooter"
-				destinationPropertyName="dataProvider"/>
-			</mdl:beads>
+		  <mdl:beads>
+			<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="faqFooter"
+			destinationPropertyName="dataProvider"/>
+		  </mdl:beads>
 		</mdl:FooterLinkList>
 	  </mdl:FooterDropDownSection>
 	</mdl:FooterMiddleSection>
@@ -52,12 +52,12 @@
 	<mdl:FooterBottomSection>
 	  <mdl:FooterLogo text="Title"/>
 	    <mdl:FooterLinkList>
-		  <mdl:beads>
-			<js:ConstantBinding
-				sourceID="model"
-				sourcePropertyName="bottomFooter"
-				destinationPropertyName="dataProvider" />
-		  </mdl:beads>
+	      <mdl:beads>
+		<js:ConstantBinding
+			sourceID="model"
+			sourcePropertyName="bottomFooter"
+			destinationPropertyName="dataProvider"/>
+	      </mdl:beads>
 	    </mdl:FooterLinkList>
 	</mdl:FooterBottomSection>
 </mdl:Footer>
