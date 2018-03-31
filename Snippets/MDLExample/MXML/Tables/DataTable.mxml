@@ -1,23 +1,23 @@
 <mdl:Table shadow="2" 
-		   className="customTableRowItemRenderer" 
-		   selectable="true">
-	<mdl:columns>
-		<mdl:TableColumn headerText="Material"/>
-		<mdl:TableColumn headerText="Quantity">
-			<mdl:beads>
-				<mdl:TableNumericColumnEnable/>
-			</mdl:beads>
-		</mdl:TableColumn>
-		<mdl:TableColumn headerText="Unit price">
-			<mdl:beads>
-				<mdl:TableNumericColumnEnable/>
-			</mdl:beads>
-		</mdl:TableColumn>
-	</mdl:columns>
-	<mdl:beads>
-		<js:ConstantBinding
-		  sourceID="model"
-		  sourcePropertyName="materials"
-		  destinationPropertyName="dataProvider"/>
-	</mdl:beads>
+	   className="customTableRowItemRenderer" 
+	   selectable="true">
+  <mdl:columns>
+	<mdl:TableColumn headerText="Material"/>
+	<mdl:TableColumn headerText="Quantity">
+	  <mdl:beads>
+	    <mdl:TableNumericColumnEnable/>
+	  </mdl:beads>
+	</mdl:TableColumn>
+	<mdl:TableColumn headerText="Unit price">
+	  <mdl:beads>
+	    <mdl:TableNumericColumnEnable/>
+	  </mdl:beads>
+	</mdl:TableColumn>
+  </mdl:columns>
+  <mdl:beads>
+	<js:ConstantBinding
+	  sourceID="model"
+	  sourcePropertyName="materials"
+	  destinationPropertyName="dataProvider"/>
+  </mdl:beads>
 </mdl:Table>
