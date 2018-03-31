@@ -1,0 +1,14 @@
+<html:Div className="material-icons" 
+		  text="add">
+	<js:beads>
+		<mdl:Tooltip text="Follow" />
+	</js:beads>
+</html:Div>
+
+<html:Div className="material-icons" 
+          text="print">
+	<js:beads>
+		<mdl:Tooltip text="Print" 
+		             large="true"/>
+	</js:beads>
+</html:Div>
