@@ -1,0 +1,17 @@
+<js:Form action="#">
+  <mdl:TextField>
+	<mdl:beads>
+		<mdl:TextPrompt 
+			prompt="Simple Textfield..."/>
+	</mdl:beads>
+  </mdl:TextField>
+  <mdl:TextField>
+	<mdl:beads>
+		<mdl:TextPrompt 
+			prompt="Numeric Textfield..."/>
+		<mdl:RestrictTextField 
+			pattern="-?[0-9]*(\.[0-9]+)?" 
+		    error="Input is not a number!"/>
+	</mdl:beads>
+  </mdl:TextField>
+</js:Form>
