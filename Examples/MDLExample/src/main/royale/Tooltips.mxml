@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+
+Licensed to the Apache Software Foundation (ASF) under one or more
+contributor license agreements.  See the NOTICE file distributed with
+this work for additional information regarding copyright ownership.
+The ASF licenses this file to You under the Apache License, Version 2.0
+(the "License"); you may not use this file except in compliance with
+the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
+<mdl:TabBarPanel xmlns:fx="http://ns.adobe.com/mxml/2009"
+                 xmlns:mdl="library://ns.apache.org/royale/mdl"
+                 xmlns:js="library://ns.apache.org/royale/basic"
+				 xmlns:html="library://ns.apache.org/royale/html"
+                 xmlns:components="components.*">
+	<mdl:Grid percentWidth="100">
+		<mdl:GridCell column="12">
+			<mdl:Card percentWidth="100">
+				<mdl:CardTitle>
+					<mdl:CardTitleText text="Simple Tooltip"/>
+				</mdl:CardTitle>
+			    <mdl:Grid percentWidth="100" percentHeight="100">
+			  		<mdl:GridCell column="6">
+						<html:Div id="tt1" className="material-icons" text="add">
+							<js:beads>
+								<mdl:Tooltip text="Follow" />
+							</js:beads>
+						</html:Div>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<html:Div id="tt2" className="material-icons" text="print">
+							<js:beads>
+								<mdl:Tooltip text="Print" large="true"/>
+							</js:beads>
+						</html:Div>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="xml" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Tooltips/TooltipsSimpleLarge.mxml"/>
+					</mdl:GridCell>
+					<mdl:GridCell column="6">
+						<components:SnippetBox languages="html" percentWidth="100" percentHeight="100"
+											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Tooltips/TooltipsSimpleLarge.html"/>
+					</mdl:GridCell>
+			    </mdl:Grid>
+			</mdl:Card>
+		</mdl:GridCell>
+	</mdl:Grid>
+</mdl:TabBarPanel>
