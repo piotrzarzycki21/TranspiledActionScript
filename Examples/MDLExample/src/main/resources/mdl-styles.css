@@ -91,9 +91,10 @@
     IItemRenderer: ClassReference("itemRenderers.CustomTableRowItemRenderer");
 }
 
-.tableRowItemRendererWithIcons
+.singleSelectionTable
 {
-    IItemRenderer: ClassReference("itemRenderers.TableRowItemRendererWithIcons");
+	IItemRenderer: ClassReference("itemRenderers.SingleSelectionTableRowItemRenderer");
+	IBeadController: ClassReference("org.apache.royale.html.beads.controllers.ListSingleSelectionMouseController");
 }
 
 .footerMiniLinkListItemRenderer
