@@ -1,0 +1,12 @@
+<js:Form action="#">
+ <mdl:TextField>
+	<mdl:beads>
+		<mdl:ExpandableSearch/>
+	</mdl:beads>
+  </mdl:TextField>
+  <mdl:TextArea width="100%" rows="3">
+	<mdl:beads>
+		<mdl:TextPrompt prompt="Text lines..."/>
+	</mdl:beads>
+  </mdl:TextArea>
+</js:Form>
