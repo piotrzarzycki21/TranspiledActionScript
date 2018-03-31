@@ -1,11 +1,11 @@
-<html:Div className="material-icons" 
+<html:Div id="tt1" className="material-icons" 
 		  text="add">
 	<js:beads>
 		<mdl:Tooltip text="Follow" />
 	</js:beads>
 </html:Div>
 
-<html:Div className="material-icons" 
+<html:Div id="tt2" className="material-icons" 
           text="print">
 	<js:beads>
 		<mdl:Tooltip text="Print" 
