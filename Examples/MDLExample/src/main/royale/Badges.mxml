@@ -33,54 +33,56 @@ limitations under the License.
         <js:ContainerDataBinding/>
     </mdl:beads>
 	
-	<mdl:Grid percentWidth="100">
-		<mdl:GridCell column="12">
-			<mdl:Card percentWidth="100">
-				<mdl:CardTitle>
-					<mdl:CardTitleText text="Number badge on icon"/>
-				</mdl:CardTitle>
-			    <mdl:Grid percentWidth="100" percentHeight="100">
-			  		<mdl:GridCell column="12">
-						<html:Div className="material-icons" text="{MaterialIconType.ACCOUNT_BOX}">
-							<js:beads>
-								<mdl:Badge dataBadge="1" overlap="true"/>
-							</js:beads>
-						</html:Div>
-					</mdl:GridCell>
-					<mdl:GridCell column="6">
-						<components:SnippetBox languages="xml" 
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Badges/BadgeWithNumber.mxml"/>
-					</mdl:GridCell>
-					<mdl:GridCell column="6">
-						<components:SnippetBox languages="html" 
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Badges/BadgeWithNumber.html"/>
-					</mdl:GridCell>
-			    </mdl:Grid>
-			</mdl:Card>
-		</mdl:GridCell>
-		<mdl:GridCell column="12">
-			<mdl:Card percentWidth="100">
-				<mdl:CardTitle>
-					<mdl:CardTitleText text="Icon badge on icon"/>
-				</mdl:CardTitle>
-			    <mdl:Grid percentWidth="100" percentHeight="100">
-			  		<mdl:GridCell column="12">
-						<html:Div className="material-icons" text="{MaterialIconType.ACCOUNT_BOX}">
-							<js:beads>
-								<mdl:Badge dataBadge="♥" overlap="true"/>
-							</js:beads>
-						</html:Div>
-					</mdl:GridCell>
-					<mdl:GridCell column="6">
-						<components:SnippetBox languages="xml" 
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Badges/BadgeWithIcon.mxml"/>
-					</mdl:GridCell>
-					<mdl:GridCell column="6">
-						<components:SnippetBox languages="html" 
-											   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Badges/BadgeWithIcon.html"/>
-					</mdl:GridCell>
-			    </mdl:Grid>
-			</mdl:Card>
-		</mdl:GridCell>
-	</mdl:Grid>
+	<js:Group className="page-content">
+		<mdl:Grid percentWidth="100">
+			<mdl:GridCell column="12">
+				<mdl:Card percentWidth="100">
+					<mdl:CardTitle>
+						<mdl:CardTitleText text="Number badge on icon"/>
+					</mdl:CardTitle>
+				    <mdl:Grid percentWidth="100" percentHeight="100">
+				  		<mdl:GridCell column="12">
+							<html:Div className="material-icons" text="{MaterialIconType.ACCOUNT_BOX}">
+								<js:beads>
+									<mdl:Badge dataBadge="1" overlap="true"/>
+								</js:beads>
+							</html:Div>
+						</mdl:GridCell>
+						<mdl:GridCell column="6">
+							<components:SnippetBox languages="xml" 
+												   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Badges/BadgeWithNumber.mxml"/>
+						</mdl:GridCell>
+						<mdl:GridCell column="6">
+							<components:SnippetBox languages="html" 
+												   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Badges/BadgeWithNumber.html"/>
+						</mdl:GridCell>
+				    </mdl:Grid>
+				</mdl:Card>
+			</mdl:GridCell>
+			<mdl:GridCell column="12">
+				<mdl:Card percentWidth="100">
+					<mdl:CardTitle>
+						<mdl:CardTitleText text="Icon badge on icon"/>
+					</mdl:CardTitle>
+				    <mdl:Grid percentWidth="100" percentHeight="100">
+				  		<mdl:GridCell column="12">
+							<html:Div className="material-icons" text="{MaterialIconType.ACCOUNT_BOX}">
+								<js:beads>
+									<mdl:Badge dataBadge="♥" overlap="true"/>
+								</js:beads>
+							</html:Div>
+						</mdl:GridCell>
+						<mdl:GridCell column="6">
+							<components:SnippetBox languages="xml" 
+												   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/MXML/Badges/BadgeWithIcon.mxml"/>
+						</mdl:GridCell>
+						<mdl:GridCell column="6">
+							<components:SnippetBox languages="html" 
+												   link="https://raw.githubusercontent.com/piotrzarzycki21/TranspiledActionScript/snippets/Snippets/MDLExample/HTML/Badges/BadgeWithIcon.html"/>
+						</mdl:GridCell>
+				    </mdl:Grid>
+				</mdl:Card>
+			</mdl:GridCell>
+		</mdl:Grid>
+	</js:Group>
 </mdl:TabBarPanel>             

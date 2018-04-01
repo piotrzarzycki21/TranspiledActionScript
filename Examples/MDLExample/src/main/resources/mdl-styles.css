@@ -22,12 +22,10 @@
 @namespace "http://www.w3.org/1999/xhtml";
 @namespace mdl "library://ns.apache.org/royale/mdl";
 
-.page-content
+body
 {
-	padding: 10px;
-	margin: 10px;
+	overflow-x: hidden;
 }
-
 
 .mainMenuNavigation
 {

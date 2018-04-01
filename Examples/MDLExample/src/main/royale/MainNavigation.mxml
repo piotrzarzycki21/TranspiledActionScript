@@ -24,20 +24,23 @@ limitations under the License.
                       xmlns="http://www.w3.org/1999/xhtml" xmlns:models="models.*"
                       fixedDrawer="true" fixedHeader="true">
 
+	<mdl:style>
+		<js:AllCSSStyles height="auto"/>
+	</mdl:style>
     <mdl:model>
         <models:MainNavigationModel id="mainNavigationModel"/>
     </mdl:model>
 
     <mdl:Header>
         <mdl:HeaderRow>
-            <mdl:LayoutTitle text="Apache Royale MDL"/>
+            <mdl:LayoutTitle text="MDLExample MXML vs. HTML"/>
         </mdl:HeaderRow>
     </mdl:Header>
 	<mdl:Drawer>
 		<mdl:style>
-			<js:AllCSSStyles overflowY="unset" height="auto" maxHeight="unset"/>
+			<js:AllCSSStyles overflowY="unset"/>
 		</mdl:style>
-		<mdl:LayoutTitle text="Apache Royale MDL">
+		<mdl:LayoutTitle text="Components">
 			<mdl:style>
 				<js:SimpleCSSStyles fontSize="16" fontWeight="bold"/>
 			</mdl:style>
