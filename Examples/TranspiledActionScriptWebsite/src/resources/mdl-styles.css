@@ -500,3 +500,9 @@ global {
 	font-size: 14pt; 
 	text-decoration: none;
 }
+.cookiesDialogStyle {
+	left: 50%;
+	top: 30%;
+	z-index: 10;
+	background-color: #444444;
+}

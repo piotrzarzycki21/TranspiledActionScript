@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdl:Dialog xmlns:fx="http://ns.adobe.com/mxml/2009"
+            xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:mdl="library://ns.apache.org/royale/mdl"
+            xmlns:html="library://ns.apache.org/royale/html" xmlns:js="library://ns.apache.org/royale/basic"
+            className="cookiesDialogStyle">
+    <mdl:DialogContent>
+        <html:P text="TranspiledActionScript uses cookies to provide
+					  you with the best possible user experience. 	
+					  By continuing on this website, you approve of our use of cookies.">	
+			<html:style>
+				<js:AllCSSStyles fontFamily="Sintony" color="#FFFFFF"/>
+			</html:style>				
+		</html:P>				
+    </mdl:DialogContent>
+    
+    <mdl:DialogActions>
+        <mdl:Button text="ACCEPT" colored="true" accent="true" width="100" click="close()">
+			<mdl:style>
+				<js:AllCSSStyles fontFamily="Sintony" color="#FFFFFF" backgroundColor="#D52D28" />
+			</mdl:style>
+		</mdl:Button>
+    </mdl:DialogActions>
+</mdl:Dialog>
