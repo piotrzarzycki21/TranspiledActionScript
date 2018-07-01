@@ -68,10 +68,6 @@ js|DataGrid .StringItemRenderer {
 	position: unset !important;
 	IBeadLayout: ClassReference("org.apache.royale.html.beads.layouts.DataGridPercentageLayout");
 }
-
-.userListDepartmentColumn {
-	IItemRenderer: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.itemRenderers.UserListDepartmentItemRenderer");
-}
 	
 .titleBarWithAdditionalInfo {
 	IBeadView: ClassReference("com.transpiledactionscript.puremvc.royale.employeeadmin.view.components.TitleBarWithAdditionalInfoView");

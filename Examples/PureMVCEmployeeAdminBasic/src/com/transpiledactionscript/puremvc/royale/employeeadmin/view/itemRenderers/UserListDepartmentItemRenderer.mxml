@@ -22,5 +22,17 @@ limitations under the License.
 	<js:beads>
         <js:ItemRendererDataBinding />
     </js:beads>
-	<js:Label text="{data[labelField].value}"/>
+	<fx:Script>
+	<![CDATA[
+		override public function set data(value:Object):void
+		{
+			super.data = value;
+			if (value)
+			{
+				department.text = data[labelField].value;
+			}
+		}
+	]]>
+</fx:Script>
+	<js:Label localId="department" />
 </js:MXMLItemRenderer>
