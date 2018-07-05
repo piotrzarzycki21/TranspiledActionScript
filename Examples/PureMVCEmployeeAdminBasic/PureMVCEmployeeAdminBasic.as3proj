@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
   <output>
-    <movie version="11"/>
+    <movie platform="Flash Player"/>
     <movie disabled="False"/>
-    <movie height="600"/>
     <movie fps="60"/>
     <movie background="#FFFFFF"/>
+    <movie version="11"/>
     <movie path="bin-debug/PureMVCEmployeeAdminBasic.swf"/>
     <movie width="800"/>
+    <movie height="600"/>
     <movie input=""/>
   </output>
   &lt;!-- Other classes to be compiled into your SWF --&gt;
@@ -16,7 +17,14 @@
     <class path="../../../../Others/puremvc-as3-multicore-framework/src"/>
   </classpaths>
   <moonshineResourcePaths></moonshineResourcePaths>
+  <moonshineNativeExtensionPaths></moonshineNativeExtensionPaths>
   <build>
+    <option showBindingWarnings="True"/>
+    <option compilerConstants=""/>
+    <option locale=""/>
+    <option showDeprecationWarnings="True"/>
+    <option antBuildPath="build/build.xml"/>
+    <option showActionScriptWarnings="True"/>
     <option showUnusedTypeSelectorWarnings="True"/>
     <option customSDK=""/>
     <option strict="True"/>
@@ -24,21 +32,15 @@
     <option useNetwork="True"/>
     <option allowSourcePathOverlap="False"/>
     <option useResourceBundleMetadata="True"/>
-    <option additional="-debug=true"/>
     <option benchmark="False"/>
-    <option locale=""/>
+    <option warnings="True"/>
     <option es="False"/>
     <option verboseStackTraces="False"/>
     <option loadConfig=""/>
     <option linkReport=""/>
-    <option warnings="True"/>
-    <option showActionScriptWarnings="True"/>
-    <option staticLinkRSL="False"/>
-    <option showBindingWarnings="True"/>
-    <option compilerConstants=""/>
     <option optimize="False"/>
-    <option showDeprecationWarnings="True"/>
-    <option antBuildPath="build/build.xml"/>
+    <option additional="-theme=${royalelib}/themes/Basic/src/basic.css -debug=true"/>
+    <option staticLinkRSL="False"/>
   </build>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
@@ -53,17 +55,20 @@
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
   <options>
-    <option defaultBuildTargets=""/>
-    <option testMovie=""/>
     <option testMovieCommand=""/>
     <option showHiddenPaths="False"/>
+    <option isPrimeFacesVisualEditor="False"/>
+    <option defaultBuildTargets=""/>
+    <option isExportedToExistingSource="False"/>
+    <option visualEditorExportPath=""/>
+    <option testMovie=""/>
   </options>
   <moonshineRunCustomization>
     <option targetPlatform="2"/>
-    <option deviceSimulator="null"/>
-    <option projectType="2"/>
-    <option launchMethod="Simulator"/>
     <option urlToLaunch=""/>
+    <option projectType="2"/>
+    <option deviceSimulator="null"/>
+    <option launchMethod="Simulator"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>
