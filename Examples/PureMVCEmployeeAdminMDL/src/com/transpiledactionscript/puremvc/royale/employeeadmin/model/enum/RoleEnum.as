@@ -23,8 +23,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum
 		public static const SHIPPING:RoleEnum 		= new RoleEnum( "Shipping"				,12 );
 		public static const RETURNS:RoleEnum 		= new RoleEnum( "Returns"				,13 );
 		
-		public var ordinal:int;
-		public var value:String;
+		private var _ordinal:int;
+		private var _value:String;
 		
 		public function RoleEnum ( value:String, ordinal:int )
 		{
@@ -51,6 +51,26 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum
 				   ];
 		}
 
+	    public function get ordinal():int
+		{
+			return _ordinal;			
+		}
+		
+		public function set ordinal(value:int):void
+		{
+			_ordinal = value;	
+		}		
+		
+		public function get value():String
+		{
+			return _value;
+		}		
+		
+		public function set value(v:String)
+		{
+			_value = v;	
+		}
+		
 		public static function get comboList():Array
 		{
 			var cList:Array = RoleEnum.list;

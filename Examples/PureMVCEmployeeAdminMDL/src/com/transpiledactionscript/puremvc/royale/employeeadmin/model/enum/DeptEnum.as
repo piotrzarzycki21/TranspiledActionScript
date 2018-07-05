@@ -14,8 +14,8 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum
 		public static const SHIPPING:DeptEnum 		= new DeptEnum( "Shipping"			, 3 );
 		public static const QC:DeptEnum 			= new DeptEnum( "Quality Control"	, 4 );
 		
-		public var ordinal:int;
-		public var value:String;
+		private var _ordinal:int;
+		private var _value:String;
 		
 		public function DeptEnum ( value:String, ordinal:int )
 		{
@@ -23,6 +23,26 @@ package com.transpiledactionscript.puremvc.royale.employeeadmin.model.enum
 			this.ordinal = ordinal;
 		}
 
+		public function get ordinal():int
+		{
+			return _ordinal;			
+		}
+		
+		public function set ordinal(value:int):void
+		{
+			_ordinal = value;	
+		}		
+		
+		public function get value():String
+		{
+			return _value;
+		}		
+		
+		public function set value(v:String)
+		{
+			_value = v;	
+		}	
+		
 		public static function get list():Array
 		{
 			return [ ACCT, 
