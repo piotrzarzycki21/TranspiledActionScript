@@ -8,7 +8,8 @@
             "src",
             "../../../../Others/puremvc-as3-multicore-framework/src"
         ],
-        "source-map": true
+        "source-map": true,
+        "theme": "${royalelib}/themes/Basic/src/basic.css"
 	},
 	"files": [
 		"src/PureMVCEmployeeAdminBasic.mxml"
