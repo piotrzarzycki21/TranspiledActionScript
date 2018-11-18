@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
   <output>
-    <movie platform="Flash Player"/>
-    <movie disabled="False"/>
-    <movie fps="60"/>
-    <movie background="#FFFFFF"/>
-    <movie version="11"/>
     <movie path="bin-debug/PureMVCEmployeeAdminMDL.swf"/>
     <movie width="800"/>
+    <movie fps="60"/>
     <movie height="600"/>
+    <movie platform="Flash Player"/>
+    <movie version="11"/>
+    <movie disabled="False"/>
+    <movie background="#FFFFFF"/>
     <movie input=""/>
   </output>
   &lt;!-- Other classes to be compiled into your SWF --&gt;
@@ -19,29 +19,39 @@
   <moonshineResourcePaths></moonshineResourcePaths>
   <moonshineNativeExtensionPaths></moonshineNativeExtensionPaths>
   <build>
-    <option showBindingWarnings="True"/>
-    <option compilerConstants=""/>
-    <option locale=""/>
-    <option showDeprecationWarnings="True"/>
-    <option antBuildPath="build/build.xml"/>
     <option showActionScriptWarnings="True"/>
-    <option showUnusedTypeSelectorWarnings="True"/>
     <option customSDK="D:\Work\royale_ide\royale_nightly_js_swf_core_changes"/>
-    <option strict="True"/>
-    <option accessible="False"/>
+    <option showBindingWarnings="True"/>
+    <option locale=""/>
+    <option staticLinkRSL="False"/>
+    <option antBuildPath="build/build.xml"/>
+    <option compilerConstants=""/>
+    <option additional="-theme=${royalelib}/themes/MDL/src/defaults.css -html-template=src/resources/mdl-js-index-template.html -debug=true"/>
+    <option showDeprecationWarnings="True"/>
     <option useNetwork="True"/>
-    <option allowSourcePathOverlap="False"/>
+    <option showUnusedTypeSelectorWarnings="True"/>
     <option useResourceBundleMetadata="True"/>
-    <option benchmark="False"/>
+    <option strict="True"/>
     <option warnings="True"/>
+    <option accessible="False"/>
     <option es="False"/>
     <option verboseStackTraces="False"/>
+    <option allowSourcePathOverlap="False"/>
     <option loadConfig=""/>
     <option linkReport=""/>
+    <option benchmark="False"/>
     <option optimize="False"/>
-    <option additional="-theme=${royalelib}/themes/MDL/src/defaults.css -html-template=src/resources/mdl-js-index-template.html -debug=true"/>
-    <option staticLinkRSL="False"/>
   </build>
+  <mavenBuild>
+    <option settingsFilePath=""/>
+    <option commandLine="clean install"/>
+    <option mavenBuildPath=""/>
+    <actions>
+      <action action="install" actionName="Build"/>
+      <action action="clean" actionName="Clean"/>
+      <action action="clean install" actionName="Clean and Build"/>
+    </actions>
+  </mavenBuild>
   <includeLibraries></includeLibraries>
   <libraryPaths></libraryPaths>
   <externalLibraryPaths></externalLibraryPaths>
@@ -54,21 +64,23 @@
   <hiddenPaths></hiddenPaths>
   <preBuildCommand>null</preBuildCommand>
   <postBuildCommand alwaysRun="False">null</postBuildCommand>
+  <trustSVNCertificate>False</trustSVNCertificate>
   <options>
-    <option testMovieCommand=""/>
-    <option showHiddenPaths="False"/>
+    <option testMovie=""/>
     <option isPrimeFacesVisualEditor="False"/>
+    <option testMovieCommand=""/>
+    <option visualEditorExportPath=""/>
     <option defaultBuildTargets=""/>
     <option isExportedToExistingSource="False"/>
-    <option visualEditorExportPath=""/>
-    <option testMovie=""/>
+    <option showHiddenPaths="False"/>
   </options>
   <moonshineRunCustomization>
+    <option customUrlToLaunch=""/>
+    <option deviceSimulator="null"/>
+    <option projectType="2"/>
+    <option launchMethod="Simulator"/>
     <option targetPlatform="2"/>
     <option urlToLaunch=""/>
-    <option projectType="2"/>
-    <option deviceSimulator="null"/>
-    <option launchMethod="Simulator"/>
     <deviceSimulator>null</deviceSimulator>
     <certAndroid>null</certAndroid>
     <certIos>null</certIos>

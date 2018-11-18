@@ -39,7 +39,7 @@
       <plugin>
         <groupId>org.apache.royale.compiler</groupId>
 		<artifactId>royale-maven-plugin</artifactId>
-	    <version>0.9.3-SNAPSHOT</version>
+	    <version>0.9.5-SNAPSHOT</version>
 	    <extensions>true</extensions>
         <configuration>
           <mainClass>App.mxml</mainClass>
@@ -51,13 +51,13 @@
 		  <dependency>
 			<groupId>org.apache.royale.compiler</groupId>
 			<artifactId>compiler-jx</artifactId>
-			<version>0.9.3-SNAPSHOT</version>
+			<version>0.9.5-SNAPSHOT</version>
 		  </dependency>
 		</dependencies>
       </plugin>
 	  <plugin>
 			<artifactId>maven-resources-plugin</artifactId>
-			<version>3.0.2</version>
+			<version>3.1.0</version>
 			<executions>
 			  <execution>
 				<id>copy-resources</id>
@@ -84,23 +84,31 @@
     <dependency>
       <groupId>org.apache.royale.framework</groupId>
       <artifactId>MaterialDesignLite</artifactId>
-      <version>0.9.3-SNAPSHOT</version>
+      <version>0.9.5-SNAPSHOT</version>
       <type>swc</type>
       <classifier>js</classifier>
     </dependency>
 	<dependency>
       <groupId>org.apache.royale.framework</groupId>
       <artifactId>Network</artifactId>
-      <version>0.9.3-SNAPSHOT</version>
+      <version>0.9.5-SNAPSHOT</version>
       <type>swc</type>
       <classifier>js</classifier>
     </dependency>
 	<dependency>
       <groupId>org.apache.royale.framework</groupId>
       <artifactId>Language</artifactId>
-      <version>0.9.3-SNAPSHOT</version>
+      <version>0.9.5-SNAPSHOT</version>
       <type>swc</type>
        <classifier>js</classifier>
+    </dependency>
+	<dependency>
+      <groupId>org.apache.royale.framework</groupId>
+      <artifactId>MDLTheme</artifactId>
+      <version>0.9.5-SNAPSHOT</version>
+      <type>swc</type>
+      <scope>theme</scope>
+      <classifier>js</classifier>
     </dependency>
   </dependencies>
 

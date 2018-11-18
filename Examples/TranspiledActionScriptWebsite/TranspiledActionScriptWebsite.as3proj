@@ -38,7 +38,7 @@
     <option showDeprecationWarnings="True"/>
     <option antBuildPath="build/build.xml"/>
     <option showUnusedTypeSelectorWarnings="True"/>
-    <option customSDK="D:\Work\royale_ide\royale_current_release"/>
+    <option customSDK=""/>
     <option strict="True"/>
   </build>
   <includeLibraries></includeLibraries>
